@@ -1,0 +1,230 @@
+[
+  {
+    "id": "flutter_001",
+    "question": "Explain the difference between StatelessWidget and StatefulWidget.",
+    "difficulty": "easy",
+    "tags": [
+      "flutter",
+      "widgets",
+      "fundamentals"
+    ]
+  },
+  {
+    "id": "flutter_002",
+    "question": "What is the widget tree, and how does Flutter's rendering pipeline turn it into pixels on screen?",
+    "difficulty": "medium",
+    "tags": [
+      "flutter",
+      "rendering"
+    ]
+  },
+  {
+    "id": "flutter_003",
+    "question": "Compare state management approaches: Provider, Riverpod, and BLoC. When would you choose one over another?",
+    "difficulty": "medium",
+    "tags": [
+      "flutter",
+      "state-management"
+    ]
+  },
+  {
+    "id": "flutter_004",
+    "question": "How would you optimize a Flutter app with long, complex scrollable lists to prevent jank?",
+    "difficulty": "hard",
+    "tags": [
+      "flutter",
+      "performance"
+    ]
+  },
+  {
+    "id": "flutter_005",
+    "question": "Design the architecture for a Flutter app that needs offline-first data sync with a remote backend.",
+    "difficulty": "hard",
+    "tags": [
+      "flutter",
+      "system-design",
+      "offline-first"
+    ]
+  },
+  {
+    "id": "flutter_006",
+    "question": "Explain how to use the `AnimatedBuilder` class in Flutter to optimize rendering of changing widgets. Please provide an example use case.",
+    "difficulty": "medium",
+    "tags": [
+      "Widgets",
+      "Animation"
+    ]
+  },
+  {
+    "id": "flutter_007",
+    "question": "Describe the differences between using `FutureBuilder` and `StreamBuilder` in Flutter for asynchronous data loading. When would you choose one over the other?",
+    "difficulty": "medium",
+    "tags": [
+      "Async Programming",
+      "Widgets"
+    ]
+  },
+  {
+    "id": "flutter_008",
+    "question": "How would you implement custom animations in Flutter using the `Tween` class and the `AnimatedWidget` class? Provide an example.",
+    "difficulty": "medium",
+    "tags": [
+      "Animation",
+      "Widgets"
+    ]
+  },
+  {
+    "id": "flutter_009",
+    "question": "Explain the concept of `Semantics` in Flutter and how it's used to improve accessibility. Describe a scenario where you would use the `AccessibilityFeatures` class.",
+    "difficulty": "medium",
+    "tags": [
+      "Accessibility",
+      "Widgets"
+    ]
+  },
+  {
+    "id": "flutter_010",
+    "question": "Design a solution for a Flutter app that needs to display a large amount of data across multiple screens. Discuss how you would use the `Navigator` class and the `PageRoute` class to achieve this.",
+    "difficulty": "medium",
+    "tags": [
+      "Navigation",
+      "Widgets"
+    ]
+  },
+  {
+    "id": "flutter_011",
+    "question": "Explain how to use the `intl` package in Flutter to format dates and numbers for different regions and cultures. Provide an example use case.",
+    "difficulty": "medium",
+    "tags": [
+      "Internationalization",
+      "Libraries"
+    ]
+  },
+  {
+    "id": "flutter_012",
+    "question": "Describe a strategy for caching images in a Flutter app to improve performance. Discuss how you would use the `CachedNetworkImage` widget and the `flutter_cache_manager` package.",
+    "difficulty": "medium",
+    "tags": [
+      "Performance",
+      "Libraries"
+    ]
+  },
+  {
+    "id": "flutter_013",
+    "question": "Design a custom widget that supports both horizontal and vertical scrolling, with dynamic animation based on scroll direction. Provide an implementation and explain the trade-offs in performance and code complexity.",
+    "difficulty": "hard",
+    "tags": [
+      "custom-widgets",
+      "animations",
+      "scrolling"
+    ]
+  },
+  {
+    "id": "flutter_014",
+    "question": "Describe a scenario where you would use the `AnimatedBuilder` widget, and how you would utilize it to animate a complex widget tree. What are the limitations of this approach, and when might you choose alternative animation methods?",
+    "difficulty": "hard",
+    "tags": [
+      "animations",
+      "widget-tree"
+    ]
+  },
+  {
+    "id": "flutter_015",
+    "question": "You are tasked with adding accessibility features to a Flutter app. Discuss the importance of implementing Semantics and describe a strategy for creating a semantic tree of widgets, including best practices for labeling, grouping, and describing widgets.",
+    "difficulty": "hard",
+    "tags": [
+      "accessibility",
+      "semantics"
+    ]
+  },
+  {
+    "id": "flutter_016",
+    "question": "Compare and contrast the use of `FutureBuilder` and `StreamBuilder` for handling asynchronous data. Provide examples of when each would be more suitable, and explain the trade-offs in terms of performance, memory usage, and code complexity.",
+    "difficulty": "hard",
+    "tags": [
+      "async-programming",
+      "widget-builders"
+    ]
+  },
+  {
+    "id": "flutter_017",
+    "question": "Design a solution for implementing a gesture recognition system in Flutter, including support for multiple gesture types (e.g., tap, swipe, pinch). Explain the architecture and provide a code implementation.",
+    "difficulty": "hard",
+    "tags": [
+      "gestures",
+      "custom-widgets"
+    ]
+  },
+  {
+    "id": "flutter_018",
+    "question": "Describe a strategy for implementing internationalization and localization in a Flutter app, including support for multiple languages and regions. Discuss the importance of using a separate data model for translations and provide an example implementation.",
+    "difficulty": "hard",
+    "tags": [
+      "internationalization",
+      "localization"
+    ]
+  },
+  {
+    "id": "flutter_019",
+    "question": "What is the difference between using `Navigator.pushReplacement` and `Navigator.push` in Flutter? Provide an example use case for both.",
+    "difficulty": "easy",
+    "tags": [
+      "navigation",
+      "widget lifecycle"
+    ]
+  },
+  {
+    "id": "flutter_020",
+    "question": "How would you implement theme customization in a Flutter app, including dynamic theme switching and support for high-contrast modes?",
+    "difficulty": "easy",
+    "tags": [
+      "UI",
+      "theme management"
+    ]
+  },
+  {
+    "id": "flutter_021",
+    "question": "Explain the concept of isolates in Flutter and provide an example use case where using isolates improves app performance.",
+    "difficulty": "easy",
+    "tags": [
+      "performance",
+      "multithreading"
+    ]
+  },
+  {
+    "id": "flutter_022",
+    "question": "Describe how to implement caching in a Flutter app using `LruCache` or other caching libraries. When would you choose a cache-based approach over loading data remotely and vice versa?",
+    "difficulty": "easy",
+    "tags": [
+      "data loading",
+      "performance"
+    ]
+  },
+  {
+    "id": "flutter_023",
+    "question": "Design a solution for a Flutter app that requires handling errors and exceptions in a robust way, including error handling using callbacks and Future API.",
+    "difficulty": "easy",
+    "tags": [
+      "error handling",
+      "async programming"
+    ]
+  },
+  {
+    "id": "flutter_024",
+    "question": "Explain the different types of gestures supported in Flutter, including the `GestureDetector` class. Provide an example use case where using gestures improves user experience.",
+    "difficulty": "easy",
+    "tags": [
+      "gestures",
+      "input handling"
+    ]
+  },
+  {
+    "id": "flutter_025",
+    "question": "Describe how to implement localization in a Flutter app, including support for both translation and formatting of dates, numbers, and currencies.",
+    "difficulty": "easy",
+    "tags": [
+      "internationalization",
+      "UI"
+    ]
+  }
+]

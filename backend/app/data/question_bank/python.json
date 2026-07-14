@@ -1,0 +1,229 @@
+[
+  {
+    "id": "python_001",
+    "question": "Explain the difference between a list and a tuple in Python, and when you'd use each.",
+    "difficulty": "easy",
+    "tags": [
+      "python",
+      "fundamentals",
+      "data-structures"
+    ]
+  },
+  {
+    "id": "python_002",
+    "question": "What are Python decorators, and how would you write one that logs function execution time?",
+    "difficulty": "medium",
+    "tags": [
+      "python",
+      "decorators"
+    ]
+  },
+  {
+    "id": "python_003",
+    "question": "Explain the Global Interpreter Lock (GIL) and how it affects multithreading vs multiprocessing in Python.",
+    "difficulty": "medium",
+    "tags": [
+      "python",
+      "concurrency"
+    ]
+  },
+  {
+    "id": "python_004",
+    "question": "How do generators and the yield keyword differ from regular functions, and why are they memory-efficient?",
+    "difficulty": "medium",
+    "tags": [
+      "python",
+      "generators"
+    ]
+  },
+  {
+    "id": "python_005",
+    "question": "Design a Python library for processing large CSV files that don't fit in memory. What approach would you take?",
+    "difficulty": "hard",
+    "tags": [
+      "python",
+      "system-design",
+      "performance"
+    ]
+  },
+  {
+    "id": "python_006",
+    "question": "What are the implications of using mutable objects as default arguments in Python functions?",
+    "difficulty": "easy",
+    "tags": [
+      "best practices",
+      "data structures"
+    ]
+  },
+  {
+    "id": "python_007",
+    "question": "How would you implement a simple singleton pattern in Python, and why is it useful?",
+    "difficulty": "easy",
+    "tags": [
+      "design patterns",
+      "object-oriented programming"
+    ]
+  },
+  {
+    "id": "python_008",
+    "question": "Explain the difference between the `with` statement and a `try`/`except` block when working with file input/output in Python.",
+    "difficulty": "easy",
+    "tags": [
+      "error handling",
+      "file i/o"
+    ]
+  },
+  {
+    "id": "python_009",
+    "question": "Design a Python function to efficiently flatten a nested list of arbitrary depth.",
+    "difficulty": "easy",
+    "tags": [
+      "collections",
+      "algorithms"
+    ]
+  },
+  {
+    "id": "python_010",
+    "question": "What are the benefits and use cases of using Python's built-in `functools.reduce()` function, and how would you implement it manually?",
+    "difficulty": "easy",
+    "tags": [
+      "functional programming",
+      "iteration"
+    ]
+  },
+  {
+    "id": "python_011",
+    "question": "Explain how Python's `os` module can be used to implement cross-platform file and directory operations.",
+    "difficulty": "easy",
+    "tags": [
+      "file i/o",
+      "cross-platform"
+    ]
+  },
+  {
+    "id": "python_012",
+    "question": "Describe how you would implement a simple Python API for caching expensive function results, and what considerations would you take into account.",
+    "difficulty": "easy",
+    "tags": [
+      "caching",
+      "performance"
+    ]
+  },
+  {
+    "id": "python_013",
+    "question": "Implement a Python class that provides a thread-safe counter, including a description of the synchronization mechanism used.",
+    "difficulty": "medium",
+    "tags": [
+      "concurrency",
+      "threading"
+    ]
+  },
+  {
+    "id": "python_014",
+    "question": "Write a Python function that performs a breadth-first search (BFS) traversal of a directed graph, and explain the algorithm used.",
+    "difficulty": "medium",
+    "tags": [
+      "algorithms",
+      "graph theory"
+    ]
+  },
+  {
+    "id": "python_015",
+    "question": "Create a Python function that calculates the intersection of two sorted lists, and describe the approach used to achieve efficient time complexity.",
+    "difficulty": "medium",
+    "tags": [
+      "algorithms",
+      "data structures"
+    ]
+  },
+  {
+    "id": "python_016",
+    "question": "Design a Python system that implements the Observer design pattern to notify clients when a data source changes, including a description of the observer interface.",
+    "difficulty": "medium",
+    "tags": [
+      "object-oriented programming",
+      "design patterns"
+    ]
+  },
+  {
+    "id": "python_017",
+    "question": "Describe a strategy for optimizing the performance of a Python function that performs repeated numerical computations, including the use of memoization or caching.",
+    "difficulty": "medium",
+    "tags": [
+      "performance optimization",
+      "mathematics"
+    ]
+  },
+  {
+    "id": "python_018",
+    "question": "Implement a Python class that provides an iterable wrapper around a database query result set, including methods for fetching and iterating over the results.",
+    "difficulty": "medium",
+    "tags": [
+      "database",
+      "iterators"
+    ]
+  },
+  {
+    "id": "python_019",
+    "question": "Create a Python function that generates a random permutation of a given list, and describe the algorithm used to ensure randomness and efficiency.",
+    "difficulty": "medium",
+    "tags": [
+      "algorithms",
+      "randomization"
+    ]
+  },
+  {
+    "id": "python_020",
+    "question": "Implement a Least Recently Used (LRU) cache using Python's built-in dictionary and list. Explain your approach and any trade-offs you made.",
+    "difficulty": "hard",
+    "tags": [
+      "data-structures",
+      "caching"
+    ]
+  },
+  {
+    "id": "python_021",
+    "question": "Write a Python function that takes a tree as input and returns a list of all leaf nodes. Describe the time complexity of your solution.",
+    "difficulty": "hard",
+    "tags": [
+      "algorithms",
+      "tree-traversal"
+    ]
+  },
+  {
+    "id": "python_022",
+    "question": "Design a Python class to simulate a bank account system using object-oriented programming principles. The class should have methods for deposit, withdrawal, and account balance inquiry. Also, write unit tests for this class.",
+    "difficulty": "hard",
+    "tags": [
+      "object-oriented-programming",
+      "testing"
+    ]
+  },
+  {
+    "id": "python_023",
+    "question": "Explain how you would implement a thread-safe singleton in Python using synchronization primitives. Discuss any potential drawbacks and alternative approaches.",
+    "difficulty": "hard",
+    "tags": [
+      "multithreading",
+      "synchronization"
+    ]
+  },
+  {
+    "id": "python_024",
+    "question": "Write a Python function that takes a string and returns its longest prefix that is a valid palindrome. You can assume the input string is not empty.",
+    "difficulty": "hard",
+    "tags": [
+      "string-manipulation",
+      "dynamic-programming"
+    ]
+  },
+  {
+    "id": "python_025",
+    "question": "Design a Python system to manage a fleet of autonomous vehicles. The system should be able to add, remove, and update vehicle locations, as well as display the nearest vehicle to a given location. Explain your approach and any trade-offs you made.",
+    "difficulty": "hard",
+    "tags": [
+      "system-design",
+      "geospatial"
+    ]
+  }
+]

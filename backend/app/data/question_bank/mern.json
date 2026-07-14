@@ -1,0 +1,245 @@
+[
+  {
+    "id": "mern_001",
+    "question": "Explain the role of the virtual DOM in React and why it improves performance.",
+    "difficulty": "easy",
+    "tags": [
+      "react",
+      "frontend"
+    ]
+  },
+  {
+    "id": "mern_002",
+    "question": "How does middleware work in Express, and how would you implement centralized error handling?",
+    "difficulty": "medium",
+    "tags": [
+      "express",
+      "backend"
+    ]
+  },
+  {
+    "id": "mern_003",
+    "question": "Design a MongoDB schema for a social app with posts, comments, and likes. Discuss embedding vs referencing.",
+    "difficulty": "hard",
+    "tags": [
+      "mongodb",
+      "system-design"
+    ]
+  },
+  {
+    "id": "mern_004",
+    "question": "Explain what is JWT token and how it is used for authentication in MERN applications.",
+    "difficulty": "easy",
+    "tags": [
+      "auth",
+      "security"
+    ]
+  },
+  {
+    "id": "mern_005",
+    "question": "Describe the difference between Mongoose's model and schema, and provide an example of how to use them in a MERN application.",
+    "difficulty": "easy",
+    "tags": [
+      "mongodb",
+      "mongoose"
+    ]
+  },
+  {
+    "id": "mern_006",
+    "question": "What is the purpose of the Node.js built-in modules 'events' and 'timers', and how would you use them in a MERN application?",
+    "difficulty": "easy",
+    "tags": [
+      "nodejs",
+      "events"
+    ]
+  },
+  {
+    "id": "mern_007",
+    "question": "Design a Redis data structure to store user sessions in a MERN application, and explain how you would implement session expiration and invalidation.",
+    "difficulty": "easy",
+    "tags": [
+      "redis",
+      "session"
+    ]
+  },
+  {
+    "id": "mern_008",
+    "question": "Explain the concept of a 'context' in Express, and describe how you would use it to share data between middleware functions in a MERN application.",
+    "difficulty": "easy",
+    "tags": [
+      "express",
+      "middleware"
+    ]
+  },
+  {
+    "id": "mern_009",
+    "question": "What is the difference between synchronous and asynchronous file I/O in Node.js, and provide an example of when you would use each in a MERN application.",
+    "difficulty": "easy",
+    "tags": [
+      "nodejs",
+      "fileio"
+    ]
+  },
+  {
+    "id": "mern_010",
+    "question": "Describe how you would implement internationalization (i18n) in a MERN application using a library such as react-intl, and explain how you would handle locale-specific formatting and translation.",
+    "difficulty": "easy",
+    "tags": [
+      "i18n",
+      "internationalization"
+    ]
+  },
+  {
+    "id": "mern_011",
+    "question": "Explain the differences between a Mongoose Model and a Mongoose Schema, and when would you use each.",
+    "difficulty": "medium",
+    "tags": [
+      "Mongoose",
+      "MongoDB"
+    ]
+  },
+  {
+    "id": "mern_012",
+    "question": "Describe a scenario where you would use a RESTful API over a GraphQL API, and vice versa. Justify your choice.",
+    "difficulty": "medium",
+    "tags": [
+      "API Design",
+      "GraphQL",
+      "RESTful API"
+    ]
+  },
+  {
+    "id": "mern_013",
+    "question": "Design a caching strategy for a MERN application using Redis, and explain how you would implement it.",
+    "difficulty": "medium",
+    "tags": [
+      "Caching",
+      "Redis",
+      "Performance"
+    ]
+  },
+  {
+    "id": "mern_014",
+    "question": "Discuss the trade-offs between using a monolithic vs microservices architecture in a MERN application, and provide an example use case for each.",
+    "difficulty": "medium",
+    "tags": [
+      "Architecture",
+      "Monolithic",
+      "Microservices"
+    ]
+  },
+  {
+    "id": "mern_015",
+    "question": "Explain how to secure user authentication in a MERN application using JSON Web Tokens (JWT). How would you handle token expiration and revocation?",
+    "difficulty": "medium",
+    "tags": [
+      "Security",
+      "Authentication",
+      "JWT"
+    ]
+  },
+  {
+    "id": "mern_016",
+    "question": "Describe a scenario where you would use a transaction in a MongoDB database, and explain how you would implement one.",
+    "difficulty": "medium",
+    "tags": [
+      "MongoDB",
+      "Transactions",
+      "Database"
+    ]
+  },
+  {
+    "id": "mern_017",
+    "question": "Design a logging mechanism for a MERN application using Winston, and explain how you would configure it for production use.",
+    "difficulty": "medium",
+    "tags": [
+      "Logging",
+      "Winston",
+      "Production"
+    ]
+  },
+  {
+    "id": "mern_018",
+    "question": "Explain how to implement internationalization (i18n) and translation in a MERN application using i18next, including how to handle language detection and routing.",
+    "difficulty": "medium",
+    "tags": [
+      "Internationalization",
+      "Translation",
+      "i18next"
+    ]
+  },
+  {
+    "id": "mern_019",
+    "question": "Describe a scenario where you would use a service worker in a MERN application, and explain how you would implement one for offline support.",
+    "difficulty": "medium",
+    "tags": [
+      "Service Worker",
+      "Offline",
+      "Performance"
+    ]
+  },
+  {
+    "id": "mern_020",
+    "question": "Discuss the differences between using a schema-first vs code-first approach in a MERN application, and provide an example use case for each.",
+    "difficulty": "medium",
+    "tags": [
+      "Schema",
+      "Code-First",
+      "Mongoose"
+    ]
+  },
+  {
+    "id": "mern_021",
+    "question": "Design a GraphQL schema with mutations for a real-time payment system. Implement caching and validation to prevent unauthorized transactions.",
+    "difficulty": "hard",
+    "tags": [
+      "GraphQL",
+      "Mutation"
+    ]
+  },
+  {
+    "id": "mern_022",
+    "question": "Explain the concept of 'async await' and 'Promise chaining' in JavaScript. Provide an example of how you would use these techniques to handle concurrent API calls in an Express.js application.",
+    "difficulty": "hard",
+    "tags": [
+      "JavaScript",
+      "Concurrency"
+    ]
+  },
+  {
+    "id": "mern_023",
+    "question": "Implement a secure authentication flow using Passport.js in an Express.js application. Discuss best practices for storing session data and protecting against common web attacks.",
+    "difficulty": "hard",
+    "tags": [
+      "Authentication",
+      "Security"
+    ]
+  },
+  {
+    "id": "mern_024",
+    "question": "Describe how to utilize Mongoose's 'Mongoose Model Plugins' to handle complex business logic in a MongoDB database. Provide an example of how you would use a plugin to enforce data consistency across multiple collections.",
+    "difficulty": "hard",
+    "tags": [
+      "MongoDB",
+      "Mongoose"
+    ]
+  },
+  {
+    "id": "mern_025",
+    "question": "Design an efficient algorithm to handle pagination in a MERN application using Node.js, Express.js, and MongoDB. Discuss the trade-offs between client-side and server-side rendering.",
+    "difficulty": "hard",
+    "tags": [
+      "Pagination",
+      "Performance"
+    ]
+  },
+  {
+    "id": "mern_026",
+    "question": "Implement an API using Node.js and Express.js to handle webhooks and notifications. Discuss strategies for handling high volumes of incoming requests and implementing retries for failed notifications.",
+    "difficulty": "hard",
+    "tags": [
+      "Webhooks",
+      "Notifications"
+    ]
+  }
+]

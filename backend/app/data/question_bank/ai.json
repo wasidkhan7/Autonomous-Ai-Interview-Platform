@@ -1,0 +1,227 @@
+[
+  {
+    "id": "ai_001",
+    "question": "Explain the difference between supervised and unsupervised learning with an example of each.",
+    "difficulty": "easy",
+    "tags": [
+      "machine-learning",
+      "fundamentals"
+    ]
+  },
+  {
+    "id": "ai_002",
+    "question": "What is the vanishing gradient problem and how do architectures like LSTM or residual connections address it?",
+    "difficulty": "medium",
+    "tags": [
+      "deep-learning",
+      "neural-networks"
+    ]
+  },
+  {
+    "id": "ai_003",
+    "question": "Walk through how retrieval-augmented generation reduces hallucination compared to a standalone LLM.",
+    "difficulty": "medium",
+    "tags": [
+      "rag",
+      "llm"
+    ]
+  },
+  {
+    "id": "ai_004",
+    "question": "Design a RAG pipeline for a domain with fast-changing documents. How would you handle re-indexing without downtime?",
+    "difficulty": "hard",
+    "tags": [
+      "rag",
+      "system-design"
+    ]
+  },
+  {
+    "id": "ai_005",
+    "question": "What's the difference between fine-tuning and LoRA/QLoRA? When would you choose one over the other?",
+    "difficulty": "hard",
+    "tags": [
+      "fine-tuning",
+      "llm"
+    ]
+  },
+  {
+    "id": "ai_006",
+    "question": "Explain the concept of explainability in AI and provide two use cases where it's essential for model deployment.",
+    "difficulty": "easy",
+    "tags": [
+      "explanation",
+      "deployment"
+    ]
+  },
+  {
+    "id": "ai_007",
+    "question": "Describe an approach for handling concept drift in a streaming data environment. How would you adapt your model to this scenario?",
+    "difficulty": "easy",
+    "tags": [
+      "concept drift",
+      "streaming data"
+    ]
+  },
+  {
+    "id": "ai_008",
+    "question": "Create a simple recommendation system using matrix factorization. Explain the process of building and training the model, including choosing the factors and optimization algorithm.",
+    "difficulty": "easy",
+    "tags": [
+      "recommendation system",
+      "matrix factorization"
+    ]
+  },
+  {
+    "id": "ai_009",
+    "question": "Design a pipeline for generating high-quality synthetic data for a dataset with missing values. How would you handle class imbalance and outliers in the generated data?",
+    "difficulty": "easy",
+    "tags": [
+      "data augmentation",
+      "synthetic data"
+    ]
+  },
+  {
+    "id": "ai_010",
+    "question": "Explain the concept of transfer learning in AI. Describe a scenario where transfer learning can be effectively applied, and how it can be adapted for domain-specific tasks.",
+    "difficulty": "easy",
+    "tags": [
+      "transfer learning",
+      "domain adaptation"
+    ]
+  },
+  {
+    "id": "ai_011",
+    "question": "Describe a method for detecting and mitigating adversarial attacks on a deep learning model. Provide a step-by-step explanation of the process, including model modification and training approaches.",
+    "difficulty": "easy",
+    "tags": [
+      "adversarial attacks",
+      "model security"
+    ]
+  },
+  {
+    "id": "ai_012",
+    "question": "Create a basic implementation of a meta-learning algorithm (e.g., MAML, Reptile) for few-shot learning. Explain the key components and hyperparameters involved in the algorithm.",
+    "difficulty": "easy",
+    "tags": [
+      "meta-learning",
+      "few-shot learning"
+    ]
+  },
+  {
+    "id": "ai_013",
+    "question": "Describe the concept of Explainable AI (XAI) and its importance in real-world applications, particularly in high-stakes decision-making scenarios. Be sure to discuss at least two popular techniques for achieving explainability.",
+    "difficulty": "medium",
+    "tags": [
+      "Explainable AI",
+      "Model Interpretability"
+    ]
+  },
+  {
+    "id": "ai_014",
+    "question": "Compare and contrast the use of Transformers versus Recurrent Neural Networks (RNNs) for sequence modeling tasks, highlighting their respective strengths and weaknesses. Provide a concrete example of a task where one architecture might be preferred over the other.",
+    "difficulty": "medium",
+    "tags": [
+      "Sequence Modeling",
+      "Deep Learning Architectures"
+    ]
+  },
+  {
+    "id": "ai_015",
+    "question": "You are tasked with developing a conversational chatbot that can learn from user feedback and adapt its responses accordingly. Design a reinforcement learning framework that incorporates both online and offline learning components, and discuss how you would handle exploration-exploitation trade-offs in this setting.",
+    "difficulty": "medium",
+    "tags": [
+      "Reinforcement Learning",
+      "Conversational AI"
+    ]
+  },
+  {
+    "id": "ai_016",
+    "question": "Assume you are working on a multi-modal dataset that combines text, images, and audio features. Describe a suitable approach for fusing these diverse modalities using attention mechanisms, and discuss the benefits and potential challenges of your proposed method.",
+    "difficulty": "medium",
+    "tags": [
+      "Multi-Modal Learning",
+      "Attention Mechanisms"
+    ]
+  },
+  {
+    "id": "ai_017",
+    "question": "You are given a dataset of user interactions with a recommendation system, where the goal is to predict the next item a user will engage with. Design a neural network architecture specifically tailored for this task, and discuss how you would incorporate user and item embeddings to capture complex relationships in the data.",
+    "difficulty": "medium",
+    "tags": [
+      "Recommendation Systems",
+      "Neural Network Design"
+    ]
+  },
+  {
+    "id": "ai_018",
+    "question": "Explain the concept of transfer learning in the context of deep learning, including both positive and negative transfer scenarios. Provide a real-world example of a domain where transfer learning might be particularly useful, and discuss potential strategies for adapting pre-trained models to new tasks.",
+    "difficulty": "medium",
+    "tags": [
+      "Transfer Learning",
+      "Deep Learning"
+    ]
+  },
+  {
+    "id": "ai_019",
+    "question": "Describe a pipeline for anomaly detection in a high-dimensional dataset, leveraging both unsupervised and supervised techniques. Discuss how you would balance detection accuracy and false positive rates in this setting, and provide a strategy for incremental learning to adapt to evolving data distributions.",
+    "difficulty": "medium",
+    "tags": [
+      "Anomaly Detection",
+      "Unsupervised Learning"
+    ]
+  },
+  {
+    "id": "ai_020",
+    "question": "Discuss the limitations of using a single model to handle multiple tasks with vastly different input formats and explain how you would approach multimodal fusion.",
+    "difficulty": "hard",
+    "tags": [
+      "multimodal learning",
+      "transfer learning"
+    ]
+  },
+  {
+    "id": "ai_021",
+    "question": "Design a framework for evaluating the fairness of AI models in a real-world setting. How would you handle noisy or missing data and what metrics would you use to assess fairness?",
+    "difficulty": "hard",
+    "tags": [
+      "fairness in AI",
+      "evaluation metrics"
+    ]
+  },
+  {
+    "id": "ai_022",
+    "question": "Explain the concept of adversarial robustness in AI and discuss a scenario where it's essential for model deployment. How would you approach adversarial training and regularization?",
+    "difficulty": "hard",
+    "tags": [
+      "adversarial robustness",
+      "adversarial training"
+    ]
+  },
+  {
+    "id": "ai_023",
+    "question": "Describe an approach for building a self-supervised learning pipeline that leverages auxiliary tasks to improve the performance of a primary task. How would you select auxiliary tasks and handle the trade-off between primary and auxiliary task performance?",
+    "difficulty": "hard",
+    "tags": [
+      "self-supervised learning",
+      "multi-task learning"
+    ]
+  },
+  {
+    "id": "ai_024",
+    "question": "You are tasked with building a model for a new domain that has a very small amount of labeled data. How would you leverage few-shot learning techniques and meta-learning to adapt to this scenario?",
+    "difficulty": "hard",
+    "tags": [
+      "few-shot learning",
+      "meta-learning"
+    ]
+  },
+  {
+    "id": "ai_025",
+    "question": "Design a pipeline for anomaly detection in a high-dimensional dataset. How would you approach feature selection and dimensionality reduction, and what metrics would you use to evaluate anomaly detection performance?",
+    "difficulty": "hard",
+    "tags": [
+      "anomaly detection",
+      "dimensionality reduction"
+    ]
+  }
+]

@@ -1,0 +1,237 @@
+[
+  {
+    "id": "devops_001",
+    "question": "Explain the difference between continuous integration and continuous deployment.",
+    "difficulty": "easy",
+    "tags": [
+      "devops",
+      "ci-cd",
+      "fundamentals"
+    ]
+  },
+  {
+    "id": "devops_002",
+    "question": "What is the difference between a Docker image and a Docker container?",
+    "difficulty": "easy",
+    "tags": [
+      "devops",
+      "docker"
+    ]
+  },
+  {
+    "id": "devops_003",
+    "question": "Explain how Kubernetes handles service discovery and load balancing between pods.",
+    "difficulty": "medium",
+    "tags": [
+      "devops",
+      "kubernetes"
+    ]
+  },
+  {
+    "id": "devops_004",
+    "question": "How would you design a CI/CD pipeline that runs automated tests, builds a Docker image, and deploys to staging on every merge to main?",
+    "difficulty": "medium",
+    "tags": [
+      "devops",
+      "ci-cd",
+      "pipeline-design"
+    ]
+  },
+  {
+    "id": "devops_005",
+    "question": "Design a zero-downtime deployment strategy for a stateful application. Compare blue-green and canary deployments.",
+    "difficulty": "hard",
+    "tags": [
+      "devops",
+      "system-design",
+      "deployment"
+    ]
+  },
+  {
+    "id": "devops_006",
+    "question": "What are the main differences between Infrastructure as Code (IaC) tools such as Terraform and Ansible?",
+    "difficulty": "easy",
+    "tags": [
+      "IaC",
+      "infrastructure"
+    ]
+  },
+  {
+    "id": "devops_007",
+    "question": "Explain the concept of a service mesh and how it fits into a microservices architecture.",
+    "difficulty": "easy",
+    "tags": [
+      "service-mesh",
+      "microservices"
+    ]
+  },
+  {
+    "id": "devops_008",
+    "question": "Design a monitoring strategy for a distributed system that includes metrics, logging, and alerting.",
+    "difficulty": "easy",
+    "tags": [
+      "monitoring",
+      "observability"
+    ]
+  },
+  {
+    "id": "devops_009",
+    "question": "How do you approach security hardening of a Linux system, and what are some best practices to follow?",
+    "difficulty": "easy",
+    "tags": [
+      "security",
+      "linux"
+    ]
+  },
+  {
+    "id": "devops_010",
+    "question": "Compare and contrast the use of etcd vs Consul for storing and retrieving configuration data in a distributed system.",
+    "difficulty": "easy",
+    "tags": [
+      "configuration-management",
+      "distributed-systems"
+    ]
+  },
+  {
+    "id": "devops_011",
+    "question": "Explain how you would implement a rolling update strategy for a stateless application, and what are the benefits and drawbacks of this approach?",
+    "difficulty": "easy",
+    "tags": [
+      "deployment-strategies",
+      "stateless-apps"
+    ]
+  },
+  {
+    "id": "devops_012",
+    "question": "Design a backup and restore strategy for a cloud-based database, including considerations for data consistency and integrity.",
+    "difficulty": "easy",
+    "tags": [
+      "backup-and-restore",
+      "cloud-databases"
+    ]
+  },
+  {
+    "id": "devops_013",
+    "question": "Explain the concept of Infrastructure as Code (IaC) and its benefits in terms of reproducibility and version control.",
+    "difficulty": "medium",
+    "tags": [
+      "IaC",
+      "DevOps",
+      "Version Control"
+    ]
+  },
+  {
+    "id": "devops_014",
+    "question": "Describe a scenario where you would use a service mesh like Istio or Linkerd, and how it would improve the scalability and reliability of your microservices-based application.",
+    "difficulty": "medium",
+    "tags": [
+      "Service Mesh",
+      "Microservices",
+      "Scalability"
+    ]
+  },
+  {
+    "id": "devops_015",
+    "question": "Design a monitoring and logging strategy for a distributed system consisting of multiple containers and pods running across multiple clusters. Describe the metrics and logs you would collect and how you would use them for alerting and troubleshooting.",
+    "difficulty": "medium",
+    "tags": [
+      "Monitoring",
+      "Logging",
+      "Distributed Systems"
+    ]
+  },
+  {
+    "id": "devops_016",
+    "question": "Explain the difference between a stateful and stateless application. Describe a scenario where a stateful application would be more suitable and one where a stateless application would be more suitable.",
+    "difficulty": "medium",
+    "tags": [
+      "Stateful",
+      "Stateless",
+      "Distributed Systems"
+    ]
+  },
+  {
+    "id": "devops_017",
+    "question": "Design a backup and restore strategy for a database that is running in a cloud provider like AWS or GCP. Describe the different types of backups you would take and how you would restore the database in case of a failure.",
+    "difficulty": "medium",
+    "tags": [
+      "Backup",
+      "Restore",
+      "Cloud Providers"
+    ]
+  },
+  {
+    "id": "devops_018",
+    "question": "Explain the concept of Chaos Engineering and its benefits in terms of identifying and mitigating potential points of failure in a distributed system. Describe a scenario where you would use Chaos Engineering to improve the reliability of your system.",
+    "difficulty": "medium",
+    "tags": [
+      "Chaos Engineering",
+      "Reliability",
+      "Distributed Systems"
+    ]
+  },
+  {
+    "id": "devops_019",
+    "question": "Design a security strategy for a containerized application running in a Kubernetes cluster. Describe the different types of security measures you would implement, including network policies, secret management, and image scanning.",
+    "difficulty": "medium",
+    "tags": [
+      "Security",
+      "Containerization",
+      "Kubernetes"
+    ]
+  },
+  {
+    "id": "devops_020",
+    "question": "You are tasked with optimizing the network performance of a distributed system. How would you use service mesh technology like Istio or Linkerd to implement traffic splitting, circuit breaking, and request routing for a microservices-based application?",
+    "difficulty": "hard",
+    "tags": [
+      "service-mesh",
+      "network-performance"
+    ]
+  },
+  {
+    "id": "devops_021",
+    "question": "A production database is experiencing high latency and slow query performance. Describe the steps you would take to identify the root cause of the issue using performance monitoring tools like Prometheus or Grafana, and optimize the database configuration and indexing to improve performance.",
+    "difficulty": "hard",
+    "tags": [
+      "database-performance",
+      "monitoring"
+    ]
+  },
+  {
+    "id": "devops_022",
+    "question": "Design a cloud cost optimization strategy for a company with multiple product lines and variable usage patterns. Explain how you would use cost allocation tags, reserved instances, and cost forecasting to minimize waste and reduce spending on cloud resources.",
+    "difficulty": "hard",
+    "tags": [
+      "cloud-cost-optimization",
+      "cost-management"
+    ]
+  },
+  {
+    "id": "devops_023",
+    "question": "You are building a CI/CD pipeline for a company with strict compliance and security requirements. Describe how you would implement secrets management using tools like HashiCorp Vault or AWS Secrets Manager, and integrate it with the pipeline to securely manage sensitive data.",
+    "difficulty": "hard",
+    "tags": [
+      "secrets-management",
+      "compliance"
+    ]
+  },
+  {
+    "id": "devops_024",
+    "question": "A company is experiencing high levels of data corruption and loss due to hardware failures in their on-premises infrastructure. Explain how you would design a disaster recovery strategy using cloud-based backup and replication services like AWS S3 or Google Cloud Storage, and ensure business continuity in the event of a disaster.",
+    "difficulty": "hard",
+    "tags": [
+      "disaster-recovery",
+      "backup-and-recovery"
+    ]
+  },
+  {
+    "id": "devops_025",
+    "question": "A team is struggling to maintain and patch multiple legacy applications running on different runtime environments. Describe how you would use containerization and automated rollouts to migrate these applications to a modern, cloud-native architecture, and ensure consistent security and compliance across the entire estate.",
+    "difficulty": "hard",
+    "tags": [
+      "containerization",
+      "cloud-native"
+    ]
+  }
+]

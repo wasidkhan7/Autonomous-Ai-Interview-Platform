@@ -1,0 +1,242 @@
+[
+  {
+    "id": "ds_001",
+    "question": "Explain the time complexity difference between an array and a linked list for insertion and lookup.",
+    "difficulty": "easy",
+    "tags": [
+      "data-structures",
+      "arrays",
+      "linked-lists"
+    ]
+  },
+  {
+    "id": "ds_002",
+    "question": "What is a hash map, and how does it achieve average O(1) lookup time?",
+    "difficulty": "easy",
+    "tags": [
+      "data-structures",
+      "hash-maps"
+    ]
+  },
+  {
+    "id": "ds_003",
+    "question": "Explain the difference between a stack and a queue, and give a real-world use case for each.",
+    "difficulty": "easy",
+    "tags": [
+      "data-structures",
+      "stacks",
+      "queues"
+    ]
+  },
+  {
+    "id": "ds_004",
+    "question": "How does a binary search tree maintain sorted order, and what causes it to degrade to O(n) operations?",
+    "difficulty": "medium",
+    "tags": [
+      "data-structures",
+      "trees"
+    ]
+  },
+  {
+    "id": "ds_005",
+    "question": "Design a data structure that supports insert, delete, and get-random-element all in O(1) time.",
+    "difficulty": "hard",
+    "tags": [
+      "data-structures",
+      "system-design"
+    ]
+  },
+  {
+    "id": "ds_006",
+    "question": "What is the trade-off between using a dynamic array versus a dynamic vector for storing large amounts of data, and how does this impact insertion and deletion performance?",
+    "difficulty": "easy",
+    "tags": [
+      "arrays",
+      "data_structures",
+      "dynamic_arrays"
+    ]
+  },
+  {
+    "id": "ds_007",
+    "question": "Explain the concept of a disjoint set data structure and describe its use cases, particularly in scenarios involving network connectivity or merge operations.",
+    "difficulty": "easy",
+    "tags": [
+      "disjoint_sets",
+      "union_find",
+      "data_structures"
+    ]
+  },
+  {
+    "id": "ds_008",
+    "question": "Design a data structure that efficiently stores a graph with millions of nodes and edges. Describe your approach to handling edge lookups and traversal.",
+    "difficulty": "easy",
+    "tags": [
+      "graphs",
+      "adjacency_lists",
+      "data_structures"
+    ]
+  },
+  {
+    "id": "ds_009",
+    "question": "Compare and contrast the time complexities of breadth-first search (BFS) and depth-first search (DFS) algorithms on unweighted graphs. Which search strategy is generally faster, and why?",
+    "difficulty": "easy",
+    "tags": [
+      "graph_traversal",
+      "dfs",
+      "bfs"
+    ]
+  },
+  {
+    "id": "ds_010",
+    "question": "Describe how a heap data structure can be used to implement a priority queue, and explain the trade-offs in terms of average-case time complexity versus worst-case time complexity.",
+    "difficulty": "easy",
+    "tags": [
+      "heaps",
+      "priority_queues",
+      "data_structures"
+    ]
+  },
+  {
+    "id": "ds_011",
+    "question": "Explain the concept of a trie data structure and describe its applications in areas such as autocomplete or spell-checking. How does the trie's structure enable efficient lookup and insertion operations?",
+    "difficulty": "easy",
+    "tags": [
+      "tries",
+      "prefix_trees",
+      "data_structures"
+    ]
+  },
+  {
+    "id": "ds_012",
+    "question": "Design a data structure that can efficiently store and retrieve the k most frequent elements from a large dataset. Describe your approach to handling updates and query operations.",
+    "difficulty": "easy",
+    "tags": [
+      "frequent_elements",
+      "heap_data_structures",
+      "data_structures"
+    ]
+  },
+  {
+    "id": "ds_013",
+    "question": "You are given a large graph with millions of nodes and edges. Describe a data structure that can efficiently store and query the graph's adjacency matrix.",
+    "difficulty": "medium",
+    "tags": [
+      "graph",
+      "matrix"
+    ]
+  },
+  {
+    "id": "ds_014",
+    "question": "Implement a data structure that supports efficient range queries on a large dataset of integers. The range queries should return the maximum value within the given range.",
+    "difficulty": "medium",
+    "tags": [
+      "range query",
+      "data structure problem"
+    ]
+  },
+  {
+    "id": "ds_015",
+    "question": "Design a data structure to efficiently store and retrieve a large number of time-series data points. The data points should be stored in chronological order, and retrieval should be done within a specified time window.",
+    "difficulty": "medium",
+    "tags": [
+      "time series data",
+      "cache"
+    ]
+  },
+  {
+    "id": "ds_016",
+    "question": "You are given a list of strings and their corresponding frequencies. Design a data structure to efficiently store and query the frequency of a given string.",
+    "difficulty": "medium",
+    "tags": [
+      "trie",
+      "dictionary"
+    ]
+  },
+  {
+    "id": "ds_017",
+    "question": "Describe a data structure that can be used to efficiently store and query a large number of key-value pairs, where each key is a complex object (e.g., a user ID) and each value is a set of related objects (e.g., user attributes).",
+    "difficulty": "medium",
+    "tags": [
+      "dictionary",
+      "hash map"
+    ]
+  },
+  {
+    "id": "ds_018",
+    "question": "Implement a data structure that supports efficient merging of two sorted lists into a single sorted list. The merging should be done in-place, without using additional storage.",
+    "difficulty": "medium",
+    "tags": [
+      "sorting",
+      "merge"
+    ]
+  },
+  {
+    "id": "ds_019",
+    "question": "Design a data structure to efficiently store and retrieve a large number of geometric objects (e.g., points, rectangles) and their spatial relationships (e.g., intersection, containment).",
+    "difficulty": "medium",
+    "tags": [
+      "geospatial data",
+      "quad tree"
+    ]
+  },
+  {
+    "id": "ds_020",
+    "question": "Design a data structure to efficiently store and retrieve the largest and smallest element from a stream of integers. Explain the time and space complexity of your solution.",
+    "difficulty": "hard",
+    "tags": [
+      "data_stream",
+      "stack",
+      "queue"
+    ]
+  },
+  {
+    "id": "ds_021",
+    "question": "Given a dictionary of words and their frequencies, implement a data structure that supports fast lookup of a word and its frequency, as well as efficient insertion and deletion of words. Analyze the time and space complexity of your solution.",
+    "difficulty": "hard",
+    "tags": [
+      "trie",
+      "hash_map",
+      "dictionary"
+    ]
+  },
+  {
+    "id": "ds_022",
+    "question": "You are given an array of integers and a target sum. Design an algorithm to find all unique pairs of elements in the array that add up to the target sum, and explain the time complexity of your solution.",
+    "difficulty": "hard",
+    "tags": [
+      "array",
+      "pair_sum",
+      "algorithm"
+    ]
+  },
+  {
+    "id": "ds_023",
+    "question": "Design a memory-efficient data structure to store a large number of integers, where each integer can have a maximum of three possible values (e.g., 0, 1, or 2). Explain the time and space complexity of your solution.",
+    "difficulty": "hard",
+    "tags": [
+      "bit_array",
+      "dense_bitmap",
+      "memory_efficient"
+    ]
+  },
+  {
+    "id": "ds_024",
+    "question": "You are given a graph represented as an adjacency list, and you need to detect whether it contains a cycle. Design an algorithm to solve this problem and explain the time complexity of your solution.",
+    "difficulty": "hard",
+    "tags": [
+      "graph",
+      "cycle_detection",
+      "breadth_first_search"
+    ]
+  },
+  {
+    "id": "ds_025",
+    "question": "Design a data structure that supports fast range sum queries on a 2D matrix, and explain the time and space complexity of your solution. Your solution should be able to handle both point queries and range queries.",
+    "difficulty": "hard",
+    "tags": [
+      "range_sum",
+      "matrix_data_structure",
+      "cache"
+    ]
+  }
+]

@@ -1,0 +1,237 @@
+[
+  {
+    "id": "laravel_001",
+    "question": "Explain the MVC pattern and how Laravel implements it.",
+    "difficulty": "easy",
+    "tags": [
+      "laravel",
+      "fundamentals",
+      "mvc"
+    ]
+  },
+  {
+    "id": "laravel_002",
+    "question": "What is Eloquent ORM, and how do relationships like hasMany and belongsToMany work?",
+    "difficulty": "easy",
+    "tags": [
+      "laravel",
+      "eloquent",
+      "database"
+    ]
+  },
+  {
+    "id": "laravel_003",
+    "question": "Explain Laravel's service container and how dependency injection works within it.",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "architecture"
+    ]
+  },
+  {
+    "id": "laravel_004",
+    "question": "How would you implement queues and jobs in Laravel for a task like sending bulk emails?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "queues",
+      "background-jobs"
+    ]
+  },
+  {
+    "id": "laravel_005",
+    "question": "Design a multi-tenant architecture in Laravel. What are the trade-offs between single-database and database-per-tenant approaches?",
+    "difficulty": "hard",
+    "tags": [
+      "laravel",
+      "system-design",
+      "multi-tenancy"
+    ]
+  },
+  {
+    "id": "laravel_006",
+    "question": "Explain the process of generating a Laravel API using Laravel's API resource. How do you handle validation and error handling in this context?",
+    "difficulty": "easy",
+    "tags": [
+      "laravel-api",
+      "validation"
+    ]
+  },
+  {
+    "id": "laravel_007",
+    "question": "How would you implement authentication and authorization in Laravel using middleware? Consider the different types of authentication and authorization.",
+    "difficulty": "easy",
+    "tags": [
+      "laravel-authentication",
+      "middleware"
+    ]
+  },
+  {
+    "id": "laravel_008",
+    "question": "Describe the use case for Laravel's package auto-discovery feature. How does it improve code organization and maintenance?",
+    "difficulty": "easy",
+    "tags": [
+      "laravel-packages",
+      "dependency-management"
+    ]
+  },
+  {
+    "id": "laravel_009",
+    "question": "Design a caching strategy for a Laravel application using Redis. Explain the different caching levels and how to implement them.",
+    "difficulty": "easy",
+    "tags": [
+      "laravel-cache",
+      "redis"
+    ]
+  },
+  {
+    "id": "laravel_010",
+    "question": "Explain how to implement rate limiting in Laravel using middleware. Consider different techniques and their trade-offs.",
+    "difficulty": "easy",
+    "tags": [
+      "laravel-rate-limiting",
+      "middleware"
+    ]
+  },
+  {
+    "id": "laravel_011",
+    "question": "How would you implement internationalization (i18n) and localization (L10n) in a Laravel application? Consider the different approaches and tools.",
+    "difficulty": "easy",
+    "tags": [
+      "laravel-i18n",
+      "localization"
+    ]
+  },
+  {
+    "id": "laravel_012",
+    "question": "Describe the process of implementing a Laravel seed for a database migration. How do you handle seeding complex relationships?",
+    "difficulty": "easy",
+    "tags": [
+      "laravel-seed",
+      "database-migrations"
+    ]
+  },
+  {
+    "id": "laravel_013",
+    "question": "How would you optimize the performance of a Laravel application with a high traffic rate, where a large number of requests are being made to a single endpoint?",
+    "difficulty": "medium",
+    "tags": [
+      "performance",
+      "optimization"
+    ]
+  },
+  {
+    "id": "laravel_014",
+    "question": "Explain the concept of middleware in Laravel and how you would use it to authenticate and authorize incoming requests to certain routes",
+    "difficulty": "medium",
+    "tags": [
+      "middleware",
+      "security"
+    ]
+  },
+  {
+    "id": "laravel_015",
+    "question": "Suppose you have a Laravel application with multiple API endpoints, and you want to implement API documentation using Swagger or similar tools. How would you configure and implement this in your application?",
+    "difficulty": "medium",
+    "tags": [
+      "api",
+      "documentation"
+    ]
+  },
+  {
+    "id": "laravel_016",
+    "question": "What are some strategies for handling and validating user-input data in a Laravel application, and how would you implement these strategies to prevent common web vulnerabilities such as SQL injection and cross-site scripting (XSS)?",
+    "difficulty": "medium",
+    "tags": [
+      "security",
+      "validation"
+    ]
+  },
+  {
+    "id": "laravel_017",
+    "question": "How would you implement caching in a Laravel application to improve the performance of frequently accessed data, and what are some common use cases for caching?",
+    "difficulty": "medium",
+    "tags": [
+      "caching",
+      "performance"
+    ]
+  },
+  {
+    "id": "laravel_018",
+    "question": "Suppose you have a Laravel application with a complex business logic that involves multiple models and their relationships. How would you implement a data migration script to transfer data from an existing schema to a new schema, while maintaining the relationships between the models?",
+    "difficulty": "medium",
+    "tags": [
+      "migrations",
+      "database"
+    ]
+  },
+  {
+    "id": "laravel_019",
+    "question": "How would you implement an API token-based authentication system in a Laravel application, and what are some benefits and trade-offs of using token-based authentication over traditional session-based authentication?",
+    "difficulty": "medium",
+    "tags": [
+      "authentication",
+      "security"
+    ]
+  },
+  {
+    "id": "laravel_020",
+    "question": "Design a Laravel package to handle caching for third-party APIs. Explain how you would implement cache expiration, cache invalidation and implement a fallback strategy when the cache is missing or expired.",
+    "difficulty": "hard",
+    "tags": [
+      "laravel",
+      "package",
+      "caching"
+    ]
+  },
+  {
+    "id": "laravel_021",
+    "question": "Describe how you would implement a custom authentication guard in Laravel using Passport. What are the security implications of using Passport, and how do you validate the user's credentials?",
+    "difficulty": "hard",
+    "tags": [
+      "laravel",
+      "auth",
+      "passport"
+    ]
+  },
+  {
+    "id": "laravel_022",
+    "question": "Explain how you would implement a real-time data streaming feature in Laravel using websockets. What are the architecture implications of using websockets, and how do you handle connection establishment and teardown?",
+    "difficulty": "hard",
+    "tags": [
+      "laravel",
+      "websockets",
+      "real-time"
+    ]
+  },
+  {
+    "id": "laravel_023",
+    "question": "Design a Laravel API that implements rate limiting using a Redis store. Explain how you would implement token bucket algorithm, and how you handle rate limiting exceptions.",
+    "difficulty": "hard",
+    "tags": [
+      "laravel",
+      "api",
+      "rate-limiter"
+    ]
+  },
+  {
+    "id": "laravel_024",
+    "question": "Explain how you would implement a data import feature in Laravel using the Laravel Queue system. Describe how you would handle concurrent import tasks, and how you would optimize the import process for large datasets.",
+    "difficulty": "hard",
+    "tags": [
+      "laravel",
+      "queue",
+      "data-import"
+    ]
+  },
+  {
+    "id": "laravel_025",
+    "question": "Design a Laravel application that implements internationalization (i18n) and localization (L10n) using the Gettext package. Explain how you would handle translations, and how you would implement locale-specific routing and view rendering.",
+    "difficulty": "hard",
+    "tags": [
+      "laravel",
+      "i18n",
+      "l10n"
+    ]
+  }
+]

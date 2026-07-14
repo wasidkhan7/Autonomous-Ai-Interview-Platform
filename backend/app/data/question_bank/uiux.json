@@ -1,0 +1,228 @@
+[
+  {
+    "id": "uiux_001",
+    "question": "What is the difference between UI design and UX design?",
+    "difficulty": "easy",
+    "tags": [
+      "ui-ux",
+      "fundamentals"
+    ]
+  },
+  {
+    "id": "uiux_002",
+    "question": "Explain the concept of visual hierarchy and how it guides a user's attention on a screen.",
+    "difficulty": "easy",
+    "tags": [
+      "ui-ux",
+      "visual-design"
+    ]
+  },
+  {
+    "id": "uiux_003",
+    "question": "Walk through your process for conducting user research before designing a new feature.",
+    "difficulty": "medium",
+    "tags": [
+      "ui-ux",
+      "user-research"
+    ]
+  },
+  {
+    "id": "uiux_004",
+    "question": "How would you design an accessible interface for users with visual impairments? What specific techniques would you apply?",
+    "difficulty": "medium",
+    "tags": [
+      "ui-ux",
+      "accessibility"
+    ]
+  },
+  {
+    "id": "uiux_005",
+    "question": "Design the end-to-end UX flow for a complex multi-step onboarding process, minimizing drop-off at each step.",
+    "difficulty": "hard",
+    "tags": [
+      "ui-ux",
+      "system-design",
+      "onboarding"
+    ]
+  },
+  {
+    "id": "uiux_006",
+    "question": "Describe a scenario where a single-screen layout would be more effective than a multi-screen layout. What design considerations would you prioritize in this scenario?",
+    "difficulty": "easy",
+    "tags": [
+      "layout",
+      "decision-making"
+    ]
+  },
+  {
+    "id": "uiux_007",
+    "question": "Design a feedback system for a web application that allows users to submit and edit text, with a focus on providing clear and timely feedback on successful and unsuccessful actions.",
+    "difficulty": "easy",
+    "tags": [
+      "feedback",
+      "interaction design"
+    ]
+  },
+  {
+    "id": "uiux_008",
+    "question": "Compare the use of micro-interactions and animations in UI design. How would you choose between these two techniques for a specific design problem?",
+    "difficulty": "easy",
+    "tags": [
+      "animation",
+      "micro-interactions"
+    ]
+  },
+  {
+    "id": "uiux_009",
+    "question": "Imagine you're tasked with creating a UI kit for a team of developers. What design assets would you include in the kit, and why?",
+    "difficulty": "easy",
+    "tags": [
+      "UI kit",
+      "design system"
+    ]
+  },
+  {
+    "id": "uiux_010",
+    "question": "How would you approach designing a UI for an application that has limited screen real estate, such as a smartwatch or a dashboard?",
+    "difficulty": "easy",
+    "tags": [
+      "mobile",
+      "device-specific UI"
+    ]
+  },
+  {
+    "id": "uiux_011",
+    "question": "Describe the process for conducting A/B testing on a UI design. What metrics would you measure, and how would you interpret the results?",
+    "difficulty": "easy",
+    "tags": [
+      "A/B testing",
+      "usability testing"
+    ]
+  },
+  {
+    "id": "uiux_012",
+    "question": "Design a system of color-coded icons for a web application that requires users to distinguish between multiple categories. What design principles would guide your decision-making process?",
+    "difficulty": "easy",
+    "tags": [
+      "iconography",
+      "color theory"
+    ]
+  },
+  {
+    "id": "uiux_013",
+    "question": "Describe the role of micro-interactions in enhancing user engagement and how you would design a micro-interaction to indicate a successful form submission.",
+    "difficulty": "medium",
+    "tags": [
+      "interaction design",
+      "usability"
+    ]
+  },
+  {
+    "id": "uiux_014",
+    "question": "Explain how you would approach designing a product for a global audience, accounting for differences in language, culture, and accessibility needs, using the example of a digital banking app.",
+    "difficulty": "medium",
+    "tags": [
+      "global design",
+      "cultural sensitivity"
+    ]
+  },
+  {
+    "id": "uiux_015",
+    "question": "How would you balance the number of features in a product to maintain user engagement while avoiding feature fatigue, and provide an example of a product where this balance was well executed?",
+    "difficulty": "medium",
+    "tags": [
+      "product management",
+      "feature prioritization"
+    ]
+  },
+  {
+    "id": "uiux_016",
+    "question": "Design a simple and intuitive navigation system for a website with a complex information architecture, such as an online university course catalog, and explain your design decisions.",
+    "difficulty": "medium",
+    "tags": [
+      "information architecture",
+      "navigation design"
+    ]
+  },
+  {
+    "id": "uiux_017",
+    "question": "Explain the concept of affordance in UX design and provide an example of a well-designed product that effectively communicates its affordances to the user.",
+    "difficulty": "medium",
+    "tags": [
+      "affordance",
+      "usability principles"
+    ]
+  },
+  {
+    "id": "uiux_018",
+    "question": "How would you design a product that requires users to make a tough decision or trade-off, such as a budgeting app that requires users to choose between saving for short-term and long-term goals, and explain how you would mitigate potential decision fatigue?",
+    "difficulty": "medium",
+    "tags": [
+      "decision-making",
+      "trade-off design"
+    ]
+  },
+  {
+    "id": "uiux_019",
+    "question": "Describe a scenario where you would use A/B testing to evaluate the effectiveness of a design change and outline a plan for conducting a statistically significant A/B test with a small sample size.",
+    "difficulty": "medium",
+    "tags": [
+      "A/B testing",
+      "design experimentation"
+    ]
+  },
+  {
+    "id": "uiux_020",
+    "question": "Design a conversational UI for an existing e-commerce application, incorporating both explicit and implicit contextual information. How would you utilize the conversational interface to personalize product recommendations and improve user engagement?",
+    "difficulty": "hard",
+    "tags": [
+      "conversational design",
+      "personalization"
+    ]
+  },
+  {
+    "id": "uiux_021",
+    "question": "You are tasked with redesigning a legacy web application that has a complex, nested information architecture. Propose a strategy for reorganizing and simplifying the IA, including techniques for categorizing and tagging content, and how you would involve stakeholders and users in the redesign process.",
+    "difficulty": "hard",
+    "tags": [
+      "information architecture",
+      "taxonomy design"
+    ]
+  },
+  {
+    "id": "uiux_022",
+    "question": "Create a UX design for an interactive data visualization dashboard, where users can explore and analyze complex data sets in real-time. Discuss the key principles and patterns you would employ to facilitate effective data exploration and decision-making.",
+    "difficulty": "hard",
+    "tags": [
+      "data visualization",
+      "interaction design"
+    ]
+  },
+  {
+    "id": "uiux_023",
+    "question": "A company wants to integrate a voice assistant into their existing mobile app. Describe the process you would follow to evaluate the feasibility of voice integration, identify potential use cases, and design a seamless voice-based user experience.",
+    "difficulty": "hard",
+    "tags": [
+      "voice UI",
+      "mobile app design"
+    ]
+  },
+  {
+    "id": "uiux_024",
+    "question": "Develop a strategy for creating an inclusive design language system that encompasses diverse cultures, languages, and abilities. How would you conduct research and create adaptable design components to accommodate these diverse requirements?",
+    "difficulty": "hard",
+    "tags": [
+      "inclusion design",
+      "design language system"
+    ]
+  },
+  {
+    "id": "uiux_025",
+    "question": "Propose a solution for designing a UI that can adapt to varying network conditions and device performance. Discuss the key design decisions and trade-offs involved in creating a responsive UI that balances user experience with performance constraints.",
+    "difficulty": "hard",
+    "tags": [
+      "responsive design",
+      "performance optimization"
+    ]
+  }
+]

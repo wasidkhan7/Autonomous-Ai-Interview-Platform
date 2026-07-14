@@ -1,0 +1,230 @@
+[
+  {
+    "id": "sql_001",
+    "question": "Explain the difference between INNER JOIN, LEFT JOIN, and RIGHT JOIN.",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "joins",
+      "fundamentals"
+    ]
+  },
+  {
+    "id": "sql_002",
+    "question": "What is database normalization, and what problems does it solve?",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "normalization"
+    ]
+  },
+  {
+    "id": "sql_003",
+    "question": "Explain how indexes work in SQL and how they impact read vs write performance.",
+    "difficulty": "medium",
+    "tags": [
+      "sql",
+      "indexing",
+      "performance"
+    ]
+  },
+  {
+    "id": "sql_004",
+    "question": "Write a query approach to find the second-highest salary in an employees table without using LIMIT/OFFSET.",
+    "difficulty": "medium",
+    "tags": [
+      "sql",
+      "queries"
+    ]
+  },
+  {
+    "id": "sql_005",
+    "question": "Design a database schema for a ride-sharing app handling millions of trips per day. How would you handle sharding?",
+    "difficulty": "hard",
+    "tags": [
+      "sql",
+      "system-design",
+      "scalability"
+    ]
+  },
+  {
+    "id": "sql_006",
+    "question": "A database contains a table with columns for orders, products, and customers. Write a query to retrieve all customers who have made at least one order with a product that costs more than $100. However, the query should also exclude customers who have made an order with a product that costs less than $50 and is called 'Discount Item'.",
+    "difficulty": "medium",
+    "tags": [
+      "joins",
+      "subqueries"
+    ]
+  },
+  {
+    "id": "sql_007",
+    "question": "Design a SQL query to retrieve a list of top 5 countries with the highest average income from a table containing data on income, country, and year. However, the query should only consider the data from the year 2020 and exclude any countries with a population of less than 10 million.",
+    "difficulty": "medium",
+    "tags": [
+      "window functions",
+      "grouping"
+    ]
+  },
+  {
+    "id": "sql_008",
+    "question": "An e-commerce website stores customer information in a database. Write a query to update the 'last_login' date for all customers who have not logged in for the past 6 months. However, the query should only consider customers who have made at least one purchase.",
+    "difficulty": "medium",
+    "tags": [
+      "update query",
+      "date functions"
+    ]
+  },
+  {
+    "id": "sql_009",
+    "question": "A database contains a table with columns for employees, departments, and managers. Write a query to retrieve the names of all employees who are managers, along with their department and the number of employees reporting to them. However, the query should also exclude departments with no reporting employees.",
+    "difficulty": "medium",
+    "tags": [
+      "joins",
+      "grouping"
+    ]
+  },
+  {
+    "id": "sql_010",
+    "question": "A company has a database with information on employees, job positions, and salary ranges. Write a query to retrieve the names of employees who have a salary above the average salary for their job position. However, the query should only consider job positions with at least 5 employees.",
+    "difficulty": "medium",
+    "tags": [
+      "aggregate functions",
+      "grouping"
+    ]
+  },
+  {
+    "id": "sql_011",
+    "question": "A database contains a table with columns for orders, order status, and dates. Write a query to retrieve a list of orders that have been shipped but not yet delivered, along with the date when they were shipped and the date when they were delivered (if known). However, the query should also handle the case where the delivery date is still unknown.",
+    "difficulty": "medium",
+    "tags": [
+      "date functions",
+      "conditional logic"
+    ]
+  },
+  {
+    "id": "sql_012",
+    "question": "A company wants to optimize the performance of a query that retrieves all customers with a specific order status. Write an explanation of how to use SQL tuning tools to improve the query, including any indexes or rewriting queries that may be necessary.",
+    "difficulty": "medium",
+    "tags": [
+      "query optimization",
+      "performance"
+    ]
+  },
+  {
+    "id": "sql_013",
+    "question": "You have a table 'transactions' with columns 'id', 'amount', 'time', and 'type'. Write a query to calculate the 90th percentile of transaction amounts over a rolling 30-day window. Assume that the time column is of type timestamp and the amount column is of type numeric.",
+    "difficulty": "hard",
+    "tags": [
+      "time-series",
+      "window-functions"
+    ]
+  },
+  {
+    "id": "sql_014",
+    "question": "Design a SQL schema to store a graph with millions of nodes and edges, where each node has a 'name' and a set of 'labels', and each edge has a 'source' and 'destination' node, along with a 'weight'. What indexing strategy would you use to optimize query performance for shortest path and node connectivity queries?",
+    "difficulty": "hard",
+    "tags": [
+      "graph-databases",
+      "indexing"
+    ]
+  },
+  {
+    "id": "sql_015",
+    "question": "A table 'users' has columns 'id', 'email', 'join_date', and 'last_login'. Write a query to find the 3 users who have been inactive (i.e., have not logged in) the longest, considering only users who have a last login date before 6 months ago. Also, return the total number of active users.",
+    "difficulty": "hard",
+    "tags": [
+      "window-functions",
+      "conditional-statements"
+    ]
+  },
+  {
+    "id": "sql_016",
+    "question": "You are given a table 'web_logs' with columns 'ip_address', 'request_path', 'http_method', and 'status_code'. Write a query to count the number of unique IP addresses that have made requests to the same resource more than 5 times within a 1-hour window.",
+    "difficulty": "hard",
+    "tags": [
+      "time-series",
+      "cassandra-queries"
+    ]
+  },
+  {
+    "id": "sql_017",
+    "question": "Design a database schema to store a social network graph where each node represents a user and each edge represents a friendship. How would you implement a query to find the shortest path between two users who are connected indirectly through a common friend?",
+    "difficulty": "hard",
+    "tags": [
+      "graph-databases",
+      "shortest-paths"
+    ]
+  },
+  {
+    "id": "sql_018",
+    "question": "A table 'orders' has columns 'id', 'customer_id', 'order_date', and 'total'. Write a query to find the total revenue for each customer over the past year, grouped by customer type (e.g., individual, business), and also return the customer with the highest total revenue.",
+    "difficulty": "hard",
+    "tags": [
+      "grouping",
+      "conditional-statements"
+    ]
+  },
+  {
+    "id": "sql_019",
+    "question": "Design a SQL query to retrieve the month with the highest average order value in a table that contains information on orders, products, and customers. However, the query should also exclude months with less than 100 orders.",
+    "difficulty": "easy",
+    "tags": [
+      "aggregation",
+      "filtering"
+    ]
+  },
+  {
+    "id": "sql_020",
+    "question": "A company has a database with information on employees, job positions, and salary ranges. Write a query to retrieve the names of employees who have a job position with a salary range that has a minimum value above the average minimum salary range across all job positions.",
+    "difficulty": "easy",
+    "tags": [
+      "window functions",
+      "aggregation"
+    ]
+  },
+  {
+    "id": "sql_021",
+    "question": "Design a database schema for an online marketplace that handles millions of products, sellers, and customers. How would you handle denormalization and caching to improve read performance?",
+    "difficulty": "easy",
+    "tags": [
+      "database design",
+      "performance optimization"
+    ]
+  },
+  {
+    "id": "sql_022",
+    "question": "A database contains a table with columns for users, activities, and timestamps. Write a query to retrieve the top 5 most active users for each day of the week, but the activity count should be based on the number of minutes spent on the platform, not the number of activities.",
+    "difficulty": "easy",
+    "tags": [
+      "window functions",
+      "aggregation"
+    ]
+  },
+  {
+    "id": "sql_023",
+    "question": "An e-commerce website stores customer information in a database. Write a query to retrieve the names of customers who have made purchases in all 12 months of the year 2020.",
+    "difficulty": "easy",
+    "tags": [
+      "filtering",
+      "aggregation"
+    ]
+  },
+  {
+    "id": "sql_024",
+    "question": "A company has a database with information on employees, job titles, and work history. Write a query to retrieve the most common job title for employees who have worked in the same department for more than 5 years.",
+    "difficulty": "easy",
+    "tags": [
+      "grouping",
+      "filtering"
+    ]
+  },
+  {
+    "id": "sql_025",
+    "question": "Design a SQL query to retrieve the top 3 countries with the highest total sales from a table containing data on sales, products, and countries. However, the query should only consider sales data from the year 2021 and should exclude countries with a total sales amount below $10 million.",
+    "difficulty": "easy",
+    "tags": [
+      "aggregation",
+      "filtering"
+    ]
+  }
+]
