@@ -5,6 +5,8 @@ from app.config import get_settings
 from app.db.session import engine, Base
 from app.api import candidates
 
+from app.api import evaluation
+
 from app.api import interviews
 
 settings = get_settings()
@@ -31,6 +33,8 @@ app.add_middleware(
 app.include_router(candidates.router)
 
 app.include_router(interviews.router)
+
+app.include_router(evaluation.router)
 
 @app.get("/health")
 def health_check():

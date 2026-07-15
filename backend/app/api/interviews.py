@@ -3,6 +3,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
+from app.modules.evaluation import run_full_evaluation
+
 from app.db.session import get_db
 from app.db.models import Candidate, Interview, InterviewResponse
 from app.modules.agent.interview_graph import start_interview, process_answer_turn
@@ -58,7 +60,6 @@ def answer(interview_id: int, payload: AnswerRequest, db: Session = Depends(get_
     if not state:
         raise HTTPException(status_code=400, detail="Interview has no active session state.")
 
-    # Log the just-answered Q&A as a permanent record before advancing state
     response_record = InterviewResponse(
         interview_id=interview_id,
         question_text=state["current_question_text"],
@@ -74,10 +75,21 @@ def answer(interview_id: int, payload: AnswerRequest, db: Session = Depends(get_
         interview.status = "completed"
         interview.ended_at = datetime.now(timezone.utc)
         db.commit()
+
+        # Automatic evaluation trigger — runs synchronously right here
+        report = run_full_evaluation(db, interview_id)
+
         return {
             "interview_id": interview_id,
             "status": "completed",
-            "message": "Interview complete. Report generation happens in a later module.",
+            "report": {
+                "summary": report.summary,
+                "strengths": report.strengths,
+                "weaknesses": report.weaknesses,
+                "learning_plan": report.learning_plan,
+                "hiring_recommendation": report.hiring_recommendation,
+                "ai_confidence_score": report.ai_confidence_score,
+            },
         }
 
     return {
