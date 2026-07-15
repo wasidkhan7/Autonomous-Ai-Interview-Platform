@@ -10,6 +10,32 @@ router = APIRouter(prefix="/evaluation", tags=["evaluation"])
 class MentorOverrideRequest(BaseModel):
     override: str  # "approve" | "reject" | "needs_review"
 
+@router.get("/")
+def list_all_reports(db: Session = Depends(get_db)):
+    """
+    Lists every completed interview that has a report, for the mentor
+    dashboard's overview table. Joins candidate info so the frontend
+    doesn't need a second round-trip per row.
+    """
+    reports = db.query(InterviewReport).all()
+
+    results = []
+    for report in reports:
+        interview = report.interview
+        candidate = interview.candidate
+        results.append({
+            "interview_id": interview.id,
+            "candidate_name": candidate.full_name,
+            "candidate_email": candidate.email,
+            "technology": candidate.technology,
+            "experience_level": candidate.experience_level,
+            "hiring_recommendation": report.hiring_recommendation,
+            "ai_confidence_score": report.ai_confidence_score,
+            "mentor_override": report.mentor_override,
+        })
+
+    return results
+
 
 @router.get("/{interview_id}")
 def get_report(interview_id: int, db: Session = Depends(get_db)):
@@ -64,3 +90,4 @@ def override_recommendation(interview_id: int, payload: MentorOverrideRequest, d
     db.commit()
 
     return {"interview_id": interview_id, "mentor_override": report.mentor_override}
+

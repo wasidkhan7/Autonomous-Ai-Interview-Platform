@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-slate-900: #1E2A38;
+  --color-indigo-600: #4C5FD5;
+  --color-amber-500: #E8A33D;
+  --color-emerald-600: #3FA65B;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #F7F8FA;
+}
