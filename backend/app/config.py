@@ -22,12 +22,18 @@ class Settings(BaseSettings):
     ELEVENLABS_API_KEY: str = ""
     WHISPER_MODEL_SIZE: str = "small"  # base | small | medium
 
+
+    OPENAI_API_KEY: str = ""
+    # OpenAI
+    
+
     class Config:
         env_file = ".env"
         case_sensitive = True
 
 
 @lru_cache
+
 def get_settings() -> Settings:
     """
     Cached so we don't re-read/re-validate the .env file on every

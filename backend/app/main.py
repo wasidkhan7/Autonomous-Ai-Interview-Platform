@@ -9,6 +9,8 @@ from app.api import evaluation
 
 from app.api import interviews
 
+from app.api import voice_interview
+
 settings = get_settings()
 
 
@@ -35,6 +37,8 @@ app.include_router(candidates.router)
 app.include_router(interviews.router)
 
 app.include_router(evaluation.router)
+
+app.include_router(voice_interview.router)
 
 @app.get("/health")
 def health_check():
