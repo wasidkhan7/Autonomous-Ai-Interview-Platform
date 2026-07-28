@@ -1,11 +1,12 @@
 from typing import TypedDict, Optional
 from langgraph.graph import StateGraph, END
+
 from app.modules.agent.question_gen import (
-    evaluate_answer_completeness,
-    judge_answer_strength,
+    evaluate_answer,
     adjust_difficulty,
     generate_followup,
-    get_next_question,
+    build_question_pool,
+    get_next_question_from_pool,
 )
 
 MAX_QUESTIONS = 6
@@ -24,13 +25,19 @@ class InterviewState(TypedDict):
     conversation_history: list
     status: str          # "in_progress" | "completed"
     next_output: Optional[str]   # the question/follow-up text to send back to the candidate
-    answer_complete: bool        
+    answer_complete: bool     
+    answer_strength: str
+    question_pool: list    
 
 
 def node_evaluate_answer(state: InterviewState) -> InterviewState:
-    """Decide: was the last answer complete enough to move on?"""
-    result = evaluate_answer_completeness(state["current_question_text"], state["last_answer"])
+    """
+    Decide: was the last answer complete enough to move on, and how
+    strong was it? Both come from ONE LLM call now instead of two.
+    """
+    result = evaluate_answer(state["current_question_text"], state["last_answer"])
     state["answer_complete"] = result["complete"]
+    state["answer_strength"] = result["strength"]  # stash this for the next node to reuse
     return state
 
 
@@ -41,14 +48,8 @@ def node_generate_followup(state: InterviewState) -> InterviewState:
     state["next_output"] = followup
     return state
 
-
 def node_adjust_and_advance(state: InterviewState) -> InterviewState:
-    """
-    Answer was complete (or follow-up limit reached): judge strength,
-    adjust difficulty, then either fetch the next question or end.
-    """
-    strength = judge_answer_strength(state["current_question_text"], state["last_answer"])
-    state["difficulty"] = adjust_difficulty(state["difficulty"], strength)
+    state["difficulty"] = adjust_difficulty(state["difficulty"], state["answer_strength"])
     state["follow_up_count"] = 0
     state["question_count"] += 1
 
@@ -57,7 +58,7 @@ def node_adjust_and_advance(state: InterviewState) -> InterviewState:
         state["next_output"] = None
         return state
 
-    next_q = get_next_question(state["technology"], state["difficulty"], state["asked_question_ids"])
+    next_q = get_next_question_from_pool(state["question_pool"], state["difficulty"], state["asked_question_ids"])
     if next_q is None:
         state["status"] = "completed"
         state["next_output"] = None
@@ -69,8 +70,6 @@ def node_adjust_and_advance(state: InterviewState) -> InterviewState:
     state["conversation_history"].append({"role": "agent", "content": next_q["question"]})
     state["next_output"] = next_q["question"]
     return state
-
-
 def route_after_evaluation(state: InterviewState) -> str:
     if not state["answer_complete"] and state["follow_up_count"] < MAX_FOLLOWUPS_PER_QUESTION:
         return "followup"
@@ -105,14 +104,9 @@ def build_answer_turn_graph():
 answer_turn_graph = build_answer_turn_graph()
 
 
-def start_interview(technology: str) -> InterviewState:
-    """
-    Starting an interview needs no evaluation step (no answer exists yet),
-    so this is plain Python rather than a graph node — running a
-    single-node graph just to fetch one question would be overhead
-    without benefit.
-    """
-    first_q = get_next_question(technology, difficulty="easy", asked_ids=[])
+def start_interview(technology: str, db) -> InterviewState:
+    pool = build_question_pool(technology, db)
+    first_q = get_next_question_from_pool(pool, difficulty="easy", asked_ids=[])
     if first_q is None:
         raise ValueError(f"No questions available for technology '{technology}'")
 
@@ -129,6 +123,8 @@ def start_interview(technology: str) -> InterviewState:
         "status": "in_progress",
         "next_output": first_q["question"],
         "answer_complete": False,
+        "answer_strength": "average",
+        "question_pool": pool,
     }
     return state
 

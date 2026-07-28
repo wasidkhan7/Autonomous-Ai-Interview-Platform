@@ -3,6 +3,12 @@ from app.config import get_settings
 from app.modules.question_bank.embeddings import embed_text
 from app.modules.question_bank.pinecone_db import query_questions
 
+import random
+from app.modules.question_bank.usage_tracker import get_usage_counts
+
+import json 
+import re 
+
 settings = get_settings()
 
 llm = ChatGroq(api_key=settings.GROQ_API_KEY, model=settings.LLM_MODEL, temperature=0.3)
@@ -38,49 +44,44 @@ def get_next_question(technology: str, difficulty: str, asked_ids: list[str]) ->
     }
 
 
-def evaluate_answer_completeness(question: str, answer: str) -> dict:
+def evaluate_answer(question: str, answer: str) -> dict:
     """
-    Lightweight, fast check: is this answer complete enough to move on,
-    or vague/incomplete enough to warrant a follow-up?
-
-    Deliberately NOT the full scoring rubric — that's Module 5's job and
-    runs after the interview ends, scoring every answer in depth. This
-    check only needs to make one cheap in-the-moment decision so the
-    conversation can flow naturally.
+    Combines what used to be two separate LLM calls (evaluate_answer_completeness
+    and judge_answer_strength) into ONE call, cutting a full network round-trip
+    per turn. Same information is returned - completeness AND strength - just
+    gathered in a single request instead of two sequential ones.
     """
     prompt = f"""You are assessing an interview answer in real time.
 
 Question: {question}
 Candidate's answer: {answer}
 
-Respond with ONLY one word: "complete" if the answer meaningfully addresses
-the question, or "incomplete" if it's vague, off-topic, or clearly missing
-key substance. Do not explain, just the single word."""
+Evaluate this answer on two dimensions and return ONLY a JSON object,
+no preamble, no markdown fences:
+
+{{
+  "complete": true or false - does this answer meaningfully address the
+    question, or is it vague/off-topic/missing key substance?,
+  "strength": "strong" or "average" or "weak" - how well did this answer
+    demonstrate technical understanding?
+}}"""
 
     response = llm.invoke(prompt)
-    verdict = response.content.strip().lower()
-    return {"complete": "complete" in verdict}
+    raw = response.content.strip()
+    raw = re.sub(r"^```json\s*|\s*```$", "", raw)
 
-
-def judge_answer_strength(question: str, answer: str) -> str:
-    """
-    Separate lightweight signal used only to move difficulty up/down —
-    not a score, just a rough strong/weak read so the next question
-    is appropriately harder or easier. Full scoring happens in Module 5.
-    """
-    prompt = f"""Question: {question}
-Answer: {answer}
-
-Respond with ONLY one word: "strong", "average", or "weak" — how well
-did this answer demonstrate technical understanding?"""
-
-    response = llm.invoke(prompt)
-    verdict = response.content.strip().lower()
-    if "strong" in verdict:
-        return "strong"
-    elif "weak" in verdict:
-        return "weak"
-    return "average"
+    try:
+        parsed = json.loads(raw)
+        return {
+            "complete": bool(parsed.get("complete", True)),
+            "strength": parsed.get("strength", "average"),
+        }
+    except json.JSONDecodeError:
+        # Fail safe: if parsing breaks, default to "complete" (move on
+        # rather than looping on follow-ups) and "average" (no difficulty
+        # swing either direction) - never let a parsing bug stall the interview.
+        return {"complete": True, "strength": "average"}
+    
 
 
 def adjust_difficulty(current_difficulty: str, strength: str) -> str:
@@ -105,3 +106,60 @@ Follow-up question:"""
 
     response = llm.invoke(prompt)
     return response.content.strip()
+
+
+POOL_PER_DIFFICULTY = 3   # how many candidates to keep per difficulty tier
+MAX_REPEAT_ALLOWED = 3    # a question stops being offered after this many total uses
+
+
+def build_question_pool(technology: str, db) -> list[dict]:
+    """
+    Called ONCE at interview start - fetches a small pool of questions per
+    difficulty tier from Pinecone (3 calls total, not one per turn), filters
+    out overused questions, and shuffles for randomness across interviews.
+    """
+    pool = []
+
+    for difficulty in DIFFICULTY_ORDER:
+        query_text = f"a {difficulty} difficulty technical interview question about {technology}"
+        query_vector = embed_text(query_text)
+        matches = query_questions(query_vector, namespace=technology.lower(), top_k=15, difficulty=difficulty)
+
+        candidate_ids = [m["id"] for m in matches]
+        usage_counts = get_usage_counts(db, candidate_ids)
+
+        eligible = [m for m in matches if usage_counts.get(m["id"], 0) < MAX_REPEAT_ALLOWED]
+        if not eligible:
+            # Every candidate is already over the repeat cap - fall back to
+            # using them anyway rather than leaving this difficulty empty.
+            eligible = matches
+
+        random.shuffle(eligible)
+        selected = eligible[:POOL_PER_DIFFICULTY]
+
+        for m in selected:
+            pool.append({
+                "id": m["id"],
+                "question": m["metadata"]["question"],
+                "difficulty": difficulty,
+            })
+
+    random.shuffle(pool)
+    return pool
+
+
+def get_next_question_from_pool(pool: list[dict], difficulty: str, asked_ids: list[str]) -> dict | None:
+    """
+    Picks the next question from the ALREADY-FETCHED pool - no network call.
+    Prefers matching the requested difficulty; falls back to any unused
+    question in the pool if that difficulty is exhausted.
+    """
+    for q in pool:
+        if q["difficulty"] == difficulty and q["id"] not in asked_ids:
+            return q
+
+    for q in pool:
+        if q["id"] not in asked_ids:
+            return q
+
+    return None

@@ -67,4 +67,11 @@ class InterviewReport(Base):
 
     interview = relationship("Interview", back_populates="report")
 
-    
+
+class QuestionUsage(Base):
+    __tablename__ = "question_usage"
+
+    id = Column(Integer, primary_key=True, index=True)
+    question_id = Column(String, unique=True, nullable=False, index=True)
+    times_used = Column(Integer, default=1)
+    last_used_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())    
