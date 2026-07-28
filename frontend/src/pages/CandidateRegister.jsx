@@ -67,8 +67,9 @@ function CandidateRegister() {
         state: {
           firstQuestion: startResponse.data.question,
           difficulty: startResponse.data.difficulty,
+          audioUrl: startResponse.data.audio_url,
         },
-      });
+      }); 
     } catch (err) {
       const detail = err.response?.data?.detail || "Something went wrong. Please try again.";
       setErrorMessage(detail);
