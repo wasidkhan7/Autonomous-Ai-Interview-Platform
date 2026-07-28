@@ -34,20 +34,12 @@ function InterviewRoom() {
   const isQuestionPlayingRef = useRef(false);
 
 
-  useEffect(() => {
-    const firstQuestion = location.state?.firstQuestion;
-    const firstAudioUrl = location.state?.firstAudioUrl;
 
-    if (firstQuestion) {
-      setConversation([{ role: "agent", content: firstQuestion, audioUrl: firstAudioUrl }]);
-      if (firstAudioUrl && audioPlayerRef.current) {
-        audioPlayerRef.current.src = `http://localhost:8000${firstAudioUrl}`;
-        audioPlayerRef.current.play().catch(() => setNeedsManualPlay(true));
-      }
-    } else {
-      // No navigation state = page refresh or direct load. Rebuild from backend.
-      resumeInterview();
-    }
+  useEffect(() => {
+    // ALWAYS rebuild from the backend. location.state can't be used as a
+    // "just arrived" signal - React Router stores it in the History API,
+    // so it survives a refresh and would reset us to question one.
+    resumeInterview();
 
     return () => {
       if (wsRef.current) wsRef.current.close();
@@ -63,15 +55,27 @@ function InterviewRoom() {
   async function resumeInterview() {
     try {
       const response = await apiClient.get(`/interviews/${interviewId}/resume`);
+
       if (response.data.status === "completed") {
         setIsCompleted(true);
         setReport(response.data.report);
         return;
       }
-      setConversation(response.data.conversation);
-      setNeedsManualPlay(true);
+
+      const restored = response.data.conversation || [];
+      setConversation(restored);
+
+      // Try to autoplay the pending question; browsers block autoplay without
+      // a recent user gesture, so fall back to the manual button.
+      const lastAgent = [...restored].reverse().find((m) => m.role === "agent");
+      if (lastAgent?.audioUrl && audioPlayerRef.current) {
+        audioPlayerRef.current.src = `http://localhost:8000${lastAgent.audioUrl}`;
+        audioPlayerRef.current.play().catch(() => setNeedsManualPlay(true));
+      } else {
+        setNeedsManualPlay(true);
+      }
     } catch (err) {
-      setErrorMessage("Could not restore this interview. It may not exist or may have expired.");
+      setErrorMessage("Could not restore this interview. Please refresh, or contact your mentor.");
     }
   }
 
