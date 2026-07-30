@@ -10,7 +10,7 @@ from starlette.websockets import WebSocketState
 from app.db.session import SessionLocal
 from app.db.models import Interview, InterviewResponse
 from app.modules.voice.audio_buffer import audio_buffer_manager
-from app.modules.voice.stt_whisper import transcribe_final
+from app.modules.voice.stt_whisper import transcribe_final, transcribe_partial
 from app.modules.voice.tts_openai import synthesize_speech
 from app.modules.agent.memory import get_session_state, save_session_state
 from app.modules.agent.interview_graph import process_answer_turn
@@ -73,6 +73,8 @@ async def voice_answer_stream(websocket: WebSocket, interview_id: int):
 
     db = SessionLocal()
 
+    chunk_count = 0
+
     try:
         while True:
             try:
@@ -82,8 +84,27 @@ async def voice_answer_stream(websocket: WebSocket, interview_id: int):
                     break
 
                 # --- Audio chunk: buffer it and wait for more ---
+                # --- Audio chunk: buffer it, and every few chunks send back a
+                # rough live caption so the candidate can see they're being heard ---
                 if "bytes" in message and message["bytes"] is not None:
-                    audio_buffer_manager.append_chunk(interview_id, message["bytes"])
+                    chunk_count += 1
+                    buffer_so_far = audio_buffer_manager.append_chunk(
+                        interview_id, message["bytes"]
+                    )
+
+                    if chunk_count % 5 == 0:
+                        try:
+                            partial = await asyncio.to_thread(transcribe_partial, buffer_so_far)
+                            if partial.strip():
+                                await safe_send(websocket, {
+                                    "type": "partial_transcript",
+                                    "text": partial,
+                                })
+                        except Exception:
+                            # A growing, not-yet-complete WebM buffer can fail to
+                            # decode mid-stream. Skip this caption rather than
+                            # killing the connection - the final pass is what counts.
+                            pass
                     continue
 
                 # --- Anything that isn't a text control message: ignore ---
@@ -177,6 +198,8 @@ async def voice_answer_stream(websocket: WebSocket, interview_id: int):
                     "type": "next_question",
                     "question": next_question_text,
                     "difficulty": new_state["difficulty"],
+                    "question_count": new_state["question_count"],
+                    "total_questions": new_state["max_questions"],
                     "audio_url": f"/voice/audio/{Path(audio_path).name}",
                     "status": new_state["status"],
                 })
@@ -200,6 +223,7 @@ async def voice_answer_stream(websocket: WebSocket, interview_id: int):
 
     finally:
         audio_buffer_manager.clear(interview_id)
+        chunk_count = 0
         if active_connections.get(interview_id) is websocket:
             del active_connections[interview_id]
         db.close()

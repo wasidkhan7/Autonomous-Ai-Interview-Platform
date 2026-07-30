@@ -48,7 +48,7 @@ def transcribe_partial(audio_buffer: bytes) -> str:
     """
     if not audio_buffer:
         return ""
-    return _transcribe_bytes(audio_buffer, beam_size=1)
+    return _transcribe_bytes(audio_buffer, beam_size=3)
 
 
 def transcribe_final(audio_buffer: bytes) -> str:
@@ -60,4 +60,4 @@ def transcribe_final(audio_buffer: bytes) -> str:
     """
     if not audio_buffer:
         return ""
-    return _transcribe_bytes(audio_buffer, beam_size=2)
+    return _transcribe_bytes(audio_buffer, beam_size=3)

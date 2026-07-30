@@ -1,12 +1,17 @@
 import { useState, useEffect, useRef } from "react";
-import { useParams, useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import apiClient from "../api/client";
+
+const LABEL = "font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-[#5A6478]";
 
 function InterviewRoom() {
   const { interviewId } = useParams();
-  const location = useLocation();
 
   const [conversation, setConversation] = useState([]);
+  const [questionCount, setQuestionCount] = useState(null);
+  // Total comes from the backend now - it's per-candidate (10 for junior,
+  // 12 for mid/senior). 10 is just the value shown before the first payload lands.
+  const [totalQuestions, setTotalQuestions] = useState(10);
   const [isRecording, setIsRecording] = useState(false);
   const [isTranscribing, setIsTranscribing] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
@@ -15,6 +20,7 @@ function InterviewRoom() {
   const [needsManualPlay, setNeedsManualPlay] = useState(false);
   const [hasSpoken, setHasSpoken] = useState(false);
   const [isQuestionPlaying, setIsQuestionPlaying] = useState(false);
+  const [liveCaption, setLiveCaption] = useState("");
 
   const wsRef = useRef(null);
   const mediaRecorderRef = useRef(null);
@@ -32,8 +38,8 @@ function InterviewRoom() {
   // Ref version for the synchronous guard inside startRecording - state
   // alone can lag behind a fast click.
   const isQuestionPlayingRef = useRef(false);
-
-
+  // Written to directly from the audio loop - see checkVolume below.
+  const levelBarRef = useRef(null);
 
   useEffect(() => {
     // ALWAYS rebuild from the backend. location.state can't be used as a
@@ -64,6 +70,8 @@ function InterviewRoom() {
 
       const restored = response.data.conversation || [];
       setConversation(restored);
+      if (response.data.question_count) setQuestionCount(response.data.question_count);
+      if (response.data.total_questions) setTotalQuestions(response.data.total_questions);
 
       // Try to autoplay the pending question; browsers block autoplay without
       // a recent user gesture, so fall back to the manual button.
@@ -75,7 +83,7 @@ function InterviewRoom() {
         setNeedsManualPlay(true);
       }
     } catch (err) {
-      setErrorMessage("Could not restore this interview. Please refresh, or contact your mentor.");
+      setErrorMessage("Couldn't load this interview. Refresh the page, or contact your mentor.");
     }
   }
 
@@ -84,7 +92,7 @@ function InterviewRoom() {
     audioPlayerRef.current.src = `http://localhost:8000${audioUrl}`;
     audioPlayerRef.current.play().catch(() => {});
   }
-  
+
   function setQuestionPlaying(playing) {
     isQuestionPlayingRef.current = playing;
     setIsQuestionPlaying(playing);
@@ -97,16 +105,16 @@ function InterviewRoom() {
   }
 
   async function startRecording() {
-
     // Don't let the mic open while the question is being read aloud -
     // otherwise the speakers bleed into the mic and Whisper transcribes
     // the interviewer's own question as the candidate's answer.
     if (isStartingRef.current || isRecording || isTranscribing || isQuestionPlayingRef.current) return;
-    
+
     isStartingRef.current = true;
 
     setErrorMessage("");
     setHasSpoken(false);
+    // setLiveCaption("");
     hasSpokenRef.current = false;
     gotServerMessageRef.current = false;
 
@@ -130,7 +138,7 @@ function InterviewRoom() {
         const supportedMimeType = preferredMimeTypes.find((t) => MediaRecorder.isTypeSupported(t));
 
         if (!supportedMimeType) {
-          setErrorMessage("Your browser doesn't support a compatible audio format.");
+          setErrorMessage("This browser can't record audio. Try Chrome or Firefox.");
           isStartingRef.current = false;
           ws.close();
           return;
@@ -140,7 +148,7 @@ function InterviewRoom() {
         try {
           mediaRecorder = new MediaRecorder(stream, { mimeType: supportedMimeType });
         } catch (err) {
-          setErrorMessage("Could not start audio recording on this browser.");
+          setErrorMessage("Couldn't start recording on this browser.");
           isStartingRef.current = false;
           ws.close();
           return;
@@ -153,7 +161,7 @@ function InterviewRoom() {
         };
 
         mediaRecorder.onerror = (event) => {
-          setErrorMessage("Recording error: " + event.error.message);
+          setErrorMessage("Recording stopped unexpectedly: " + event.error.message);
         };
 
         mediaRecorder.start(1000);
@@ -167,7 +175,7 @@ function InterviewRoom() {
         // Only show a generic message if the server never told us anything.
         // Otherwise its specific message (e.g. "No speech detected") stands.
         if (!gotServerMessageRef.current) {
-          setErrorMessage("Lost connection to the interview server. Please click Start Speaking to try again.");
+          setErrorMessage("Lost connection to the interview server. Press Start speaking to retry.");
         }
         isStartingRef.current = false;
         setIsTranscribing(false);
@@ -179,7 +187,7 @@ function InterviewRoom() {
 
       ws.onmessage = (event) => handleServerMessage(JSON.parse(event.data));
     } catch (err) {
-      setErrorMessage("Could not access microphone. Please allow mic permission.");
+      setErrorMessage("Couldn't reach your microphone. Allow mic access and try again.");
       isStartingRef.current = false;
     }
   }
@@ -194,7 +202,7 @@ function InterviewRoom() {
     source.connect(analyser);
 
     const dataArray = new Uint8Array(analyser.frequencyBinCount);
-    const SILENCE_THRESHOLD = 20;        // above typical mic noise floor
+    const SILENCE_THRESHOLD = 12;        // above typical mic noise floor
     const SILENCE_DURATION_MS = 6000;    // quiet this long -> auto-submit
     const FRAMES_TO_CONFIRM_SPEECH = 12; // ~0.2s of sustained sound
 
@@ -205,6 +213,14 @@ function InterviewRoom() {
 
       analyser.getByteFrequencyData(dataArray);
       const averageVolume = dataArray.reduce((sum, v) => sum + v, 0) / dataArray.length;
+
+      // Write the mic level straight to the DOM node. Routing this through
+      // React state would re-render the whole conversation 60 times a second
+      // for what is a decorative bar.
+      if (levelBarRef.current) {
+        const pct = Math.min(100, (averageVolume / 60) * 100);
+        levelBarRef.current.style.width = `${pct}%`;
+      }
 
       if (averageVolume < SILENCE_THRESHOLD) {
         loudFrameCount = 0;
@@ -242,7 +258,7 @@ function InterviewRoom() {
     if (!hasSpokenRef.current) {
       // Nothing was ever spoken - don't send an empty answer to the backend.
       // Keep recording so they can just start talking.
-      setErrorMessage("I didn't hear anything yet - please speak your answer.");
+      setErrorMessage("Nothing recorded yet. Speak your answer, then send it.");
       return;
     }
 
@@ -265,6 +281,7 @@ function InterviewRoom() {
     if (audioContextRef.current && audioContextRef.current.state !== "closed") {
       audioContextRef.current.close();
     }
+    if (levelBarRef.current) levelBarRef.current.style.width = "0%";
     isRecordingRef.current = false;
     setIsRecording(false);
   }
@@ -272,9 +289,14 @@ function InterviewRoom() {
   function handleServerMessage(data) {
     gotServerMessageRef.current = true;
 
+    if (data.type === "partial_transcript") {
+      // setLiveCaption(data.text);
+    }
+
     if (data.type === "final_transcript") {
       setConversation((prev) => [...prev, { role: "candidate", content: data.text }]);
       setIsTranscribing(false);
+      setLiveCaption("");
     }
 
     if (data.type === "next_question") {
@@ -282,6 +304,8 @@ function InterviewRoom() {
         ...prev,
         { role: "agent", content: data.question, audioUrl: data.audio_url },
       ]);
+      if (data.question_count) setQuestionCount(data.question_count);
+      if (data.total_questions) setTotalQuestions(data.total_questions);
       playAudio(data.audio_url);
       if (wsRef.current) wsRef.current.close();
     }
@@ -301,10 +325,14 @@ function InterviewRoom() {
 
   if (isCompleted && report) return <ReportView report={report} />;
 
-  return (
-    <div className="max-w-2xl mx-auto mt-8 px-6 flex flex-col h-[calc(100vh-80px)]">
-      <h1 className="text-xl font-bold text-slate-900 mb-4">Interview in Progress (Voice)</h1>
+  // Prefer the backend's count. If it isn't there yet, approximate from the
+  // transcript so the progress bar still moves.
+  const agentMessages = conversation.filter((m) => m.role === "agent").length;
+  const displayCount = questionCount ?? Math.min(totalQuestions, Math.max(1, agentMessages));
+  const progress = Math.min(100, (displayCount / totalQuestions) * 100);
 
+  return (
+    <div className="h-[calc(100vh-57px)] flex flex-col bg-[#F7F8FA]">
       <audio
         ref={audioPlayerRef}
         className="hidden"
@@ -314,85 +342,163 @@ function InterviewRoom() {
         onError={() => setQuestionPlaying(false)}
       />
 
-      {needsManualPlay && (
-        <button
-          onClick={playCurrentPendingQuestion}
-          className="mb-3 bg-slate-200 text-slate-900 text-sm px-4 py-2 rounded-md hover:bg-slate-300 self-start"
-        >
-          🔊 Play Current Question
-        </button>
-      )}
-
-      <div className="flex-1 overflow-y-auto space-y-4 pb-4">
-        {conversation.map((msg, idx) => (
-          <div key={idx} className={`flex ${msg.role === "agent" ? "justify-start" : "justify-end"}`}>
-            <div
-              className={`max-w-[80%] rounded-lg px-4 py-2.5 text-sm ${
-                msg.role === "agent"
-                  ? "bg-white border border-slate-200 text-slate-900"
-                  : "bg-indigo-600 text-white"
-              }`}
-            >
-              {msg.content}
-              {msg.role === "agent" && msg.audioUrl && (
-                <button
-                  onClick={() => playAudio(msg.audioUrl)}
-                  className="ml-2 text-xs text-indigo-600 underline"
-                >
-                  Replay
-                </button>
-              )}
-            </div>
+      {/* Header - progress is what a candidate most wants to know mid-interview */}
+      <header className="bg-white border-b border-[#EAEDF2] shrink-0">
+        <div className="max-w-3xl mx-auto px-6 py-3.5 flex items-end justify-between gap-4">
+          <div>
+            <p className={LABEL}>Ezitech · AutonomIQ</p>
+            <h1 className="text-xl font-semibold text-slate-900 mt-0.5">Technical interview</h1>
           </div>
-        ))}
+          <p className="font-mono text-[13px] text-[#5A6478] shrink-0">
+            Question <span className="text-slate-900 font-semibold">{displayCount}</span> of {totalQuestions}
+          </p>
+        </div>
+        <div className="h-0.5 bg-[#EAEDF2]">
+          <div
+            className="h-full bg-indigo-600 transition-all duration-500"
+            style={{ width: `${progress}%` }}
+          />
+        </div>
+      </header>
 
-        {isRecording && (
-          <div className="flex justify-end">
-            <div className="rounded-lg px-4 py-2.5 text-sm bg-indigo-100 text-indigo-900 italic">
-              {hasSpoken ? "Listening…" : "Waiting for you to speak…"}
+      {/* Conversation - anchored to the bottom so a short interview doesn't
+          leave the messages stranded at the top of an empty screen */}
+      <div className="flex-1 overflow-y-auto">
+        <div className="max-w-3xl mx-auto px-6 py-6 min-h-full flex flex-col justify-end gap-4">
+          {conversation.map((msg, idx) =>
+            msg.role === "agent" ? (
+              <AgentBubble
+                key={idx}
+                message={msg}
+                isLast={idx === conversation.length - 1}
+                needsPlay={needsManualPlay && idx === conversation.length - 1}
+                disabled={isRecording}
+                onPlay={() =>
+                  needsManualPlay && idx === conversation.length - 1
+                    ? playCurrentPendingQuestion()
+                    : playAudio(msg.audioUrl)
+                }
+              />
+            ) : (
+              <CandidateBubble key={idx} content={msg.content} />
+            )
+          )}
+
+          {isRecording && liveCaption && (
+            <div className="flex justify-end">
+              <div className="max-w-[85%] rounded-2xl rounded-br-md px-4 py-2.5 bg-indigo-100 text-indigo-900 text-[15px] italic">
+                {liveCaption}…
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {isTranscribing && (
-          <div className="flex justify-end">
-            <div className="rounded-lg px-4 py-2.5 text-sm bg-slate-200 text-slate-700 italic">
-              Transcribing your answer…
+          {isTranscribing && (
+            <div className="flex justify-end">
+              <div className="rounded-2xl rounded-br-md px-4 py-2.5 bg-[#EDEFF4] text-[#5A6478] text-[15px] italic">
+                Transcribing your answer…
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        <div ref={bottomRef} />
+          <div ref={bottomRef} />
+        </div>
       </div>
 
-      {errorMessage && (
-        <div className="bg-red-50 border border-red-200 text-red-700 text-sm rounded-md px-3 py-2 mb-3">
-          {errorMessage}
-        </div>
-      )}
+      {/* Control bar */}
+      <footer className="bg-white border-t border-[#EAEDF2] shrink-0">
+        <div className="max-w-3xl mx-auto px-6 py-4">
+          {errorMessage && (
+            <div className="bg-red-50 border border-red-200 text-red-700 text-[14px] rounded-md px-3 py-2 mb-3">
+              {errorMessage}
+            </div>
+          )}
 
-      <div className="border-t border-slate-200 pt-4 pb-6 flex justify-center gap-3">
-        {!isRecording ? (
-          <button
-            onClick={startRecording}
-            disabled={isTranscribing || isQuestionPlaying}
-            className="bg-indigo-600 text-white font-medium px-6 py-3 rounded-full hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          {/* Mic level - updated by direct DOM writes, not React state */}
+          <div
+            className={`h-1 bg-[#EAEDF2] rounded-full overflow-hidden mb-3 transition-opacity ${
+              isRecording ? "opacity-100" : "opacity-0"
+            }`}
           >
-            {isTranscribing
-              ? "Processing…"
-              : isQuestionPlaying
-              ? "Listen to the question…"
-              : "Start Speaking"}
-          </button>
-        ) : (
+            <div ref={levelBarRef} className="h-full bg-emerald-600 rounded-full" style={{ width: "0%" }} />
+          </div>
+
+          <div className="flex items-center gap-4">
+            <p className="text-[14px] text-[#5A6478] flex-1">
+              {isQuestionPlaying
+                ? "Listen to the question, then answer."
+                : isTranscribing
+                ? "Working on your answer…"
+                : isRecording && hasSpoken
+                ? "Recording. Send when you're finished, or pause and it'll send itself."
+                : isRecording
+                ? "Recording. Start speaking whenever you're ready."
+                : "Press to answer out loud."}
+            </p>
+
+            {!isRecording ? (
+              <button
+                onClick={startRecording}
+                disabled={isTranscribing || isQuestionPlaying}
+                className="shrink-0 bg-indigo-600 text-white text-[15px] font-medium px-6 py-2.5 rounded-full hover:bg-indigo-700 disabled:opacity-40 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 transition-colors"
+              >
+                {isTranscribing
+                  ? "Processing…"
+                  : isQuestionPlaying
+                  ? "Question playing…"
+                  : "Start speaking"}
+              </button>
+            ) : (
+              <button
+                onClick={finalizeAnswer}
+                disabled={!hasSpoken}
+                className="shrink-0 bg-emerald-600 text-white text-[15px] font-medium px-6 py-2.5 rounded-full hover:bg-emerald-700 disabled:opacity-40 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:ring-offset-2 transition-colors"
+              >
+                {hasSpoken ? "Send answer" : "Listening…"}
+              </button>
+            )}
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+function AgentBubble({ message, isLast, needsPlay, disabled, onPlay }) {
+  return (
+    <div className="flex justify-start">
+      <div
+        className={`max-w-[85%] rounded-2xl rounded-tl-md px-4 py-3 border ${
+          isLast ? "bg-white border-[#D8DDE6]" : "bg-white/70 border-[#EAEDF2]"
+        }`}
+      >
+        <p className={LABEL}>Interviewer</p>
+        <p className="text-[15px] text-slate-900 leading-relaxed mt-1.5">{message.content}</p>
+        {message.audioUrl && (
           <button
-            onClick={finalizeAnswer}
-            disabled={!hasSpoken}
-            className="bg-emerald-600 text-white font-medium px-6 py-3 rounded-full hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            onClick={onPlay}
+            disabled={disabled}
+            className={`mt-2.5 font-mono text-[11px] font-semibold uppercase tracking-wide px-2.5 py-1 rounded transition-colors disabled:opacity-40 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-indigo-600 ${
+              needsPlay
+                ? "bg-indigo-600 text-white hover:bg-indigo-700"
+                : "text-[#5A6478] bg-[#F1F3F7] hover:bg-[#E5E9F0]"
+            }`}
           >
-            {hasSpoken ? "Send Answer" : "Speak your answer…"}
+            {needsPlay ? "Play question" : "Replay"}
           </button>
         )}
+      </div>
+    </div>
+  );
+}
+
+function CandidateBubble({ content }) {
+  return (
+    <div className="flex justify-end">
+      <div className="max-w-[85%] rounded-2xl rounded-br-md px-4 py-3 bg-indigo-600">
+        <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-white/60">
+          You
+        </p>
+        <p className="text-[15px] text-white leading-relaxed mt-1.5">{content}</p>
       </div>
     </div>
   );
@@ -406,27 +512,43 @@ function ReportView({ report }) {
   }[report.hiring_recommendation] || "bg-slate-500";
 
   return (
-    <div className="max-w-2xl mx-auto mt-12 px-6 pb-12">
-      <h1 className="text-2xl font-bold text-slate-900 mb-1">Interview Complete</h1>
-      <p className="text-sm text-slate-500 mb-6">Here's your engineering assessment report.</p>
+    <div className="min-h-[calc(100vh-57px)] bg-[#F7F8FA] px-6 py-10">
+      <div className="max-w-2xl mx-auto">
+        <p className={LABEL}>Ezitech · AutonomIQ</p>
+        <h1 className="text-2xl font-semibold text-slate-900 mt-1">Interview complete</h1>
+        <p className="text-[15px] text-[#5A6478] mt-1.5 mb-6">
+          Here's your assessment. A mentor reviews this before any decision is made.
+        </p>
 
-      <div className="bg-white border border-slate-200 rounded-lg p-6 space-y-5">
-        <div className="flex items-center gap-3">
-          <span className={`text-white text-xs font-medium px-3 py-1 rounded-full ${recommendationColor}`}>
-            {report.hiring_recommendation.toUpperCase()}
-          </span>
-          <span className="text-xs text-slate-500 font-mono">
-            AI Confidence: {(report.ai_confidence_score * 100).toFixed(0)}%
-          </span>
+        <div className="bg-white border border-[#EAEDF2] rounded-lg p-6 space-y-6">
+          <div className="flex items-center gap-3 pb-4 border-b border-[#EAEDF2]">
+            <span
+              className={`text-white font-mono text-[10px] font-semibold tracking-wide px-2 py-0.5 rounded ${recommendationColor}`}
+            >
+              {report.hiring_recommendation.toUpperCase()}
+            </span>
+            <span className="font-mono text-[11px] text-[#5A6478]">
+              AI confidence {Math.round((report.ai_confidence_score || 0) * 100)}%
+            </span>
+          </div>
+
+          <Section title="Summary" body={report.summary} />
+          <Section title="Strengths" body={report.strengths} />
+          <Section title="Weaknesses" body={report.weaknesses} />
+          <Section title="Recommended learning plan" body={report.learning_plan} />
         </div>
-        <div><h3 className="text-sm font-semibold text-slate-900 mb-1">Summary</h3><p className="text-sm text-slate-700">{report.summary}</p></div>
-        <div><h3 className="text-sm font-semibold text-slate-900 mb-1">Strengths</h3><p className="text-sm text-slate-700">{report.strengths}</p></div>
-        <div><h3 className="text-sm font-semibold text-slate-900 mb-1">Weaknesses</h3><p className="text-sm text-slate-700">{report.weaknesses}</p></div>
-        <div><h3 className="text-sm font-semibold text-slate-900 mb-1">Recommended Learning Plan</h3><p className="text-sm text-slate-700">{report.learning_plan}</p></div>
       </div>
     </div>
   );
 }
 
-export default InterviewRoom;
+function Section({ title, body }) {
+  return (
+    <div>
+      <p className={LABEL}>{title}</p>
+      <p className="text-[15px] text-slate-700 mt-2 leading-[1.7]">{body}</p>
+    </div>
+  );
+}
 
+export default InterviewRoom;
