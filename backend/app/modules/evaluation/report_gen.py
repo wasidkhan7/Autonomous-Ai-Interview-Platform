@@ -53,7 +53,10 @@ Write a report with exactly these fields. Return ONLY a JSON object, no preamble
   "hiring_recommendation": "recommend | review | reject",
   "ai_confidence_score": 0.0
 }}
-
+Assess meaning, not language. The candidate is a non-native English speaker and
+the transcript came from speech-to-text, so grammar errors and misheard words are
+expected. Never criticise their English, vocabulary, or grammar in the report -
+comment only on technical substance and reasoning.
 ai_confidence_score should be a number between 0 and 1 representing how confident YOU are in this
 assessment given the transcript length and answer quality (lower if answers were very short or the
 interview ended early)."""
