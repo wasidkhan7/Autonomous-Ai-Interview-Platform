@@ -11,6 +11,9 @@ from app.api import interviews
 
 from app.api import voice_interview
 
+from app.api import analytics
+
+
 settings = get_settings()
 
 
@@ -39,6 +42,8 @@ app.include_router(interviews.router)
 app.include_router(evaluation.router)
 
 app.include_router(voice_interview.router)
+
+app.include_router(analytics.router)
 
 @app.get("/health")
 def health_check():
