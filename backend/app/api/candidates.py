@@ -49,6 +49,16 @@ def register_candidate(
         ).delete()
         db.commit()
 
+    # Normalise to the canonical casing so analytics doesn't split one track
+    # into two groups ("ai" and "AI" grouping separately).
+    CANONICAL_TRACKS = {
+        "ai": "AI", "mern": "MERN", "laravel": "Laravel", "flutter": "Flutter",
+        "python": "Python", "devops": "DevOps", "uiux": "UIUX", "sql": "SQL",
+        "data_structures": "Data_Structures", "system_design": "System_Design",
+    }
+    technology = CANONICAL_TRACKS.get(technology.strip().lower(), technology.strip())
+        
+
     # Save uploaded file to disk
     file_ext = Path(resume.filename).suffix.lower()
     if file_ext not in [".pdf", ".docx"]:
