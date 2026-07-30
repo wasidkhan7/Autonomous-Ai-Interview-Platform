@@ -2,10 +2,21 @@ import tempfile
 from pathlib import Path
 from faster_whisper import WhisperModel
 from app.config import get_settings
+from groq import Groq
 
 settings = get_settings()
 
 _model = None
+
+_groq_client = None
+
+
+def _get_groq_client():
+    global _groq_client
+    if _groq_client is None:
+        _groq_client = Groq(api_key=settings.GROQ_API_KEY)
+    return _groq_client
+
 
 
 def get_whisper_model():
@@ -53,11 +64,27 @@ def transcribe_partial(audio_buffer: bytes) -> str:
 
 def transcribe_final(audio_buffer: bytes) -> str:
     """
-    Called ONCE, when the candidate's turn is finalized. This result
-    becomes the actual answer_text stored and scored - beam_size=2 keeps
-    a small accuracy safety net here since this is the permanent record,
-    while still being meaningfully faster than the original beam_size=5.
+    Sends the complete answer to Groq's hosted Whisper. This is what makes
+    concurrent interviews viable - a local model serialises every request behind
+    the last one, so ten candidates finishing answers at once means the tenth
+    waits for the other nine. Falls back to the local model if Groq fails, so a
+    rate limit or outage degrades quality rather than breaking the interview.
     """
     if not audio_buffer:
         return ""
+
+    try:
+        # Groq needs a named file tuple; the extension tells it the container.
+        result = _get_groq_client().audio.transcriptions.create(
+            file=("answer.webm", audio_buffer),
+            model="whisper-large-v3-turbo",
+            response_format="text",
+            language="en",
+        )
+        text = result if isinstance(result, str) else getattr(result, "text", "")
+        if text.strip():
+            return text.strip()
+    except Exception as e:
+        print(f"[stt] Groq transcription failed, falling back to local: {e}")
+
     return _transcribe_bytes(audio_buffer, beam_size=3)

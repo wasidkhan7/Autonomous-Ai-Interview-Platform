@@ -48,3 +48,26 @@ def run_full_evaluation(db: Session, interview_id: int) -> InterviewReport:
     db.refresh(report)
 
     return report
+
+def run_full_evaluation_threadsafe(interview_id: int) -> dict:
+    """
+    Opens its own DB session so this can run on a worker thread - SQLAlchemy
+    Sessions are not thread-safe and must not be shared across threads.
+    Returns a plain dict because the ORM object detaches once the session closes.
+    """
+    from app.db.session import SessionLocal
+
+    db = SessionLocal()
+    try:
+        report = run_full_evaluation(db, interview_id)
+        return {
+            "summary": report.summary,
+            "strengths": report.strengths,
+            "weaknesses": report.weaknesses,
+            "learning_plan": report.learning_plan,
+            "hiring_recommendation": report.hiring_recommendation,
+            "ai_confidence_score": report.ai_confidence_score,
+        }
+    finally:
+        db.close()
+        

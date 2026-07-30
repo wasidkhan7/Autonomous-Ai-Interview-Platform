@@ -4,7 +4,14 @@ from app.config import get_settings
 
 settings = get_settings()
 
-engine = create_engine(settings.DATABASE_URL, pool_pre_ping=True)
+engine = create_engine(
+    settings.DATABASE_URL,
+    pool_pre_ping=True,
+    # Each open WebSocket holds a session for its whole life, so 10 concurrent
+    # interviews plus normal HTTP traffic exhausts the default pool of 5 + 10.
+    pool_size=20,
+    max_overflow=10,
+)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 

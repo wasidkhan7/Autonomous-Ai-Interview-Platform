@@ -27,6 +27,11 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title=settings.APP_NAME, lifespan=lifespan)
 
+# Add this route to fix the 404 error
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to my FastAPI application!"}
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],

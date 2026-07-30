@@ -14,10 +14,11 @@ from app.modules.voice.stt_whisper import transcribe_final, transcribe_partial
 from app.modules.voice.tts_openai import synthesize_speech
 from app.modules.agent.memory import get_session_state, save_session_state
 from app.modules.agent.interview_graph import process_answer_turn
-from app.modules.evaluation import run_full_evaluation
+from app.modules.evaluation import run_full_evaluation_threadsafe
 from app.modules.question_bank.usage_tracker import increment_usage
 
 router = APIRouter(prefix="/voice", tags=["voice"])
+
 
 # interview_id -> the websocket currently serving it. We store the socket
 # itself (not just the id) so a NEW connection can forcibly close a stale
@@ -161,7 +162,9 @@ async def voice_answer_stream(websocket: WebSocket, interview_id: int):
                 ))
                 db.commit()
 
-                new_state = process_answer_turn(state, final_text)
+                # Blocking Groq call - must leave the event loop or every other
+                # candidate's connection stalls behind it.
+                new_state = await asyncio.to_thread(process_answer_turn, state, final_text)
                 save_session_state(db, interview_id, new_state)
 
                 if new_state["status"] == "completed":
@@ -169,18 +172,11 @@ async def voice_answer_stream(websocket: WebSocket, interview_id: int):
                     interview.ended_at = datetime.now(timezone.utc)
                     db.commit()
 
-                    report = run_full_evaluation(db, interview_id)
+                    report = await asyncio.to_thread(run_full_evaluation_threadsafe, interview_id)
 
                     await safe_send(websocket, {
                         "type": "interview_completed",
-                        "report": {
-                            "summary": report.summary,
-                            "strengths": report.strengths,
-                            "weaknesses": report.weaknesses,
-                            "learning_plan": report.learning_plan,
-                            "hiring_recommendation": report.hiring_recommendation,
-                            "ai_confidence_score": report.ai_confidence_score,
-                        },
+                        "report": report,
                     })
                     break
 
