@@ -24,6 +24,7 @@ const LEVELS = [
   { value: "senior", label: "Senior" },
 ];
 
+
 const FIELD =
   "w-full border border-[#D8DDE6] rounded-md px-3 py-2.5 text-[15px] text-slate-900 bg-white " +
   "focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors";
@@ -177,10 +178,13 @@ function CandidateRegister() {
               <Expect n="03" title="We read your resume">
                 Your resume is used to tailor the questions to your experience and skills.
               </Expect>
-              <Expect n="04" title="Your progress is saved">
+              <Expect n="04" title="Stay on this page while answering">
+                Switching tabs or windows mid-answer is recorded and shared with your mentor.
+              </Expect>
+              <Expect n="05" title="Your progress is saved">
                 Refreshing or losing connection won't restart the interview.
               </Expect>
-              <Expect n="05" title="A mentor makes the final call">
+              <Expect n="06" title="A mentor makes the final call">
                 The AI writes an assessment and a recommendation. A human reviews it before any decision.
               </Expect>
             </ul>

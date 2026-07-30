@@ -20,6 +20,7 @@ const FILTERS = [
   { id: "all", label: "All" },
 ];
 
+
 function MentorDashboard() {
   const [reports, setReports] = useState([]);
   const [selectedId, setSelectedId] = useState(null);
@@ -241,6 +242,12 @@ function ReportDetail({ report, isSaving, onDecision }) {
                         <p className="text-[15px] font-medium text-slate-900 leading-relaxed">
                           {qa.question}
                         </p>
+                            {qa.focus_loss_count > 0 && (
+                          <span className="inline-block mt-1.5 font-mono text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded bg-amber-100 text-amber-800">
+                            Left page {qa.focus_loss_count}×
+                          </span>
+                        )}
+
                         <p className="text-[15px] text-[#4A5568] mt-2 leading-relaxed">
                           {qa.answer || (
                             <span className="italic text-[#8A94A6]">No answer recorded</span>

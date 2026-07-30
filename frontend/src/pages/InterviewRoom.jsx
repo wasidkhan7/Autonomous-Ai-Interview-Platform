@@ -20,6 +20,7 @@ function InterviewRoom() {
   const [needsManualPlay, setNeedsManualPlay] = useState(false);
   const [hasSpoken, setHasSpoken] = useState(false);
   const [isQuestionPlaying, setIsQuestionPlaying] = useState(false);
+  const [focusLosses, setFocusLosses] = useState(0);
   const [liveCaption, setLiveCaption] = useState("");
 
   const wsRef = useRef(null);
@@ -41,13 +42,25 @@ function InterviewRoom() {
   // Written to directly from the audio loop - see checkVolume below.
   const levelBarRef = useRef(null);
 
+  const focusLossRef = useRef(0);
+  const detachFocusWatchersRef = useRef(null);
+
+
+
+
   useEffect(() => {
     // ALWAYS rebuild from the backend. location.state can't be used as a
     // "just arrived" signal - React Router stores it in the History API,
     // so it survives a refresh and would reset us to question one.
     resumeInterview();
 
+    // Watch for the whole time a question is on screen, not just while
+    // recording - the exploitable window is hearing the question, tabbing
+    // away to look it up, then coming back and pressing record.
+    attachFocusWatchers();
+
     return () => {
+      if (detachFocusWatchersRef.current) detachFocusWatchersRef.current();
       if (wsRef.current) wsRef.current.close();
       stopRecording();
     };
@@ -251,6 +264,33 @@ function InterviewRoom() {
     checkVolume();
   }
 
+  function attachFocusWatchers() {
+    let lastCountedAt = 0;
+
+    const record = () => {
+      // A single alt-tab usually fires BOTH visibilitychange and blur.
+      // Collapse anything within a second into one event.
+      const now = Date.now();
+      if (now - lastCountedAt < 1000) return;
+      lastCountedAt = now;
+
+      focusLossRef.current += 1;
+      setFocusLosses(focusLossRef.current);
+    };
+
+    const onVisibility = () => {
+      if (document.hidden) record();
+    };
+
+    document.addEventListener("visibilitychange", onVisibility);
+    window.addEventListener("blur", record);
+
+    detachFocusWatchersRef.current = () => {
+      document.removeEventListener("visibilitychange", onVisibility);
+      window.removeEventListener("blur", record);
+    };
+  }
+
   function finalizeAnswer() {
     // Read the REF, not the state - this is called from a setTimeout closure.
     if (!isRecordingRef.current) return;
@@ -263,7 +303,13 @@ function InterviewRoom() {
     }
 
     if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
-      wsRef.current.send(JSON.stringify({ type: "finalize" }));
+      wsRef.current.send(JSON.stringify({
+        type: "finalize",
+        focus_losses: focusLossRef.current,
+      }));
+      // Reset for the next question - the count is per-answer.
+      focusLossRef.current = 0;
+      setFocusLosses(0);
       setIsTranscribing(true);
     }
     stopRecording();
@@ -282,6 +328,7 @@ function InterviewRoom() {
       audioContextRef.current.close();
     }
     if (levelBarRef.current) levelBarRef.current.style.width = "0%";
+
     isRecordingRef.current = false;
     setIsRecording(false);
   }
@@ -410,6 +457,13 @@ function InterviewRoom() {
           {errorMessage && (
             <div className="bg-red-50 border border-red-200 text-red-700 text-[14px] rounded-md px-3 py-2 mb-3">
               {errorMessage}
+            </div>
+          )}
+
+          {focusLosses > 0 && (
+            <div className="bg-amber-50 border border-amber-200 text-amber-800 text-[13px] rounded-md px-3 py-2 mb-3">
+              You left this page {focusLosses} {focusLosses === 1 ? "time" : "times"} on
+              this question. This is recorded and shown to your mentor.
             </div>
           )}
 
@@ -552,3 +606,4 @@ function Section({ title, body }) {
 }
 
 export default InterviewRoom;
+

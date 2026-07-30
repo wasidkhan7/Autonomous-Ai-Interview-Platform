@@ -66,6 +66,7 @@ def get_report(interview_id: int, db: Session = Depends(get_db)):
                 "technical_score": r.technical_score,
                 "problem_solving_score": r.problem_solving_score,
                 "communication_score": r.communication_score,
+                "focus_loss_count": r.focus_loss_count or 0,
             }
             for r in responses
         ],

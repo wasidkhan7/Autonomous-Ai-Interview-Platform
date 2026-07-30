@@ -159,6 +159,7 @@ async def voice_answer_stream(websocket: WebSocket, interview_id: int):
                     interview_id=interview_id,
                     question_text=state["current_question_text"],
                     answer_text=final_text,
+                    focus_loss_count=int(control_message.get("focus_losses", 0)),
                 ))
                 db.commit()
 

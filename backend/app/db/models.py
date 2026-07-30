@@ -46,6 +46,8 @@ class InterviewResponse(Base):
     problem_solving_score = Column(Float, nullable=True)
     communication_score = Column(Float, nullable=True)
     emotion_signal = Column(String, nullable=True)  # optional, from DeepFace
+    # Times the candidate left the tab/window while answering THIS question.
+    focus_loss_count = Column(Integer, default=0) # to avoid tab switching during the interview
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
     interview = relationship("Interview", back_populates="responses")
