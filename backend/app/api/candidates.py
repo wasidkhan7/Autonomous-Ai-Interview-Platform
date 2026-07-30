@@ -4,7 +4,7 @@ from pathlib import Path
 from fastapi import APIRouter, Depends, UploadFile, File, Form, HTTPException
 from sqlalchemy.orm import Session
 from app.db.session import get_db
-from app.db.models import Candidate
+from app.db.models import Candidate, Interview, InterviewResponse
 from app.modules.resume_parser import parse_resume
 
 router = APIRouter(prefix="/candidates", tags=["candidates"])
@@ -23,9 +23,31 @@ def register_candidate(
     db: Session = Depends(get_db),
 ):
     # Check for duplicate email early, before touching the filesystem
+    # An email is only "taken" once the candidate has actually answered
+    # something. Before that, a crashed or abandoned registration shouldn't
+    # lock them out of their own email - they can just register again.
     existing = db.query(Candidate).filter(Candidate.email == email).first()
+
     if existing:
-        raise HTTPException(status_code=400, detail="Candidate with this email already exists.")
+        answered = (
+            db.query(InterviewResponse)
+            .join(Interview, InterviewResponse.interview_id == Interview.id)
+            .filter(Interview.candidate_id == existing.id)
+            .count()
+        )
+        if answered > 0:
+            raise HTTPException(
+                status_code=400,
+                detail="An interview has already been started with this email. Contact your mentor if you need to retake it.",
+            )
+
+        # Untouched registration - discard the empty interview shell so they get
+        # a fresh question pool matching whatever they select this time.
+        db.query(Interview).filter(
+            Interview.candidate_id == existing.id,
+            Interview.status == "in_progress",
+        ).delete()
+        db.commit()
 
     # Save uploaded file to disk
     file_ext = Path(resume.filename).suffix.lower()
@@ -43,15 +65,26 @@ def register_candidate(
         raise HTTPException(status_code=400, detail=str(e))
 
     # Create candidate record
-    candidate = Candidate(
-        full_name=full_name,
-        email=email,
-        technology=technology,
-        experience_level=experience_level,
-        resume_path=str(save_path),
-        resume_skills=parsed["skills"],
-    )
-    db.add(candidate)
+    # Reuse the row if this email was registered but never used, otherwise
+    # create a new candidate.
+    if existing:
+        candidate = existing
+        candidate.full_name = full_name
+        candidate.technology = technology
+        candidate.experience_level = experience_level
+        candidate.resume_path = str(save_path)
+        candidate.resume_skills = parsed["skills"]
+    else:
+        candidate = Candidate(
+            full_name=full_name,
+            email=email,
+            technology=technology,
+            experience_level=experience_level,
+            resume_path=str(save_path),
+            resume_skills=parsed["skills"],
+        )
+        db.add(candidate)
+
     db.commit()
     db.refresh(candidate)
 
