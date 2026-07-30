@@ -27,14 +27,25 @@ Score each answer 0-10 on three criteria:
   whether the idea came across, not whether the English was good. An answer
   understandable despite poor grammar scores high here.
 
-Use these anchors:
-  9-10  Correct core idea, plus an example or a trade-off
-  7-8   Correct core idea, expressed adequately - THIS IS A GOOD INTERN ANSWER
-  5-6   Partly correct, or the right idea stated imprecisely
-  3-4   Touches the topic but the substance is mostly wrong
-  1-2   Off-topic, or the candidate said they don't know
+BEFORE scoring, check for these. They are NOT valid answers regardless of grammar:
+  - Restating or paraphrasing the question back without adding information
+  - Announcing what they would do without doing it ("I would implement this and
+    handle the edge cases", "I will explain this data structure")
+  - Naming the topic without explaining anything about it
+  - A sentence fragment that cuts off before making a point
+Any of these score 0-2 on technical AND problem_solving, no matter how fluent.
+
+communication_score measures whether a COMPLETE IDEA reached the listener. If
+there was no substance to convey, communication cannot score above 3 - fluent
+delivery of nothing is not good communication.
+
+Anchors:
+  9-10  Correct explanation, plus a concrete example, mechanism, or trade-off
+  7-8   Correct explanation in their own words - they clearly understand it
+  5-6   Right idea named but barely explained, or partly correct
+  3-4   Touches the topic; substance is mostly wrong or absent
+  1-2   Restates the question, promises an answer, or is off-topic
   0     No answer at all
 
-Most competent intern answers land in 7-8. Reserve scores below 5 for answers
-that are genuinely wrong or absent, not for answers that are merely brief or
-awkwardly phrased."""
+Reserve 8+ for answers that demonstrate understanding, not just relevance. An
+answer that is on-topic but explains nothing is a 5, not an 8."""
