@@ -1,237 +1,997 @@
 [
   {
     "id": "devops_001",
-    "question": "Explain the difference between continuous integration and continuous deployment.",
+    "question": "What is the main difference between a Docker image and a Docker container?",
     "difficulty": "easy",
     "tags": [
-      "devops",
-      "ci-cd",
-      "fundamentals"
+      "docker",
+      "containers"
     ]
   },
   {
     "id": "devops_002",
-    "question": "What is the difference between a Docker image and a Docker container?",
+    "question": "What is the role of a load balancer in a DevOps pipeline, and how does it distribute traffic?",
     "difficulty": "easy",
     "tags": [
-      "devops",
-      "docker"
+      "load-balancing",
+      "devops"
     ]
   },
   {
     "id": "devops_003",
-    "question": "Explain how Kubernetes handles service discovery and load balancing between pods.",
-    "difficulty": "medium",
+    "question": "What is the purpose of a CI/CD pipeline, and what are its key stages?",
+    "difficulty": "easy",
     "tags": [
-      "devops",
-      "kubernetes"
+      "ci-cd",
+      "pipelines"
     ]
   },
   {
     "id": "devops_004",
-    "question": "How would you design a CI/CD pipeline that runs automated tests, builds a Docker image, and deploys to staging on every merge to main?",
-    "difficulty": "medium",
+    "question": "What is the difference between a private and a public Git repository, and when would you use each?",
+    "difficulty": "easy",
     "tags": [
-      "devops",
-      "ci-cd",
-      "pipeline-design"
+      "git",
+      "version-control"
     ]
   },
   {
     "id": "devops_005",
-    "question": "Design a zero-downtime deployment strategy for a stateful application. Compare blue-green and canary deployments.",
-    "difficulty": "hard",
+    "question": "What are the benefits and use cases of container orchestration tools like Kubernetes?",
+    "difficulty": "easy",
     "tags": [
-      "devops",
-      "system-design",
-      "deployment"
+      "kubernetes",
+      "container-orchestration"
     ]
   },
   {
     "id": "devops_006",
-    "question": "What are the main differences between Infrastructure as Code (IaC) tools such as Terraform and Ansible?",
+    "question": "What is infrastructure as code (IaC), and what are some popular tools used for IaC?",
     "difficulty": "easy",
     "tags": [
-      "IaC",
-      "infrastructure"
+      "iac",
+      "infrastructure-as-code"
     ]
   },
   {
     "id": "devops_007",
-    "question": "Explain the concept of a service mesh and how it fits into a microservices architecture.",
+    "question": "What is the difference between a service mesh and a traditional load balancer, and what are their typical use cases?",
     "difficulty": "easy",
     "tags": [
       "service-mesh",
-      "microservices"
+      "load-balancing"
     ]
   },
   {
     "id": "devops_008",
-    "question": "Design a monitoring strategy for a distributed system that includes metrics, logging, and alerting.",
+    "question": "What are the main steps involved in setting up a pipeline for automating deployments to a cloud platform like AWS or Google Cloud?",
     "difficulty": "easy",
     "tags": [
-      "monitoring",
-      "observability"
+      "cloud-deployment",
+      "devops-pipelines"
     ]
   },
   {
     "id": "devops_009",
-    "question": "How do you approach security hardening of a Linux system, and what are some best practices to follow?",
+    "question": "What is the primary difference between a container registry and a package manager, and how do they store software artifacts?",
     "difficulty": "easy",
     "tags": [
-      "security",
-      "linux"
+      "docker",
+      "containers"
     ]
   },
   {
     "id": "devops_010",
-    "question": "Compare and contrast the use of etcd vs Consul for storing and retrieving configuration data in a distributed system.",
+    "question": "What is the purpose of a configuration management tool like Ansible, and how does it handle infrastructure as code?",
     "difficulty": "easy",
     "tags": [
-      "configuration-management",
-      "distributed-systems"
+      "devops",
+      "infrastructure"
     ]
   },
   {
     "id": "devops_011",
-    "question": "Explain how you would implement a rolling update strategy for a stateless application, and what are the benefits and drawbacks of this approach?",
+    "question": "What are the key characteristics of a microservices architecture, and how does it differ from a monolithic application?",
     "difficulty": "easy",
     "tags": [
-      "deployment-strategies",
-      "stateless-apps"
+      "microservices",
+      "architecture"
     ]
   },
   {
     "id": "devops_012",
-    "question": "Design a backup and restore strategy for a cloud-based database, including considerations for data consistency and integrity.",
+    "question": "What is the role of a monitoring tool like Prometheus in a DevOps pipeline, and what metrics does it typically collect?",
     "difficulty": "easy",
     "tags": [
-      "backup-and-restore",
-      "cloud-databases"
+      "monitoring",
+      "metrics"
     ]
   },
   {
     "id": "devops_013",
-    "question": "Explain the concept of Infrastructure as Code (IaC) and its benefits in terms of reproducibility and version control.",
-    "difficulty": "medium",
+    "question": "What is the purpose of a CI/CD tool like Jenkins, and how does it integrate with other tools in a DevOps pipeline?",
+    "difficulty": "easy",
     "tags": [
-      "IaC",
-      "DevOps",
-      "Version Control"
+      "ci/cd",
+      "pipeline"
     ]
   },
   {
     "id": "devops_014",
-    "question": "Describe a scenario where you would use a service mesh like Istio or Linkerd, and how it would improve the scalability and reliability of your microservices-based application.",
-    "difficulty": "medium",
+    "question": "What is the difference between a stateful and a stateless application, and how does this impact deployment and scaling?",
+    "difficulty": "easy",
     "tags": [
-      "Service Mesh",
-      "Microservices",
-      "Scalability"
+      "appdesign",
+      "scaling"
     ]
   },
   {
     "id": "devops_015",
-    "question": "Design a monitoring and logging strategy for a distributed system consisting of multiple containers and pods running across multiple clusters. Describe the metrics and logs you would collect and how you would use them for alerting and troubleshooting.",
-    "difficulty": "medium",
+    "question": "What are the key features of a cloud provider like Azure, and how does it differ from a traditional on-premises infrastructure?",
+    "difficulty": "easy",
     "tags": [
-      "Monitoring",
-      "Logging",
-      "Distributed Systems"
+      "cloud",
+      "azure"
     ]
   },
   {
     "id": "devops_016",
-    "question": "Explain the difference between a stateful and stateless application. Describe a scenario where a stateful application would be more suitable and one where a stateless application would be more suitable.",
-    "difficulty": "medium",
+    "question": "What is the purpose of a security tool like Docker content trust, and how does it ensure secure deployment of images?",
+    "difficulty": "easy",
     "tags": [
-      "Stateful",
-      "Stateless",
-      "Distributed Systems"
+      "security",
+      "docker"
     ]
   },
   {
     "id": "devops_017",
-    "question": "Design a backup and restore strategy for a database that is running in a cloud provider like AWS or GCP. Describe the different types of backups you would take and how you would restore the database in case of a failure.",
-    "difficulty": "medium",
+    "question": "What is the main purpose of a build tool like Maven, and how does it differ from a package manager like npm?",
+    "difficulty": "easy",
     "tags": [
-      "Backup",
-      "Restore",
-      "Cloud Providers"
+      "ci/cd",
+      "build-tools"
     ]
   },
   {
     "id": "devops_018",
-    "question": "Explain the concept of Chaos Engineering and its benefits in terms of identifying and mitigating potential points of failure in a distributed system. Describe a scenario where you would use Chaos Engineering to improve the reliability of your system.",
-    "difficulty": "medium",
+    "question": "What is the difference between a virtual machine and a container, and what are the implications for resource allocation?",
+    "difficulty": "easy",
     "tags": [
-      "Chaos Engineering",
-      "Reliability",
-      "Distributed Systems"
+      "virtualization",
+      "containers"
     ]
   },
   {
     "id": "devops_019",
-    "question": "Design a security strategy for a containerized application running in a Kubernetes cluster. Describe the different types of security measures you would implement, including network policies, secret management, and image scanning.",
-    "difficulty": "medium",
+    "question": "What are the key characteristics of a log aggregation tool like ELK Stack, and how does it improve log management?",
+    "difficulty": "easy",
     "tags": [
-      "Security",
-      "Containerization",
-      "Kubernetes"
+      "monitoring",
+      "logging"
     ]
   },
   {
     "id": "devops_020",
-    "question": "You are tasked with optimizing the network performance of a distributed system. How would you use service mesh technology like Istio or Linkerd to implement traffic splitting, circuit breaking, and request routing for a microservices-based application?",
-    "difficulty": "hard",
+    "question": "What is the role of a version control system like Git in a DevOps pipeline, and how does it facilitate collaboration?",
+    "difficulty": "easy",
     "tags": [
-      "service-mesh",
-      "network-performance"
+      "version-control",
+      "collaboration"
     ]
   },
   {
     "id": "devops_021",
-    "question": "A production database is experiencing high latency and slow query performance. Describe the steps you would take to identify the root cause of the issue using performance monitoring tools like Prometheus or Grafana, and optimize the database configuration and indexing to improve performance.",
-    "difficulty": "hard",
+    "question": "What is the difference between a Dockerfile and an image, and how does the Docker build process work?",
+    "difficulty": "easy",
     "tags": [
-      "database-performance",
-      "monitoring"
+      "docker",
+      "containerization"
     ]
   },
   {
     "id": "devops_022",
-    "question": "Design a cloud cost optimization strategy for a company with multiple product lines and variable usage patterns. Explain how you would use cost allocation tags, reserved instances, and cost forecasting to minimize waste and reduce spending on cloud resources.",
-    "difficulty": "hard",
+    "question": "What are the main benefits of using a secrets management tool like Hashicorp Vault, and how does it secure sensitive data?",
+    "difficulty": "easy",
     "tags": [
-      "cloud-cost-optimization",
-      "cost-management"
+      "security",
+      "secrets-management"
     ]
   },
   {
     "id": "devops_023",
-    "question": "You are building a CI/CD pipeline for a company with strict compliance and security requirements. Describe how you would implement secrets management using tools like HashiCorp Vault or AWS Secrets Manager, and integrate it with the pipeline to securely manage sensitive data.",
-    "difficulty": "hard",
+    "question": "What is the purpose of a test automation framework like Cucumber, and how does it improve test coverage?",
+    "difficulty": "easy",
     "tags": [
-      "secrets-management",
-      "compliance"
+      "testing",
+      "test-automation"
     ]
   },
   {
     "id": "devops_024",
-    "question": "A company is experiencing high levels of data corruption and loss due to hardware failures in their on-premises infrastructure. Explain how you would design a disaster recovery strategy using cloud-based backup and replication services like AWS S3 or Google Cloud Storage, and ensure business continuity in the event of a disaster.",
-    "difficulty": "hard",
+    "question": "What is the difference between a CI tool like CircleCI and a CD tool like Ansible, and how do they fit into a DevOps pipeline?",
+    "difficulty": "easy",
     "tags": [
-      "disaster-recovery",
-      "backup-and-recovery"
+      "ci/cd",
+      "pipeline-tools"
     ]
   },
   {
     "id": "devops_025",
-    "question": "A team is struggling to maintain and patch multiple legacy applications running on different runtime environments. Describe how you would use containerization and automated rollouts to migrate these applications to a modern, cloud-native architecture, and ensure consistent security and compliance across the entire estate.",
+    "question": "What is a service mesh, and how does it improve communication between microservices in a distributed system?",
+    "difficulty": "easy",
+    "tags": [
+      "service mesh",
+      "microservices"
+    ]
+  },
+  {
+    "id": "devops_026",
+    "question": "What is the difference between a public repository and a private repository in a version control system like Git, and what are the implications for collaboration and security?",
+    "difficulty": "easy",
+    "tags": [
+      "git",
+      "version control"
+    ]
+  },
+  {
+    "id": "devops_027",
+    "question": "What is the purpose of a infrastructure as code tool like Terraform, and how does it manage infrastructure provisioning and configuration?",
+    "difficulty": "easy",
+    "tags": [
+      "terraform",
+      "infrastructure as code"
+    ]
+  },
+  {
+    "id": "devops_028",
+    "question": "What is monitoring and logging in a DevOps pipeline, and how do they help with issue detection and debugging?",
+    "difficulty": "easy",
+    "tags": [
+      "monitoring",
+      "logging"
+    ]
+  },
+  {
+    "id": "devops_029",
+    "question": "What is the role of a build tool like Gradle in a CI/CD pipeline, and how does it differ from a package manager like Maven?",
+    "difficulty": "easy",
+    "tags": [
+      "gradle",
+      "build tool"
+    ]
+  },
+  {
+    "id": "devops_030",
+    "question": "What is the difference between a CI tool like Travis CI and a CD tool like Spinnaker, and how do they fit into a DevOps pipeline?",
+    "difficulty": "easy",
+    "tags": [
+      "travis ci",
+      "spinnaker"
+    ]
+  },
+  {
+    "id": "devops_031",
+    "question": "What is the main difference between a stateful and a stateless container, and how does this impact container deployment and management?",
+    "difficulty": "easy",
+    "tags": [
+      "containers",
+      "docker"
+    ]
+  },
+  {
+    "id": "devops_032",
+    "question": "How does a load balancer improve the availability and scalability of web applications, and what are its key characteristics?",
+    "difficulty": "easy",
+    "tags": [
+      "load-balancing",
+      "availability"
+    ]
+  },
+  {
+    "id": "devops_033",
+    "question": "How does a service discovery mechanism work in a microservices architecture, and what are its key benefits?",
+    "difficulty": "easy",
+    "tags": [
+      "service-discovery",
+      "microservices"
+    ]
+  },
+  {
+    "id": "devops_034",
+    "question": "What is the difference between a immutable and an immutable infrastructure, and how does this impact configuration and provisioning?",
+    "difficulty": "easy",
+    "tags": [
+      "infrastructure-as-code",
+      "immutable-infrastructure"
+    ]
+  },
+  {
+    "id": "devops_035",
+    "question": "How does a CI/CD pipeline improve code quality and delivery, and what are the key stages involved in a typical pipeline?",
+    "difficulty": "easy",
+    "tags": [
+      "ci/cd",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_036",
+    "question": "What is the purpose of a monitoring tool like Prometheus, and how does it help with infrastructure and application monitoring?",
+    "difficulty": "easy",
+    "tags": [
+      "monitoring",
+      "prometheus"
+    ]
+  },
+  {
+    "id": "devops_037",
+    "question": "How does a secrets management tool like Hashicorp's Consul differ from a traditional configuration file, and what benefits does it offer?",
+    "difficulty": "easy",
+    "tags": [
+      "secrets-management",
+      "consul"
+    ]
+  },
+  {
+    "id": "devops_038",
+    "question": "What is the difference between a Dockerfile and a Vagrantfile, and how do they facilitate application deployment in a DevOps environment?",
+    "difficulty": "easy",
+    "tags": [
+      "DevOps",
+      "Docker",
+      "Vagrant"
+    ]
+  },
+  {
+    "id": "devops_039",
+    "question": "What is the purpose of a continuous integration server like Jenkins, and how does it integrate with a source control system like Git?",
+    "difficulty": "easy",
+    "tags": [
+      "DevOps",
+      "Jenkins",
+      "Git"
+    ]
+  },
+  {
+    "id": "devops_040",
+    "question": "What is the difference between a security hardening process and a vulnerability scanning tool, and how do they ensure application security in a DevOps pipeline?",
+    "difficulty": "easy",
+    "tags": [
+      "DevOps",
+      "Security",
+      "Hardening"
+    ]
+  },
+  {
+    "id": "devops_041",
+    "question": "Explain the purpose of a monitoring tool in a DevOps pipeline. How would you choose between using Prometheus and Grafana, and why?",
+    "difficulty": "medium",
+    "tags": [
+      "monitoring",
+      "devops-tools"
+    ]
+  },
+  {
+    "id": "devops_042",
+    "question": "Describe the process of setting up a new AWS EC2 instance for a project. How would you handle the situation where the instance is stuck in a 'pending' state for an extended period of time?",
+    "difficulty": "medium",
+    "tags": [
+      "aws",
+      "ec2",
+      "instance-management"
+    ]
+  },
+  {
+    "id": "devops_043",
+    "question": "Compare and contrast the use of Docker Compose and Kubernetes for container orchestration. What are the primary differences between these tools, and when would you choose one over the other?",
+    "difficulty": "medium",
+    "tags": [
+      "container-orchestration",
+      "docker-compose",
+      "kubernetes"
+    ]
+  },
+  {
+    "id": "devops_044",
+    "question": "Suppose you are deploying a web application that requires multiple services to be running simultaneously. How would you design a CI/CD pipeline to handle this scenario using Jenkins and Docker?",
+    "difficulty": "medium",
+    "tags": [
+      "ci-cd",
+      "jenkins",
+      "docker"
+    ]
+  },
+  {
+    "id": "devops_045",
+    "question": "You are tasked with migrating a project from using a monolithic deployment strategy to a microservices-based architecture. What are some key considerations you would need to take into account, and how would you approach this migration?",
+    "difficulty": "medium",
+    "tags": [
+      "deployment-strategies",
+      "microservices"
+    ]
+  },
+  {
+    "id": "devops_046",
+    "question": "Explain the concept of a 'gold image' in the context of DevOps. How would you create and manage a gold image for an application using tools like Packer and Ansible?",
+    "difficulty": "medium",
+    "tags": [
+      "gold-image",
+      "packer",
+      "ansible"
+    ]
+  },
+  {
+    "id": "devops_047",
+    "question": "Describe a scenario where you would use a service mesh like Istio to manage traffic between microservices. What are the benefits and potential trade-offs of using a service mesh in this scenario?",
+    "difficulty": "medium",
+    "tags": [
+      "service-mesh",
+      "istio",
+      "traffic-management"
+    ]
+  },
+  {
+    "id": "devops_048",
+    "question": "You are responsible for setting up a Continuous Integration server like GitLab CI/CD. How would you configure the pipeline to automatically run unit tests and code linting checks for a project, and what tools would you use to accomplish this?",
+    "difficulty": "medium",
+    "tags": [
+      "gitlab-ci",
+      "continuous-integration",
+      "pipeline-management"
+    ]
+  },
+  {
+    "id": "devops_049",
+    "question": "You are tasked with setting up a backup and recovery plan for a project using AWS S3 and Glacier. How would you design a daily and weekly backup strategy to ensure that data is reliably stored and can be recovered in case of an outage?",
+    "difficulty": "medium",
+    "tags": [
+      "devops",
+      "backup",
+      "aws"
+    ]
+  },
+  {
+    "id": "devops_050",
+    "question": "Suppose you are deploying a web application that requires a load balancer to distribute incoming traffic across multiple instances. How would you configure a HAProxy load balancer to automatically scale with the number of instances and handle high traffic volumes?",
+    "difficulty": "medium",
+    "tags": [
+      "devops",
+      "load balancing",
+      "haproxy"
+    ]
+  },
+  {
+    "id": "devops_051",
+    "question": "You are responsible for setting up a security scanner like OWASP ZAP to identify vulnerabilities in a web application. How would you integrate ZAP with your CI/CD pipeline to automatically run scans and report on findings?",
+    "difficulty": "medium",
+    "tags": [
+      "devops",
+      "security",
+      "zap"
+    ]
+  },
+  {
+    "id": "devops_052",
+    "question": "How would you use Ansible to automate the deployment of a configuration management file (like a Docker compose file) to a set of servers, and what are some potential benefits and trade-offs of this approach?",
+    "difficulty": "medium",
+    "tags": [
+      "devops",
+      "ansible",
+      "config management"
+    ]
+  },
+  {
+    "id": "devops_053",
+    "question": "Suppose you are tasked with setting up a service-level agreement (SLA) dashboard to monitor the performance of a team's services. How would you design a monitoring dashboard using Grafana and a data source like Prometheus, and what metrics would you track?",
+    "difficulty": "medium",
+    "tags": [
+      "devops",
+      "monitoring",
+      "grafana"
+    ]
+  },
+  {
+    "id": "devops_054",
+    "question": "You are tasked with automating the deployment of a project using a configuration management tool like Puppet. How would you use Puppet to manage and deploy a set of servers, and what are some key considerations when using this approach?",
+    "difficulty": "medium",
+    "tags": [
+      "devops",
+      "puppet",
+      "config management"
+    ]
+  },
+  {
+    "id": "devops_055",
+    "question": "suppose you have a project with multiple environments like dev, staging, and prod. How would you set up environment-specific configurations and secrets using a tool like Hashicorp's vault, and what are some benefits and trade-offs of this approach?",
+    "difficulty": "medium",
+    "tags": [
+      "devops",
+      "vault",
+      "secrets management"
+    ]
+  },
+  {
+    "id": "devops_056",
+    "question": "How would you design a logging pipeline using Elasticsearch, Logstash, and Kibana to collect and visualize log data from a web application, and what are some key considerations when setting up this pipeline?",
+    "difficulty": "medium",
+    "tags": [
+      "devops",
+      "logging",
+      "elk"
+    ]
+  },
+  {
+    "id": "devops_057",
+    "question": "You are tasked with implementing a canary release strategy for a web application using a tool like Kubernetes. What are some key considerations you would need to take into account, and how would you design a canary release pipeline to minimize risks and ensure a smooth rollout?",
+    "difficulty": "medium",
+    "tags": [
+      "kubernetes",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_058",
+    "question": "Suppose you are deploying a containerized application that requires secret management. How would you use a secret management tool like Hashicorp's Vault to securely store and retrieve sensitive data like API keys and database credentials, and what are some benefits and trade-offs of this approach?",
+    "difficulty": "medium",
+    "tags": [
+      "security",
+      "devops",
+      "vault"
+    ]
+  },
+  {
+    "id": "devops_059",
+    "question": "You are responsible for setting up a monitoring and alerting system for a team's services using Prometheus and Grafana. What are some key metrics you would track, and how would you design a notification system to alert teams of potential issues and outages?",
+    "difficulty": "medium",
+    "tags": [
+      "monitoring",
+      "alerting",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_060",
+    "question": "Suppose you are tasked with implementing a feature toggle in a web application to enable or disable certain features based on user roles or environments. How would you use a feature toggle tool like Flagsmith to manage feature flags, and what are some benefits and trade-offs of this approach?",
+    "difficulty": "medium",
+    "tags": [
+      "feature toggles",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_061",
+    "question": "You are responsible for setting up a CI/CD pipeline using Jenkins and Docker. How would you configure the pipeline to automatically build, test, and deploy a Docker image to a production environment, and what tools would you use to accomplish this?",
+    "difficulty": "medium",
+    "tags": [
+      "jenkins",
+      "docker",
+      "ci/cd"
+    ]
+  },
+  {
+    "id": "devops_062",
+    "question": "Suppose you are deploying a distributed system that requires distributed locking to manage concurrency. How would you use a distributed locking tool like Redis to implement distributed locks, and what are some benefits and trade-offs of this approach?",
+    "difficulty": "medium",
+    "tags": [
+      "distributed locking",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_063",
+    "question": "You are tasked with implementing a deployment strategy for a microservices-based application using a tool like Kubernetes. What are some key considerations you would need to take into account, and how would you design a deployment strategy to ensure high availability and scalability?",
+    "difficulty": "medium",
+    "tags": [
+      "kubernetes",
+      "devops",
+      "deployment"
+    ]
+  },
+  {
+    "id": "devops_064",
+    "question": "You are tasked with implementing a static website hosting solution using AWS S3 and Route 53. What are some benefits and trade-offs of using AWS S3 for static website hosting, and how would you configure Route 53 to route traffic to your S3 bucket?",
+    "difficulty": "medium",
+    "tags": [
+      "aws",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_065",
+    "question": "Suppose you are building a CI/CD pipeline using GitLab CI/CD and Docker. How would you use GitLab CI/CD to automatically build, test, and deploy a Docker image to a production environment, and what are some key considerations when using this tool for continuous deployment?",
+    "difficulty": "medium",
+    "tags": [
+      "gitlab",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_066",
+    "question": "You are responsible for setting up a logging and monitoring pipeline for a team's services using Splunk and Nagios. What are some key metrics you would track, and how would you design a notification system to alert teams of potential issues and outages?",
+    "difficulty": "medium",
+    "tags": [
+      "splunk",
+      "nagios",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_067",
+    "question": "Suppose you are tasked with implementing a service discovery system using etcd and a reverse proxy like NGINX. How would you use etcd to manage service discovery, and what are some benefits and trade-offs of using this approach?",
+    "difficulty": "medium",
+    "tags": [
+      "etcd",
+      "nginx",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_068",
+    "question": "You are tasked with setting up a container registry using Docker Hub. What are some key considerations when using a container registry for version control and deployment of Docker images, and how would you configure Docker Hub to manage Docker images?",
+    "difficulty": "medium",
+    "tags": [
+      "docker",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_069",
+    "question": "Suppose you are building a disaster recovery and business continuity plan using AWS S3, Glacier, and RDS. How would you design a disaster recovery plan to ensure data availability and integrity during a disaster, and what are some key considerations when using AWS S3 and Glacier for data storage?",
+    "difficulty": "medium",
+    "tags": [
+      "aws",
+      "disasterrecovery",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_070",
+    "question": "Suppose you are tasked with implementing a infrastructure as code solution using Terraform and AWS. How would you use Terraform to manage infrastructure provisioning, and what are some benefits and trade-offs of using this approach for infrastructure management?",
+    "difficulty": "medium",
+    "tags": [
+      "terraform",
+      "aws",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_071",
+    "question": "Suppose you are handling log rotation for a service using a tool like Logrotate. How would you configure log rotation to manage disk space usage, and what are some potential issues to consider when handling log retention?",
+    "difficulty": "medium",
+    "tags": [
+      "log-rotation",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_072",
+    "question": "You are tasked with implementing a security hardening plan for a team's services using a framework like CHEF or Ansible. What are some key security best practices you would include in the plan to minimize risks, and how would you apply them to the services?",
+    "difficulty": "medium",
+    "tags": [
+      "security-hardening",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_073",
+    "question": "Suppose you are setting up a load balancing strategy for a microservices-based application using a tool like HAProxy. What are some key considerations you would take into account when designing the load balancing strategy, and how would you configure HAProxy to ensure high availability?",
+    "difficulty": "medium",
+    "tags": [
+      "load-balancing",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_074",
+    "question": "You are responsible for setting up a backup and recovery strategy for a team's data using a tool like Bacula. What are some key considerations you would need to take into account when designing the backup strategy, and how would you configure Bacula to ensure data recoverability?",
+    "difficulty": "medium",
+    "tags": [
+      "backup-and-recovery",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_075",
+    "question": "Suppose you are implementing a two-factor authentication system for a web application using a tool like Google Authenticator. How would you integrate this system with the existing authentication infrastructure, and what are some potential benefits and trade-offs of using this approach?",
+    "difficulty": "medium",
+    "tags": [
+      "two-factor-authentication",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_076",
+    "question": "You are tasked with setting up a container orchestration platform using a tool like DC/OS. What are some key considerations you would need to take into account when designing the orchestration platform, and how would you configure DC/OS to manage container deployment and scaling?",
+    "difficulty": "medium",
+    "tags": [
+      "container-orchestration",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_077",
+    "question": "You are responsible for setting up a access control and identity management system for a team's services using a tool like OpenLDAP. What are some key considerations you would need to take into account when designing the access control system, and how would you configure OpenLDAP to manage user identities and access permissions?",
+    "difficulty": "medium",
+    "tags": [
+      "access-control",
+      "devops"
+    ]
+  },
+  {
+    "id": "devops_078",
+    "question": "Suppose you are tasked with implementing a service health check system using Prometheus and Grafana. How would you design a system to continuously monitor service health, and what are some key considerations when implementing alerts and notifications?",
+    "difficulty": "medium",
+    "tags": [
+      "service-discovery",
+      "monitoring"
+    ]
+  },
+  {
+    "id": "devops_079",
+    "question": "You are responsible for setting up a secret management system for a team's services using Hashicorp Vault. What are some key security best practices you would follow when designing the secret management system, and how would you implement access control and encryption?",
+    "difficulty": "medium",
+    "tags": [
+      "security",
+      "secret-management"
+    ]
+  },
+  {
+    "id": "devops_080",
+    "question": "Suppose you are tasked with implementing a CI/CD pipeline using Jenkins and a containerization platform like Docker. How would you design a pipeline to automate testing, deployment, and rollback, and what are some key considerations when implementing continuous delivery?",
+    "difficulty": "medium",
+    "tags": [
+      "ci-cd",
+      "containerization"
+    ]
+  },
+  {
+    "id": "devops_081",
+    "question": "Suppose you're managing a CI/CD pipeline with a large number of automated tests. However, running all these tests on each commit is taking too long and slowing down the development process. Describe a strategy to implement incremental testing, where only relevant tests are run, without sacrificing test coverage.",
     "difficulty": "hard",
     "tags": [
-      "containerization",
-      "cloud-native"
+      "testing",
+      "pipeline",
+      "continuous-integration"
+    ]
+  },
+  {
+    "id": "devops_082",
+    "question": "You're deploying a containerized application to a cloud platform, but the initial deployment is taking an unusually long time. As the team, you suspect that the slow deployment is due to network issues in the cloud provider's region. How would you diagnose the issue without having access to cloud provider's internal monitoring tools?",
+    "difficulty": "hard",
+    "tags": [
+      "deployment",
+      "networking",
+      "cloud"
+    ]
+  },
+  {
+    "id": "devops_083",
+    "question": "Imagine you're tasked with automating the backup and restore process for a small team's configuration data stored in a cloud-based database. However, the database is not designed for high-throughput backup operations and has restrictions on the maximum backup size. Suggest an efficient solution to automate data backups.",
+    "difficulty": "hard",
+    "tags": [
+      "backup",
+      "restore",
+      "database"
+    ]
+  },
+  {
+    "id": "devops_084",
+    "question": "You're part of a team implementing a multi-stage build process in a CI/CD pipeline. However, the build process fails intermittently due to an external dependency that occasionally takes an unusually long time to resolve. Describe a strategy to detect and mitigate such failures without requiring significant modifications to the external dependency.",
+    "difficulty": "hard",
+    "tags": [
+      "pipeline",
+      "multistage-build",
+      "failure-detection"
+    ]
+  },
+  {
+    "id": "devops_085",
+    "question": "Suppose you're working with a team that's experiencing intermittent failures during container orchestration due to resource contention. How would you troubleshoot and optimize the resource allocation strategy for the containers to prevent such failures?",
+    "difficulty": "hard",
+    "tags": [
+      "orchestration",
+      "container",
+      "resource-allocation"
+    ]
+  },
+  {
+    "id": "devops_086",
+    "question": "You're tasked with optimizing the disk space usage of an automated testing environment. The environment consists of multiple virtual machines, each with a large number of Docker images. Describe a strategy to implement disk space efficiency without sacrificing the test environment's functionality.",
+    "difficulty": "hard",
+    "tags": [
+      "disk-space",
+      "virtual-machine",
+      "docker"
+    ]
+  },
+  {
+    "id": "devops_087",
+    "question": "You're managing a CI/CD pipeline that interacts with an external service for static code analysis. However, the service is down for maintenance, and you need to continue the pipeline without waiting for the service to come back online. Suggest an alternative solution to complete the pipeline.",
+    "difficulty": "hard",
+    "tags": [
+      "pipeline",
+      "external-service",
+      "static-code-analysis"
+    ]
+  },
+  {
+    "id": "devops_088",
+    "question": "Suppose you're building a CI/CD pipeline where the build process is triggered by a source code management tool. However, the pipeline fails due to an incorrectly configured tool integration. Describe a strategy to automate the detection and correction of such tool integration issues without requiring manual intervention.",
+    "difficulty": "hard",
+    "tags": [
+      "pipeline",
+      "tool-integration",
+      "automated-detection"
+    ]
+  },
+  {
+    "id": "devops_089",
+    "question": "You're working on a CI/CD pipeline that includes a manual step for approving deployment before releasing the new version to production. However, the pipeline's approval process is becoming a bottleneck due to frequent approvals required from multiple stakeholders. Describe a strategy to automate the approval process while ensuring that it's still transparent and auditable.",
+    "difficulty": "hard",
+    "tags": [
+      "ci/cd",
+      "approval process",
+      "automation"
+    ]
+  },
+  {
+    "id": "devops_090",
+    "question": "Suppose you're managing a cloud-based infrastructure where resources are dynamically provisioned based on load. However, the high provisioning rate has resulted in a high number of idle resources, leading to unnecessary costs. Suggest a strategy to implement a cost-effective provisioning mechanism that balances resource availability with cost optimization.",
+    "difficulty": "hard",
+    "tags": [
+      "cloud infrastructure",
+      "cost optimization",
+      "provisioning"
+    ]
+  },
+  {
+    "id": "devops_091",
+    "question": "Imagine you're working on a containerized application that relies on a third-party library for some critical functionality. However, the library has a known vulnerability that can be exploited by an attacker to compromise the entire application. Describe a strategy to implement a vulnerability remediation process that ensures the application remains secure without requiring manual intervention.",
+    "difficulty": "hard",
+    "tags": [
+      "container security",
+      "vulnerability remediation",
+      "devsecops"
+    ]
+  },
+  {
+    "id": "devops_092",
+    "question": "You're tasked with implementing a disaster recovery process for a small team's data center. However, the data center is located in a region prone to natural disasters, and the team has limited resources for implementing a comprehensive disaster recovery strategy. Suggest a strategy to develop a cost-effective disaster recovery plan that ensures business continuity in the event of a disaster.",
+    "difficulty": "hard",
+    "tags": [
+      "disaster recovery",
+      "business continuity",
+      "cost optimization"
+    ]
+  },
+  {
+    "id": "devops_093",
+    "question": "Suppose you're managing a CI/CD pipeline that uses a source code management tool for version control. However, the tool's API is rate-limited, and frequent API calls are causing the pipeline to timeout. Describe a strategy to implement a caching mechanism that reduces the number of API calls while ensuring data accuracy and consistency.",
+    "difficulty": "hard",
+    "tags": [
+      "ci/cd",
+      "api management",
+      "caching"
+    ]
+  },
+  {
+    "id": "devops_094",
+    "question": "Imagine you're working on a cloud-based application that uses a serverless architecture for scalability. However, the application's performance is impacted by the cold start issue, where the function takes too long to initialize on the first call. Suggest a strategy to implement a solution that mitigates the cold start issue without compromising the serverless architecture.",
+    "difficulty": "hard",
+    "tags": [
+      "serverless architecture",
+      "cold start issue",
+      "performance optimization"
+    ]
+  },
+  {
+    "id": "devops_095",
+    "question": "You're tasked with implementing a security monitoring framework for a cloud-based infrastructure. However, the framework needs to integrate with multiple security tools, each with its own API, and the integration process is becoming complex. Describe a strategy to design a scalable and maintainable integration framework that ensures seamless monitoring and incident response.",
+    "difficulty": "hard",
+    "tags": [
+      "cloud security",
+      "integration framework",
+      "incident response"
+    ]
+  },
+  {
+    "id": "devops_096",
+    "question": "Suppose you're managing a CI/CD pipeline that includes a series of automated checks for compliance and security. However, the pipeline's checks are becoming increasingly complex and time-consuming, leading to delays in the delivery process. Suggest a strategy to implement a modular and scalable checking framework that reduces the complexity and time required for compliance and security checks.",
+    "difficulty": "hard",
+    "tags": [
+      "ci/cd",
+      "compliance checking",
+      "security auditing"
+    ]
+  },
+  {
+    "id": "devops_097",
+    "question": "Imagine you're working on a cloud-based application that uses a microservices architecture for scalability. However, the application's logs are becoming increasingly complex and hard to analyze due to the distributed nature of the logs. Describe a strategy to implement a logging and analytics solution that provides a unified view of the application's logs while ensuring scalability and performance.",
+    "difficulty": "hard",
+    "tags": [
+      "cloud application",
+      "logging analytics",
+      "microservices architecture"
+    ]
+  },
+  {
+    "id": "devops_098",
+    "question": "You're tasked with implementing a service discovery mechanism for a microservices-based application. However, the application's services are deployed in multiple cloud regions, and the service discovery mechanism needs to handle region-specific failures. Describe a strategy to design a fault-tolerant service discovery system that ensures seamless communication across regions.",
+    "difficulty": "hard",
+    "tags": [
+      "service-discovery",
+      "dns",
+      "cloud-agnostic"
+    ]
+  },
+  {
+    "id": "devops_099",
+    "question": "Suppose you're working on a CI/CD pipeline that requires sensitive data encryption for secure data transfer between environments. However, the existing pipeline is not optimized for encryption and is causing performance bottlenecks. Suggest a strategy to optimize the encryption process within the pipeline without compromising data security.",
+    "difficulty": "hard",
+    "tags": [
+      "ci/cd",
+      "security",
+      "encryption"
+    ]
+  },
+  {
+    "id": "devops_100",
+    "question": "Imagine you're managing a cloud-based infrastructure that uses a container orchestration tool for resource management. However, the infrastructure's resources are becoming increasingly fragmented due to the growing number of containers and services. Describe a strategy to implement a container management and resource optimization framework that improves resource utilization and reduces costs.",
+    "difficulty": "hard",
+    "tags": [
+      "container-orchestration",
+      "resource-optimization",
+      "cloud-cost"
+    ]
+  },
+  {
+    "id": "devops_101",
+    "question": "You're tasked with implementing a log aggregation and analytics solution for a distributed application. However, the application's logs are being generated at different log levels (e.g., info, warn, error) and require filtering and grouping for meaningful analysis. Describe a strategy to design a log processing and analytics pipeline that handles log-level filtering and grouping for efficient analysis.",
+    "difficulty": "hard",
+    "tags": [
+      "log-aggregation",
+      "analytics",
+      "log-processing"
+    ]
+  },
+  {
+    "id": "devops_102",
+    "question": "Suppose you're working on a CI/CD pipeline that requires automated testing for a complex application with many components. However, the testing process is becoming increasingly complex and time-consuming due to the large number of test cases. Suggest a strategy to implement an automated testing framework that reduces test complexity and improves testing efficiency.",
+    "difficulty": "hard",
+    "tags": [
+      "ci/cd",
+      "testing",
+      "test-automation"
+    ]
+  },
+  {
+    "id": "devops_103",
+    "question": "Imagine you're managing a cloud-based infrastructure that uses a serverless architecture for scalability. However, the infrastructure's security is becoming a concern due to the lack of visibility into serverless function logs and performance metrics. Describe a strategy to implement a serverless security and monitoring framework that provides actionable insights into logs and performance metrics.",
+    "difficulty": "hard",
+    "tags": [
+      "serverless-security",
+      "logging",
+      "monitoring"
+    ]
+  },
+  {
+    "id": "devops_104",
+    "question": "You're tasked with implementing a data backup and recovery solution for a cloud-based application. However, the application's data is distributed across multiple storage systems, and the backup process needs to handle data consistency and integrity. Describe a strategy to design a data backup and recovery framework that ensures data consistency and integrity while reducing storage costs.",
+    "difficulty": "hard",
+    "tags": [
+      "backup-recovery",
+      "cloud-storage",
+      "data-consistency"
+    ]
+  },
+  {
+    "id": "devops_105",
+    "question": "Suppose you're working on a CI/CD pipeline that requires automated deployment of a complex application with multiple components. However, the deployment process is becoming increasingly complex due to the need to handle different environment configurations and security settings. Suggest a strategy to implement an automated deployment framework that reduces deployment complexity and improves deployment efficiency.",
+    "difficulty": "hard",
+    "tags": [
+      "ci/cd",
+      "deployment",
+      "environment-configuration"
     ]
   }
 ]

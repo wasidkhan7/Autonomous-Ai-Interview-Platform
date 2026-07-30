@@ -1,70 +1,349 @@
 [
   {
     "id": "mern_001",
-    "question": "Explain the role of the virtual DOM in React and why it improves performance.",
+    "question": "What is React and how does it compare to Angular and Vue.js?",
     "difficulty": "easy",
     "tags": [
       "react",
-      "frontend"
+      "front-end",
+      "comparison"
     ]
   },
   {
     "id": "mern_002",
-    "question": "How does middleware work in Express, and how would you implement centralized error handling?",
-    "difficulty": "medium",
+    "question": "What are the main differences between Node.js and MongoDB? Why would you choose each?",
+    "difficulty": "easy",
     "tags": [
-      "express",
-      "backend"
+      "node",
+      "mongo",
+      "database"
     ]
   },
   {
     "id": "mern_003",
-    "question": "Design a MongoDB schema for a social app with posts, comments, and likes. Discuss embedding vs referencing.",
-    "difficulty": "hard",
+    "question": "What is the purpose of Express.js in a MERN stack and why do you use it?",
+    "difficulty": "easy",
     "tags": [
-      "mongodb",
-      "system-design"
+      "express",
+      "server-side",
+      "framework"
     ]
   },
   {
     "id": "mern_004",
-    "question": "Explain what is JWT token and how it is used for authentication in MERN applications.",
+    "question": "How does MongoDB handle data querying and sorting, and what is the difference between find() and findOne()?",
     "difficulty": "easy",
     "tags": [
-      "auth",
-      "security"
+      "mongo",
+      "database",
+      "querying"
     ]
   },
   {
     "id": "mern_005",
-    "question": "Describe the difference between Mongoose's model and schema, and provide an example of how to use them in a MERN application.",
+    "question": "What is a RESTful API and why is it used in API design?",
     "difficulty": "easy",
     "tags": [
-      "mongodb",
-      "mongoose"
+      "api",
+      "rest",
+      "design-patterns"
     ]
   },
   {
     "id": "mern_006",
-    "question": "What is the purpose of the Node.js built-in modules 'events' and 'timers', and how would you use them in a MERN application?",
+    "question": "What is the main difference between ES6 classes and constructor functions in JavaScript?",
     "difficulty": "easy",
     "tags": [
-      "nodejs",
-      "events"
+      "js",
+      "es6",
+      "classes"
     ]
   },
   {
     "id": "mern_007",
-    "question": "Design a Redis data structure to store user sessions in a MERN application, and explain how you would implement session expiration and invalidation.",
+    "question": "How do you handle user authentication in a MERN application, and what role does Passport.js play?",
     "difficulty": "easy",
     "tags": [
-      "redis",
-      "session"
+      "auth",
+      "passport",
+      "security"
     ]
   },
   {
     "id": "mern_008",
-    "question": "Explain the concept of a 'context' in Express, and describe how you would use it to share data between middleware functions in a MERN application.",
+    "question": "What is the purpose of Mongoose in a MongoDB application, and how does it simplify data modeling?",
+    "difficulty": "easy",
+    "tags": [
+      "mongoose",
+      "mongo",
+      "data-modeling"
+    ]
+  },
+  {
+    "id": "mern_009",
+    "question": "What are the key differences between Express.js and Hapi.js in terms of their routing and middleware handling?",
+    "difficulty": "easy",
+    "tags": [
+      "Express.js",
+      "Hapi.js"
+    ]
+  },
+  {
+    "id": "mern_010",
+    "question": "How does MongoDB's schema design influence the structure of your application's data, and why is it essential to consider schema design in MERN development?",
+    "difficulty": "easy",
+    "tags": [
+      "MongoDB",
+      "Schema Design"
+    ]
+  },
+  {
+    "id": "mern_011",
+    "question": "What is the primary function of a middleware in an Express.js application, and how can you use middleware to handle errors or security concerns?",
+    "difficulty": "easy",
+    "tags": [
+      "Express.js",
+      "Middleware"
+    ]
+  },
+  {
+    "id": "mern_012",
+    "question": "How do you use the Mongoose model to interact with your MongoDB database, and what advantages does it provide over direct database interactions?",
+    "difficulty": "easy",
+    "tags": [
+      "Mongoose",
+      "MongoDB"
+    ]
+  },
+  {
+    "id": "mern_013",
+    "question": "What is the difference between synchronous and asynchronous code execution in Node.js, and how does it impact the performance of your application?",
+    "difficulty": "easy",
+    "tags": [
+      "Node.js",
+      "Synchronous vs Asynchronous"
+    ]
+  },
+  {
+    "id": "mern_014",
+    "question": "How do you handle static files, such as images or CSS files, in an Express.js application, and what are the implications for routing and caching?",
+    "difficulty": "easy",
+    "tags": [
+      "Express.js",
+      "Static Files"
+    ]
+  },
+  {
+    "id": "mern_015",
+    "question": "What are the primary benefits and drawbacks of using a MERN stack for developing a web application, and how does it compare to other full-stack technologies?",
+    "difficulty": "easy",
+    "tags": [
+      "MERN Stack",
+      "Full-Stack Development"
+    ]
+  },
+  {
+    "id": "mern_016",
+    "question": "How do you integrate environment variables in a Node.js application, and what tools or libraries are commonly used for managing and accessing environment variables?",
+    "difficulty": "easy",
+    "tags": [
+      "Node.js",
+      "Environment Variables"
+    ]
+  },
+  {
+    "id": "mern_017",
+    "question": "What is the purpose of a .env file in a MERN project, and how is it used for environment configuration?",
+    "difficulty": "easy",
+    "tags": [
+      "mern",
+      ".env",
+      "environment configuration"
+    ]
+  },
+  {
+    "id": "mern_018",
+    "question": "How does MongoDB's ObjectId work, and what benefits does it provide for document identification?",
+    "difficulty": "easy",
+    "tags": [
+      "mongodb",
+      "ObjectId",
+      "document identification"
+    ]
+  },
+  {
+    "id": "mern_019",
+    "question": "What are the key differences between MongoDB's Find() and FindOne() methods, and when would you use each?",
+    "difficulty": "easy",
+    "tags": [
+      "mongodb",
+      "find",
+      "findOne"
+    ]
+  },
+  {
+    "id": "mern_020",
+    "question": "What is the purpose of the __dirname and __filename variables in Node.js, and how are they commonly used?",
+    "difficulty": "easy",
+    "tags": [
+      "nodejs",
+      "dirname",
+      "filename"
+    ]
+  },
+  {
+    "id": "mern_021",
+    "question": "How does Express.js handle request and response objects, and what are some common methods used for interacting with them?",
+    "difficulty": "easy",
+    "tags": [
+      "express",
+      "request",
+      "response"
+    ]
+  },
+  {
+    "id": "mern_022",
+    "question": "What is the difference between the GET and POST HTTP methods, and how do they relate to different use cases in a MERN application?",
+    "difficulty": "easy",
+    "tags": [
+      "http",
+      "get",
+      "post"
+    ]
+  },
+  {
+    "id": "mern_023",
+    "question": "What is the purpose of a middleware function in a MERN application, and how is it typically used for handling requests and responses?",
+    "difficulty": "easy",
+    "tags": [
+      "middleware",
+      "request",
+      "response"
+    ]
+  },
+  {
+    "id": "mern_024",
+    "question": "How does Mongoose handle schema validation, and what are some common validation techniques used in a MERN application?",
+    "difficulty": "easy",
+    "tags": [
+      "mongoose",
+      "schema",
+      "validation"
+    ]
+  },
+  {
+    "id": "mern_025",
+    "question": "What is the difference between a stateless and stateful application, and how does a MERN application typically handle state?",
+    "difficulty": "easy",
+    "tags": [
+      "state",
+      "stateless",
+      "stateful"
+    ]
+  },
+  {
+    "id": "mern_026",
+    "question": "What is the purpose of the req.body object in a MERN application, and how is it populated?",
+    "difficulty": "easy",
+    "tags": [
+      "req",
+      "body",
+      "express"
+    ]
+  },
+  {
+    "id": "mern_027",
+    "question": "What are the primary benefits and drawbacks of using synchronous code instead of asynchronous code in a Node.js application?",
+    "difficulty": "easy",
+    "tags": [
+      "Node.js",
+      "Asynchronous Programming"
+    ]
+  },
+  {
+    "id": "mern_028",
+    "question": "How do you handle errors in a Mongoose model, and what are some common ways to catch and handle errors that occur during schema validation?",
+    "difficulty": "easy",
+    "tags": [
+      "Mongoose",
+      "Error Handling"
+    ]
+  },
+  {
+    "id": "mern_029",
+    "question": "What is the purpose of the req.query object in a MERN application, and how is it populated?",
+    "difficulty": "easy",
+    "tags": [
+      "req.query",
+      "Request Object"
+    ]
+  },
+  {
+    "id": "mern_030",
+    "question": "What are the key differences between MongoDB's insertMany() and insertOne() methods, and when would you use each?",
+    "difficulty": "easy",
+    "tags": [
+      "MongoDB",
+      "insertMany"
+    ]
+  },
+  {
+    "id": "mern_031",
+    "question": "How does Express.js support routing in a MERN application, and what are some common ways to define routes?",
+    "difficulty": "easy",
+    "tags": [
+      "Express.js",
+      "Routing"
+    ]
+  },
+  {
+    "id": "mern_032",
+    "question": "What is the purpose of the package.json file in a MERN project, and how is it used for dependency management?",
+    "difficulty": "easy",
+    "tags": [
+      "package.json",
+      "NPM"
+    ]
+  },
+  {
+    "id": "mern_033",
+    "question": "How does a MERN application handle session management, and what are some common ways to implement session storage?",
+    "difficulty": "easy",
+    "tags": [
+      "Session Management",
+      "MERN"
+    ]
+  },
+  {
+    "id": "mern_034",
+    "question": "What are the primary benefits and drawbacks of using a Model-View-Controller (MVC) architecture in a MERN application, and how does it compare to other architectural patterns?",
+    "difficulty": "easy",
+    "tags": [
+      "MVC",
+      "Architecture"
+    ]
+  },
+  {
+    "id": "mern_035",
+    "question": "What is the purpose of the res.locals object in a MERN application, and how is it used for storing and retrieving local variables?",
+    "difficulty": "easy",
+    "tags": [
+      "res.locals",
+      "Response Object"
+    ]
+  },
+  {
+    "id": "mern_036",
+    "question": "What is the difference between a MongoDB collection and a database, and how are they related in a MERN application?",
+    "difficulty": "easy",
+    "tags": [
+      "mongodb",
+      "data-storage"
+    ]
+  },
+  {
+    "id": "mern_037",
+    "question": "What is Express.js middleware, and how is it used to process incoming HTTP requests in a MERN application?",
     "difficulty": "easy",
     "tags": [
       "express",
@@ -72,174 +351,652 @@
     ]
   },
   {
-    "id": "mern_009",
-    "question": "What is the difference between synchronous and asynchronous file I/O in Node.js, and provide an example of when you would use each in a MERN application.",
+    "id": "mern_038",
+    "question": "What is the purpose of the Mongoose model, and how is it used to interact with a MongoDB database in a MERN application?",
+    "difficulty": "easy",
+    "tags": [
+      "mongoose",
+      "database-models"
+    ]
+  },
+  {
+    "id": "mern_039",
+    "question": "What is a Node.js callback function, and how is it used to handle asynchronous operations in a MERN application?",
     "difficulty": "easy",
     "tags": [
       "nodejs",
-      "fileio"
+      "asynchronous-programming"
     ]
   },
   {
-    "id": "mern_010",
-    "question": "Describe how you would implement internationalization (i18n) in a MERN application using a library such as react-intl, and explain how you would handle locale-specific formatting and translation.",
+    "id": "mern_040",
+    "question": "What is the purpose of the req.params object in a MERN application, and how is it populated with route parameters?",
     "difficulty": "easy",
     "tags": [
-      "i18n",
-      "internationalization"
+      "express",
+      "routing"
     ]
   },
   {
-    "id": "mern_011",
-    "question": "Explain the differences between a Mongoose Model and a Mongoose Schema, and when would you use each.",
+    "id": "mern_041",
+    "question": "You've built a simple TODO list app with React and Express. Now, you want to add a feature for users to upload images of completed tasks. How would you modify the current API endpoints to accommodate this new feature, considering data storage and security?",
     "difficulty": "medium",
     "tags": [
-      "Mongoose",
-      "MongoDB"
+      "Express",
+      "React",
+      "MERN"
     ]
   },
   {
-    "id": "mern_012",
-    "question": "Describe a scenario where you would use a RESTful API over a GraphQL API, and vice versa. Justify your choice.",
+    "id": "mern_042",
+    "question": "Suppose you're building an authentication system using MongoDB, Express, and Node.js. You want to implement password hashing and salting. What are the potential trade-offs in storing salt values with the hashed passwords versus storing them separately, and why?",
     "difficulty": "medium",
     "tags": [
-      "API Design",
-      "GraphQL",
-      "RESTful API"
-    ]
-  },
-  {
-    "id": "mern_013",
-    "question": "Design a caching strategy for a MERN application using Redis, and explain how you would implement it.",
-    "difficulty": "medium",
-    "tags": [
-      "Caching",
-      "Redis",
-      "Performance"
-    ]
-  },
-  {
-    "id": "mern_014",
-    "question": "Discuss the trade-offs between using a monolithic vs microservices architecture in a MERN application, and provide an example use case for each.",
-    "difficulty": "medium",
-    "tags": [
-      "Architecture",
-      "Monolithic",
-      "Microservices"
-    ]
-  },
-  {
-    "id": "mern_015",
-    "question": "Explain how to secure user authentication in a MERN application using JSON Web Tokens (JWT). How would you handle token expiration and revocation?",
-    "difficulty": "medium",
-    "tags": [
-      "Security",
-      "Authentication",
-      "JWT"
-    ]
-  },
-  {
-    "id": "mern_016",
-    "question": "Describe a scenario where you would use a transaction in a MongoDB database, and explain how you would implement one.",
-    "difficulty": "medium",
-    "tags": [
+      "Node.js",
       "MongoDB",
-      "Transactions",
-      "Database"
+      "Authentication"
     ]
   },
   {
-    "id": "mern_017",
-    "question": "Design a logging mechanism for a MERN application using Winston, and explain how you would configure it for production use.",
+    "id": "mern_043",
+    "question": "In a React application, you have a list of items that are filtered based on user input. As the user types, the filtered list is updated. However, when the user backspaces, the filtered list doesn't update immediately. How would you optimize the filtering mechanism to handle this edge case?",
     "difficulty": "medium",
     "tags": [
-      "Logging",
-      "Winston",
-      "Production"
+      "React",
+      "Frontend Optimization"
     ]
   },
   {
-    "id": "mern_018",
-    "question": "Explain how to implement internationalization (i18n) and translation in a MERN application using i18next, including how to handle language detection and routing.",
+    "id": "mern_044",
+    "question": "You're building a simple CRUD API with Express and MongoDB. You want to add data validation and sanitization to prevent potential SQL injection attacks. How would you implement these security measures, and what are the potential pitfalls?",
     "difficulty": "medium",
     "tags": [
-      "Internationalization",
-      "Translation",
-      "i18next"
-    ]
-  },
-  {
-    "id": "mern_019",
-    "question": "Describe a scenario where you would use a service worker in a MERN application, and explain how you would implement one for offline support.",
-    "difficulty": "medium",
-    "tags": [
-      "Service Worker",
-      "Offline",
-      "Performance"
-    ]
-  },
-  {
-    "id": "mern_020",
-    "question": "Discuss the differences between using a schema-first vs code-first approach in a MERN application, and provide an example use case for each.",
-    "difficulty": "medium",
-    "tags": [
-      "Schema",
-      "Code-First",
-      "Mongoose"
-    ]
-  },
-  {
-    "id": "mern_021",
-    "question": "Design a GraphQL schema with mutations for a real-time payment system. Implement caching and validation to prevent unauthorized transactions.",
-    "difficulty": "hard",
-    "tags": [
-      "GraphQL",
-      "Mutation"
-    ]
-  },
-  {
-    "id": "mern_022",
-    "question": "Explain the concept of 'async await' and 'Promise chaining' in JavaScript. Provide an example of how you would use these techniques to handle concurrent API calls in an Express.js application.",
-    "difficulty": "hard",
-    "tags": [
-      "JavaScript",
-      "Concurrency"
-    ]
-  },
-  {
-    "id": "mern_023",
-    "question": "Implement a secure authentication flow using Passport.js in an Express.js application. Discuss best practices for storing session data and protecting against common web attacks.",
-    "difficulty": "hard",
-    "tags": [
-      "Authentication",
+      "Express",
+      "MongoDB",
       "Security"
     ]
   },
   {
-    "id": "mern_024",
-    "question": "Describe how to utilize Mongoose's 'Mongoose Model Plugins' to handle complex business logic in a MongoDB database. Provide an example of how you would use a plugin to enforce data consistency across multiple collections.",
-    "difficulty": "hard",
+    "id": "mern_045",
+    "question": "Suppose you have a large MongoDB collection with a field that contains URLs. You want to create an API endpoint to retrieve the number of unique URLs in the collection. What is the most efficient way to achieve this using MongoDB, and how would you optimize the results for large datasets?",
+    "difficulty": "medium",
     "tags": [
       "MongoDB",
-      "Mongoose"
+      "Database Optimization"
     ]
   },
   {
-    "id": "mern_025",
-    "question": "Design an efficient algorithm to handle pagination in a MERN application using Node.js, Express.js, and MongoDB. Discuss the trade-offs between client-side and server-side rendering.",
-    "difficulty": "hard",
+    "id": "mern_046",
+    "question": "You're building a simple login system using Node.js and Express. You want to add a feature to remember user login credentials for a certain period. How would you implement this feature using cookies and sessions, and what are the potential security concerns?",
+    "difficulty": "medium",
     "tags": [
-      "Pagination",
-      "Performance"
+      "Node.js",
+      "Express",
+      "Authentication"
     ]
   },
   {
-    "id": "mern_026",
-    "question": "Implement an API using Node.js and Express.js to handle webhooks and notifications. Discuss strategies for handling high volumes of incoming requests and implementing retries for failed notifications.",
+    "id": "mern_047",
+    "question": "In a React application, you have a list of items with varying levels of nesting. You want to create a recursive component to render the list items. How would you handle the recursive component to prevent potential performance issues, and what are the trade-offs between different recursive component approaches?",
+    "difficulty": "medium",
+    "tags": [
+      "React",
+      "Frontend Optimization"
+    ]
+  },
+  {
+    "id": "mern_048",
+    "question": "You're building a simple chat application using Socket.io and Node.js. You want to add real-time notifications when a user receives a message. How would you implement this feature using WebSockets, and what are the potential challenges in handling multiple concurrent connections?",
+    "difficulty": "medium",
+    "tags": [
+      "Socket.io",
+      "Realtime Updates"
+    ]
+  },
+  {
+    "id": "mern_049",
+    "question": "You're building a RESTful API with Express.js. A client sends a request with a large payload, causing the server to run out of memory. How would you implement pagination on the API endpoint to handle large requests, and what are the potential trade-offs in implementing pagination?",
+    "difficulty": "medium",
+    "tags": [
+      "express",
+      "api",
+      "performance"
+    ]
+  },
+  {
+    "id": "mern_050",
+    "question": "In a MERN stack application, you're using Mongoose models to interact with MongoDB. You want to implement optimistic concurrency control to prevent data inconsistencies when multiple users update the same document simultaneously. How would you achieve this using Mongoose, and what are the potential pitfalls of this approach?",
+    "difficulty": "medium",
+    "tags": [
+      "mongoose",
+      "concurrency",
+      "optimism"
+    ]
+  },
+  {
+    "id": "mern_051",
+    "question": "You're building a real-time analytics dashboard using React, Node.js, and Socket.io. The dashboard displays a live count of users online. However, the count is not always up-to-date due to WebSocket disconnections and reconnections. How would you implement a debouncing mechanism to ensure the count remains accurate, and what are the potential benefits of using debouncing?",
+    "difficulty": "medium",
+    "tags": [
+      "real-time",
+      "debouncing",
+      "socket.io"
+    ]
+  },
+  {
+    "id": "mern_052",
+    "question": "In a MERN stack application, you're using Passport.js for authentication. You want to implement a feature to allow users to reset their passwords. How would you handle password reset requests, and what are the potential security concerns in storing reset passwords?",
+    "difficulty": "medium",
+    "tags": [
+      "passport",
+      "passwords",
+      "security"
+    ]
+  },
+  {
+    "id": "mern_053",
+    "question": "You're building a file uploading system using Express.js and Multer. However, the system is vulnerable to malicious file uploads, such as uploading of .exe or .zip files. How would you implement file validation and sanitization to prevent malicious file uploads, and what are the potential trade-offs in using whitelisting versus blacklisting?",
+    "difficulty": "medium",
+    "tags": [
+      "multer",
+      "file-upload",
+      "validation"
+    ]
+  },
+  {
+    "id": "mern_054",
+    "question": "In a MERN stack application, you're using Mongoose to interact with MongoDB. You want to implement data aggregation using the $facet operator to retrieve complex data from the database. How would you use the $facet operator to achieve this, and what are the potential benefits of using data aggregation?",
+    "difficulty": "medium",
+    "tags": [
+      "mongoose",
+      "aggregation",
+      "facet"
+    ]
+  },
+  {
+    "id": "mern_055",
+    "question": "You're building a live chat system using Socket.io and Node.js. However, the system is experiencing performance issues due to a high number of concurrent connections. How would you scale the system horizontally using multiple Node.js processes, and what are the potential trade-offs in using load balancing versus connection draining?",
+    "difficulty": "medium",
+    "tags": [
+      "socket.io",
+      "scalability",
+      "load-balancing"
+    ]
+  },
+  {
+    "id": "mern_056",
+    "question": "In a React application, you're using the Context API to manage state. However, the state is not updated correctly when the component re-renders due to a change in a dependent state. How would you debug the issue using React DevTools, and what are the potential solutions to update the state correctly?",
+    "difficulty": "medium",
+    "tags": [
+      "react",
+      "context-api",
+      "state-management"
+    ]
+  },
+  {
+    "id": "mern_057",
+    "question": "You're building an e-commerce application using React and Node.js with MongoDB. The application needs to handle discounts and promotions on products. How would you implement a feature to apply multiple discounts to a product, and what are the potential trade-offs in using a single database field versus multiple fields to store discounts?",
+    "difficulty": "medium",
+    "tags": [
+      "mongodb",
+      "reactjs",
+      "nodejs"
+    ]
+  },
+  {
+    "id": "mern_058",
+    "question": "In a MERN stack application, you're using Socket.io for real-time updates. However, the application has a high number of concurrent connections and is causing the Node.js process to consume high amounts of memory. How would you optimize the Socket.io connection management to reduce memory consumption, and what are the potential benefits of using Socket.io's built-in connection management features?",
+    "difficulty": "medium",
+    "tags": [
+      "socketio",
+      "nodejs"
+    ]
+  },
+  {
+    "id": "mern_059",
+    "question": "You're building a user onboarding system using Node.js, Express, and Mongoose. The system requires sending a verification email to the user after registration. How would you implement a feature to send verification emails using Node.js and Mongoose, and what are the potential security concerns in using an SMTP server to send emails?",
+    "difficulty": "medium",
+    "tags": [
+      "nodejs",
+      "expressjs",
+      "mongoose"
+    ]
+  },
+  {
+    "id": "mern_060",
+    "question": "In a React application, you're using the useEffect hook to fetch data from an API. However, the application is experiencing performance issues due to unnecessary API calls on every render. How would you optimize the useEffect hook to fetch data only when necessary, and what are the potential trade-offs in using the useMemo hook versus the useEffect hook for data fetching?",
+    "difficulty": "medium",
+    "tags": [
+      "reactjs",
+      "javascript"
+    ]
+  },
+  {
+    "id": "mern_061",
+    "question": "You're building a data analytics dashboard using Node.js, Express, and MongoDB. The dashboard requires displaying aggregated data from multiple collections. How would you implement a feature to display aggregated data using MongoDB aggregation framework, and what are the potential benefits of using aggregation versus data processing in the application code?",
+    "difficulty": "medium",
+    "tags": [
+      "mongodb",
+      "nodejs",
+      "expressjs"
+    ]
+  },
+  {
+    "id": "mern_062",
+    "question": "In a MERN stack application, you're using Passport.js for authentication. However, the application has a custom authentication logic that requires additional verification steps. How would you integrate custom authentication logic with Passport.js, and what are the potential trade-offs in using Passport.js's built-in support for custom authentication logic?",
+    "difficulty": "medium",
+    "tags": [
+      "passportjs",
+      "nodejs",
+      "javascript"
+    ]
+  },
+  {
+    "id": "mern_063",
+    "question": "You're building a payment gateway integration using Node.js, Express, and Stripe. The integration requires handling payment webhooks from Stripe to update the application's database. How would you implement a feature to handle payment webhooks using Node.js and Express, and what are the potential benefits of using Stripe's built-in webhook handling features?",
+    "difficulty": "medium",
+    "tags": [
+      "nodejs",
+      "expressjs",
+      "stripe"
+    ]
+  },
+  {
+    "id": "mern_064",
+    "question": "In a React application, you're using the Context API to manage authentication state. However, the application has a complex authentication flow that requires multiple authentication providers. How would you integrate multiple authentication providers with the Context API, and what are the potential trade-offs in using a single authentication provider versus multiple providers?",
+    "difficulty": "medium",
+    "tags": [
+      "reactjs",
+      "contextapi",
+      "javascript"
+    ]
+  },
+  {
+    "id": "mern_065",
+    "question": "You're building a RESTful API using Express.js and MongoDB. However, the API is experiencing performance issues due to the frequent creation of new MongoDB connections. How would you implement connection pooling to improve performance, and what are the potential trade-offs in using a connection pool versus establishing new connections?",
+    "difficulty": "medium",
+    "tags": [
+      "express",
+      "mongodb"
+    ]
+  },
+  {
+    "id": "mern_066",
+    "question": "In a MERN stack application, you're using React to render a list of products from a MongoDB database. However, the list rendering is slow due to the excessive use of DOM rendering. How would you optimize the list rendering using React's Virtualized List feature, and what are the potential benefits of using Virtualized List versus standard list rendering?",
+    "difficulty": "medium",
+    "tags": [
+      "react",
+      "mongodb"
+    ]
+  },
+  {
+    "id": "mern_067",
+    "question": "You're building a real-time dashboard using Node.js, Socket.io, and MongoDB. However, the dashboard is experiencing latency issues due to the high volume of data being updated in real-time. How would you implement data buffering to reduce latency, and what are the potential trade-offs in using a buffer versus updating the data in real-time?",
+    "difficulty": "medium",
+    "tags": [
+      "socket.io",
+      "mongodb"
+    ]
+  },
+  {
+    "id": "mern_068",
+    "question": "In a MERN stack application, you're using Mongoose to interact with MongoDB. However, the application is experiencing issues with data denormalization due to the frequent fetching of related data. How would you implement data denormalization using Mongoose's populate feature, and what are the potential benefits of using data denormalization versus eager loading?",
+    "difficulty": "medium",
+    "tags": [
+      "mongoose",
+      "mongodb"
+    ]
+  },
+  {
+    "id": "mern_069",
+    "question": "You're building a user authentication system using Node.js, Express, and Passport.js. However, the system requires additional authentication steps such as 2FA. How would you integrate 2FA with Passport.js, and what are the potential trade-offs in using Passport.js's built-in support for 2FA versus implementing a custom solution?",
+    "difficulty": "medium",
+    "tags": [
+      "passport.js",
+      "node.js"
+    ]
+  },
+  {
+    "id": "mern_070",
+    "question": "In a React application, you're using the Redux library to manage global state. However, the application is experiencing issues with state updates due to the excessive use of selectors. How would you optimize state updates using Redux's selectors, and what are the potential benefits of using selectors versus using the state directly?",
+    "difficulty": "medium",
+    "tags": [
+      "redux",
+      "react"
+    ]
+  },
+  {
+    "id": "mern_071",
+    "question": "You're building a data import feature using Node.js, Express, and MongoDB. However, the feature requires handling large amounts of data being imported in a single operation. How would you implement parallel data import using Node.js's built-in support for parallel operations, and what are the potential benefits of using parallel data import versus sequential data import?",
+    "difficulty": "medium",
+    "tags": [
+      "node.js",
+      "mongodb"
+    ]
+  },
+  {
+    "id": "mern_072",
+    "question": "In a MERN application, you're using the MongoDB Change Stream API to observe changes to a collection. However, the application is experiencing performance issues due to the high volume of change events. How would you implement filtering and batching to reduce the number of events being processed, and what are the potential trade-offs in using these techniques?",
+    "difficulty": "medium",
+    "tags": [
+      "mongodb",
+      "change-streams"
+    ]
+  },
+  {
+    "id": "mern_073",
+    "question": "You're building a real-time chat application using Node.js, Socket.io, and MongoDB. However, the application requires handling multiple concurrent chat sessions. How would you implement connection multiplexing using Socket.io, and what are the potential benefits of using multiplexing versus creating new connections for each session?",
+    "difficulty": "medium",
+    "tags": [
+      "socket-io",
+      "connection-multiplexing"
+    ]
+  },
+  {
+    "id": "mern_074",
+    "question": "In a React application, you're using the Context API to manage user preferences. However, the application is experiencing issues with stale data due to the incorrect use of context. How would you implement context updates using the Context API, and what are the potential benefits of using memoization and caching to improve performance?",
+    "difficulty": "medium",
+    "tags": [
+      "react",
+      "context-api"
+    ]
+  },
+  {
+    "id": "mern_075",
+    "question": "You're building a search functionality using Node.js, Express, and MongoDB. However, the application requires handling complex search queries with multiple terms and filters. How would you implement full-text search using MongoDB's text search index, and what are the potential benefits of using indexing versus querying the application code?",
+    "difficulty": "medium",
+    "tags": [
+      "mongodb",
+      "text-search"
+    ]
+  },
+  {
+    "id": "mern_076",
+    "question": "You're building a data encryption feature using Node.js, Express, and MongoDB. However, the application requires handling sensitive data being stored in MongoDB. How would you implement data encryption using MongoDB's built-in encryption support, and what are the potential benefits of using encryption versus using a third-party library?",
+    "difficulty": "medium",
+    "tags": [
+      "mongodb",
+      "data-encryption"
+    ]
+  },
+  {
+    "id": "mern_077",
+    "question": "In a React application, you're using the React Router library to manage client-side routing. However, the application is experiencing issues with page loading due to the incorrect use of lazy loading. How would you implement lazy loading using React Router, and what are the potential benefits of using lazy loading versus standard loading?",
+    "difficulty": "medium",
+    "tags": [
+      "react-router",
+      "lazy-loading"
+    ]
+  },
+  {
+    "id": "mern_078",
+    "question": "You're building a user profiling feature using Node.js, Express, and MongoDB. However, the application requires handling large amounts of user data being stored in MongoDB. How would you implement data deduplication using MongoDB's built-in data type, and what are the potential benefits of using deduplication versus using a third-party library?",
+    "difficulty": "medium",
+    "tags": [
+      "mongodb",
+      "data-deduplication"
+    ]
+  },
+  {
+    "id": "mern_079",
+    "question": "You're building a RESTful API using Node.js and Express, and you need to implement pagination for a large dataset. How would you handle this scenario, and what are the trade-offs between using a limit/offset query string parameter versus a cursor-based approach?",
+    "difficulty": "medium",
+    "tags": [
+      "node.js",
+      "express",
+      "pagination"
+    ]
+  },
+  {
+    "id": "mern_080",
+    "question": "In a React application, you're using the Redux Toolkit library to manage global state, and you need to optimize the performance of a complex form submission process. How would you implement memoization and caching to improve performance, and what are the potential benefits of using these techniques versus re-rendering the entire form?",
+    "difficulty": "medium",
+    "tags": [
+      "react",
+      "redux-toolkit",
+      "memoization"
+    ]
+  },
+  {
+    "id": "mern_081",
+    "question": "A user can upload multiple images at once. Describe a solution to ensure that all uploaded files are persisted to disk before moving on to the next file, while maintaining the same level of performance as if all files were uploaded separately.",
     "difficulty": "hard",
     "tags": [
-      "Webhooks",
-      "Notifications"
+      "async",
+      "file-upload",
+      "performance"
+    ]
+  },
+  {
+    "id": "mern_082",
+    "question": "You notice that after adding a new field to an existing MongoDB collection, all queries that reference the new field are taking significantly longer to execute. What could be the cause of this performance issue, and how would you debug it?",
+    "difficulty": "hard",
+    "tags": [
+      "mongodb",
+      "performance",
+      "query-optimization"
+    ]
+  },
+  {
+    "id": "mern_083",
+    "question": "Imagine you're working on an e-commerce application with React as the frontend and Express.js as the backend. When a user clicks the 'Add to Cart' button, the corresponding product is added to the cart on the server-side. However, when the user navigates to the cart page, it's empty. What could be the reason for this discrepancy, and how would you fix it?",
+    "difficulty": "hard",
+    "tags": [
+      "react",
+      "express",
+      "frontend-backend-sync"
+    ]
+  },
+  {
+    "id": "mern_084",
+    "question": "You're building a single-page application with a large amount of static resources (e.g., images, fonts, CSS files). How would you configure Next.js routing to serve these static resources efficiently, while minimizing the number of requests to the server?",
+    "difficulty": "hard",
+    "tags": [
+      "nextjs",
+      "routing",
+      "static-resources"
+    ]
+  },
+  {
+    "id": "mern_085",
+    "question": "Describe the implications of using the 'one true database' approach for your MERN application. What are the trade-offs between consistency, availability, and partition tolerance, and how would you mitigate potential issues?",
+    "difficulty": "hard",
+    "tags": [
+      "database",
+      "one-truth-database",
+      "cap-theorem"
+    ]
+  },
+  {
+    "id": "mern_086",
+    "question": "You're experiencing a scenario where a user's Mern application data is being corrupted due to a mismatch between the data types in the MongoDB collection and the data being sent from the Mongoose model. Describe the issue, and explain how you would diagnose and resolve it.",
+    "difficulty": "hard",
+    "tags": [
+      "mongodb",
+      "mongoose",
+      "data-corruption"
+    ]
+  },
+  {
+    "id": "mern_087",
+    "question": "An engineer has built a custom React Hook for managing authentication in your application. However, when the user logs out, the state of the component doesn't update correctly, resulting in stale data being displayed. Provide an explanation for why this might happen, and suggest how to fix the issue.",
+    "difficulty": "hard",
+    "tags": [
+      "react",
+      "auth-hook",
+      "state-management"
+    ]
+  },
+  {
+    "id": "mern_088",
+    "question": "Your Mern application relies heavily on RESTful APIs, but you want to introduce WebSocket support to improve real-time communication between the client and the server. Describe a high-level architecture for integrating WebSockets using Socket.IO, and address potential challenges you might encounter.",
+    "difficulty": "hard",
+    "tags": [
+      "websocket",
+      "socket-io",
+      "real-time-communication"
+    ]
+  },
+  {
+    "id": "mern_089",
+    "question": "Your Mern application has a complex schema with multiple nested objects and arrays. Describe a strategy for implementing data validation and sanitization using Joi, without sacrificing performance or adding unnecessary overhead.",
+    "difficulty": "hard",
+    "tags": [
+      "validation",
+      "sanitization",
+      "joi"
+    ]
+  },
+  {
+    "id": "mern_090",
+    "question": "A user reports an issue where their MongoDB collection is being filled with duplicate documents, despite implementing a unique index on the relevant field. What possible reasons could be causing this issue, and how would you investigate and resolve it?",
+    "difficulty": "hard",
+    "tags": [
+      "mongodb",
+      "duplicates",
+      "index"
+    ]
+  },
+  {
+    "id": "mern_091",
+    "question": "Your React application has a component that renders a large list of items, but it's experiencing significant performance issues due to the number of re-renders. Describe a technique for optimizing the component's rendering using React.memo and shouldComponentUpdate, and explain the trade-offs involved.",
+    "difficulty": "hard",
+    "tags": [
+      "optimization",
+      "react",
+      "memo"
+    ]
+  },
+  {
+    "id": "mern_092",
+    "question": "A security vulnerability is discovered in a third-party library used by your Mern application. Describe a plan for patching the vulnerability and minimizing downtime, including steps for upgrading dependencies and testing for regressions.",
+    "difficulty": "hard",
+    "tags": [
+      "security",
+      "patching",
+      "dependencies"
+    ]
+  },
+  {
+    "id": "mern_093",
+    "question": "Your Express.js application has a route that handles a large number of concurrent requests, but it's experiencing issues with connection pooling and socket exhaustion. Describe a strategy for configuring connection pooling and managing socket utilization to improve application performance.",
+    "difficulty": "hard",
+    "tags": [
+      "express",
+      "connection pooling",
+      "socket management"
+    ]
+  },
+  {
+    "id": "mern_094",
+    "question": "A user reports an issue where their user session is being timed out randomly, despite implementing a reliable session management system. What possible reasons could be causing this issue, and how would you investigate and resolve it?",
+    "difficulty": "hard",
+    "tags": [
+      "session management",
+      "timeout",
+      "reliability"
+    ]
+  },
+  {
+    "id": "mern_095",
+    "question": "Your Mongoose model has a schema that includes a field with a reference to another document, but the field is not being populated correctly due to a mismatch between the schema and the data. Describe a technique for resolving the discrepancy and ensuring that the field is populated correctly.",
+    "difficulty": "hard",
+    "tags": [
+      "mongoose",
+      "schema",
+      "population"
+    ]
+  },
+  {
+    "id": "mern_096",
+    "question": "Your React application has a component that uses a timer to poll a backend API for new data, but it's experiencing issues with excessive API requests and performance degradation. Describe a strategy for refactoring the timer to use WebSockets for real-time updates, and explain the trade-offs involved.",
+    "difficulty": "hard",
+    "tags": [
+      "react",
+      "timers",
+      "websockets"
+    ]
+  },
+  {
+    "id": "mern_097",
+    "question": "You are implementing API rate limiting in your Express.js application using a custom middleware. However, you notice that the rate limiting is not being enforced consistently across different routes. Explain why this might happen and suggest how to enforce rate limiting consistently.",
+    "difficulty": "hard",
+    "tags": [
+      "express",
+      "api-rate-limiting"
+    ]
+  },
+  {
+    "id": "mern_098",
+    "question": "In a React application, you are using a third-party library for handling file uploads. However, you notice that the file is not being uploaded correctly when the user selects a file from their local file system. Describe the possible reasons for this issue and explain how you would investigate and resolve it.",
+    "difficulty": "hard",
+    "tags": [
+      "react",
+      "file-upload"
+    ]
+  },
+  {
+    "id": "mern_099",
+    "question": "You are experiencing issues with MongoDB query performance due to the use of a complex pipeline that includes multiple stages. Explain how you would optimize the pipeline to improve query performance without sacrificing data accuracy.",
+    "difficulty": "hard",
+    "tags": [
+      "mongodb",
+      "query-optimization"
+    ]
+  },
+  {
+    "id": "mern_100",
+    "question": "In a MERN application, you are using a single MongoDB collection for storing different types of data. However, you notice that the data is not being queried correctly due to a mismatch between the data types. Describe a strategy for normalizing the data types and enforcing data consistency across the application.",
+    "difficulty": "hard",
+    "tags": [
+      "mongodb",
+      "data-normalization"
+    ]
+  },
+  {
+    "id": "mern_101",
+    "question": "You are implementing authentication using a JSON Web Token (JWT) in your Express.js application. However, you notice that the JWT is not being verified correctly due to a mismatch between the expected audience and the audience in the JWT payload. Explain the possible reasons for this issue and describe how you would resolve it.",
+    "difficulty": "hard",
+    "tags": [
+      "jwt",
+      "express-authentication"
+    ]
+  },
+  {
+    "id": "mern_102",
+    "question": "In a React application, you are using React Hooks for state management. However, you notice that the state is not being updated correctly due to a stale value being used in the component. Describe the possible reasons for this issue and explain how you would resolve it.",
+    "difficulty": "hard",
+    "tags": [
+      "react-hooks",
+      "state-management"
+    ]
+  },
+  {
+    "id": "mern_103",
+    "question": "You are experiencing issues with Mongoose schema validation due to the use of a complex validation rule that includes multiple conditions. Explain how you would optimize the validation rule to improve performance without sacrificing data accuracy.",
+    "difficulty": "hard",
+    "tags": [
+      "mongoose",
+      "schema-validation"
+    ]
+  },
+  {
+    "id": "mern_104",
+    "question": "In a MERN application, you are using WebSockets for real-time communication between the client and the server. However, you notice that the WebSocket connection is not being established correctly due to a mismatch between the expected protocol and the protocol used by the client. Describe a strategy for resolving the discrepancy and ensuring that the WebSocket connection is established correctly.",
+    "difficulty": "hard",
+    "tags": [
+      "websockets",
+      "socket-io"
+    ]
+  },
+  {
+    "id": "mern_105",
+    "question": "You're implementing a caching mechanism in your MERN application using Redis. However, you notice that the cached data is not being invalidated correctly due to a mismatch between the cache expiration time and the data update frequency. Describe a strategy for synchronizing the cache expiration time with the data update frequency to ensure data consistency.",
+    "difficulty": "hard",
+    "tags": [
+      "mern",
+      "caching",
+      "redis"
     ]
   }
 ]

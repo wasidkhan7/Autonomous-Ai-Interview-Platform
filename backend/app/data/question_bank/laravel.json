@@ -1,237 +1,1016 @@
 [
   {
     "id": "laravel_001",
-    "question": "Explain the MVC pattern and how Laravel implements it.",
+    "question": "What is the main difference between route model binding and injecting a model instance in a Laravel controller method?",
     "difficulty": "easy",
     "tags": [
-      "laravel",
-      "fundamentals",
-      "mvc"
+      "Laravel",
+      "Routing"
     ]
   },
   {
     "id": "laravel_002",
-    "question": "What is Eloquent ORM, and how do relationships like hasMany and belongsToMany work?",
+    "question": "How does Laravel's IoC container handle singleton and non-singleton services for an application?",
     "difficulty": "easy",
     "tags": [
-      "laravel",
-      "eloquent",
-      "database"
+      "Laravel",
+      "Dependency Injection"
     ]
   },
   {
     "id": "laravel_003",
-    "question": "Explain Laravel's service container and how dependency injection works within it.",
-    "difficulty": "medium",
+    "question": "In Laravel, what is the purpose of the 'namespace' attribute in the Route facade's 'get' and 'post' methods?",
+    "difficulty": "easy",
     "tags": [
-      "laravel",
-      "architecture"
+      "Laravel",
+      "Routing"
     ]
   },
   {
     "id": "laravel_004",
-    "question": "How would you implement queues and jobs in Laravel for a task like sending bulk emails?",
-    "difficulty": "medium",
+    "question": "What is the significance of the 'fillable' property in a Laravel Eloquent model, and how is it used?",
+    "difficulty": "easy",
     "tags": [
-      "laravel",
-      "queues",
-      "background-jobs"
+      "Laravel",
+      "Eloquent"
     ]
   },
   {
     "id": "laravel_005",
-    "question": "Design a multi-tenant architecture in Laravel. What are the trade-offs between single-database and database-per-tenant approaches?",
-    "difficulty": "hard",
+    "question": "How does Laravel handle migrations, and what is the purpose of the 'up' and 'down' methods in a migration file?",
+    "difficulty": "easy",
     "tags": [
-      "laravel",
-      "system-design",
-      "multi-tenancy"
+      "Laravel",
+      "Migrations"
     ]
   },
   {
     "id": "laravel_006",
-    "question": "Explain the process of generating a Laravel API using Laravel's API resource. How do you handle validation and error handling in this context?",
+    "question": "What is the difference between form validation using the 'validate' method in a Laravel controller and the 'rule' function in a form request?",
     "difficulty": "easy",
     "tags": [
-      "laravel-api",
-      "validation"
+      "Laravel",
+      "Validation"
     ]
   },
   {
     "id": "laravel_007",
-    "question": "How would you implement authentication and authorization in Laravel using middleware? Consider the different types of authentication and authorization.",
+    "question": "In Laravel, how does the 'middleware' function in the 'boot' method of the 'AppServiceProvider' differ from applying middleware in a route group or in individual routes?",
     "difficulty": "easy",
     "tags": [
-      "laravel-authentication",
-      "middleware"
+      "Laravel",
+      "Middleware"
     ]
   },
   {
     "id": "laravel_008",
-    "question": "Describe the use case for Laravel's package auto-discovery feature. How does it improve code organization and maintenance?",
+    "question": "What is the purpose of the 'resource' method in Laravel's Route facade, and how does it generate routes for a given controller?",
     "difficulty": "easy",
     "tags": [
-      "laravel-packages",
-      "dependency-management"
+      "Laravel",
+      "Routing"
     ]
   },
   {
     "id": "laravel_009",
-    "question": "Design a caching strategy for a Laravel application using Redis. Explain the different caching levels and how to implement them.",
+    "question": "What is the difference between Eloquent's query builder and the Query Builder facade in Laravel?",
     "difficulty": "easy",
     "tags": [
-      "laravel-cache",
-      "redis"
+      "laravel",
+      "eloquent",
+      "query-builder"
     ]
   },
   {
     "id": "laravel_010",
-    "question": "Explain how to implement rate limiting in Laravel using middleware. Consider different techniques and their trade-offs.",
+    "question": "In Laravel, what is the purpose of the 'use' statement in a controller method, and how does it relate to the IoC container?",
     "difficulty": "easy",
     "tags": [
-      "laravel-rate-limiting",
-      "middleware"
+      "laravel",
+      "ioc-container",
+      "use-statement"
     ]
   },
   {
     "id": "laravel_011",
-    "question": "How would you implement internationalization (i18n) and localization (L10n) in a Laravel application? Consider the different approaches and tools.",
+    "question": "How does Laravel's authentication mechanism handle password hashing and verification for user credentials?",
     "difficulty": "easy",
     "tags": [
-      "laravel-i18n",
-      "localization"
+      "laravel",
+      "authentication",
+      "password-hashing"
     ]
   },
   {
     "id": "laravel_012",
-    "question": "Describe the process of implementing a Laravel seed for a database migration. How do you handle seeding complex relationships?",
+    "question": "What is the meaning of the 'protected $fillable' attribute in a Laravel model, and how is it used in form handling?",
     "difficulty": "easy",
     "tags": [
-      "laravel-seed",
-      "database-migrations"
+      "laravel",
+      "fillable",
+      "form-handling"
     ]
   },
   {
     "id": "laravel_013",
-    "question": "How would you optimize the performance of a Laravel application with a high traffic rate, where a large number of requests are being made to a single endpoint?",
-    "difficulty": "medium",
+    "question": "In Laravel, what is the difference between the 'create' and 'save' methods in Eloquent models, and when would you use each?",
+    "difficulty": "easy",
     "tags": [
-      "performance",
-      "optimization"
+      "laravel",
+      "eloquent",
+      "create-save"
     ]
   },
   {
     "id": "laravel_014",
-    "question": "Explain the concept of middleware in Laravel and how you would use it to authenticate and authorize incoming requests to certain routes",
-    "difficulty": "medium",
+    "question": "What is the purpose of Laravel's route model binding, and how does it simplify route parameters for Eloquent models?",
+    "difficulty": "easy",
     "tags": [
-      "middleware",
-      "security"
+      "laravel",
+      "route-model-binding",
+      "eloquent"
     ]
   },
   {
     "id": "laravel_015",
-    "question": "Suppose you have a Laravel application with multiple API endpoints, and you want to implement API documentation using Swagger or similar tools. How would you configure and implement this in your application?",
-    "difficulty": "medium",
+    "question": "How does Laravel's caching mechanism handle cache storage and retrieval for an application's data?",
+    "difficulty": "easy",
     "tags": [
-      "api",
-      "documentation"
+      "laravel",
+      "caching",
+      "cache-storage"
     ]
   },
   {
     "id": "laravel_016",
-    "question": "What are some strategies for handling and validating user-input data in a Laravel application, and how would you implement these strategies to prevent common web vulnerabilities such as SQL injection and cross-site scripting (XSS)?",
-    "difficulty": "medium",
+    "question": "In Laravel, what is the 'middleware' group in the 'kernel.php' file, and how does it impact application routes and controllers?",
+    "difficulty": "easy",
     "tags": [
-      "security",
-      "validation"
+      "laravel",
+      "middleware",
+      "kernel"
     ]
   },
   {
     "id": "laravel_017",
-    "question": "How would you implement caching in a Laravel application to improve the performance of frequently accessed data, and what are some common use cases for caching?",
-    "difficulty": "medium",
+    "question": "What is the difference between the 'validate' method in a Laravel controller and the 'authorize' method in Eloquent models, and how are they used in application logic?",
+    "difficulty": "easy",
     "tags": [
-      "caching",
-      "performance"
+      "laravel",
+      "validation",
+      "authorization"
     ]
   },
   {
     "id": "laravel_018",
-    "question": "Suppose you have a Laravel application with a complex business logic that involves multiple models and their relationships. How would you implement a data migration script to transfer data from an existing schema to a new schema, while maintaining the relationships between the models?",
-    "difficulty": "medium",
+    "question": "In Laravel, what is the purpose of the 'dispatch' method in Eloquent models, and how is it used in event handling and broadcasting?",
+    "difficulty": "easy",
     "tags": [
-      "migrations",
-      "database"
+      "laravel",
+      "eloquent",
+      "event-handling"
     ]
   },
   {
     "id": "laravel_019",
-    "question": "How would you implement an API token-based authentication system in a Laravel application, and what are some benefits and trade-offs of using token-based authentication over traditional session-based authentication?",
-    "difficulty": "medium",
+    "question": "What is the meaning of the 'protected $table' attribute in a Laravel model, and how does it impact Eloquent queries and model operations?",
+    "difficulty": "easy",
     "tags": [
-      "authentication",
-      "security"
+      "laravel",
+      "eloquent",
+      "table-name"
     ]
   },
   {
     "id": "laravel_020",
-    "question": "Design a Laravel package to handle caching for third-party APIs. Explain how you would implement cache expiration, cache invalidation and implement a fallback strategy when the cache is missing or expired.",
-    "difficulty": "hard",
+    "question": "How does Laravel's package discovery mechanism handle third-party packages and their dependencies in an application?",
+    "difficulty": "easy",
     "tags": [
       "laravel",
-      "package",
-      "caching"
+      "package-discovery",
+      "third-party-packages"
     ]
   },
   {
     "id": "laravel_021",
-    "question": "Describe how you would implement a custom authentication guard in Laravel using Passport. What are the security implications of using Passport, and how do you validate the user's credentials?",
-    "difficulty": "hard",
+    "question": "In Laravel, what is the purpose of the 'base_path()' helper function, and how does it differ from using PHP's 'dirname(__FILE__)'?",
+    "difficulty": "easy",
     "tags": [
-      "laravel",
-      "auth",
-      "passport"
+      "helpers",
+      "path"
     ]
   },
   {
     "id": "laravel_022",
-    "question": "Explain how you would implement a real-time data streaming feature in Laravel using websockets. What are the architecture implications of using websockets, and how do you handle connection establishment and teardown?",
-    "difficulty": "hard",
+    "question": "How does Laravel's validation system handle localization, and what are some common ways to display error messages in different languages?",
+    "difficulty": "easy",
     "tags": [
-      "laravel",
-      "websockets",
-      "real-time"
+      "validation",
+      "localization"
     ]
   },
   {
     "id": "laravel_023",
-    "question": "Design a Laravel API that implements rate limiting using a Redis store. Explain how you would implement token bucket algorithm, and how you handle rate limiting exceptions.",
-    "difficulty": "hard",
+    "question": "What is the difference between Laravel's 'artisan migrate' and 'artisan dbseed' commands, and when would you use each?",
+    "difficulty": "easy",
     "tags": [
-      "laravel",
-      "api",
-      "rate-limiter"
+      "database",
+      "migration"
     ]
   },
   {
     "id": "laravel_024",
-    "question": "Explain how you would implement a data import feature in Laravel using the Laravel Queue system. Describe how you would handle concurrent import tasks, and how you would optimize the import process for large datasets.",
-    "difficulty": "hard",
+    "question": "In Laravel, what is the purpose of the 'cache' facade, and how does it relate to the application's cache stores?",
+    "difficulty": "easy",
     "tags": [
-      "laravel",
-      "queue",
-      "data-import"
+      "caching",
+      "facade"
     ]
   },
   {
     "id": "laravel_025",
-    "question": "Design a Laravel application that implements internationalization (i18n) and localization (L10n) using the Gettext package. Explain how you would handle translations, and how you would implement locale-specific routing and view rendering.",
+    "question": "How does Laravel's Blade templating engine handle inheritance and extends in layouts, and what are some best practices for using them?",
+    "difficulty": "easy",
+    "tags": [
+      "blade",
+      "templates"
+    ]
+  },
+  {
+    "id": "laravel_026",
+    "question": "What is the difference between Laravel's 'Request' and 'Input' facade, and when would you use each in a request?",
+    "difficulty": "easy",
+    "tags": [
+      "requests",
+      "facade"
+    ]
+  },
+  {
+    "id": "laravel_027",
+    "question": "In Laravel, what is the purpose of the 'dispatch' method in the 'Request' facade, and how does it differ from using the 'dispatch' method in Eloquent models?",
+    "difficulty": "easy",
+    "tags": [
+      "requests",
+      "event"
+    ]
+  },
+  {
+    "id": "laravel_028",
+    "question": "How does Laravel's package auto-discovery mechanism work, and what are some common ways to configure it for custom packages?",
+    "difficulty": "easy",
+    "tags": [
+      "packages",
+      "auto-discovery"
+    ]
+  },
+  {
+    "id": "laravel_029",
+    "question": "What is the role of the 'Controller' class in Laravel, and how does it interact with other components in the application?",
+    "difficulty": "easy",
+    "tags": [
+      "laravel",
+      "controllers"
+    ]
+  },
+  {
+    "id": "laravel_030",
+    "question": "In Laravel, what is the purpose of the 'Middleware' class, and how are they ordered in the application?",
+    "difficulty": "easy",
+    "tags": [
+      "laravel",
+      "middleware"
+    ]
+  },
+  {
+    "id": "laravel_031",
+    "question": "How does Laravel's 'Auth' facade handle user authentication, and what are the differences between different authentication drivers?",
+    "difficulty": "easy",
+    "tags": [
+      "laravel",
+      "authentication"
+    ]
+  },
+  {
+    "id": "laravel_032",
+    "question": "What is the purpose of the 'Route::group' method in Laravel, and how can it be used to group related routes together?",
+    "difficulty": "easy",
+    "tags": [
+      "laravel",
+      "routing"
+    ]
+  },
+  {
+    "id": "laravel_033",
+    "question": "In Laravel, what is the role of the 'Exception' class in the exception handling mechanism, and how can custom exceptions be created?",
+    "difficulty": "easy",
+    "tags": [
+      "laravel",
+      "exceptions"
+    ]
+  },
+  {
+    "id": "laravel_034",
+    "question": "How does Laravel's 'Validator' facade validate form input, and what are some common validation rules that can be used?",
+    "difficulty": "easy",
+    "tags": [
+      "laravel",
+      "validation"
+    ]
+  },
+  {
+    "id": "laravel_035",
+    "question": "What is the purpose of the 'Service Provider' class in Laravel, and how can custom service providers be created?",
+    "difficulty": "easy",
+    "tags": [
+      "laravel",
+      "dependency injection"
+    ]
+  },
+  {
+    "id": "laravel_036",
+    "question": "In Laravel, what is the role of the 'Event' class in event handling, and how can custom events be dispatched and listened to?",
+    "difficulty": "easy",
+    "tags": [
+      "laravel",
+      "events"
+    ]
+  },
+  {
+    "id": "laravel_037",
+    "question": "What is the purpose of the 'with' method in Eloquent models, and how does it affect the retrieved data?",
+    "difficulty": "easy",
+    "tags": [
+      "eloquent",
+      "model",
+      "database"
+    ]
+  },
+  {
+    "id": "laravel_038",
+    "question": "What is the difference between a Laravel 'Trait' and a 'Trait' in PHP, and when would you use each?",
+    "difficulty": "easy",
+    "tags": [
+      "trait",
+      "inheritance",
+      "php"
+    ]
+  },
+  {
+    "id": "laravel_039",
+    "question": "How does Laravel's 'Queue' system handle job processing, and what are the benefits of using it for background tasks?",
+    "difficulty": "easy",
+    "tags": [
+      "queue",
+      "job",
+      "background-task",
+      "laravel-queue"
+    ]
+  },
+  {
+    "id": "laravel_040",
+    "question": "What is the role of the 'Factory' class in Laravel, and how can you create custom factories for models?",
+    "difficulty": "easy",
+    "tags": [
+      "factory",
+      "model",
+      "database"
+    ]
+  },
+  {
+    "id": "laravel_041",
+    "question": "You're building an e-commerce application using Laravel. If a customer adds multiple products to their cart but later wants to remove some of them, how would you handle this scenario in the most efficient way? Consider both the frontend and backend aspects.",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "cart-system",
+      "e-commerce"
+    ]
+  },
+  {
+    "id": "laravel_042",
+    "question": "In a typical Laravel application, how would you decide whether to use eager loading, lazy loading, or a hybrid approach when retrieving associated records from a database? What are the trade-offs involved in each approach?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "orm",
+      "eager-loading"
+    ]
+  },
+  {
+    "id": "laravel_043",
+    "question": "Suppose you're building a Laravel API for a web application. You need to handle authentication and authorization for users, but you're not using Laravel's built-in Passport package. How would you design the authentication system, and what considerations would you take into account during the process?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "api",
+      "auth-system"
+    ]
+  },
+  {
+    "id": "laravel_044",
+    "question": "When using Laravel's migrations to create and update database tables, how would you ensure that the migrations are properly rolled back in case of an error or when switching between different environments? What are the potential pitfalls to watch out for?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "database",
+      "migrations"
+    ]
+  },
+  {
+    "id": "laravel_045",
+    "question": "Imagine you're developing a Laravel application that requires storing and querying a large amount of metadata associated with each user. How would you approach this challenge, and what data structures or caching mechanisms might you consider using?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "database",
+      "metadata"
+    ]
+  },
+  {
+    "id": "laravel_046",
+    "question": "In a Laravel application, how would you validate and sanitize user input data to prevent common web vulnerabilities like SQL injection and cross-site scripting (XSS)? What tools or techniques would you use to achieve this goal?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "security",
+      "input-validation"
+    ]
+  },
+  {
+    "id": "laravel_047",
+    "question": "Suppose you're building a Laravel application that needs to send emails to users with different content based on their roles or preferences. How would you design the email sending process, and what Laravel features or packages might you use to make it more efficient?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "email",
+      "templating"
+    ]
+  },
+  {
+    "id": "laravel_048",
+    "question": "When using Laravel's route model binding to bind a model instance to a route parameter, how would you handle cases where the model instance is not found or throws an exception? What error handling mechanisms might you employ to make the application more robust?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "routing",
+      "model-binding"
+    ]
+  },
+  {
+    "id": "laravel_049",
+    "question": "In a Laravel application, you're using middleware to filter incoming requests. However, some middleware functions are expensive to compute and may slow down the application. How would you cache the results of these middleware functions to improve performance, and what implications would you consider when choosing a caching mechanism?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "middleware",
+      "caching"
+    ]
+  },
+  {
+    "id": "laravel_050",
+    "question": "Suppose you're building a RESTful API using Laravel. You need to implement soft deletes for a model, which allows you to toggle the deleted status of a record without actually deleting it from the database. How would you implement this feature, and what are the trade-offs involved in using soft deletes compared to permanent deletes?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "rest-api",
+      "soft-deletes"
+    ]
+  },
+  {
+    "id": "laravel_051",
+    "question": "In a Laravel application, you're using the Queue system to process long-running tasks asynchronously. However, the task processing time exceeds the maximum allowed time, resulting in a fatal error. How would you handle this situation, and what strategies would you use to prevent similar issues in the future?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "queue",
+      "async-processing"
+    ]
+  },
+  {
+    "id": "laravel_052",
+    "question": "Imagine you're developing a Laravel application that requires generating PDF documents with dynamic content using the built-in PDF package. However, the PDF generation process is too slow, and you want to improve the performance. How would you optimize the PDF generation process, and what techniques might you use to improve the rendering speed?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "pdf",
+      "optimization"
+    ]
+  },
+  {
+    "id": "laravel_053",
+    "question": "Suppose you're building a Laravel application that uses multiple databases for storing data. You need to configure the database connections and retrieve data from the correct database based on the user's preferences. How would you handle database connections and routing in Laravel, and what are the best practices for managing multiple databases in a single application?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "database",
+      "connections"
+    ]
+  },
+  {
+    "id": "laravel_054",
+    "question": "In a Laravel application, you're using the Mail package to send emails to users. However, the email sending process is too slow, and you want to improve the performance. How would you optimize the email sending process, and what techniques might you use to improve the sending speed and reliability?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "mail",
+      "optimization"
+    ]
+  },
+  {
+    "id": "laravel_055",
+    "question": "Imagine you're developing a Laravel application that requires authenticating users using a third-party OAuth service. You need to implement the OAuth login flow, which involves redirecting the user to the OAuth service and receiving the authorization token. How would you implement the OAuth login flow in Laravel, and what are the key considerations when integrating a third-party authentication service?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "oauth",
+      "authentication"
+    ]
+  },
+  {
+    "id": "laravel_056",
+    "question": "Suppose you're building a Laravel application that stores large binary files, such as images or videos, in the database. You need to optimize the storage and retrieval of these files to improve performance and reduce storage costs. How would you design the file storage system in Laravel, and what techniques might you use to optimize file storage and retrieval?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "file-storage",
+      "optimization"
+    ]
+  },
+  {
+    "id": "laravel_057",
+    "question": "You're developing a Laravel application that uses a third-party API to fetch data on demand. However, this API has usage limits and charges by the number of requests made. How would you implement rate limiting in your application to avoid hitting the API limits and incurring unnecessary costs?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "rate limiting"
+    ]
+  },
+  {
+    "id": "laravel_058",
+    "question": "In a Laravel application, you're using the Session facility to store user data, but you're concerned about the security implications of storing sensitive data in the session. What alternatives would you consider using to store sensitive data securely, and how would you configure Laravel's session management to meet your security requirements?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "security"
+    ]
+  },
+  {
+    "id": "laravel_059",
+    "question": "Suppose you're building a Laravel application that requires generating unique short URLs for internal links. How would you implement this feature, and what considerations would you keep in mind when choosing a suitable URL shortening algorithm and storing the shortened URLs in your database?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "url shortening"
+    ]
+  },
+  {
+    "id": "laravel_060",
+    "question": "In a Laravel application, you're using the Blade templating engine to render views, but you're experiencing performance issues due to excessive template compilation. How would you optimize Blade template compilation, and what techniques might you use to minimize the overhead of template compilation in your application?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "blade templating"
+    ]
+  },
+  {
+    "id": "laravel_061",
+    "question": "You're developing a Laravel application that uses the Auth facade to authenticate users, but you need to customize the login and registration processes to meet specific business requirements. How would you extend or override the built-in authentication mechanisms in Laravel, and what features would you need to implement or modify to achieve your custom authentication logic?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "authentication"
+    ]
+  },
+  {
+    "id": "laravel_062",
+    "question": "In a Laravel application, you're using the Migration facility to manage database schema changes, but you're concerned about the version control implications of storing migration history in the application codebase. What alternatives would you consider using to manage migration history, and how would you configure Laravel's migration facility to meet your version control requirements?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "database migrations"
+    ]
+  },
+  {
+    "id": "laravel_063",
+    "question": "Suppose you're building a Laravel application that requires caching frequently accessed data to improve performance. How would you design an efficient caching system in Laravel, and what considerations would you keep in mind when choosing a suitable caching mechanism and configuring cache expiration policies?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "caching"
+    ]
+  },
+  {
+    "id": "laravel_064",
+    "question": "In a Laravel application, you're using the Validation library to validate user input data, but you need to customize the validation rules to meet specific business requirements. How would you extend or override the built-in validation mechanics in Laravel, and what features would you need to implement or modify to achieve your custom validation logic?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "validation"
+    ]
+  },
+  {
+    "id": "laravel_065",
+    "question": "You're developing a Laravel application that uses the Filesystem facade to store and retrieve files, but you're experiencing performance issues due to excessive disk I/O operations. How would you optimize file storage and retrieval, and what techniques might you use to minimize the overhead of disk I/O operations in your application?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "filesystem"
+    ]
+  },
+  {
+    "id": "laravel_066",
+    "question": "Suppose you're building a Laravel application that requires internationalization and localization support for multiple languages. How would you implement and configure Laravel's built-in translation and localization tools, and what considerations would you keep in mind when choosing a suitable translation and localization strategy?",
+    "difficulty": "medium",
+    "tags": [
+      "internationalization",
+      "localization",
+      "translation",
+      "laravel-i18n"
+    ]
+  },
+  {
+    "id": "laravel_067",
+    "question": "In a Laravel application, you're using the Eloquent ORM to interact with the database, but you're concerned about the performance implications of eager loading and lazy loading relationships. How would you optimize the loading of related models in Eloquent, and what techniques might you use to minimize the overhead of relationship loading?",
+    "difficulty": "medium",
+    "tags": [
+      "eager-loading",
+      "lazy-loading",
+      "eloquent-orm",
+      "relationship-loading"
+    ]
+  },
+  {
+    "id": "laravel_068",
+    "question": "You're developing a Laravel application that requires logging and monitoring critical application events, such as errors and security breaches. How would you implement and configure Laravel's built-in logging and logging drivers, and what tools or third-party libraries would you use to enhance logging and monitoring capabilities?",
+    "difficulty": "medium",
+    "tags": [
+      "logging",
+      "laravel-logging",
+      "logging-drivers",
+      "monitoring"
+    ]
+  },
+  {
+    "id": "laravel_069",
+    "question": "Suppose you're building a Laravel application that requires sending asynchronous task jobs to a queue-based job processor. How would you implement and configure Laravel's built-in queueing and job processing system, and what considerations would you keep in mind when choosing a suitable job queue and processing strategy?",
+    "difficulty": "medium",
+    "tags": [
+      "queueing",
+      "job-processing",
+      "async-jobs",
+      "laravel-queue"
+    ]
+  },
+  {
+    "id": "laravel_070",
+    "question": "In a Laravel application, you're using the Auth facade to authenticate users, but you need to implement multi-factor authentication (MFA) to enhance security. How would you extend or override the built-in authentication mechanisms in Laravel to support MFA, and what features would you need to implement or modify to achieve MFA?",
+    "difficulty": "medium",
+    "tags": [
+      "multi-factor-authentication",
+      "mfa",
+      "auth-facade",
+      "laravel-auth"
+    ]
+  },
+  {
+    "id": "laravel_071",
+    "question": "Suppose you're building a Laravel application that requires generating and processing digital signatures for authentication and data integrity. How would you implement and configure Laravel's built-in digital signature tools, and what considerations would you keep in mind when choosing a suitable digital signature algorithm and processing strategy?",
+    "difficulty": "medium",
+    "tags": [
+      "digital-signatures",
+      "signature-algorithms",
+      "digital-signature-processing",
+      "laravel-signature"
+    ]
+  },
+  {
+    "id": "laravel_072",
+    "question": "In a Laravel application, you're using the Cache facade to store and retrieve data, but you're concerned about the cache invalidation and expiration strategies when implementing a content delivery network (CDN). How would you design a caching system in Laravel that meets CDN requirements, and what techniques would you use to minimize cache invalidation and expiration overhead?",
+    "difficulty": "medium",
+    "tags": [
+      "cache-invalidation",
+      "cache-expiration",
+      "cdn",
+      "laravel-cache"
+    ]
+  },
+  {
+    "id": "laravel_073",
+    "question": "You're developing a Laravel API that needs to handle pagination for large datasets. How would you implement pagination in your API, and what trade-offs would you consider when choosing between cursor-based and offset-based pagination?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "api",
+      "pagination"
+    ]
+  },
+  {
+    "id": "laravel_074",
+    "question": "Suppose you're building a Laravel application that requires sending email notifications to users. How would you implement and configure Laravel's built-in mail sending system, and what considerations would you keep in mind when choosing a suitable email service provider and configuring email templates?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "email",
+      "notification"
+    ]
+  },
+  {
+    "id": "laravel_075",
+    "question": "In a Laravel application, you're using the Queue facade to process background jobs, but you need to handle job failures and retries. How would you design a job processing system in Laravel to handle failures and retries, and what techniques would you use to minimize job processing overhead?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "queue",
+      "background-jobs"
+    ]
+  },
+  {
+    "id": "laravel_076",
+    "question": "You're developing a Laravel application that needs to validate user input data for multiple languages. How would you implement and configure Laravel's built-in validation system to support multiple languages, and what considerations would you keep in mind when choosing a suitable validation strategy and configuring translation files?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "validation",
+      "internationalization"
+    ]
+  },
+  {
+    "id": "laravel_077",
+    "question": "In a Laravel application, you need to integrate a third-party API to retrieve external data. How would you implement and configure Laravel's built-in API client system, and what considerations would you keep in mind when choosing a suitable API client library and configuring API request headers?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "api",
+      "integration"
+    ]
+  },
+  {
+    "id": "laravel_078",
+    "question": "In a Laravel application, you're using the Storage facade to store uploaded files, but you need to handle file uploads and downloads securely. How would you design a file upload and download system in Laravel to handle security concerns, and what techniques would you use to minimize file handling overhead?",
+    "difficulty": "medium",
+    "tags": [
+      "laravel",
+      "file-upload",
+      "file-download"
+    ]
+  },
+  {
+    "id": "laravel_079",
+    "question": "You're developing a Laravel application that requires integrating with a third-party payment gateway. How would you choose and implement a suitable payment processing library in Laravel, and what considerations would you keep in mind when configuring payment gateways and handling payment failures?",
+    "difficulty": "medium",
+    "tags": [
+      "payment-gateway",
+      "integrated-payments"
+    ]
+  },
+  {
+    "id": "laravel_080",
+    "question": "Suppose you're building a Laravel application that needs to handle user permissions and roles. How would you create and manage user roles and permissions in Laravel, and what techniques would you use to minimize permission conflicts and improve role management?",
+    "difficulty": "medium",
+    "tags": [
+      "user-permissions",
+      "role-based-access-control"
+    ]
+  },
+  {
+    "id": "laravel_081",
+    "question": "Design a caching strategy to mitigate the N+1 query problem in a Laravel application that uses Eloquent to fetch a list of users and their respective posts. The application has an average of 1000 users and 5000 posts. Consider the trade-offs between hit ratio, cache expiration, and cache size.",
+    "difficulty": "hard",
+    "tags": [
+      "lumen",
+      "database",
+      "caching"
+    ]
+  },
+  {
+    "id": "laravel_082",
+    "question": "You are debugging a Laravel API that uses JSON Web Tokens for authentication. However, when a user sends a POST request to the API, the API returns a 500 error instead of authenticating the user. Explain the possible reasons behind this behavior and how you would troubleshoot the issue.",
     "difficulty": "hard",
     "tags": [
       "laravel",
-      "i18n",
-      "l10n"
+      "api",
+      "jwt"
+    ]
+  },
+  {
+    "id": "laravel_083",
+    "question": "Suppose you are building a chat application using Laravel's Broadcasting feature. However, you notice that some messages are being duplicated in the chat log. Explain why this might be happening and how you would implement a deduplication mechanism to prevent message duplication.",
+    "difficulty": "hard",
+    "tags": [
+      "laravel",
+      "broadcasting",
+      "message-queue"
+    ]
+  },
+  {
+    "id": "laravel_084",
+    "question": "In a Laravel application, you need to implement a feature that requires the application to send an email notification to a user when a new post is created. However, the email is not being sent immediately after the post is created. Explain the possible reasons behind this behavior and how you would ensure that the email is sent promptly after the post creation.",
+    "difficulty": "hard",
+    "tags": [
+      "laravel",
+      "email",
+      "queue"
+    ]
+  },
+  {
+    "id": "laravel_085",
+    "question": "Describe how you would handle a situation where a Laravel application's routes are not being resolved correctly due to an incorrect route configuration. Explain the possible causes and how you would troubleshoot and resolve the issue.",
+    "difficulty": "hard",
+    "tags": [
+      "laravel",
+      "routing",
+      "config"
+    ]
+  },
+  {
+    "id": "laravel_086",
+    "question": "Suppose you are building a Laravel application that uses a third-party API to fetch data. However, the API returns a response in a non-standard format that does not match the expected format used by your application. Explain how you would parse and handle the non-standard response format and validate it against your application's requirements.",
+    "difficulty": "hard",
+    "tags": [
+      "laravel",
+      "api",
+      "parser"
+    ]
+  },
+  {
+    "id": "laravel_087",
+    "question": "You are tasked with implementing a feature in a Laravel application that allows users to upload files to a cloud storage service. However, the uploaded files are not being stored correctly due to an incorrect storage configuration. Explain the possible reasons behind this behavior and how you would troubleshoot and resolve the issue.",
+    "difficulty": "hard",
+    "tags": [
+      "laravel",
+      "storage",
+      "filesystem"
+    ]
+  },
+  {
+    "id": "laravel_088",
+    "question": "In a Laravel application, you need to implement a feature that requires the application to cache frequently accessed data for a short period of time. However, you notice that the cache is not being cleared when the application is restarted. Explain the possible reasons behind this behavior and how you would implement a cache clearing mechanism to prevent stale cache data.",
+    "difficulty": "hard",
+    "tags": [
+      "laravel",
+      "cache",
+      "clear"
+    ]
+  },
+  {
+    "id": "laravel_089",
+    "question": "You are tasked with debugging a Laravel application that is experiencing high traffic and slow response times. Explain how you would use metrics and monitoring tools to identify the bottlenecks in the application and provide suggestions for optimization and performance improvement.",
+    "difficulty": "hard",
+    "tags": [
+      "laravel",
+      "performance",
+      "monitoring"
+    ]
+  },
+  {
+    "id": "laravel_090",
+    "question": "You are building a Laravel API that uses Laravel Passport for OAuth authentication. However, you notice that the API returns a 404 error when attempting to authenticate with a valid client ID and secret. Explain the possible reasons behind this behavior and how you would troubleshoot the issue.",
+    "difficulty": "hard",
+    "tags": [
+      "oauth",
+      "passport"
+    ]
+  },
+  {
+    "id": "laravel_091",
+    "question": "Suppose you are building a Laravel application that uses a queue to process long-running tasks. However, you notice that the tasks are taking a lot longer to complete than expected due to a high number of concurrent executions. Explain how you would implement a task queuing strategy to manage concurrency and improve task processing times.",
+    "difficulty": "hard",
+    "tags": [
+      "queues",
+      "concurrency"
+    ]
+  },
+  {
+    "id": "laravel_092",
+    "question": "You are tasked with implementing a feature in a Laravel application that allows users to upload and manage their profile pictures. However, you notice that the uploaded images are not being resized correctly due to an incorrect image processing configuration. Explain the possible reasons behind this behavior and how you would troubleshoot and resolve the issue.",
+    "difficulty": "hard",
+    "tags": [
+      "image",
+      "processing"
+    ]
+  },
+  {
+    "id": "laravel_093",
+    "question": "In a Laravel application, you need to implement a feature that requires the application to generate a unique token for each user session. However, you notice that the generated tokens are not being stored correctly due to an incorrect caching strategy. Explain the possible reasons behind this behavior and how you would implement a cache strategy to prevent token duplication.",
+    "difficulty": "hard",
+    "tags": [
+      "caching",
+      "sessions"
+    ]
+  },
+  {
+    "id": "laravel_094",
+    "question": "You are tasked with migrating a Laravel application from PostgreSQL to MySQL. However, you notice that the application is experiencing performance issues due to a large number of SQL joins being executed. Explain how you would analyze and optimize the database schema to improve performance and reduce the number of joins.",
+    "difficulty": "hard",
+    "tags": [
+      "database",
+      "schema"
+    ]
+  },
+  {
+    "id": "laravel_095",
+    "question": "Suppose you are building a Laravel application that uses Laravel's Event Dispatcher to handle application events. However, you notice that the events are not being dispatched correctly due to a high volume of event triggers. Explain how you would implement an event dispatching strategy to handle high volumes of events and prevent application crashes.",
+    "difficulty": "hard",
+    "tags": [
+      "events",
+      "dispatching"
+    ]
+  },
+  {
+    "id": "laravel_096",
+    "question": "In a Laravel application, you need to implement a feature that requires the application to generate a CSV file for export. However, you notice that the generated CSV file is not being formatted correctly due to an incorrect CSV library configuration. Explain the possible reasons behind this behavior and how you would troubleshoot and resolve the issue.",
+    "difficulty": "hard",
+    "tags": [
+      "csv",
+      "export"
+    ]
+  },
+  {
+    "id": "laravel_097",
+    "question": "You are tasked with implementing a feature in a Laravel application that allows users to collaborate on a shared document. However, you notice that the application is experiencing issues with concurrent document updates due to a lack of locking mechanisms. Explain how you would implement a locking strategy to prevent concurrent updates and ensure data integrity.",
+    "difficulty": "hard",
+    "tags": [
+      "concurrency",
+      "locking"
+    ]
+  },
+  {
+    "id": "laravel_098",
+    "question": "Suppose you are building a Laravel API that uses Laravel's built-in validation system to validate incoming requests. However, you notice that the validation logic is not being executed correctly due to a custom validation rule being overridden by a built-in rule. Explain how you would identify and resolve the issue, and provide strategies for preventing future similar conflicts.",
+    "difficulty": "hard",
+    "tags": [
+      "Laravel",
+      "Validation"
+    ]
+  },
+  {
+    "id": "laravel_099",
+    "question": "You are tasked with implementing a feature in a Laravel application that requires the application to authenticate with an external OAuth provider using Laravel's socialite package. However, you notice that the authentication flow is being interrupted due to a CORS policy error when making requests to the external provider. Explain how you would debug and resolve the issue, and provide strategies for configuring CORS policies effectively.",
+    "difficulty": "hard",
+    "tags": [
+      "Laravel",
+      "OAuth",
+      "CORS"
+    ]
+  },
+  {
+    "id": "laravel_100",
+    "question": "In a Laravel application, you need to implement a feature that requires the application to generate a JSON Web Token (JWT) for each user session. However, you notice that the generated JWTs are not being validated correctly due to an incorrect implementation of the JWT Payload validation logic. Explain how you would identify and resolve the issue, and provide strategies for securing JWT payloads effectively.",
+    "difficulty": "hard",
+    "tags": [
+      "Laravel",
+      "JWT",
+      "Security"
+    ]
+  },
+  {
+    "id": "laravel_101",
+    "question": "You are tasked with migrating a Laravel application from a monolithic architecture to a microservices-based architecture using Laravel's built-in container and service providers. However, you notice that the microservices are not communicating effectively due to a lack of clear service discovery and communication protocols. Explain how you would design and implement a service discovery and communication system to facilitate effective communication between microservices.",
+    "difficulty": "hard",
+    "tags": [
+      "Laravel",
+      "Microservices",
+      "Service Discovery"
+    ]
+  },
+  {
+    "id": "laravel_102",
+    "question": "Suppose you are building a Laravel application that uses Laravel's built-in logging system to log critical application events. However, you notice that the logs are not being stored correctly due to a configuration issue with the underlying logging driver. Explain how you would diagnose and resolve the issue, and provide strategies for configuring log drivers effectively.",
+    "difficulty": "hard",
+    "tags": [
+      "Laravel",
+      "Logging",
+      "Configuration"
+    ]
+  },
+  {
+    "id": "laravel_103",
+    "question": "In a Laravel application, you need to implement a feature that requires the application to schedule recurring tasks using Laravel's built-in scheduler. However, you notice that the scheduled tasks are not being executed correctly due to a configuration issue with the scheduler. Explain how you would diagnose and resolve the issue, and provide strategies for configuring the scheduler effectively.",
+    "difficulty": "hard",
+    "tags": [
+      "Laravel",
+      "Scheduler",
+      "Cron Jobs"
+    ]
+  },
+  {
+    "id": "laravel_104",
+    "question": "You are tasked with implementing a feature in a Laravel application that requires the application to store and retrieve large binary files from a database. However, you notice that the file storage and retrieval operations are being slow due to a suboptimal database schema and indexing strategy. Explain how you would analyze and optimize the database schema and indexing strategy to improve performance.",
+    "difficulty": "hard",
+    "tags": [
+      "Laravel",
+      "Database",
+      "Performance Optimization"
+    ]
+  },
+  {
+    "id": "laravel_105",
+    "question": "Suppose you are building a Laravel API that uses Laravel's built-in rate limiting system to prevent over-requests from clients. However, you notice that the rate limiting logic is not being executed correctly due to a configuration issue with the rate limiter. Explain how you would diagnose and resolve the issue, and provide strategies for configuring rate limiters effectively.",
+    "difficulty": "hard",
+    "tags": [
+      "Laravel",
+      "Rate Limiting",
+      "API Security"
     ]
   }
 ]

@@ -1,229 +1,968 @@
 [
   {
     "id": "python_001",
-    "question": "Explain the difference between a list and a tuple in Python, and when you'd use each.",
+    "question": "What is the difference between mutable and immutable data types in Python?",
     "difficulty": "easy",
     "tags": [
-      "python",
-      "fundamentals",
-      "data-structures"
+      "data types",
+      "variables"
     ]
   },
   {
     "id": "python_002",
-    "question": "What are Python decorators, and how would you write one that logs function execution time?",
-    "difficulty": "medium",
+    "question": "How do you create and use lists in Python?",
+    "difficulty": "easy",
     "tags": [
-      "python",
-      "decorators"
+      "data structures",
+      "lists"
     ]
   },
   {
     "id": "python_003",
-    "question": "Explain the Global Interpreter Lock (GIL) and how it affects multithreading vs multiprocessing in Python.",
-    "difficulty": "medium",
+    "question": "What is the purpose of the `__init__` method in a Python class?",
+    "difficulty": "easy",
     "tags": [
-      "python",
-      "concurrency"
+      "object-oriented programming",
+      "classes"
     ]
   },
   {
     "id": "python_004",
-    "question": "How do generators and the yield keyword differ from regular functions, and why are they memory-efficient?",
-    "difficulty": "medium",
+    "question": "What is a function decorator in Python and how is it used?",
+    "difficulty": "easy",
     "tags": [
-      "python",
-      "generators"
+      "functions",
+      "decorators"
     ]
   },
   {
     "id": "python_005",
-    "question": "Design a Python library for processing large CSV files that don't fit in memory. What approach would you take?",
-    "difficulty": "hard",
+    "question": "How do you handle errors and exceptions in a Python script?",
+    "difficulty": "easy",
     "tags": [
-      "python",
-      "system-design",
-      "performance"
+      "error handling",
+      "exceptions"
     ]
   },
   {
     "id": "python_006",
-    "question": "What are the implications of using mutable objects as default arguments in Python functions?",
+    "question": "What is the difference between `==` and `is` operators in Python?",
     "difficulty": "easy",
     "tags": [
-      "best practices",
-      "data structures"
+      "operators",
+      "comparisons"
     ]
   },
   {
     "id": "python_007",
-    "question": "How would you implement a simple singleton pattern in Python, and why is it useful?",
+    "question": "How do you iterate over a dictionary in Python?",
     "difficulty": "easy",
     "tags": [
-      "design patterns",
-      "object-oriented programming"
+      "data structures",
+      "dictionaries"
     ]
   },
   {
     "id": "python_008",
-    "question": "Explain the difference between the `with` statement and a `try`/`except` block when working with file input/output in Python.",
+    "question": "What is the purpose of the `global` keyword in a Python script?",
     "difficulty": "easy",
     "tags": [
-      "error handling",
-      "file i/o"
+      "variables",
+      "scope"
     ]
   },
   {
     "id": "python_009",
-    "question": "Design a Python function to efficiently flatten a nested list of arbitrary depth.",
+    "question": "What is the purpose of using try-except blocks in Python?",
     "difficulty": "easy",
     "tags": [
-      "collections",
-      "algorithms"
+      "error_handling",
+      "basics"
     ]
   },
   {
     "id": "python_010",
-    "question": "What are the benefits and use cases of using Python's built-in `functools.reduce()` function, and how would you implement it manually?",
+    "question": "What is the difference between a generator and a list comprehension in Python?",
     "difficulty": "easy",
     "tags": [
-      "functional programming",
-      "iteration"
-    ]
-  },
-  {
-    "id": "python_011",
-    "question": "Explain how Python's `os` module can be used to implement cross-platform file and directory operations.",
-    "difficulty": "easy",
-    "tags": [
-      "file i/o",
-      "cross-platform"
-    ]
-  },
-  {
-    "id": "python_012",
-    "question": "Describe how you would implement a simple Python API for caching expensive function results, and what considerations would you take into account.",
-    "difficulty": "easy",
-    "tags": [
-      "caching",
-      "performance"
-    ]
-  },
-  {
-    "id": "python_013",
-    "question": "Implement a Python class that provides a thread-safe counter, including a description of the synchronization mechanism used.",
-    "difficulty": "medium",
-    "tags": [
-      "concurrency",
-      "threading"
-    ]
-  },
-  {
-    "id": "python_014",
-    "question": "Write a Python function that performs a breadth-first search (BFS) traversal of a directed graph, and explain the algorithm used.",
-    "difficulty": "medium",
-    "tags": [
-      "algorithms",
-      "graph theory"
-    ]
-  },
-  {
-    "id": "python_015",
-    "question": "Create a Python function that calculates the intersection of two sorted lists, and describe the approach used to achieve efficient time complexity.",
-    "difficulty": "medium",
-    "tags": [
-      "algorithms",
-      "data structures"
-    ]
-  },
-  {
-    "id": "python_016",
-    "question": "Design a Python system that implements the Observer design pattern to notify clients when a data source changes, including a description of the observer interface.",
-    "difficulty": "medium",
-    "tags": [
-      "object-oriented programming",
-      "design patterns"
-    ]
-  },
-  {
-    "id": "python_017",
-    "question": "Describe a strategy for optimizing the performance of a Python function that performs repeated numerical computations, including the use of memoization or caching.",
-    "difficulty": "medium",
-    "tags": [
-      "performance optimization",
-      "mathematics"
-    ]
-  },
-  {
-    "id": "python_018",
-    "question": "Implement a Python class that provides an iterable wrapper around a database query result set, including methods for fetching and iterating over the results.",
-    "difficulty": "medium",
-    "tags": [
-      "database",
+      "generators",
       "iterators"
     ]
   },
   {
-    "id": "python_019",
-    "question": "Create a Python function that generates a random permutation of a given list, and describe the algorithm used to ensure randomness and efficiency.",
-    "difficulty": "medium",
+    "id": "python_011",
+    "question": "How do you access and modify a dictionary within a dictionary in Python?",
+    "difficulty": "easy",
     "tags": [
-      "algorithms",
-      "randomization"
+      "data_structures",
+      "dictionary"
+    ]
+  },
+  {
+    "id": "python_012",
+    "question": "What is the purpose of the `with` statement when working with files in Python?",
+    "difficulty": "easy",
+    "tags": [
+      "files",
+      "io"
+    ]
+  },
+  {
+    "id": "python_013",
+    "question": "What is the difference between a class and a struct in Python?",
+    "difficulty": "easy",
+    "tags": [
+      "classes",
+      "objects"
+    ]
+  },
+  {
+    "id": "python_014",
+    "question": "How do you sort a list of objects based on an attribute in Python?",
+    "difficulty": "easy",
+    "tags": [
+      "sorting",
+      "list"
+    ]
+  },
+  {
+    "id": "python_015",
+    "question": "What is the purpose of the `enumerate` function when iterating over a sequence in Python?",
+    "difficulty": "easy",
+    "tags": [
+      "iteration",
+      "sequence"
+    ]
+  },
+  {
+    "id": "python_016",
+    "question": "What is the difference between a set and a frozenset in Python?",
+    "difficulty": "easy",
+    "tags": [
+      "data_structures",
+      "sets"
+    ]
+  },
+  {
+    "id": "python_017",
+    "question": "What is the difference between the `len()` function and the `sys.getsizeof()` function in Python, and how are they used?",
+    "difficulty": "easy",
+    "tags": [
+      "python",
+      "data-types"
+    ]
+  },
+  {
+    "id": "python_018",
+    "question": "How do you dynamically add or remove attributes from an object in Python?",
+    "difficulty": "easy",
+    "tags": [
+      "python",
+      "object-oriented-programming"
+    ]
+  },
+  {
+    "id": "python_019",
+    "question": "How do you differentiate between the `del` statement and the `pop()` method when removing an item from a collection in Python?",
+    "difficulty": "easy",
+    "tags": [
+      "python",
+      "collections"
     ]
   },
   {
     "id": "python_020",
-    "question": "Implement a Least Recently Used (LRU) cache using Python's built-in dictionary and list. Explain your approach and any trade-offs you made.",
-    "difficulty": "hard",
+    "question": "What is the difference between the `input()` function and the `raw_input()` function in Python, and how do you use them?",
+    "difficulty": "easy",
     "tags": [
-      "data-structures",
-      "caching"
+      "python",
+      "input-output"
     ]
   },
   {
     "id": "python_021",
-    "question": "Write a Python function that takes a tree as input and returns a list of all leaf nodes. Describe the time complexity of your solution.",
-    "difficulty": "hard",
+    "question": "How do you use the `any()` function to check for the presence of a condition in a collection in Python?",
+    "difficulty": "easy",
     "tags": [
-      "algorithms",
-      "tree-traversal"
+      "python",
+      "conditionals"
     ]
   },
   {
     "id": "python_022",
-    "question": "Design a Python class to simulate a bank account system using object-oriented programming principles. The class should have methods for deposit, withdrawal, and account balance inquiry. Also, write unit tests for this class.",
-    "difficulty": "hard",
+    "question": "What is the purpose of using the `classmethod` decorator in Python, and how is it different from using a regular method?",
+    "difficulty": "easy",
     "tags": [
-      "object-oriented-programming",
-      "testing"
+      "python",
+      "object-oriented-programming"
     ]
   },
   {
     "id": "python_023",
-    "question": "Explain how you would implement a thread-safe singleton in Python using synchronization primitives. Discuss any potential drawbacks and alternative approaches.",
-    "difficulty": "hard",
+    "question": "How do you use the `super()` function to access the methods of a parent class in a subclass in Python?",
+    "difficulty": "easy",
     "tags": [
-      "multithreading",
-      "synchronization"
+      "python",
+      "inheritance"
     ]
   },
   {
     "id": "python_024",
-    "question": "Write a Python function that takes a string and returns its longest prefix that is a valid palindrome. You can assume the input string is not empty.",
-    "difficulty": "hard",
+    "question": "What is the difference between a list and a tuple in Python, and how are they used?",
+    "difficulty": "easy",
     "tags": [
-      "string-manipulation",
-      "dynamic-programming"
+      "lists",
+      "tuples"
     ]
   },
   {
     "id": "python_025",
-    "question": "Design a Python system to manage a fleet of autonomous vehicles. The system should be able to add, remove, and update vehicle locations, as well as display the nearest vehicle to a given location. Explain your approach and any trade-offs you made.",
+    "question": "How do you use the `isinstance()` function to check if an object is an instance of a particular class in Python?",
+    "difficulty": "easy",
+    "tags": [
+      "inheritance",
+      "polymorphism"
+    ]
+  },
+  {
+    "id": "python_026",
+    "question": "What are lambda functions in Python, and how do you use them?",
+    "difficulty": "easy",
+    "tags": [
+      "anonymous functions",
+      "higher-order functions"
+    ]
+  },
+  {
+    "id": "python_027",
+    "question": "How do you create a dictionary from a list of key-value pairs in Python?",
+    "difficulty": "easy",
+    "tags": [
+      "dictionaries",
+      "key-value pairs"
+    ]
+  },
+  {
+    "id": "python_028",
+    "question": "What is the purpose of the `break` and `continue` statements when iterating over a sequence in Python?",
+    "difficulty": "easy",
+    "tags": [
+      "loops",
+      "iteration"
+    ]
+  },
+  {
+    "id": "python_029",
+    "question": "How do you use the `zip()` function to iterate over multiple sequences in parallel in Python?",
+    "difficulty": "easy",
+    "tags": [
+      "iteration",
+      "mapping functions"
+    ]
+  },
+  {
+    "id": "python_030",
+    "question": "How do you use the `globals()` and `locals()` functions to access the current execution scope in Python?",
+    "difficulty": "easy",
+    "tags": [
+      "execution scope",
+      "symbolic tables"
+    ]
+  },
+  {
+    "id": "python_031",
+    "question": "What is the difference between a dictionary key and a dictionary value, and how can they be used to store and retrieve data in a dictionary?",
+    "difficulty": "easy",
+    "tags": [
+      "dictionaries",
+      "data structures"
+    ]
+  },
+  {
+    "id": "python_032",
+    "question": "How do you use the `enumerate()` function to iterate over a collection in Python, and what information does it provide about each item?",
+    "difficulty": "easy",
+    "tags": [
+      "iterators",
+      "collections"
+    ]
+  },
+  {
+    "id": "python_033",
+    "question": "How do you use the `re` module in Python to work with regular expressions, and what functionality do they provide?",
+    "difficulty": "easy",
+    "tags": [
+      "regex",
+      "text processing"
+    ]
+  },
+  {
+    "id": "python_034",
+    "question": "How do you use the `open()` function in Python to work with files, and what modes are available for opening files?",
+    "difficulty": "easy",
+    "tags": [
+      "files",
+      "input/output"
+    ]
+  },
+  {
+    "id": "python_035",
+    "question": "How do you use the `datetime` module in Python to work with dates and times, and what classes are available for creating and manipulating date-time objects?",
+    "difficulty": "easy",
+    "tags": [
+      "dates",
+      "times"
+    ]
+  },
+  {
+    "id": "python_036",
+    "question": "How do you create a shallow copy of a list in Python, and what is the difference between a shallow and a deep copy?",
+    "difficulty": "easy",
+    "tags": [
+      "list",
+      "copying"
+    ]
+  },
+  {
+    "id": "python_037",
+    "question": "How do you use the `set` data structure in Python, and what are some common use cases for sets?",
+    "difficulty": "easy",
+    "tags": [
+      "sets",
+      "data structures"
+    ]
+  },
+  {
+    "id": "python_038",
+    "question": "How do you use the `sorted()` function to sort a list of objects in Python, and what arguments can you pass to customize the sorting?",
+    "difficulty": "easy",
+    "tags": [
+      "sorting",
+      "list"
+    ]
+  },
+  {
+    "id": "python_039",
+    "question": "What is the purpose of the `__repr__()` method in Python, and how does it differ from the `__str__()` method?",
+    "difficulty": "easy",
+    "tags": [
+      "dunder methods",
+      "string representation"
+    ]
+  },
+  {
+    "id": "python_040",
+    "question": "How do you use the `map()` function to apply a function to each item in an iterable in Python, and what is the difference between `map()` and a list comprehension?",
+    "difficulty": "easy",
+    "tags": [
+      "higher-order functions",
+      "list comprehensions"
+    ]
+  },
+  {
+    "id": "python_041",
+    "question": "Suppose you're using Python's contextmanager decorator to implement a locking mechanism, but realize that you'd like to have more control over the lock timing. How would you modify your solution to handle this new requirement?",
+    "difficulty": "medium",
+    "tags": [
+      "contextmanager",
+      "lock management",
+      "decorator"
+    ]
+  },
+  {
+    "id": "python_042",
+    "question": "You're building a data processing pipeline in Python using the pandas library. A user reports that the pipeline fails for large datasets due to memory issues. What possible optimization strategies would you consider to improve the pipeline's performance?",
+    "difficulty": "medium",
+    "tags": [
+      "performance optimization",
+      "pandas",
+      "data processing"
+    ]
+  },
+  {
+    "id": "python_043",
+    "question": "Assume you're using the requests library in Python to fetch data from an API. However, you notice that the API sometimes returns unexpected JSON data. What approach would you take to handle and log this unexpected data without raising exceptions?",
+    "difficulty": "medium",
+    "tags": [
+      "error handling",
+      "requests",
+      "json parsing"
+    ]
+  },
+  {
+    "id": "python_044",
+    "question": "In a Python web application built using Flask or Django, you need to implement authentication and authorization using JWT tokens. Which library or method would you prefer to use, and why?",
+    "difficulty": "medium",
+    "tags": [
+      "jwt",
+      "authentication",
+      "web development"
+    ]
+  },
+  {
+    "id": "python_045",
+    "question": "When working with large CSV files in Python using pandas, you face the issue of slower performance due to disk I/O. How would you optimize this process by utilizing the Dask library or other related techniques?",
+    "difficulty": "medium",
+    "tags": [
+      "csv processing",
+      "dask",
+      "performance"
+    ]
+  },
+  {
+    "id": "python_046",
+    "question": "In a Python script using the schedule library to run tasks at specific intervals, you notice that the scheduling is not working as expected due to incorrect timezone handling. How would you correctly configure the schedule to handle this issue?",
+    "difficulty": "medium",
+    "tags": [
+      "scheduling",
+      "timezone",
+      "schedule library"
+    ]
+  },
+  {
+    "id": "python_047",
+    "question": "Using Python's multiprocessing module for parallel processing, you encounter a situation where you need to share a large data structure between multiple processes. What approach would you use to safely share this data structure?",
+    "difficulty": "medium",
+    "tags": [
+      "multiprocessing",
+      "shared memory",
+      "data structures"
+    ]
+  },
+  {
+    "id": "python_048",
+    "question": "When using the Python logging module to handle logs, you're concerned about log rotation and sizing issues for your application logs. What configuration options or strategies would you implement to handle these issues effectively?",
+    "difficulty": "medium",
+    "tags": [
+      "logging",
+      "log rotation",
+      "configuration"
+    ]
+  },
+  {
+    "id": "python_049",
+    "question": "You're using Python's os.path module to join file paths together. However, you need to ensure that the resulting path is always absolute. How would you modify your code to achieve this?",
+    "difficulty": "medium",
+    "tags": [
+      "os",
+      "path"
+    ]
+  },
+  {
+    "id": "python_050",
+    "question": "In a Python GUI application built using Tkinter, you want to implement a feature that automatically saves the current state of the application when the user closes it. What design pattern or approach would you use to achieve this?",
+    "difficulty": "medium",
+    "tags": [
+      "tkinter",
+      "design pattern"
+    ]
+  },
+  {
+    "id": "python_051",
+    "question": "When working with Python's logging module, you notice that log messages are not being displayed in the correct order due to concurrent logging. What synchronization technique or strategy would you use to ensure that logs are written in the correct order?",
+    "difficulty": "medium",
+    "tags": [
+      "logging",
+      "multithreading"
+    ]
+  },
+  {
+    "id": "python_052",
+    "question": "You're using Python's sqlite3 module to interact with a SQLite database. However, you need to ensure that the database connection is properly closed after use to prevent resource leaks. How would you achieve this in your code?",
+    "difficulty": "medium",
+    "tags": [
+      "sqlite",
+      "database"
+    ]
+  },
+  {
+    "id": "python_053",
+    "question": "In a Python script using the argparse module to parse command-line arguments, you want to add a feature that automatically generates a help message when the user passes an invalid argument. What approach would you use to implement this feature?",
+    "difficulty": "medium",
+    "tags": [
+      "argparse",
+      "cli"
+    ]
+  },
+  {
+    "id": "python_054",
+    "question": "When working with Python's subprocess module to run external commands, you encounter a situation where the command output is not being captured correctly due to shell quoting issues. What technique or strategy would you use to resolve this issue?",
+    "difficulty": "medium",
+    "tags": [
+      "subprocess",
+      "shell"
+    ]
+  },
+  {
+    "id": "python_055",
+    "question": "You're using Python's datetime module to handle date and time calculations. However, you need to ensure that the resulting date and time are always in the user's local timezone. What approach would you use to achieve this?",
+    "difficulty": "medium",
+    "tags": [
+      "datetime",
+      "timezone"
+    ]
+  },
+  {
+    "id": "python_056",
+    "question": "In a Python web application built using Flask or Django, you want to implement a feature that prevents SQL injection attacks by validating user input. What security technique or strategy would you use to achieve this?",
+    "difficulty": "medium",
+    "tags": [
+      "sql",
+      "security"
+    ]
+  },
+  {
+    "id": "python_057",
+    "question": "When using Python's requests library to make HTTP requests, you encounter a situation where the server returns a compressed response, but the library doesn't automatically decompress it. What approach would you use to decompress the response in your code?",
+    "difficulty": "medium",
+    "tags": [
+      "requests",
+      "http"
+    ]
+  },
+  {
+    "id": "python_058",
+    "question": "In a Python script using the json module to parse and generate JSON data, you need to handle cases where invalid JSON data is encountered. What exception handling and data validation strategies would you use to robustly handle such cases?",
+    "difficulty": "medium",
+    "tags": [
+      "json",
+      "data-validation"
+    ]
+  },
+  {
+    "id": "python_059",
+    "question": "You're using Python's hashlib library to generate and compare hash values of files. However, you're concerned about the security implications of using hash functions in your application. What considerations and best practices would you follow to use hash functions securely?",
+    "difficulty": "medium",
+    "tags": [
+      "hash-functions",
+      "security"
+    ]
+  },
+  {
+    "id": "python_060",
+    "question": "When working with Python's pathlib module to manipulate file paths and directories, you need to handle cases where file permissions or access errors occur. What exception handling and error handling strategies would you use to robustly handle such cases?",
+    "difficulty": "medium",
+    "tags": [
+      "pathlib",
+      "file-system"
+    ]
+  },
+  {
+    "id": "python_061",
+    "question": "In a Python GUI application built using PyQt or wxPython, you want to implement a feature that automatically saves the application's current state when the user logs out. What design pattern or approach would you use to achieve this?",
+    "difficulty": "medium",
+    "tags": [
+      "gui",
+      "saving-state"
+    ]
+  },
+  {
+    "id": "python_062",
+    "question": "You're using Python's socket library to establish network connections. However, you're concerned about issues related to connection timeouts and socket closure. What techniques and best practices would you follow to properly handle such cases?",
+    "difficulty": "medium",
+    "tags": [
+      "sockets",
+      "networking"
+    ]
+  },
+  {
+    "id": "python_063",
+    "question": "When using Python's unittest module to write unit tests, you need to handle cases where test dependencies or database connections are required. What fixture management and test isolation strategies would you use to robustly handle such cases?",
+    "difficulty": "medium",
+    "tags": [
+      "unit-testing",
+      "fixtures"
+    ]
+  },
+  {
+    "id": "python_064",
+    "question": "In a Python web application built using Pyramid or FastAPI, you want to implement a feature that prevents cross-site request forgery (CSRF) attacks. What security technique or strategy would you use to achieve this?",
+    "difficulty": "medium",
+    "tags": [
+      "csrf",
+      "security"
+    ]
+  },
+  {
+    "id": "python_065",
+    "question": "You've written a Python script that uses the logging module to handle application logs. However, you want to add a feature that allows the user to filter and customize log messages based on their severity and content. What approach would you use to implement this feature?",
+    "difficulty": "medium",
+    "tags": [
+      "logging",
+      "configuration"
+    ]
+  },
+  {
+    "id": "python_066",
+    "question": "When working with Python's pandas library to manipulate and analyze data, you need to handle cases where the input data is missing or has inconsistent formats. What data cleaning and validation strategies would you use to robustly handle such cases and ensure data integrity?",
+    "difficulty": "medium",
+    "tags": [
+      "data-analysis",
+      "data-validation"
+    ]
+  },
+  {
+    "id": "python_067",
+    "question": "You're using Python's sqlite3 module to interact with a SQLite database. However, you're concerned about issues related to database concurrency and locking. What techniques and best practices would you follow to handle concurrent database access and ensure data consistency?",
+    "difficulty": "medium",
+    "tags": [
+      "database-interaction",
+      "concurrency"
+    ]
+  },
+  {
+    "id": "python_068",
+    "question": "In a Python script that uses the requests library to make HTTP requests, you want to implement a feature that automatically retries failed requests after a specified timeout period. What approach would you use to implement this feature and handle retry logic?",
+    "difficulty": "medium",
+    "tags": [
+      "http-requests",
+      "retry-logic"
+    ]
+  },
+  {
+    "id": "python_069",
+    "question": "When working with Python's multiprocessing module to parallelize tasks, you need to handle cases where multiple processes share resources or have conflicting requirements. What synchronization and coordination strategies would you use to ensure data consistency and integrity?",
+    "difficulty": "medium",
+    "tags": [
+      "concurrency",
+      "synchronization"
+    ]
+  },
+  {
+    "id": "python_070",
+    "question": "You've written a Python script that uses the threading module to execute multiple tasks concurrently. However, you're concerned about issues related to thread safety and data consistency. What techniques and best practices would you follow to ensure thread safety and protect shared resources?",
+    "difficulty": "medium",
+    "tags": [
+      "threading",
+      "thread-safety"
+    ]
+  },
+  {
+    "id": "python_071",
+    "question": "In a Python web application built using Flask or Django, you want to implement a feature that allows the user to upload files to the server. What file upload and validation strategies would you use to ensure secure and robust file upload?",
+    "difficulty": "medium",
+    "tags": [
+      "file-upload",
+      "security"
+    ]
+  },
+  {
+    "id": "python_072",
+    "question": "You're using Python's asyncio library to develop an asynchronous application. However, you're concerned about issues related to await timeouts and task cancellation. What techniques and best practices would you follow to handle await timeouts and task cancellation correctly?",
+    "difficulty": "medium",
+    "tags": [
+      "asynchronous-programming",
+      "timeout-handling"
+    ]
+  },
+  {
+    "id": "python_073",
+    "question": "In a Python script that uses the datetime module to handle date and time, you want to implement a feature that automatically converts date strings from a user's locale to a standard format. How would you handle cases where users enter dates in different formats, and what considerations would you take to ensure accurate conversions?",
+    "difficulty": "medium",
+    "tags": [
+      "datetime",
+      "locale",
+      "data conversion"
+    ]
+  },
+  {
+    "id": "python_074",
+    "question": "When using Python's enum module to define and use enumerations, you're concerned about issues related to backward compatibility and enumeration changes. What strategies would you follow to ensure smooth updates and avoid potential conflicts when updating existing enumeration values or adding new ones?",
+    "difficulty": "medium",
+    "tags": [
+      "enum",
+      "backwards compatibility"
+    ]
+  },
+  {
+    "id": "python_075",
+    "question": "In a Python application that uses the subprocess module to execute external commands, you want to implement a feature that captures and logs the output of the executed commands. How would you handle cases where commands produce output in different formats, and what considerations would you take to ensure robust logging and error handling?",
+    "difficulty": "medium",
+    "tags": [
+      "subprocess",
+      "logging",
+      "error handling"
+    ]
+  },
+  {
+    "id": "python_076",
+    "question": "You're using Python's typing module to add type hints to your code. However, you're concerned about issues related to generic types and type constraints. What techniques and best practices would you follow to ensure accurate type annotations and avoid potential type errors?",
+    "difficulty": "medium",
+    "tags": [
+      "typing",
+      "type hints",
+      "generic types"
+    ]
+  },
+  {
+    "id": "python_077",
+    "question": "In a Python web application built using Pyramid or FastAPI, you want to implement a feature that allows the user to select and apply different themes or layouts for the application. How would you handle cases where themes have different layout structures or styling requirements, and what considerations would you take to ensure seamless theme switching?",
+    "difficulty": "medium",
+    "tags": [
+      "web development",
+      "themes",
+      "layouts"
+    ]
+  },
+  {
+    "id": "python_078",
+    "question": "When using Python's pathlib module to handle file paths and directories, you're concerned about issues related to path normalization and canonicalization. What techniques and best practices would you follow to ensure accurate path resolution and avoid potential path-related errors?",
+    "difficulty": "medium",
+    "tags": [
+      "pathlib",
+      "path normalization"
+    ]
+  },
+  {
+    "id": "python_079",
+    "question": "In a Python script that uses the hashlib module to create and verify cryptographic hashes, you want to implement a feature that allows users to securely store and retrieve sensitive data based on user-provided input. How would you handle cases where users enter invalid input or produce unexpected hash values, and what considerations would you take to ensure secure data storage?",
+    "difficulty": "medium",
+    "tags": [
+      "hashlib",
+      "data storage",
+      "security"
+    ]
+  },
+  {
+    "id": "python_080",
+    "question": "You're using Python's contextlib module to create and manage contexts for resource allocation and deallocation. However, you're concerned about issues related to context management and error handling. What techniques and best practices would you follow to ensure robust context management and prevent resource leaks?",
+    "difficulty": "medium",
+    "tags": [
+      "contextlib",
+      "resource management"
+    ]
+  },
+  {
+    "id": "python_081",
+    "question": "You're tasked with optimizing a Python script that uses a list of objects to store data. The script often results in a 'MemoryError' due to excessive memory usage. Describe a scenario where you'd use a 'view' object in Python to optimize memory usage.",
     "difficulty": "hard",
     "tags": [
-      "system-design",
-      "geospatial"
+      "memory-management",
+      "optimization"
+    ]
+  },
+  {
+    "id": "python_082",
+    "question": "How would you handle the case where a user attempts to access a file in a directory, but that file does not exist? What Python exception would you expect to catch, and what steps would you take to prevent it?",
+    "difficulty": "hard",
+    "tags": [
+      "error-handling",
+      "file-system"
+    ]
+  },
+  {
+    "id": "python_083",
+    "question": "Imagine you're building a data pipeline in Python, and one of the tasks involves reading a large CSV file. Describe how you'd take advantage of Python's 'yield from' expression to implement a generator that efficiently yields individual rows from the CSV file.",
+    "difficulty": "hard",
+    "tags": [
+      "generators",
+      "data-pipelines"
+    ]
+  },
+  {
+    "id": "python_084",
+    "question": "Consider a scenario where you're implementing a Python decorator that logs function call times. However, you've noticed that the logging statements are appearing before the actual function call. Explain why this might be happening, and describe how you'd fix it.",
+    "difficulty": "hard",
+    "tags": [
+      "decorators",
+      "logging"
+    ]
+  },
+  {
+    "id": "python_085",
+    "question": "You've built a Python script that uses a recursive function to calculate the factorial of a given number. However, when you run the script with a large input, it crashes with a 'RecursionError'. Describe what's happening, and how you'd modify the function to avoid this issue using an alternative approach.",
+    "difficulty": "hard",
+    "tags": [
+      "recursion",
+      "algorithm-optimization"
+    ]
+  },
+  {
+    "id": "python_086",
+    "question": "Suppose you're building a Python web application using a specific library, and you need to handle cases where the application receives a request with invalid data. Explain how you'd use Python's built-in 'json' module to parse the request data, and describe what you'd do to handle the case where the data is invalid or missing.",
+    "difficulty": "hard",
+    "tags": [
+      "web-development",
+      "data-parsing"
+    ]
+  },
+  {
+    "id": "python_087",
+    "question": "Consider a scenario where you're implementing a Python class that simulates a bank account. However, you've noticed that when you attempt to perform transactions, the class doesn't update the account balance correctly. Explain why this might be happening, and describe how you'd fix it by using Python's `__repr__` method to ensure correct output.",
+    "difficulty": "hard",
+    "tags": [
+      "oop",
+      "attribute-management"
+    ]
+  },
+  {
+    "id": "python_088",
+    "question": "Imagine you're building a Python script that uses a loop to iterate over a collection of objects. However, you need to exit the loop early based on a specific condition. Describe how you'd use Python's 'next' function in conjunction with the 'iter' function to implement a context manager that allows you to exit the loop early.",
+    "difficulty": "hard",
+    "tags": [
+      "loops",
+      "context-managers"
+    ]
+  },
+  {
+    "id": "python_089",
+    "question": "You're designing a Python class that utilizes a property to store and retrieve an object's metadata. However, when you access the property, it raises a 'RuntimeError'. Describe the potential reason for this issue and how you'd modify the class to resolve it.",
+    "difficulty": "hard",
+    "tags": [
+      "python",
+      "properties",
+      "exceptions"
+    ]
+  },
+  {
+    "id": "python_090",
+    "question": "Consider a scenario where you're implementing a Python function that uses asynchronous processing to handle a list of tasks. However, when you attempt to use the 'asyncio.gather' function, it raises a 'TimeoutError' unexpectedly. Explain the reason behind this issue and how you'd modify the function to handle the timeout correctly.",
+    "difficulty": "hard",
+    "tags": [
+      "python",
+      "asyncio",
+      "timeout"
+    ]
+  },
+  {
+    "id": "python_091",
+    "question": "Imagine you're building a Python script that utilizes the 'contextlib.contextmanager' decorator to manage resources. However, when you run the script, it raises a 'ValueError' with an unexpected error message. Describe the potential reason for this issue and how you'd modify the script to resolve it.",
+    "difficulty": "hard",
+    "tags": [
+      "python",
+      "contextmanagers",
+      "decorators"
+    ]
+  },
+  {
+    "id": "python_092",
+    "question": "You're tasked with implementing a Python class that simulates a cache system using the 'functools.lru_cache' decorator. However, when you attempt to use the cache, it raises a 'RuntimeError' unexpectedly. Explain the reason behind this issue and how you'd modify the class to resolve it.",
+    "difficulty": "hard",
+    "tags": [
+      "python",
+      "lru_cache",
+      "decorators"
+    ]
+  },
+  {
+    "id": "python_093",
+    "question": "Consider a scenario where you're building a Python script that uses the 'itertools.groupby' function to group items by a common attribute. However, when you attempt to iterate over the groups, it raises a 'TypeError' unexpectedly. Describe the potential reason for this issue and how you'd modify the script to resolve it.",
+    "difficulty": "hard",
+    "tags": [
+      "python",
+      "groupby",
+      "iterators"
+    ]
+  },
+  {
+    "id": "python_094",
+    "question": "Imagine you're implementing a Python function that uses the 'pathlib.Path' class to manipulate file paths. However, when you attempt to use the 'Path.exists' method, it raises an 'OSError' unexpectedly. Explain the reason behind this issue and how you'd modify the function to resolve it.",
+    "difficulty": "hard",
+    "tags": [
+      "python",
+      "pathlib",
+      "file-management"
+    ]
+  },
+  {
+    "id": "python_095",
+    "question": "You're tasked with designing a Python class that simulates a singleton pattern using the 'types.SimpleNamespace' class. However, when you attempt to use the instance, it raises a 'RuntimeError' unexpectedly. Describe the potential reason for this issue and how you'd modify the class to resolve it.",
+    "difficulty": "hard",
+    "tags": [
+      "python",
+      "singleton",
+      "types"
+    ]
+  },
+  {
+    "id": "python_096",
+    "question": "Consider a scenario where you're building a Python script that uses the 'unittest.mock' module to create a mock object. However, when you attempt to use the mock object, it raises an 'AttributeError' unexpectedly. Explain the reason behind this issue and how you'd modify the script to resolve it.",
+    "difficulty": "hard",
+    "tags": [
+      "python",
+      "mocking",
+      "unittest"
+    ]
+  },
+  {
+    "id": "python_097",
+    "question": "Suppose you're working with a Python class that utilizes the 'property' decorator to store and retrieve an object's metadata. However, you've noticed that when you access the metadata property, it gets cached indefinitely, leading to unexpected behavior. Explain the reason behind this issue and describe how you'd modify the class to resolve it by using the 'property' decorator correctly.",
+    "difficulty": "hard",
+    "tags": [
+      "properties",
+      "caching"
+    ]
+  },
+  {
+    "id": "python_098",
+    "question": "Consider a scenario where you're building a Python script that uses the 'asyncio' library to perform concurrent I/O operations. However, you've encountered a situation where the coroutines are not being executed in the expected order. Describe the potential reason behind this issue and explain how you'd use the 'asyncio.wait' function to correctly execute the coroutines in the order you want.",
+    "difficulty": "hard",
+    "tags": [
+      "asyncio",
+      "concurrency"
+    ]
+  },
+  {
+    "id": "python_099",
+    "question": "Imagine you're working with a Python class that utilizes the 'weakref' module to implement a weak reference to an object. However, you've noticed that when you try to access the weakly referenced object, it raises a 'WeakRefError' unexpectedly. Explain the reason behind this issue and describe how you'd modify the class to resolve it by using the 'WeakSet' class instead.",
+    "difficulty": "hard",
+    "tags": [
+      "weakref",
+      "garbage collection"
+    ]
+  },
+  {
+    "id": "python_100",
+    "question": "Suppose you're building a Python script that uses the 'contextlib.suppress' context manager to catch and suppress exceptions. However, you've encountered a situation where the exceptions are not being caught as expected. Describe the potential reason behind this issue and explain how you'd use the 'contextlib.suppress' context manager to correctly catch and suppress exceptions.",
+    "difficulty": "hard",
+    "tags": [
+      "contextlib",
+      "exception handling"
+    ]
+  },
+  {
+    "id": "python_101",
+    "question": "Consider a scenario where you're implementing a Python function that uses a closure to store and retrieve data. However, you've noticed that when you try to access the closed data, it raises an 'UnboundLocalError' unexpectedly. Explain the reason behind this issue and describe how you'd modify the function to resolve it by using the 'nonlocal' keyword correctly.",
+    "difficulty": "hard",
+    "tags": [
+      "closures",
+      "variable scope"
+    ]
+  },
+  {
+    "id": "python_102",
+    "question": "Imagine you're working with a Python class that utilizes the 'metaclass' to modify the class's behavior dynamically. However, you've encountered a situation where the metaclass modifications are not being applied as expected. Describe the potential reason behind this issue and explain how you'd use the 'metaclass' to correctly modify the class's behavior.",
+    "difficulty": "hard",
+    "tags": [
+      "metaclasses",
+      "reflection"
+    ]
+  },
+  {
+    "id": "python_103",
+    "question": "Suppose you're building a Python script that uses the 'functools.total_ordering' decorator to enable total ordering for a class. However, you've encountered a situation where the total ordering is not being applied as expected. Describe the potential reason behind this issue and explain how you'd use the 'functools.total_ordering' decorator to correctly enable total ordering.",
+    "difficulty": "hard",
+    "tags": [
+      "functools",
+      "ordering"
+    ]
+  },
+  {
+    "id": "python_104",
+    "question": "Consider a scenario where you're implementing a Python function that uses the 'pathlib.Path.resolve' method to resolve a path. However, you've noticed that when you try to resolve a path with a relative directory, it raises a 'ValueError' unexpectedly. Explain the reason behind this issue and describe how you'd modify the function to resolve relative directories correctly.",
+    "difficulty": "hard",
+    "tags": [
+      "pathlib",
+      "paths"
+    ]
+  },
+  {
+    "id": "python_105",
+    "question": "You're tasked with designing a Python class that implements a custom descriptor for an attribute. However, when you attempt to use the descriptor with a class instance, it raises a 'TypeError' unexpectedly. Describe the potential reason for this issue and explain how you'd modify the class to resolve it by using the descriptor correctly.",
+    "difficulty": "hard",
+    "tags": [
+      "descriptors",
+      "mro"
     ]
   }
 ]

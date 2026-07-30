@@ -1,207 +1,846 @@
 [
   {
     "id": "sysdesign_001",
-    "question": "What is the difference between horizontal and vertical scaling?",
+    "question": "What are the main differences between a monolithic architecture and a microservices architecture?",
     "difficulty": "easy",
-    "tags": ["system-design", "scalability", "fundamentals"]
+    "tags": [
+      "monolithic_architecture",
+      "microservices_architecture",
+      "system_design"
+    ]
   },
   {
     "id": "sysdesign_002",
-    "question": "Explain the CAP theorem and what trade-offs it forces in distributed systems.",
-    "difficulty": "medium",
-    "tags": ["system-design", "distributed-systems"]
+    "question": "Explain the concept of the Single Responsibility Principle (SRP) in the context of system design.",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "single_responsibility_principle",
+      "software_design"
+    ]
   },
   {
     "id": "sysdesign_003",
-    "question": "How would you design a rate limiter for a public API?",
-    "difficulty": "medium",
-    "tags": ["system-design", "rate-limiting"]
+    "question": "What is the purpose of a Registry in a Service-Oriented Architecture (SOA)?",
+    "difficulty": "easy",
+    "tags": [
+      "service_oriented_architecture",
+      "registry",
+      "system_design"
+    ]
   },
   {
     "id": "sysdesign_004",
-    "question": "Design a URL shortening service like bit.ly. Discuss ID generation, storage, and redirect handling at scale.",
-    "difficulty": "hard",
-    "tags": ["system-design", "scalability"]
+    "question": "Compare and contrast the benefits and trade-offs of using a centralized and decentralized data storage approach.",
+    "difficulty": "easy",
+    "tags": [
+      "centralized_data_storage",
+      "decentralized_data_storage",
+      "system_design"
+    ]
   },
   {
     "id": "sysdesign_005",
-    "question": "Design the backend architecture for a real-time chat application supporting millions of concurrent users.",
-    "difficulty": "hard",
-    "tags": ["system-design", "real-time", "scalability"]
-  }
-,
-  {
-    "id": "sysd_001",
-    "question": "Design a load balancer that can handle 10,000 concurrent connections. Describe the hardware and software requirements.",
+    "question": "Describe the role and functionality of an API Gateway in a system architecture.",
     "difficulty": "easy",
     "tags": [
-      "load_balancing",
+      "api_gateway",
+      "system_architecture",
+      "api_design"
+    ]
+  },
+  {
+    "id": "sysdesign_006",
+    "question": "What are the key characteristics of a scalable system design, and how can they be achieved?",
+    "difficulty": "easy",
+    "tags": [
+      "scalable_system_design",
+      "high_availability",
+      "system_design"
+    ]
+  },
+  {
+    "id": "sysdesign_007",
+    "question": "Explain the difference between a Load Balancer and a Reverse Proxy, and how they are used in system design.",
+    "difficulty": "easy",
+    "tags": [
+      "load_balancer",
+      "reverse_proxy",
+      "system_design"
+    ]
+  },
+  {
+    "id": "sysdesign_008",
+    "question": "What is the purpose of a Database Index, and how does it improve query performance?",
+    "difficulty": "easy",
+    "tags": [
+      "database_index",
+      "query_performance",
+      "database_design"
+    ]
+  },
+  {
+    "id": "sysdesign_009",
+    "question": "What are the key differences between a Service-Oriented Architecture (SOA) and a Microservices Architecture?",
+    "difficulty": "easy",
+    "tags": [
+      "systemdesign",
+      "architecture"
+    ]
+  },
+  {
+    "id": "sysdesign_010",
+    "question": "Describe the role of a Service Registry in Service Discovery, and how does it facilitate communication between services?",
+    "difficulty": "easy",
+    "tags": [
+      "systemdesign",
+      "microservices"
+    ]
+  },
+  {
+    "id": "sysdesign_011",
+    "question": "What is the primary purpose of a Cache in a system design, and how does it improve performance?",
+    "difficulty": "easy",
+    "tags": [
+      "systemdesign",
+      "performance"
+    ]
+  },
+  {
+    "id": "sysdesign_012",
+    "question": "Compare and contrast the benefits and trade-offs of using a Request-Response vs. Event-Driven architecture pattern.",
+    "difficulty": "easy",
+    "tags": [
+      "systemdesign",
+      "architecture"
+    ]
+  },
+  {
+    "id": "sysdesign_013",
+    "question": "What is the role of a Circuit Breaker in a system design, and how does it prevent cascading failures?",
+    "difficulty": "easy",
+    "tags": [
+      "systemdesign",
+      "faulttolerance"
+    ]
+  },
+  {
+    "id": "sysdesign_014",
+    "question": "Explain the concept of a Dead Letter Queue in a system design, and how does it handle failed messages?",
+    "difficulty": "easy",
+    "tags": [
+      "systemdesign",
+      "messagequeue"
+    ]
+  },
+  {
+    "id": "sysdesign_015",
+    "question": "Describe the difference between a Horizontal Scaling and a Vertical Scaling approach, and when would each be used in system design?",
+    "difficulty": "easy",
+    "tags": [
+      "systemdesign",
+      "scaling"
+    ]
+  },
+  {
+    "id": "sysdesign_016",
+    "question": "What is the purpose of a Service Mesh, and how does it enable features like service discovery and traffic management?",
+    "difficulty": "easy",
+    "tags": [
+      "systemdesign",
+      "service mesh"
+    ]
+  },
+  {
+    "id": "sysdesign_017",
+    "question": "What is the primary function of a Service Interface in a system design, and how does it facilitate loose coupling between services?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "microservices"
+    ]
+  },
+  {
+    "id": "sysdesign_018",
+    "question": "How does a Message Queue improve communication between systems, and what are its key advantages over synchronous request-response calls?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "message_queue"
+    ]
+  },
+  {
+    "id": "sysdesign_019",
+    "question": "What is the purpose of a Health Check endpoint in a system design, and how does it help in monitoring service availability?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "service_health"
+    ]
+  },
+  {
+    "id": "sysdesign_020",
+    "question": "Explain the difference between a Single-Page Application (SPA) and a Multi-Page Application (MPA) in terms of system design and user experience.",
+    "difficulty": "easy",
+    "tags": [
+      "web_development",
+      "system_design"
+    ]
+  },
+  {
+    "id": "sysdesign_021",
+    "question": "How does a Content Delivery Network (CDN) improve the performance and availability of a web application, and what are its key components?",
+    "difficulty": "easy",
+    "tags": [
+      "cdns",
+      "web_performance"
+    ]
+  },
+  {
+    "id": "sysdesign_022",
+    "question": "What is the role of a Configuration Management tool in a system design, and how does it help in managing service configurations across environments?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "devops"
+    ]
+  },
+  {
+    "id": "sysdesign_023",
+    "question": "Explain the concept of a Service Level Agreement (SLA) in a system design, and how does it ensure service quality and reliability?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "service_level_agreement"
+    ]
+  },
+  {
+    "id": "sysdesign_024",
+    "question": "How does a Resource Governor help in managing resource utilization in a system design, and what are its key benefits in terms of scalability and performance?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "resource_governance"
+    ]
+  },
+  {
+    "id": "sysdesign_025",
+    "question": "Describe the purpose of a Load Balancer in a system design, and how does it improve the responsiveness of a web application?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "load_balancing"
+    ]
+  },
+  {
+    "id": "sysdesign_026",
+    "question": "Explain the concept of Service-Oriented Architecture (SOA) in system design, and how does it enable reusability and flexibility in service development?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "soa"
+    ]
+  },
+  {
+    "id": "sysdesign_027",
+    "question": "What is the role of an Event-Driven Architecture (EDA) in system design, and how does it facilitate loose coupling between systems?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "eda"
+    ]
+  },
+  {
+    "id": "sysdesign_028",
+    "question": "Describe the difference between a stateless and stateful service in system design, and when would each be used in a microservices-based application?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "stateless_stateful"
+    ]
+  },
+  {
+    "id": "sysdesign_029",
+    "question": "Explain the concept of Circuit Breaking in a system design, and how does it prevent a cascading failure when a service is experiencing high latency?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "circuit_breaker"
+    ]
+  },
+  {
+    "id": "sysdesign_030",
+    "question": "What is the purpose of a Service Registry in a system design, and how does it enable service discovery and registration in a microservices-based architecture?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "service_registry"
+    ]
+  },
+  {
+    "id": "sysdesign_031",
+    "question": "Describe the difference between a synchronous and asynchronous communication pattern in system design, and when would each be used in a distributed system?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "synchronous_asynchronous"
+    ]
+  },
+  {
+    "id": "sysdesign_032",
+    "question": "What is the primary goal of a system architect when designing a system, and how do they balance competing priorities such as functionality, scalability, and maintainability?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "architecture"
+    ]
+  },
+  {
+    "id": "sysdesign_033",
+    "question": "How does a system designer ensure that a web application is accessible and usable for users with disabilities, and what are some common accessibility design patterns?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "web_development"
+    ]
+  },
+  {
+    "id": "sysdesign_034",
+    "question": "What is the role of a system administrator in ensuring the availability and reliability of a system, and what tools or techniques do they use to monitor and troubleshoot system performance?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "system_administration"
+    ]
+  },
+  {
+    "id": "sysdesign_035",
+    "question": "Explain the concept of a system boundary in system design, and how does it help in defining the scope and responsibilities of a system or subsystem?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "boundary"
+    ]
+  },
+  {
+    "id": "sysdesign_036",
+    "question": "Describe the difference between a process-oriented approach and a data-oriented approach to system design, and when would each be used in a real-world system?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "approaches"
+    ]
+  },
+  {
+    "id": "sysdesign_037",
+    "question": "How does a system designer ensure that a distributed system remains consistent and reliable in the presence of network partitions or node failures, and what are some common techniques used to mitigate these issues?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "consistency"
+    ]
+  },
+  {
+    "id": "sysdesign_038",
+    "question": "Explain the concept of a system interface in system design, and how does it help in defining the interactions and dependencies between different components or subsystems of a system?",
+    "difficulty": "easy",
+    "tags": [
+      "system_design",
+      "interface"
+    ]
+  },
+  {
+    "id": "sysdesign_039",
+    "question": "Describe the difference between a centralized and decentralized data storage approach in system design, and when would each be used in a data-driven application?",
+    "difficulty": "easy",
+    "tags": [
+      "data_storage",
+      "system_design",
+      "centralized",
+      "decentralized"
+    ]
+  },
+  {
+    "id": "sysdesign_040",
+    "question": "What is the role of a Service Mesh in system design, and how does it help in service discovery, traffic management, and security in a microservices-based system?",
+    "difficulty": "easy",
+    "tags": [
+      "service_mesh",
+      "system_design",
+      "microservices"
+    ]
+  },
+  {
+    "id": "sysdesign_041",
+    "question": "Design a system to ensure that each user in a chat application can have multiple groups, but each group can only have one admin user. How would you implement this system, and what trade-offs would you consider when deciding on the database schema?",
+    "difficulty": "medium",
+    "tags": [
+      "database",
+      "system_design"
+    ]
+  },
+  {
+    "id": "sysdesign_042",
+    "question": "You are tasked with designing a simple e-commerce website that can handle a moderate volume of traffic. What caching strategy would you use to improve the performance of the site, and how would you implement it without writing to the database for every single request?",
+    "difficulty": "medium",
+    "tags": [
+      "caching",
+      "performance"
+    ]
+  },
+  {
+    "id": "sysdesign_043",
+    "question": "Suppose you are building a content delivery network (CDN) to reduce latency for users accessing a video streaming service. What are some key considerations when deciding where to place your CDN nodes, and how would you balance latency, cost, and maintenance complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "networking",
       "scalability"
     ]
   },
   {
-    "id": "sysd_002",
-    "question": "You are given a distributed system with 5 nodes, each with 16 GB of RAM. If 3 nodes are serving web traffic and 2 nodes are serving database queries, explain how you would configure the RAM to maximize system performance.",
-    "difficulty": "easy",
+    "id": "sysdesign_044",
+    "question": "Design a system to handle high-volume transactions for a payment gateway. What would be the main considerations for designing the system to ensure it can handle a large number of concurrent transactions without failing, and how would you implement load balancing and failover?",
+    "difficulty": "medium",
     "tags": [
-      "distributed_systems",
-      "memory_management"
+      "scalability",
+      "high_availability"
     ]
   },
   {
-    "id": "sysd_003",
-    "question": "Design a caching layer to improve the performance of a web application. Describe the cache eviction policy and how you would implement it.",
-    "difficulty": "easy",
+    "id": "sysdesign_045",
+    "question": "You are tasked with designing a microservice-based architecture for a social media platform that can handle millions of users. What are some key decisions you would need to make when deciding on the boundaries of each microservice, and how would you ensure loose coupling and communication between them?",
+    "difficulty": "medium",
+    "tags": [
+      "microservices",
+      "system_design"
+    ]
+  },
+  {
+    "id": "sysdesign_046",
+    "question": "Suppose you are building an online banking system that requires high security for sensitive customer data. What are some key design considerations for ensuring the security of the system, particularly in terms of authentication, authorization, and data encryption?",
+    "difficulty": "medium",
+    "tags": [
+      "security",
+      "system_design"
+    ]
+  },
+  {
+    "id": "sysdesign_047",
+    "question": "Design a system to handle large volumes of logs from multiple sources in a scalable and efficient manner. What would be the main considerations for designing the system, and how would you implement log aggregation, filtering, and storage?",
+    "difficulty": "medium",
+    "tags": [
+      "logging",
+      "scalability"
+    ]
+  },
+  {
+    "id": "sysdesign_048",
+    "question": "You are tasked with designing a system to support real-time analytics for a gaming platform that can handle thousands of players simultaneously. What are some key considerations for designing the system to ensure low latency and high throughput, and how would you implement caching, queuing, and data processing?",
+    "difficulty": "medium",
+    "tags": [
+      "realtime",
+      "performance"
+    ]
+  },
+  {
+    "id": "sysdesign_049",
+    "question": "Design a data warehousing system for a retail company that handles daily transactions across various stores. What trade-offs would you consider when deciding between a star and snowflake schema, and how would you optimize the data warehousing system for query performance and scalability?",
+    "difficulty": "medium",
+    "tags": [
+      "data_warehousing",
+      "database_design"
+    ]
+  },
+  {
+    "id": "sysdesign_050",
+    "question": "Suppose you are building a system for monitoring and analyzing the network traffic of a software development company. What are some key considerations for designing the system to handle large volumes of network data, and how would you implement data processing, storage, and visualization to ensure real-time insights into network traffic?",
+    "difficulty": "medium",
+    "tags": [
+      "network_monitoring",
+      "data_analysis"
+    ]
+  },
+  {
+    "id": "sysdesign_051",
+    "question": "Design a system for generating and verifying digital certificates for secure communication between a website and its users. What are some key considerations for ensuring the security and authenticity of digital certificates, and how would you implement a certificate authority and certificate revocation list to mitigate risks?",
+    "difficulty": "medium",
+    "tags": [
+      "public_key_infrastructure",
+      "security"
+    ]
+  },
+  {
+    "id": "sysdesign_052",
+    "question": "You are tasked with designing a cloud-based system for hosting and managing virtual machines for a startup company. What are some key considerations for ensuring scalable and on-demand resource allocation, and how would you implement a load balancer and virtual machine manager to ensure high availability and fault tolerance?",
+    "difficulty": "medium",
+    "tags": [
+      "cloud_computing",
+      "virtualization"
+    ]
+  },
+  {
+    "id": "sysdesign_053",
+    "question": "Design a system for caching frequently accessed data for a web application that experiences high traffic. What are some trade-offs when deciding between in-memory and disk-based caching, and how would you implement caching strategies to reduce database queries and improve performance?",
+    "difficulty": "medium",
     "tags": [
       "caching",
       "performance_optimization"
     ]
   },
   {
-    "id": "sysd_004",
-    "question": "Explain how you would implement a leader election algorithm in a distributed system with 5 nodes. Describe the advantages and disadvantages of your approach.",
-    "difficulty": "easy",
+    "id": "sysdesign_054",
+    "question": "Suppose you are building a system for handling and processing large video files for a streaming service. What are some key considerations for ensuring efficient video transcoding and processing, and how would you implement a transcoding pipeline to handle concurrent video requests?",
+    "difficulty": "medium",
+    "tags": [
+      "video_processing",
+      "transcoding"
+    ]
+  },
+  {
+    "id": "sysdesign_055",
+    "question": "Design a system for ensuring data consistency and synchronization across multiple distributed systems for a financial services company. What are some key considerations for ensuring data integrity and consistency in the presence of network partitions and failures, and how would you implement a distributed locking mechanism to mitigate concurrency issues?",
+    "difficulty": "medium",
     "tags": [
       "distributed_systems",
-      "leader_election"
+      "data_consistency"
     ]
   },
   {
-    "id": "sysd_005",
-    "question": "You are given a system with a high rate of failed requests. Explain how you would use circuit breakers to prevent cascading failures and improve system reliability.",
-    "difficulty": "easy",
-    "tags": [
-      "fault_tolerance",
-      "circuit_breakers"
-    ]
-  },
-  {
-    "id": "sysd_006",
-    "question": "Design a system to handle high-volume data ingestion from multiple sources. Describe the data processing pipeline and how you would handle data deduplication and data quality issues.",
-    "difficulty": "easy",
-    "tags": [
-      "data_integration",
-      "data_processing"
-    ]
-  },
-  {
-    "id": "sysd_007",
-    "question": "You are tasked with implementing a geographically distributed system with multiple data centers. Explain how you would use a consensus algorithm to ensure data consistency across the system.",
-    "difficulty": "easy",
-    "tags": [
-      "distributed_systems",
-      "consensus_algorithms"
-    ]
-  },
-  {
-    "id": "sysd_008",
-    "question": "Design a caching layer for a real-time analytics application that processes high-velocity data streams. Ensure the cache is thread-safe and can adapt to changing data distribution.",
+    "id": "sysdesign_056",
+    "question": "You are tasked with designing a system for providing a single sign-on (SSO) experience for multiple applications and services for a business organization. What are some key considerations for ensuring secure and seamless user authentication and authorization, and how would you implement SSO protocols and identity federation to support multiple applications?",
     "difficulty": "medium",
     "tags": [
-      "caching",
-      "concurrency",
-      "streaming"
+      "single_sign_on",
+      "identity_management"
     ]
   },
   {
-    "id": "sysd_009",
-    "question": "Develop a system to monitor and alert on anomalies in a large-scale IoT network. Describe the components required, trade-offs, and considerations for implementing a distributed system.",
+    "id": "sysdesign_057",
+    "question": "Design an API gateway for a microservices architecture that can handle both HTTP and gRPC requests. What trade-offs would you consider when deciding between a single API gateway instance and multiple instances in load balancing mode, and how would you implement routing and rate limiting to ensure scalability and security?",
     "difficulty": "medium",
     "tags": [
-      "IoT",
-      "monitoring",
-      "distributed systems"
+      "api_gateway",
+      "microservices"
     ]
   },
   {
-    "id": "sysd_010",
-    "question": "Design a content delivery network (CDN) that can efficiently distribute large multimedia content across multiple edge locations. Consider the impact of network latency, geographic distribution, and caching strategies.",
+    "id": "sysdesign_058",
+    "question": "Suppose you are building a system to support content delivery for a news website that requires real-time updates and high availability. What are some key considerations for designing a content delivery network (CDN) that can handle millions of users and reduce latency, and how would you implement caching, DNS caching, and edge computing to ensure efficient content delivery?",
     "difficulty": "medium",
     "tags": [
-      "content delivery network",
-      "edge computing",
-      "caching"
+      "cdn",
+      "content_delivery"
     ]
   },
   {
-    "id": "sysd_011",
-    "question": "You are tasked with designing a system to process large batches of financial transactions while maintaining compliance with strict regulatory requirements. How would you ensure data integrity, auditability, and performance under high concurrency?",
+    "id": "sysdesign_059",
+    "question": "Design a system for handling batch processing workloads in a cloud environment that can scale up to thousands of concurrent tasks. What are some key considerations for ensuring efficient resource allocation and job scheduling, and how would you implement job queuing, monitoring, and failure handling to ensure reliable batch processing?",
     "difficulty": "medium",
     "tags": [
-      "financial systems",
-      "concurrency",
-      "data integrity"
+      "batch_processing",
+      "cloud_computing"
     ]
   },
   {
-    "id": "sysd_012",
-    "question": "Design a system to handle a sudden surge in traffic to an E-commerce platform during a promotional event. Outline the strategies to handle increased load, manage user experience, and minimize the impact on existing users.",
+    "id": "sysdesign_060",
+    "question": "Imagine a system that integrates multiple third-party APIs for a travel booking platform. What are some key considerations for designing the system to handle different API response formats, request rates, and authentication schemes, and how would you implement API aggregation, caching, and error handling to ensure seamless user experience?",
     "difficulty": "medium",
     "tags": [
-      "scalability",
-      "load balancing",
-      "e-commerce"
+      "api_integration",
+      "microservices"
     ]
   },
   {
-    "id": "sysd_013",
-    "question": "Develop a system to manage a fleet of autonomous vehicles, ensuring safe and efficient coordination between vehicles, traffic signal integration, and communication with a centralized control center.",
+    "id": "sysdesign_061",
+    "question": "Suppose you are building a system to support IoT device management for a smart home company that requires efficient communication and data processing. What are some key considerations for designing an IoT hub that can handle low-bandwidth connections and ensure reliable data transmission, and how would you implement data processing, analytics, and security to support IoT devices?",
     "difficulty": "medium",
     "tags": [
-      "autonomous vehicles",
-      "system-of-systems",
-      "coordination"
+      "iot",
+      "device_management"
     ]
   },
   {
-    "id": "sysd_014",
-    "question": "Design a system to collect and process sensor data from industrial equipment in real-time. Describe the architecture, data storage, and analytics capabilities required to support predictive maintenance and machine learning applications.",
+    "id": "sysdesign_062",
+    "question": "Design a system for generating reports and visualizing data for a business intelligence platform that requires fast data processing and rendering. What are some key considerations for ensuring efficient data loading, processing, and rendering, and how would you implement caching, compression, and parallel processing to ensure fast report generation and visualization?",
     "difficulty": "medium",
     "tags": [
-      "industrial IoT",
-      "predictive maintenance",
-      "data analytics"
+      "business_intelligence",
+      "data_visualization"
     ]
   },
   {
-    "id": "sysd_015",
-    "question": "You're tasked with designing a system that needs to handle a high volume of concurrent requests, but the underlying hardware doesn't have the necessary memory to store all the requests in RAM. Design a caching strategy that minimizes the impact on the system's performance.",
-    "difficulty": "hard",
+    "id": "sysdesign_063",
+    "question": "Imagine a system that supports collaboration and file sharing for a team management platform. What are some key considerations for designing the system to ensure secure file sharing, access control, and data consistency, and how would you implement authentication, authorization, and version control to ensure reliable collaboration?",
+    "difficulty": "medium",
     "tags": [
-      "caching",
+      "collaboration",
+      "file_sharing"
+    ]
+  },
+  {
+    "id": "sysdesign_064",
+    "question": "Suppose you are building a system to support real-time analytics for a sports analytics company that requires efficient data ingestion and processing. What are some key considerations for designing a data pipeline that can handle large volumes of streaming data, and how would you implement real-time data processing, analytics, and visualization to support fast insights and decision-making?",
+    "difficulty": "medium",
+    "tags": [
+      "real_time_analytics",
+      "data_pipeline"
+    ]
+  },
+  {
+    "id": "sysdesign_065",
+    "question": "Suppose you are designing a system for providing personalized recommendations to users based on their past behavior. What trade-offs would you consider when deciding between a centralized and decentralized data storage model, and how would you handle data locality and access control in each approach?",
+    "difficulty": "medium",
+    "tags": [
+      "system_design",
+      "data_modeling"
+    ]
+  },
+  {
+    "id": "sysdesign_066",
+    "question": "You are tasked with designing a system for handling high-volume, low-latency transactions for an e-commerce platform. What considerations would you take into account when choosing between a synchronous and asynchronous messaging pattern, and how would you implement each pattern to ensure high throughput and low latency?",
+    "difficulty": "medium",
+    "tags": [
+      "system_design",
+      "messaging"
+    ]
+  },
+  {
+    "id": "sysdesign_067",
+    "question": "Imagine a system that supports fault-tolerant and self-healing architecture for a cloud-based infrastructure. What are some key considerations for ensuring high availability and minimal downtime in the presence of hardware failures and network partitions, and how would you design a recovery mechanism to ensure quick restart of critical services?",
+    "difficulty": "medium",
+    "tags": [
+      "system_design",
+      "availability"
+    ]
+  },
+  {
+    "id": "sysdesign_068",
+    "question": "Suppose you are building a system to support real-time collaboration for a group chat application. What considerations would you take into account when designing a system that can handle concurrent updates and ensure data consistency across multiple users, and how would you implement conflict resolution and data synchronization to support seamless collaboration?",
+    "difficulty": "medium",
+    "tags": [
+      "system_design",
       "concurrency"
     ]
   },
   {
-    "id": "sysd_016",
-    "question": "A large e-commerce platform has multiple data centers across the globe, each with its own database. Design a system that can automatically detect and resolve inconsistencies between the databases in different data centers, without interrupting the normal operation of the platform.",
-    "difficulty": "hard",
+    "id": "sysdesign_069",
+    "question": "You are tasked with designing a system for handling large-scale data ingestion for a business intelligence platform. What trade-offs would you consider when deciding between a batch processing and stream processing approach, and how would you design a system that can handle both real-time and batch data ingestion to support fast insights and decision-making?",
+    "difficulty": "medium",
     "tags": [
-      "data replication",
-      "consistency"
+      "system_design",
+      "data_ingestion"
     ]
   },
   {
-    "id": "sysd_017",
-    "question": "You're developing a real-time analytics system that processes a massive amount of streaming data. Design a system that can handle data bursts, spikes, and dips in real-time, without compromising the accuracy of the analytics.",
+    "id": "sysdesign_070",
+    "question": "Imagine a system that supports load balancing and autoscaling for a scalable architecture. What are some key considerations for ensuring efficient resource allocation and scaling in the presence of changing workloads and network traffic, and how would you design a system that can dynamically adjust to changing requirements to ensure high throughput and low latency?",
+    "difficulty": "medium",
+    "tags": [
+      "system_design",
+      "autoscaling"
+    ]
+  },
+  {
+    "id": "sysdesign_071",
+    "question": "Suppose you are designing a system for providing secure and private data storage for a sensitive application. What considerations would you take into account when choosing between a homomorphic encryption and differential privacy approach, and how would you implement each approach to ensure secure and private data storage?",
+    "difficulty": "medium",
+    "tags": [
+      "system_design",
+      "data_security"
+    ]
+  },
+  {
+    "id": "sysdesign_072",
+    "question": "You are tasked with designing a system for handling complex business workflows for a process automation platform. What trade-offs would you consider when deciding between a graph-based and state-machine-based approach, and how would you design a system that can handle complex workflows with multiple branches and conditional logic to ensure accurate and efficient processing?",
+    "difficulty": "medium",
+    "tags": [
+      "system_design",
+      "process_automation"
+    ]
+  },
+  {
+    "id": "sysdesign_073",
+    "question": "You are tasked with designing a system for handling network partitions in a highly available distributed architecture. What are some key considerations for designing a partition detection and recovery mechanism, and how would you ensure fast failover to a standby node in the event of a partition?",
+    "difficulty": "medium",
+    "tags": [
+      "system_design",
+      "high_availability"
+    ]
+  },
+  {
+    "id": "sysdesign_074",
+    "question": "Suppose you are building a system to support load testing and benchmarking for a high-performance computing platform. What trade-offs would you consider when deciding between a micro-benchmarking approach and a macro-benchmarking approach, and how would you design a system that can accurately measure and compare performance metrics across different workloads?",
+    "difficulty": "medium",
+    "tags": [
+      "system_design",
+      "performance_optimization"
+    ]
+  },
+  {
+    "id": "sysdesign_075",
+    "question": "Imagine a system that supports secure key management and rotation for a cloud-based encryption platform. What considerations would you take into account when designing a key management system that can handle large numbers of keys, and how would you implement a secure key rotation and revocation mechanism?",
+    "difficulty": "medium",
+    "tags": [
+      "system_design",
+      "security"
+    ]
+  },
+  {
+    "id": "sysdesign_076",
+    "question": "You are tasked with designing a system for handling data deduplication and compression for a large-scale data storage platform. What trade-offs would you consider when deciding between a hash-based deduplication approach and a delta-based deduplication approach, and how would you implement an efficient data compression algorithm to reduce storage costs?",
+    "difficulty": "medium",
+    "tags": [
+      "system_design",
+      "data_management"
+    ]
+  },
+  {
+    "id": "sysdesign_077",
+    "question": "Suppose you are building a system to support event-driven architecture for a real-time data processing platform. What considerations would you take into account when designing an event-driven system that can handle high-volume and high-velocity data streams, and how would you implement event sourcing and CQRS to ensure data consistency and scalability?",
+    "difficulty": "medium",
+    "tags": [
+      "system_design",
+      "event_driven"
+    ]
+  },
+  {
+    "id": "sysdesign_078",
+    "question": "You are tasked with designing a system for handling caching and content delivery for a high-traffic e-commerce platform. What trade-offs would you consider when deciding between a caching proxy server approach and a content delivery network (CDN) approach, and how would you implement an efficient caching and content delivery mechanism to reduce latency and improve performance?",
+    "difficulty": "medium",
+    "tags": [
+      "system_design",
+      "performance_optimization"
+    ]
+  },
+  {
+    "id": "sysdesign_079",
+    "question": "Imagine a system that supports disaster recovery and business continuity for a critical infrastructure platform. What considerations would you take into account when designing a disaster recovery plan that can handle site outages and data loss, and how would you implement a business continuity mechanism to ensure minimal downtime and data loss?",
+    "difficulty": "medium",
+    "tags": [
+      "system_design",
+      "high_availability"
+    ]
+  },
+  {
+    "id": "sysdesign_080",
+    "question": "Suppose you are building a system to support microservices architecture for a large-scale application platform. What trade-offs would you consider when deciding between a service-based architecture and a function-as-a-service (FaaS) approach, and how would you implement a scalable and resilient microservices architecture to ensure high throughput and low latency?",
+    "difficulty": "medium",
+    "tags": [
+      "system_design",
+      "microservices"
+    ]
+  },
+  {
+    "id": "sysdesign_081",
+    "question": "Design a caching layer for a simple e-commerce website that has an average of 100 concurrent users. Assume the website has two types of content: static (e.g., product images) and dynamic (e.g., user-specific recommendations). The static content is relatively small (less than 1 MB) and doesn't change frequently, while the dynamic content is larger (up to 10 MB) and changes every hour. The caching layer must handle the following scenarios: a user requests a static image that is already cached, a user requests a static image that is not cached, a user requests dynamic content that is currently being updated, and a user requests dynamic content that is not cached. How would you implement this caching layer, considering the trade-offs between cache hit ratio, cache memory usage, and update latency?",
     "difficulty": "hard",
     "tags": [
-      "stream processing",
+      "system_design",
+      "caching",
+      "trade-offs"
+    ]
+  },
+  {
+    "id": "sysdesign_082",
+    "question": "You are designing a real-time analytics system for a social media platform that has 10 million users. The system must process a high volume of user interactions (e.g., likes, comments, shares) and provide real-time insights on topic trends and user engagement. Assume the system has the following constraints: it must process interactions within 1-second latency, it must handle 10,000 interactions per second, and it must scale horizontally to accommodate increasing traffic. How would you design the system architecture, including data storage, processing, and visualization components, to meet these requirements?",
+    "difficulty": "hard",
+    "tags": [
+      "system_design",
+      "real-time analytics",
       "scalability"
     ]
   },
   {
-    "id": "sysd_018",
-    "question": "A company is planning to launch a new IoT device that generates a large amount of sensor data. Design a system that can efficiently collect, process, and store the sensor data from the device, while ensuring the security and integrity of the data.",
+    "id": "sysdesign_083",
+    "question": "Consider a simple load balancer that distributes incoming HTTP requests across multiple web servers. The load balancer uses a round-robin algorithm to select the next server, but it has a problem: when a server becomes overloaded or encounters an error, the load balancer does not immediately detect the issue. As a result, the load balancer continues to direct requests to the overloaded server, which can lead to cascading failures. How would you modify the load balancer to detect server failures and dynamically adjust the request distribution to ensure high availability and reliability?",
     "difficulty": "hard",
     "tags": [
-      "IoT",
-      "data processing"
+      "system_design",
+      "load balancing",
+      "fault tolerance"
     ]
   },
   {
-    "id": "sysd_019",
-    "question": "You're tasked with designing a system that can provide personalized recommendations to users based on their browsing history and preferences. Design a system that can handle a large number of users and items, while minimizing the latency and improving the accuracy of the recommendations.",
+    "id": "sysdesign_084",
+    "question": "Design a system that provides personalized product recommendations for an e-commerce website. The system must consider the following factors: user behavior (e.g., purchase history, browsing patterns), product attributes (e.g., price, category, ratings), and contextual factors (e.g., seasonality, holiday promotions). Assume the system has a database of 10,000 products and 1 million users. How would you implement a collaborative filtering algorithm to generate accurate and relevant recommendations, considering the trade-offs between accuracy, scalability, and computational resources?",
+    "difficulty": "hard",
+    "tags": [
+      "system_design",
+      "recommendation system",
+      "collaborative filtering"
+    ]
+  },
+  {
+    "id": "sysdesign_085",
+    "question": "You are designing a distributed system that consists of three microservices: a user service, a product service, and an order service. Each microservice is hosted on a separate container, and the system must ensure high availability and fault tolerance. Assume the system has the following requirements: it must detect and recover from microservice failures, it must maintain data consistency across services, and it must scale horizontally to accommodate increasing traffic. How would you implement a circuit breaker pattern to detect and prevent cascading failures, considering the trade-offs between reliability, scalability, and development complexity?",
+    "difficulty": "hard",
+    "tags": [
+      "system_design",
+      "distributed systems",
+      "circuit breaker"
+    ]
+  },
+  {
+    "id": "sysdesign_086",
+    "question": "Consider a simple database system that uses a hash table to store and retrieve data. The system has a problem: when the hash table becomes full, the system cannot handle new requests and the system crashes. As a result, the database system loses data and becomes unavailable. How would you modify the database system to handle hash table collisions and ensure data consistency, considering the trade-offs between storage efficiency, query performance, and system reliability?",
+    "difficulty": "hard",
+    "tags": [
+      "system_design",
+      "database systems",
+      "hash table collisions"
+    ]
+  },
+  {
+    "id": "sysdesign_087",
+    "question": "Design a system that provides low-latency and high-throughput video streaming for a media platform. The system must handle large files (up to 1 GB) and ensure smooth playback on various devices. Assume the system has the following constraints: it must process 10,000 video streams per second, it must handle 1-minute latency, and it must scale horizontally to accommodate increasing traffic. How would you implement a chunk-based streaming algorithm to ensure efficient data transfer and smooth playback, considering the trade-offs between latency, throughput, and storage efficiency?",
+    "difficulty": "hard",
+    "tags": [
+      "system_design",
+      "video streaming",
+      "chunk-based streaming"
+    ]
+  },
+  {
+    "id": "sysdesign_088",
+    "question": "You are designing a system that generates and manages digital certificates for secure communication between clients and servers. The system must handle a high volume of certificate requests and ensure that certificates are issued in a timely manner. Assume the system has the following constraints: it must issue certificates within 1-minute latency, it must handle 10,000 requests per minute, and it must scale horizontally to accommodate increasing traffic. How would you implement an asynchronous certificate generation process to ensure efficient and secure certificate issuance, considering the trade-offs between security, scalability, and development complexity?",
+    "difficulty": "hard",
+    "tags": [
+      "system_design",
+      "certificate management",
+      "asynchronous processing"
+    ]
+  },
+  {
+    "id": "sysdesign_089",
+    "question": "You are designing a system for real-time inventory tracking for an e-commerce company with multiple warehouses. The system must update inventory levels every 5 minutes and provide real-time visibility into stock levels across all warehouses. If a product is out of stock, the system must notify the inventory management team. Assume the system has a database with inventory data for 10,000 products and 100 warehouses. How would you design the system architecture, including data storage, processing, and notification components, to meet these requirements?",
+    "difficulty": "hard",
+    "tags": [
+      "real-time",
+      "inventory management"
+    ]
+  },
+  {
+    "id": "sysdesign_090",
+    "question": "Consider a cloud-based storage system that provides automatic backups for users' files. The system has a problem: when a user uploads a large file (over 100 MB), the system slows down due to high disk I/O and network traffic. How would you optimize the storage system to handle large file uploads efficiently, considering the trade-offs between storage space, disk I/O, and network bandwidth?",
+    "difficulty": "hard",
+    "tags": [
+      "storage optimization",
+      "cloud storage"
+    ]
+  },
+  {
+    "id": "sysdesign_091",
+    "question": "You are designing a system for online event ticket sales with a capacity of 10,000 tickets per event. The system must ensure fair ticket distribution among users and prevent ticket scams. Assume the system has a database with event data and user information. How would you implement a ticket purchasing system that ensures fairness, security, and scalability, considering the trade-offs between fairness, security, and development complexity?",
+    "difficulty": "hard",
+    "tags": [
+      "ticket sales",
+      "fairness",
+      "security"
+    ]
+  },
+  {
+    "id": "sysdesign_092",
+    "question": "Consider a system that provides personalized news recommendations for users based on their interests. The system has a problem: when a user's interests change frequently, the system takes a long time to update the recommendation model and provide new recommendations. How would you implement a hybrid recommendation system that combines collaborative filtering and content-based filtering to ensure efficient and accurate recommendations?",
     "difficulty": "hard",
     "tags": [
       "recommendation system",
@@ -209,13 +848,129 @@
     ]
   },
   {
-    "id": "sysd_020",
-    "question": "A company is planning to launch a new cloud-based service that requires a high level of reliability and availability. Design a system that can automatically detect and recover from failures in the cloud infrastructure, without interrupting the service to users.",
+    "id": "sysdesign_093",
+    "question": "You are designing a system for data archiving and retrieval for a large media company with a vast library of historical data. The system must store and retrieve large files (up to 1 TB) from cold storage and provide fast data retrieval for analytics and reporting purposes. Assume the system has a budget for 10 PB of storage. How would you design the system architecture, including storage, processing, and retrieval components, to meet these requirements?",
     "difficulty": "hard",
     "tags": [
-      "cloud computing",
+      "data archiving",
+      "cold storage"
+    ]
+  },
+  {
+    "id": "sysdesign_094",
+    "question": "Consider a system that provides location-based services for mobile apps, such as navigation and search. The system has a problem: when a user's location changes rapidly, the system takes a long time to update the user's location and provide accurate services. How would you implement a location services system that ensures fast and accurate location updates, considering the trade-offs between location accuracy, user experience, and system complexity?",
+    "difficulty": "hard",
+    "tags": [
+      "location services",
+      "geospatial"
+    ]
+  },
+  {
+    "id": "sysdesign_095",
+    "question": "You are designing a system for data replication and synchronization across multiple data centers for a global e-commerce company. The system must ensure high availability and scalability across multiple data centers and ensure data consistency across all sites. Assume the system has 5 data centers with a total storage capacity of 100 TB. How would you design the system architecture, including replication, synchronization, and consistency components, to meet these requirements?",
+    "difficulty": "hard",
+    "tags": [
+      "data replication",
+      "synchronization"
+    ]
+  },
+  {
+    "id": "sysdesign_096",
+    "question": "Consider a system that provides machine learning model deployment and management for a large enterprise with multiple applications. The system has a problem: when a new model is deployed, the system takes a long time to update the model and provide accurate predictions. How would you implement a model serving system that ensures fast and accurate model deployment, considering the trade-offs between model accuracy, deployment speed, and system complexity?",
+    "difficulty": "hard",
+    "tags": [
+      "model deployment",
+      "machine learning"
+    ]
+  },
+  {
+    "id": "sysdesign_097",
+    "question": "Design a system that provides rate limiting for a web API with a high traffic volume. The system must prevent abuse and ensure fair access for all users. What strategies would you use to implement rate limiting, and how would you handle different types of traffic patterns, such as sudden spikes or sustained high volumes?",
+    "difficulty": "hard",
+    "tags": [
+      "rate limiting",
+      "api security",
+      "traffic management"
+    ]
+  },
+  {
+    "id": "sysdesign_098",
+    "question": "Consider a system that uses Service-Oriented Architecture (SOA) for building applications. How would you implement a robust API gateway that handles authentication, routing, and load balancing, and what strategies would you use to ensure scalability, reliability, and security in the API gateway?",
+    "difficulty": "hard",
+    "tags": [
+      "soa",
+      "api gateway",
+      "load balancing"
+    ]
+  },
+  {
+    "id": "sysdesign_099",
+    "question": "Design a system that provides caching for frequently accessed data in a database. The system must minimize database queries, reduce latency, and ensure data consistency. What caching techniques would you use, and how would you handle cache expiration, invalidation, and refresh?",
+    "difficulty": "hard",
+    "tags": [
+      "caching",
+      "database performance",
+      "consistency"
+    ]
+  },
+  {
+    "id": "sysdesign_100",
+    "question": "Consider a system that uses a message queue for asynchronous communication between services. How would you design a message queue system that ensures reliable delivery, handles message retries, and provides visibility into message processing, and what strategies would you use to handle message overflow and system failures?",
+    "difficulty": "hard",
+    "tags": [
+      "message queues",
+      "asynchronous communication",
+      "reliability"
+    ]
+  },
+  {
+    "id": "sysdesign_101",
+    "question": "Design a system that provides load balancing for a cluster of web servers. The system must distribute incoming traffic efficiently, handle server failures, and ensure high availability. What load balancing algorithms would you use, and how would you handle different traffic patterns, such as sudden spikes or sustained high volumes?",
+    "difficulty": "hard",
+    "tags": [
+      "load balancing",
+      "cluster management",
+      "availability"
+    ]
+  },
+  {
+    "id": "sysdesign_102",
+    "question": "Consider a system that uses a microservices architecture for building applications. How would you implement a service discovery system that handles service registration, lookup, and deregistration, and what strategies would you use to ensure scalability, reliability, and fault tolerance in the service discovery system?",
+    "difficulty": "hard",
+    "tags": [
+      "microservices",
+      "service discovery",
       "fault tolerance"
     ]
+  },
+  {
+    "id": "sysdesign_103",
+    "question": "Design a system that provides content delivery for multimedia files. The system must ensure fast and efficient delivery, handle large file sizes, and provide streaming capabilities. What content delivery strategies would you use, and how would you handle different content types, such as video, audio, or images?",
+    "difficulty": "hard",
+    "tags": [
+      "content delivery network",
+      "file streaming",
+      "multimedia"
+    ]
+  },
+  {
+    "id": "sysdesign_104",
+    "question": "Consider a system that uses a graph database for storing complex relationships between data entities. How would you design a graph database system that ensures efficient querying, handles large datasets, and provides scalability and reliability, and what strategies would you use to handle graph traversal, data consistency, and system failures?",
+    "difficulty": "hard",
+    "tags": [
+      "graph databases",
+      "complex data relationships",
+      "scalability"
+    ]
+  },
+  {
+    "id": "sysdesign_105",
+    "question": "You are designing a system for real-time monitoring and analytics for a large manufacturing plant. The system must capture and process sensor data from various machines and devices, provide instant alerts for anomalies, and offer detailed insights for quality control and optimization. Assume the system must handle a large volume of data from multiple sources with varying sampling rates and data formats. How would you design the system to ensure real-time data processing, reliable data storage, and efficient analytics, considering the trade-offs between data freshness, processing speed, and system complexity?",
+    "difficulty": "hard",
+    "tags": [
+      "system_design",
+      "real-time_systems",
+      "stream_processing"
+    ]
   }
-
 ]

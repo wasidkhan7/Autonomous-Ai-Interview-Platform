@@ -1,242 +1,965 @@
 [
   {
     "id": "ds_001",
-    "question": "Explain the time complexity difference between an array and a linked list for insertion and lookup.",
+    "question": "What's the main difference between a stack and a queue in terms of their data access and removal order?",
     "difficulty": "easy",
     "tags": [
-      "data-structures",
-      "arrays",
-      "linked-lists"
-    ]
-  },
-  {
-    "id": "ds_002",
-    "question": "What is a hash map, and how does it achieve average O(1) lookup time?",
-    "difficulty": "easy",
-    "tags": [
-      "data-structures",
-      "hash-maps"
-    ]
-  },
-  {
-    "id": "ds_003",
-    "question": "Explain the difference between a stack and a queue, and give a real-world use case for each.",
-    "difficulty": "easy",
-    "tags": [
-      "data-structures",
+      "data_structures",
       "stacks",
       "queues"
     ]
   },
   {
-    "id": "ds_004",
-    "question": "How does a binary search tree maintain sorted order, and what causes it to degrade to O(n) operations?",
-    "difficulty": "medium",
+    "id": "ds_002",
+    "question": "How do you traverse a binary tree if you only want to visit nodes in a top-down manner?",
+    "difficulty": "easy",
     "tags": [
-      "data-structures",
-      "trees"
+      "data_structures",
+      "binary_trees",
+      "tree_traversal"
+    ]
+  },
+  {
+    "id": "ds_003",
+    "question": "What's the purpose of using a hash function in a hash table, and how is it different from a regular function?",
+    "difficulty": "easy",
+    "tags": [
+      "data_structures",
+      "hash_tables",
+      "hash_functions"
+    ]
+  },
+  {
+    "id": "ds_004",
+    "question": "What's the difference between a linked list and an array in terms of memory usage and random access?",
+    "difficulty": "easy",
+    "tags": [
+      "data_structures",
+      "linked_lists",
+      "arrays"
     ]
   },
   {
     "id": "ds_005",
-    "question": "Design a data structure that supports insert, delete, and get-random-element all in O(1) time.",
-    "difficulty": "hard",
+    "question": "If you have a binary search tree and you want to find the closest element to a given target value, what would you do?",
+    "difficulty": "easy",
     "tags": [
-      "data-structures",
-      "system-design"
+      "data_structures",
+      "binary_search_trees",
+      "tree_queries"
     ]
   },
   {
     "id": "ds_006",
-    "question": "What is the trade-off between using a dynamic array versus a dynamic vector for storing large amounts of data, and how does this impact insertion and deletion performance?",
+    "question": "What's the trade-off between a balanced binary search tree and an unbalanced one in terms of operations like insertion and deletion?",
     "difficulty": "easy",
     "tags": [
-      "arrays",
       "data_structures",
-      "dynamic_arrays"
+      "binary_search_trees",
+      "balancing"
     ]
   },
   {
     "id": "ds_007",
-    "question": "Explain the concept of a disjoint set data structure and describe its use cases, particularly in scenarios involving network connectivity or merge operations.",
+    "question": "How do you handle collisions in a hash table, and what are some common strategies for resolving them?",
     "difficulty": "easy",
     "tags": [
-      "disjoint_sets",
-      "union_find",
-      "data_structures"
+      "data_structures",
+      "hash_tables",
+      "collision_resolution"
     ]
   },
   {
     "id": "ds_008",
-    "question": "Design a data structure that efficiently stores a graph with millions of nodes and edges. Describe your approach to handling edge lookups and traversal.",
+    "question": "What's the main advantage of using a trie over a regular hash table for storing a large dataset of strings?",
     "difficulty": "easy",
     "tags": [
-      "graphs",
-      "adjacency_lists",
-      "data_structures"
+      "data_structures",
+      "tries",
+      "hash_tables"
     ]
   },
   {
     "id": "ds_009",
-    "question": "Compare and contrast the time complexities of breadth-first search (BFS) and depth-first search (DFS) algorithms on unweighted graphs. Which search strategy is generally faster, and why?",
+    "question": "What's the difference between a linked list and a dynamic array in terms of memory allocation and resizing?",
     "difficulty": "easy",
     "tags": [
-      "graph_traversal",
-      "dfs",
-      "bfs"
+      "linked_lists",
+      "data_structures"
     ]
   },
   {
     "id": "ds_010",
-    "question": "Describe how a heap data structure can be used to implement a priority queue, and explain the trade-offs in terms of average-case time complexity versus worst-case time complexity.",
+    "question": "How do you determine the time complexity of an algorithm that uses a nested loop and another loop that iterates over the elements of a vector?",
     "difficulty": "easy",
     "tags": [
-      "heaps",
-      "priority_queues",
+      "time_complexity",
       "data_structures"
     ]
   },
   {
     "id": "ds_011",
-    "question": "Explain the concept of a trie data structure and describe its applications in areas such as autocomplete or spell-checking. How does the trie's structure enable efficient lookup and insertion operations?",
+    "question": "What's the purpose of using a sentinel node in a singly linked list, and how does it simplify some operations?",
     "difficulty": "easy",
     "tags": [
-      "tries",
-      "prefix_trees",
+      "linked_lists",
       "data_structures"
     ]
   },
   {
     "id": "ds_012",
-    "question": "Design a data structure that can efficiently store and retrieve the k most frequent elements from a large dataset. Describe your approach to handling updates and query operations.",
+    "question": "What's the main difference between an AVL tree and a red-black tree in terms of balancing and tree reorganization?",
     "difficulty": "easy",
     "tags": [
-      "frequent_elements",
-      "heap_data_structures",
+      "trees",
       "data_structures"
     ]
   },
   {
     "id": "ds_013",
-    "question": "You are given a large graph with millions of nodes and edges. Describe a data structure that can efficiently store and query the graph's adjacency matrix.",
-    "difficulty": "medium",
+    "question": "How do you handle insertions and deletions in a stack, and what are some scenarios where a queue might be more suitable?",
+    "difficulty": "easy",
     "tags": [
-      "graph",
-      "matrix"
+      "stacks",
+      "queues"
     ]
   },
   {
     "id": "ds_014",
-    "question": "Implement a data structure that supports efficient range queries on a large dataset of integers. The range queries should return the maximum value within the given range.",
-    "difficulty": "medium",
+    "question": "What's the trade-off between using a flat array versus a 2D array to represent a matrix of data?",
+    "difficulty": "easy",
     "tags": [
-      "range query",
-      "data structure problem"
+      "arrays",
+      "data_structures"
     ]
   },
   {
     "id": "ds_015",
-    "question": "Design a data structure to efficiently store and retrieve a large number of time-series data points. The data points should be stored in chronological order, and retrieval should be done within a specified time window.",
-    "difficulty": "medium",
+    "question": "What's the difference between a sparse matrix and a dense matrix in terms of memory usage and storage?",
+    "difficulty": "easy",
     "tags": [
-      "time series data",
-      "cache"
+      "matrices",
+      "data_structures"
     ]
   },
   {
     "id": "ds_016",
-    "question": "You are given a list of strings and their corresponding frequencies. Design a data structure to efficiently store and query the frequency of a given string.",
-    "difficulty": "medium",
+    "question": "How do you implement a circular buffer using an array, and what are some benefits of using this data structure?",
+    "difficulty": "easy",
     "tags": [
-      "trie",
-      "dictionary"
+      "arrays",
+      "data_structures"
     ]
   },
   {
     "id": "ds_017",
-    "question": "Describe a data structure that can be used to efficiently store and query a large number of key-value pairs, where each key is a complex object (e.g., a user ID) and each value is a set of related objects (e.g., user attributes).",
-    "difficulty": "medium",
+    "question": "What is the main purpose of using a Fibonacci heap over a standard binary heap in terms of time complexity for operations like insertion and deletion?",
+    "difficulty": "easy",
     "tags": [
-      "dictionary",
-      "hash map"
+      "data_structures",
+      "heaps"
     ]
   },
   {
     "id": "ds_018",
-    "question": "Implement a data structure that supports efficient merging of two sorted lists into a single sorted list. The merging should be done in-place, without using additional storage.",
-    "difficulty": "medium",
+    "question": "What's the difference between a merge sort and a quick sort in terms of stability, space complexity, and time complexity?",
+    "difficulty": "easy",
     "tags": [
       "sorting",
-      "merge"
+      "algorithms"
     ]
   },
   {
     "id": "ds_019",
-    "question": "Design a data structure to efficiently store and retrieve a large number of geometric objects (e.g., points, rectangles) and their spatial relationships (e.g., intersection, containment).",
-    "difficulty": "medium",
+    "question": "How do you handle the case where a binary search tree node has both a left and right child, but also has a parent node, in terms of updating parent pointers?",
+    "difficulty": "easy",
     "tags": [
-      "geospatial data",
-      "quad tree"
+      "binary_trees",
+      "data_structures"
     ]
   },
   {
     "id": "ds_020",
-    "question": "Design a data structure to efficiently store and retrieve the largest and smallest element from a stream of integers. Explain the time and space complexity of your solution.",
-    "difficulty": "hard",
+    "question": "What's the trade-off between using a B-tree and a B+-tree for storing a large dataset of records with varying keys and values?",
+    "difficulty": "easy",
     "tags": [
-      "data_stream",
+      "indexing",
+      "data_structures"
+    ]
+  },
+  {
+    "id": "ds_021",
+    "question": "What are the main differences between a static array and a dynamic array in terms of memory allocation and growth?",
+    "difficulty": "easy",
+    "tags": [
+      "arrays",
+      "data_structures"
+    ]
+  },
+  {
+    "id": "ds_022",
+    "question": "How do you decide when to use a radix sort over a quick sort or merge sort for sorting a large dataset of integers or strings?",
+    "difficulty": "easy",
+    "tags": [
+      "sorting",
+      "data_structures"
+    ]
+  },
+  {
+    "id": "ds_023",
+    "question": "What's the purpose of using a heap queue over a stack or queue for scheduling tasks with varying priorities?",
+    "difficulty": "easy",
+    "tags": [
+      "data_structures",
+      "queueing"
+    ]
+  },
+  {
+    "id": "ds_024",
+    "question": "What are the main advantages of using a skip list over an array or linked list for storing a large dataset with random access requirements?",
+    "difficulty": "easy",
+    "tags": [
+      "indexing",
+      "data_structures"
+    ]
+  },
+  {
+    "id": "ds_025",
+    "question": "What is the main purpose of a trie data structure, and how does it differ from a prefix tree?",
+    "difficulty": "easy",
+    "tags": [
+      "tries",
+      "prefix-trees"
+    ]
+  },
+  {
+    "id": "ds_026",
+    "question": "What are some common operations performed on a linked list, such as insertion and deletion, and how do you handle edge cases like inserting at the beginning or end of the list?",
+    "difficulty": "easy",
+    "tags": [
+      "linked-lists",
+      "data-manipulation"
+    ]
+  },
+  {
+    "id": "ds_027",
+    "question": "What is the difference between a stack and a queue in terms of order of operations, and how do you decide which data structure to use for a given problem?",
+    "difficulty": "easy",
+    "tags": [
+      "stacks-vs-queues",
+      "data-structure-choice"
+    ]
+  },
+  {
+    "id": "ds_028",
+    "question": "How does a hash table handle collisions when multiple keys hash to the same index, and what are some common strategies for resolving these collisions?",
+    "difficulty": "easy",
+    "tags": [
+      "hash-tables",
+      "collision-resolution"
+    ]
+  },
+  {
+    "id": "ds_029",
+    "question": "What is the purpose of a disjoint set data structure, and how is it used to solve problems involving connectivity and union-finding?",
+    "difficulty": "easy",
+    "tags": [
+      "disjoint-sets",
+      "union-find"
+    ]
+  },
+  {
+    "id": "ds_030",
+    "question": "What are some key differences between a binary search tree and a balanced binary search tree, such as the purpose of the balance factor and how it affects tree height?",
+    "difficulty": "easy",
+    "tags": [
+      "binary-search-trees",
+      "balanced-trees"
+    ]
+  },
+  {
+    "id": "ds_031",
+    "question": "How does a queue data structure handle insertion and deletion, and what are some common use cases for a queue, such as print queues or job scheduling?",
+    "difficulty": "easy",
+    "tags": [
+      "queues",
+      "data-structure-usage"
+    ]
+  },
+  {
+    "id": "ds_032",
+    "question": "What is the purpose of a bit array data structure, and how does it compare to other data structures like arrays or linked lists in terms of memory usage and query efficiency?",
+    "difficulty": "easy",
+    "tags": [
+      "bit-arrays",
+      "data-structure-comparison"
+    ]
+  },
+  {
+    "id": "ds_033",
+    "question": "What are the main differences between a stack and a queue in terms of handling duplicate elements and preserving order of insertion?",
+    "difficulty": "easy",
+    "tags": [
       "stack",
       "queue"
     ]
   },
   {
-    "id": "ds_021",
-    "question": "Given a dictionary of words and their frequencies, implement a data structure that supports fast lookup of a word and its frequency, as well as efficient insertion and deletion of words. Analyze the time and space complexity of your solution.",
-    "difficulty": "hard",
+    "id": "ds_034",
+    "question": "How does a graph data structure handle edge connections, and what are some common operations performed on a graph?",
+    "difficulty": "easy",
     "tags": [
-      "trie",
-      "hash_map",
-      "dictionary"
+      "graph"
     ]
   },
   {
-    "id": "ds_022",
-    "question": "You are given an array of integers and a target sum. Design an algorithm to find all unique pairs of elements in the array that add up to the target sum, and explain the time complexity of your solution.",
-    "difficulty": "hard",
+    "id": "ds_035",
+    "question": "What is the purpose of using a doubly linked list over a singly linked list for storing a large dataset with frequent insertion and deletion operations?",
+    "difficulty": "easy",
+    "tags": [
+      "linked list"
+    ]
+  },
+  {
+    "id": "ds_036",
+    "question": "What are the main advantages of using an array over a linked list for storing a small to medium-sized dataset with random access requirements?",
+    "difficulty": "easy",
     "tags": [
       "array",
-      "pair_sum",
-      "algorithm"
+      "linked list"
     ]
   },
   {
-    "id": "ds_023",
-    "question": "Design a memory-efficient data structure to store a large number of integers, where each integer can have a maximum of three possible values (e.g., 0, 1, or 2). Explain the time and space complexity of your solution.",
-    "difficulty": "hard",
+    "id": "ds_037",
+    "question": "How does a set data structure handle duplicate elements, and what are some common operations performed on a set?",
+    "difficulty": "easy",
     "tags": [
-      "bit_array",
-      "dense_bitmap",
-      "memory_efficient"
+      "set"
     ]
   },
   {
-    "id": "ds_024",
-    "question": "You are given a graph represented as an adjacency list, and you need to detect whether it contains a cycle. Design an algorithm to solve this problem and explain the time complexity of your solution.",
-    "difficulty": "hard",
+    "id": "ds_038",
+    "question": "What is the difference between a circular buffer and a regular array in terms of memory allocation and data wrapping?",
+    "difficulty": "easy",
     "tags": [
-      "graph",
-      "cycle_detection",
-      "breadth_first_search"
+      "circular buffer",
+      "array"
     ]
   },
   {
-    "id": "ds_025",
-    "question": "Design a data structure that supports fast range sum queries on a 2D matrix, and explain the time and space complexity of your solution. Your solution should be able to handle both point queries and range queries.",
-    "difficulty": "hard",
+    "id": "ds_039",
+    "question": "What are the main purposes of using a tree data structure and its types, such as binary tree, AVL tree, and red-black tree?",
+    "difficulty": "easy",
     "tags": [
-      "range_sum",
-      "matrix_data_structure",
+      "tree"
+    ]
+  },
+  {
+    "id": "ds_040",
+    "question": "How does a map data structure handle key-value pairs, and what are some common operations performed on a map?",
+    "difficulty": "easy",
+    "tags": [
+      "map"
+    ]
+  },
+  {
+    "id": "ds_041",
+    "question": "Suppose you're building a database of unique users with their respective friends' IDs. If you start with an empty array, what data structure would be more efficient for storing and querying these friendships, and why?",
+    "difficulty": "medium",
+    "tags": [
+      "arrays",
+      "linked lists",
+      "dynamic data"
+    ]
+  },
+  {
+    "id": "ds_042",
+    "question": "You're part of a team building a caching layer for a web application. You have two choices: use a separate hash table for storing cache keys or use a hash table with a separate chaining mechanism like linked lists. How would you decide which approach to use, and what are some potential trade-offs?",
+    "difficulty": "medium",
+    "tags": [
+      "hash tables",
+      "linked lists",
       "cache"
+    ]
+  },
+  {
+    "id": "ds_043",
+    "question": "Imagine you're working on a project that requires efficient storage of key-value pairs with a large number of duplicate keys. Which data structure would be more suitable, a set or a dictionary, and what are some scenarios where you might prefer one over the other?",
+    "difficulty": "medium",
+    "tags": [
+      "sets",
+      "dictionaries",
+      "hashing"
+    ]
+  },
+  {
+    "id": "ds_044",
+    "question": "Consider a scenario where you need to implement a custom queue using a data structure. Which data structure would you choose as the underlying implementation, and how would you handle issues like inserting and removing elements, and maintaining the ordering of elements?",
+    "difficulty": "medium",
+    "tags": [
+      "stacks",
+      "queues",
+      "linked lists"
+    ]
+  },
+  {
+    "id": "ds_045",
+    "question": "You're tasked with designing a system that stores and retrieves large amounts of spatial data (e.g., GPS coordinates). What data structure would you use to optimize the storage and querying of this data, and how would you handle the trade-offs between space and time complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "trees",
+      "graphs",
+      "geospatial data"
+    ]
+  },
+  {
+    "id": "ds_046",
+    "question": "Suppose you're building a system that requires efficient insertion, deletion, and search operations on a large dataset of strings. What data structure would be most suitable, and how would you handle the trade-offs between time and space complexity in your implementation?",
+    "difficulty": "medium",
+    "tags": [
+      "tries",
+      "trees",
+      "string searching"
+    ]
+  },
+  {
+    "id": "ds_047",
+    "question": "You're tasked with implementing a data structure that allows efficient merging of sorted arrays. Which data structure would you use as the underlying implementation, and how would you handle edge cases like empty arrays or duplicate elements?",
+    "difficulty": "medium",
+    "tags": [
+      "linked lists",
+      "arrays",
+      "sorting"
+    ]
+  },
+  {
+    "id": "ds_048",
+    "question": "Imagine you're working on a project that requires efficient storage of a large dataset of integers with a limited range of values. Which data structure would be most suitable, and how would you handle the trade-offs between time and space complexity in your implementation?",
+    "difficulty": "medium",
+    "tags": [
+      "bit arrays",
+      "arrays",
+      "memory efficiency"
+    ]
+  },
+  {
+    "id": "ds_049",
+    "question": "You're building a system that requires efficient storage and querying of a large graph with nodes and edges. You have two options: use an adjacency matrix or an adjacency list. How would you decide which representation to use, and what are some potential trade-offs?",
+    "difficulty": "medium",
+    "tags": [
+      "graphs",
+      "adjacency matrices",
+      "adjacency lists"
+    ]
+  },
+  {
+    "id": "ds_050",
+    "question": "Consider a scenario where you need to store a large dataset of objects with multiple attributes. Each attribute may or may not be present in a given object, and you want to allow for efficient insertion, deletion, and search operations. Which data structure would be most suitable, and how would you handle the trade-offs between time and space complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "sparse arrays",
+      "dictionaries",
+      "dynamic attributes"
+    ]
+  },
+  {
+    "id": "ds_051",
+    "question": "Imagine you're working on a project that requires efficient sorting and searching of a large dataset of unique identifiers. However, you also need to support efficient insertion and deletion operations after the initial sorting step. Which data structure would be most suitable, and how would you handle the trade-offs between time and space complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "sorted sets",
+      "balanced trees",
+      "insertion sort"
+    ]
+  },
+  {
+    "id": "ds_052",
+    "question": "Suppose you're building a system that requires efficient storage and querying of a large set of points in a high-dimensional space. How would you choose a data structure to support efficient nearest neighbor searches, and what are some potential trade-offs between space and time complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "nearest neighbor search",
+      "kd-trees",
+      "ball trees"
+    ]
+  },
+  {
+    "id": "ds_053",
+    "question": "You're tasked with designing a system that stores and retrieves large amounts of temporal data (e.g., timestamps, event logs). What data structure would you use to optimize the storage and querying of this data, and how would you handle the trade-offs between space and time complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "time series data",
+      "event logs",
+      "temporal indexing"
+    ]
+  },
+  {
+    "id": "ds_054",
+    "question": "Consider a scenario where you need to store a large dataset of strings with a limited alphabet size. You want to allow for efficient storage and querying of these strings, as well as support for prefix matching and substring searching. Which data structure would be most suitable, and how would you handle the trade-offs between time and space complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "prefix trees",
+      "suffix arrays",
+      "string matching"
+    ]
+  },
+  {
+    "id": "ds_055",
+    "question": "Imagine you're working on a project that requires efficient storage and querying of a large set of matrices or multi-dimensional arrays. You want to support efficient matrix multiplication and other operations. Which data structure would be most suitable, and how would you handle the trade-offs between space and time complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "matrix storage",
+      "multi-dimensional arrays",
+      "array operations"
+    ]
+  },
+  {
+    "id": "ds_056",
+    "question": "Suppose you're building a system that requires efficient storage and querying of a large set of intervals orranges on a one-dimensional axis. How would you choose a data structure to support efficient intersection and overlap queries, and what are some potential trade-offs between space and time complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "interval trees",
+      "range queries",
+      "binary search"
+    ]
+  },
+  {
+    "id": "ds_057",
+    "question": "You're tasked with designing a system that stores and retrieves a large number of web pages, each with its own metadata such as title, description, and keywords. You need to support efficient insertion, deletion, and search operations by keyword. What data structure would you use, and how would you handle the trade-offs between time and space complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "indexing",
+      "strings"
+    ]
+  },
+  {
+    "id": "ds_058",
+    "question": "Consider a scenario where you need to store a large dataset of financial transactions, each with its own timestamp and amount. You want to support efficient querying of transactions within a given time range, as well as efficient insertion and deletion of new transactions. Which data structure would be most suitable, and how would you handle the trade-offs between time and space complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "temporal",
+      "ordering"
+    ]
+  },
+  {
+    "id": "ds_059",
+    "question": "Imagine you're working on a project that requires efficient storage and retrieval of a large set of images, each with its own metadata such as resolution, format, and location. You need to support efficient search operations by image attributes, as well as efficient insertion and deletion of new images. Which data structure would be most suitable, and how would you handle the trade-offs between time and space complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "metadata",
+      "media"
+    ]
+  },
+  {
+    "id": "ds_060",
+    "question": "You're tasked with designing a system that stores and retrieves a large number of user preferences, each with its own set of attributes such as color scheme, font size, and layout. You need to support efficient insertion, deletion, and search operations by attribute value. What data structure would you use, and how would you handle the trade-offs between time and space complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "config",
+      "attributes"
+    ]
+  },
+  {
+    "id": "ds_061",
+    "question": "Consider a scenario where you need to store a large dataset of sensor readings, each with its own timestamp and value. You want to support efficient querying of readings within a given time range, as well as efficient insertion and deletion of new readings. Which data structure would be most suitable, and how would you handle the trade-offs between time and space complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "time_series",
+      "ordering"
+    ]
+  },
+  {
+    "id": "ds_062",
+    "question": "Suppose you're building a system that requires efficient storage and querying of a large set of email messages, each with its own metadata such as sender, recipient, and subject. You want to support efficient search operations by email attributes, as well as efficient insertion and deletion of new messages. Which data structure would be most suitable, and how would you handle the trade-offs between time and space complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "email",
+      "metadata"
+    ]
+  },
+  {
+    "id": "ds_063",
+    "question": "You're building a system that requires efficient storage and retrieval of a large number of text documents, where each document has a set of keywords associated with it. You need to support efficient search operations by keyword, as well as efficient insertion and deletion of new documents. What data structure would you use, and how would you handle the trade-offs between time and space complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "document storage",
+      "keyword search"
+    ]
+  },
+  {
+    "id": "ds_064",
+    "question": "Consider a scenario where you need to store a large dataset of network traffic data, where each record contains information about a packet, including its source and destination IP addresses, port numbers, and timestamp. You want to support efficient querying of packets by IP address, port number, and time range. Which data structure would be most suitable, and how would you handle the trade-offs between space and time complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "network data",
+      "traffic analysis"
+    ]
+  },
+  {
+    "id": "ds_065",
+    "question": "Suppose you're working on a project that requires efficient storage and retrieval of a large number of 3D models, where each model has a set of attributes such as vertices, edges, and faces. You need to support efficient search operations by model attributes, as well as efficient insertion and deletion of new models. Which data structure would be most suitable, and how would you handle the trade-offs between time and space complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "3D modeling",
+      "model storage"
+    ]
+  },
+  {
+    "id": "ds_066",
+    "question": "Imagine you're working on a project that requires efficient storage and retrieval of a large number of geographic data, where each record contains information about a location, including its latitude, longitude, and altitude. You need to support efficient search operations by location, as well as efficient insertion and deletion of new locations. Which data structure would be most suitable, and how would you handle the trade-offs between time and space complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "geographic data",
+      "location storage"
+    ]
+  },
+  {
+    "id": "ds_067",
+    "question": "Consider a scenario where you need to store a large dataset of user behavior data, where each record contains information about a user's actions, including their clicks, browsed pages, and purchase history. You want to support efficient querying of user behavior by action type, as well as efficient insertion and deletion of new user behavior records. Which data structure would be most suitable, and how would you handle the trade-offs between space and time complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "user behavior",
+      "data analysis"
+    ]
+  },
+  {
+    "id": "ds_068",
+    "question": "Suppose you're building a system that requires efficient storage and retrieval of a large number of scientific simulations, where each simulation has a set of attributes such as parameters, inputs, and outputs. You need to support efficient search operations by simulation attributes, as well as efficient insertion and deletion of new simulations. Which data structure would be most suitable, and how would you handle the trade-offs between time and space complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "scientific simulations",
+      "data storage"
+    ]
+  },
+  {
+    "id": "ds_069",
+    "question": "You're tasked with designing a system that stores and retrieves a large number of social network data, where each record contains information about a user's connections, including their friends, followers, and likes. You want to support efficient querying of users by connection type, as well as efficient insertion and deletion of new user connections. Which data structure would you use, and how would you handle the trade-offs between time and space complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "social network",
+      "data storage"
+    ]
+  },
+  {
+    "id": "ds_070",
+    "question": "Imagine you're building a caching system that stores frequently accessed items. You want to minimize the time spent searching for items, as well as the time spent evicting the least recently used items when the cache is full. Which data structure would you use, and how would you handle the trade-offs between cache hit rate and eviction time?",
+    "difficulty": "medium",
+    "tags": [
+      "caching",
+      "LRU_cache"
+    ]
+  },
+  {
+    "id": "ds_071",
+    "question": "Consider a scenario where you need to store a large dataset of items with multiple categorizations, such as a product catalog with multiple categorizations like department, category, and subcategory. You want to support efficient querying of items by categorization, as well as efficient insertion and deletion of new items. Which data structure would be most suitable?",
+    "difficulty": "medium",
+    "tags": [
+      "hierarchical_data_structures",
+      "tree_traversal"
+    ]
+  },
+  {
+    "id": "ds_072",
+    "question": "You're building a system that requires efficient storage and retrieval of a large number of ordered elements, such as a stack of books in a library. You want to support efficient search operations by book title, as well as efficient insertion and deletion of new books. Which data structure would you use, and how would you handle the trade-offs between search time and insertion/deletion time?",
+    "difficulty": "medium",
+    "tags": [
+      "ordered_data_structures",
+      "search_algorithms"
+    ]
+  },
+  {
+    "id": "ds_073",
+    "question": "Suppose you're working on a project that requires efficient storage and retrieval of a large number of graph-like data, such as a family tree or a social network. You need to support efficient search operations by node attributes, as well as efficient insertion and deletion of new nodes. Which data structure would be most suitable?",
+    "difficulty": "medium",
+    "tags": [
+      "graph_data_structures",
+      "graph_algorithms"
+    ]
+  },
+  {
+    "id": "ds_074",
+    "question": "Imagine you're building a system that requires efficient storage and retrieval of a large number of time series data, such as temperature readings from a weather station. You want to support efficient search operations by time range, as well as efficient insertion and deletion of new readings. Which data structure would you use, and how would you handle the trade-offs between search time and insertion/deletion time?",
+    "difficulty": "medium",
+    "tags": [
+      "time_series_data_structures",
+      "time_complexity"
+    ]
+  },
+  {
+    "id": "ds_075",
+    "question": "Consider a scenario where you need to store a large dataset of items with multiple attributes, such as a database of employee information with attributes like name, department, and salary. You want to support efficient querying of items by attribute values, as well as efficient insertion and deletion of new items. Which data structure would be most suitable?",
+    "difficulty": "medium",
+    "tags": [
+      "multi_attribute_data_structures",
+      "query_optimization"
+    ]
+  },
+  {
+    "id": "ds_076",
+    "question": "You're tasked with designing a system that stores and retrieves a large number of bitmaps, such as a set of medical images or a set of geographical maps. You want to support efficient search operations by image attribute, as well as efficient insertion and deletion of new images. Which data structure would you use, and how would you handle the trade-offs between search time and insertion/deletion time?",
+    "difficulty": "medium",
+    "tags": [
+      "bitmap_data_structures",
+      "image_processing"
+    ]
+  },
+  {
+    "id": "ds_077",
+    "question": "Suppose you're building a system that requires efficient storage and retrieval of a large number of sparse data, such as a set of sparse matrices or a set of sparse graphs. You need to support efficient search operations by attribute values, as well as efficient insertion and deletion of new data. Which data structure would be most suitable?",
+    "difficulty": "medium",
+    "tags": [
+      "sparse_data_structures",
+      "matrix_algorithms"
+    ]
+  },
+  {
+    "id": "ds_078",
+    "question": "Consider a scenario where you're building a system that requires efficient storage and retrieval of a large number of text search queries, where each query contains a set of keywords and their frequencies. You need to support efficient search operations by keyword, as well as efficient insertion and deletion of new queries. Which data structure would be most suitable, and how would you handle the trade-offs between search time and query length?",
+    "difficulty": "medium",
+    "tags": [
+      "trie"
+    ]
+  },
+  {
+    "id": "ds_079",
+    "question": "Suppose you're building a system that requires efficient storage and retrieval of a large number of ordered sets, such as a set of exam scores or a set of stock prices. You want to support efficient search operations by score or price, as well as efficient insertion and deletion of new scores or prices. However, you also want to maintain the order of the scores or prices. Which data structure would be most suitable?",
+    "difficulty": "medium",
+    "tags": [
+      "skip list",
+      "balanced tree"
+    ]
+  },
+  {
+    "id": "ds_080",
+    "question": "Imagine you're working on a project that involves storing a large number of geometric shapes, such as points, lines, and polygons. You need to support efficient search operations by shape properties, such as area or perimeter. Which data structure would be most suitable, and how would you handle the trade-offs between search time and shape complexity?",
+    "difficulty": "medium",
+    "tags": [
+      "quad tree",
+      "k-d tree"
+    ]
+  },
+  {
+    "id": "ds_081",
+    "question": "Design a self-balancing binary search tree to store a collection of exam questions, where each question is a string and each node stores a unique question. Provide a step-by-step explanation of your approach and how you would handle insertions and deletions.",
+    "difficulty": "hard",
+    "tags": [
+      "self-balancing BST",
+      "tree data structure"
+    ]
+  },
+  {
+    "id": "ds_082",
+    "question": "Implement a Least Frequent File Node (LFFN) data structure, where you keep track of files on a disk. Describe what type of data you would store and how you would update frequency counters when a file is accessed.",
+    "difficulty": "hard",
+    "tags": [
+      "frequency counter",
+      "linked list"
+    ]
+  },
+  {
+    "id": "ds_083",
+    "question": "Given two hash tables, A and B, explain how you would merge them into a single hash table while handling hash collisions, especially when the hash functions used in both tables are different.",
+    "difficulty": "hard",
+    "tags": [
+      "hash table",
+      "collision resolution"
+    ]
+  },
+  {
+    "id": "ds_084",
+    "question": "Design a queue data structure using fixed-size arrays to store a collection of exam papers. When the queue reaches its capacity, what approach would you take to handle overflow, and how would you ensure that the data structure can efficiently handle insertions and removals at the end?",
+    "difficulty": "hard",
+    "tags": [
+      "queue",
+      "array-based data structure"
+    ]
+  },
+  {
+    "id": "ds_085",
+    "question": "Describe a scenario where you would use a disjoint set data structure to optimize the performance of a social media application that needs to group friends based on common interests.",
+    "difficulty": "hard",
+    "tags": [
+      "disjoint set",
+      "union-find algorithm"
+    ]
+  },
+  {
+    "id": "ds_086",
+    "question": "Design a cache eviction policy that uses a combination of LRU (Least Recently Used) and LFU (Least Frequently Used) strategies to manage a cache with a limited size. Provide examples to demonstrate the trade-offs between these two approaches.",
+    "difficulty": "hard",
+    "tags": [
+      "cache eviction",
+      "LRU/LFU"
+    ]
+  },
+  {
+    "id": "ds_087",
+    "question": "You are given a graph representing a network of friends, where each friend is a vertex connected to their acquaintances. Describe how you would use a graph traversal algorithm (e.g., DFS, BFS) to recommend a list of friends to a user based on their existing social connections.",
+    "difficulty": "hard",
+    "tags": [
+      "graph traversal",
+      "social network recommendation"
+    ]
+  },
+  {
+    "id": "ds_088",
+    "question": "Suppose you are building a system to manage a collection of books, and you need to store the authors and titles while maintaining their relationships. Design a data structure to store this information using a combination of arrays and hash maps, explaining how you would handle insertion, deletion, and retrieval operations.",
+    "difficulty": "hard",
+    "tags": [
+      "data structure design",
+      "array-hash map combination"
+    ]
+  },
+  {
+    "id": "ds_089",
+    "question": "A company uses a database of employees with their respective departments, employee IDs, and salaries. Design a system to efficiently query employees with salaries above a certain threshold within a specific department, while also handling the case when the department does not exist.",
+    "difficulty": "hard",
+    "tags": [
+      "searching",
+      "indexing"
+    ]
+  },
+  {
+    "id": "ds_090",
+    "question": "A system is designed to manage a collection of music albums, consisting of artist names, album titles, and song durations. How would you design a data structure to efficiently answer queries like 'What is the average song duration of the albums by a specific artist?' or 'What are the top 5 albums with the longest total song duration?'",
+    "difficulty": "hard",
+    "tags": [
+      "aggregation",
+      "querying"
+    ]
+  },
+  {
+    "id": "ds_091",
+    "question": "Given a binary tree data structure where each node represents a transaction with a transaction ID, amount, and timestamp, design an efficient way to update the tree after a rollback operation (i.e., reversing the most recent transaction) and handle edge cases like an empty tree or multiple rollback operations in a row.",
+    "difficulty": "hard",
+    "tags": [
+      "tree manipulation",
+      "update logic"
+    ]
+  },
+  {
+    "id": "ds_092",
+    "question": "A large-scale system uses a data structure to store a vast number of IP address ranges with their corresponding country codes and city names. Design an efficient querying mechanism to find all IP addresses within a specific country or city, taking into account the overlapping ranges and handling missing data.",
+    "difficulty": "hard",
+    "tags": [
+      "range queries",
+      "overlapping intervals"
+    ]
+  },
+  {
+    "id": "ds_093",
+    "question": "A real-time system requires a data structure to store a high-speed stream of incoming sensor readings with timestamps, each with a unique ID and sensor type. How would you design a system to efficiently detect anomalies in the sensor readings (e.g., values that deviate by more than 3 standard deviations) and handle the continuous stream of new data?",
+    "difficulty": "hard",
+    "tags": [
+      "anomaly detection",
+      "stream processing"
+    ]
+  },
+  {
+    "id": "ds_094",
+    "question": "A system is built to manage a collection of user preferences on various settings, with each preference having a user ID, setting name, and preference value. Design an efficient data structure to update user preferences while handling edge cases like deleted settings, users, or duplicate preferences in a single update operation.",
+    "difficulty": "hard",
+    "tags": [
+      "update logic",
+      "data consistency"
+    ]
+  },
+  {
+    "id": "ds_095",
+    "question": "A company maintains a database of customer orders with order IDs, item names, quantities, and prices. How would you design a system to efficiently process a batch of pending orders and update the customer's available credit limit in real-time, handling edge cases like order cancellations or partial payments?",
+    "difficulty": "hard",
+    "tags": [
+      "batch processing",
+      "real-time updates"
+    ]
+  },
+  {
+    "id": "ds_096",
+    "question": "A social media platform uses a data structure to store user friendships with each user having a unique ID and a list of friends. Design an efficient algorithm to find all friends of friends for a given user and handle the scenario where the friendship list does not fit in memory or the number of users is very large.",
+    "difficulty": "hard",
+    "tags": [
+      "friend recommendations",
+      "memory-efficient algorithms"
+    ]
+  },
+  {
+    "id": "ds_097",
+    "question": "Design a hash table-based data structure to efficiently store and retrieve a large collection of strings, where each string is associated with a unique numerical value (e.g., a UUID). However, due to storage constraints, the numerical values cannot be stored explicitly, but rather must be computed on the fly using a given hash function. Explain how you would handle collisions and provide an example of how this data structure would be implemented in a specific programming language.",
+    "difficulty": "hard",
+    "tags": [
+      "hash_table",
+      "string_processing"
+    ]
+  },
+  {
+    "id": "ds_098",
+    "question": "Consider a scenario where you need to store a large number of sparse matrices in a data structure. Each matrix has a fixed size (e.g., 100x100) but is mostly empty, with only a small fraction of non-zero elements. Describe a data structure that would efficiently store and retrieve these sparse matrices, taking into account memory usage and query performance. Provide an example of how this data structure would be implemented.",
+    "difficulty": "hard",
+    "tags": [
+      "sparse_matrix",
+      "memory_optimization"
+    ]
+  },
+  {
+    "id": "ds_099",
+    "question": "A music streaming service needs to store a large collection of users' favorite songs, with each song associated with a unique numerical ID and a timestamp when it was added to the user's playlist. Design a data structure that would efficiently support the following queries: 'What are the top 10 most recently added songs to a user's playlist?' and 'What are all the songs in a user's playlist that have been added within the last 30 days?'. Explain how you would implement this data structure and handle edge cases.",
+    "difficulty": "hard",
+    "tags": [
+      "priority_queue",
+      "timestamp_query"
+    ]
+  },
+  {
+    "id": "ds_100",
+    "question": "Suppose you are building a system to store a large collection of user ratings for various products, with each rating associated with a user ID, product ID, and a numerical rating score. Design a data structure that would efficiently support the following queries: 'What are the top 5 products with the highest average rating?' and 'What are all the users who have rated a specific product above a certain threshold?'. Explain how you would implement this data structure and handle edge cases.",
+    "difficulty": "hard",
+    "tags": [
+      "matrix_query",
+      "average_rating"
+    ]
+  },
+  {
+    "id": "ds_101",
+    "question": "A company uses a data structure to store a large number of transactions with each transaction associated with a unique ID, timestamp, and a numerical value. However, due to storage constraints, the numerical values are stored in a compressed format. Design a data structure that would efficiently support the following queries: 'What is the total value of all transactions within a specific time range?' and 'What is the value of the most recent transaction?'. Explain how you would implement this data structure and handle edge cases.",
+    "difficulty": "hard",
+    "tags": [
+      "compression",
+      "transaction_query"
+    ]
+  },
+  {
+    "id": "ds_102",
+    "question": "A social media platform needs to store a large collection of users' friends, with each friend associated with a unique numerical ID. However, due to storage constraints, each user's friend list is stored in a compressed format. Design a data structure that would efficiently support the following queries: 'What are all the friends of a given user?' and 'What are the common friends between two users?'. Explain how you would implement this data structure and handle edge cases.",
+    "difficulty": "hard",
+    "tags": [
+      "compression",
+      "social_network"
+    ]
+  },
+  {
+    "id": "ds_103",
+    "question": "A system is designed to store a large collection of web pages with each page associated with a unique URL and a numerical ranking score. Design a data structure that would efficiently support the following queries: 'What are the top 10 web pages with the highest ranking score?' and 'What is the ranking score of a specific web page?'. Explain how you would implement this data structure and handle edge cases.",
+    "difficulty": "hard",
+    "tags": [
+      "ranking_query",
+      "web_search"
+    ]
+  },
+  {
+    "id": "ds_104",
+    "question": "A company uses a data structure to store a large number of customer orders with each order associated with a unique numerical ID and a timestamp. However, due to storage constraints, the orders are stored in a compressed format. Design a data structure that would efficiently support the following queries: 'What are all the orders placed within a specific time range?' and 'What is the total value of all orders placed by a specific customer?'. Explain how you would implement this data structure and handle edge cases.",
+    "difficulty": "hard",
+    "tags": [
+      "compression",
+      "order_management"
+    ]
+  },
+  {
+    "id": "ds_105",
+    "question": "Design a data structure to efficiently store and retrieve a large collection of trees, where each tree has a unique numerical ID, node values, and child pointers. However, due to memory constraints, each tree is stored in a compressed format, and node values are not explicitly stored. Describe how you would handle node insertions, deletions, and traversals in this data structure, and explain how you would implement this data structure in a specific programming language.",
+    "difficulty": "hard",
+    "tags": [
+      "trees",
+      "compression"
     ]
   }
 ]

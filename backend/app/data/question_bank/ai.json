@@ -1,227 +1,983 @@
 [
   {
     "id": "ai_001",
-    "question": "Explain the difference between supervised and unsupervised learning with an example of each.",
+    "question": "What is the main difference between supervised and unsupervised learning in AI?",
     "difficulty": "easy",
     "tags": [
-      "machine-learning",
-      "fundamentals"
+      "ai",
+      "ml",
+      "supervised-learning",
+      "unsupervised-learning"
     ]
   },
   {
     "id": "ai_002",
-    "question": "What is the vanishing gradient problem and how do architectures like LSTM or residual connections address it?",
-    "difficulty": "medium",
+    "question": "Describe the key characteristics of a neural network. Can you provide an example of a simple neural network?",
+    "difficulty": "easy",
     "tags": [
-      "deep-learning",
-      "neural-networks"
+      "neural-networks",
+      "nn",
+      "nn-architecture"
     ]
   },
   {
     "id": "ai_003",
-    "question": "Walk through how retrieval-augmented generation reduces hallucination compared to a standalone LLM.",
-    "difficulty": "medium",
+    "question": "What is the purpose of activation functions in a neural network, and can you give an example of a commonly used activation function?",
+    "difficulty": "easy",
     "tags": [
-      "rag",
-      "llm"
+      "activation-functions",
+      "nn",
+      "sigmoid-function"
     ]
   },
   {
     "id": "ai_004",
-    "question": "Design a RAG pipeline for a domain with fast-changing documents. How would you handle re-indexing without downtime?",
-    "difficulty": "hard",
+    "question": "Explain the concept of overfitting in machine learning and how can it be avoided.",
+    "difficulty": "easy",
     "tags": [
-      "rag",
-      "system-design"
+      "overfitting",
+      "underfitting",
+      "regularization"
     ]
   },
   {
     "id": "ai_005",
-    "question": "What's the difference between fine-tuning and LoRA/QLoRA? When would you choose one over the other?",
-    "difficulty": "hard",
+    "question": "What are some common applications of Reinforcement Learning in real-world scenarios? Can you describe a simple scenario?",
+    "difficulty": "easy",
     "tags": [
-      "fine-tuning",
-      "llm"
+      "reinforcement-learning",
+      "rl",
+      "agents"
     ]
   },
   {
     "id": "ai_006",
-    "question": "Explain the concept of explainability in AI and provide two use cases where it's essential for model deployment.",
+    "question": "What is Transfer Learning and how is it used in AI model development, especially with Convolutional Neural Networks?",
     "difficulty": "easy",
     "tags": [
-      "explanation",
-      "deployment"
+      "transfer-learning",
+      "pre-trained-models",
+      "cnn"
     ]
   },
   {
     "id": "ai_007",
-    "question": "Describe an approach for handling concept drift in a streaming data environment. How would you adapt your model to this scenario?",
+    "question": "What is the difference between classification and regression problems in AI? Can you give an example of each?",
     "difficulty": "easy",
     "tags": [
-      "concept drift",
-      "streaming data"
+      "classification",
+      "regression",
+      "ml"
     ]
   },
   {
     "id": "ai_008",
-    "question": "Create a simple recommendation system using matrix factorization. Explain the process of building and training the model, including choosing the factors and optimization algorithm.",
+    "question": "Explain the concept of bias and variance tradeoff in machine learning models and how can it be managed.",
     "difficulty": "easy",
     "tags": [
-      "recommendation system",
-      "matrix factorization"
+      "bias-variance-tradeoff",
+      "hyperparameter-tuning",
+      "model-selection"
     ]
   },
   {
     "id": "ai_009",
-    "question": "Design a pipeline for generating high-quality synthetic data for a dataset with missing values. How would you handle class imbalance and outliers in the generated data?",
+    "question": "What is the purpose of normalization in data preprocessing and how does it impact the performance of AI models?",
     "difficulty": "easy",
     "tags": [
-      "data augmentation",
-      "synthetic data"
+      "data-preprocessing",
+      "normalization"
     ]
   },
   {
     "id": "ai_010",
-    "question": "Explain the concept of transfer learning in AI. Describe a scenario where transfer learning can be effectively applied, and how it can be adapted for domain-specific tasks.",
+    "question": "Can you describe the key characteristics of a decision tree and how does it work?",
     "difficulty": "easy",
     "tags": [
-      "transfer learning",
-      "domain adaptation"
+      "decision-trees",
+      "decision-making"
     ]
   },
   {
     "id": "ai_011",
-    "question": "Describe a method for detecting and mitigating adversarial attacks on a deep learning model. Provide a step-by-step explanation of the process, including model modification and training approaches.",
+    "question": "What is the difference between a Generative Adversarial Network (GAN) and a Variational Autoencoder (VAE)?",
     "difficulty": "easy",
     "tags": [
-      "adversarial attacks",
-      "model security"
+      "deep-learning",
+      "gan",
+      "vae"
     ]
   },
   {
     "id": "ai_012",
-    "question": "Create a basic implementation of a meta-learning algorithm (e.g., MAML, Reptile) for few-shot learning. Explain the key components and hyperparameters involved in the algorithm.",
+    "question": "Explain the concept of Curse of Dimensionality in AI and how can it be addressed?",
     "difficulty": "easy",
     "tags": [
-      "meta-learning",
-      "few-shot learning"
+      "dimensionality-reduction",
+      "curse-of-dimensionality"
     ]
   },
   {
     "id": "ai_013",
-    "question": "Describe the concept of Explainable AI (XAI) and its importance in real-world applications, particularly in high-stakes decision-making scenarios. Be sure to discuss at least two popular techniques for achieving explainability.",
-    "difficulty": "medium",
+    "question": "Can you describe the role of Regularization in AI model development and list some common techniques used for regularization?",
+    "difficulty": "easy",
     "tags": [
-      "Explainable AI",
-      "Model Interpretability"
+      "regularization",
+      "overfitting"
     ]
   },
   {
     "id": "ai_014",
-    "question": "Compare and contrast the use of Transformers versus Recurrent Neural Networks (RNNs) for sequence modeling tasks, highlighting their respective strengths and weaknesses. Provide a concrete example of a task where one architecture might be preferred over the other.",
-    "difficulty": "medium",
+    "question": "What is the purpose of using ensemble methods in AI, such as Bagging and Boosting?",
+    "difficulty": "easy",
     "tags": [
-      "Sequence Modeling",
-      "Deep Learning Architectures"
+      "ensemble-methods",
+      "model-selection"
     ]
   },
   {
     "id": "ai_015",
-    "question": "You are tasked with developing a conversational chatbot that can learn from user feedback and adapt its responses accordingly. Design a reinforcement learning framework that incorporates both online and offline learning components, and discuss how you would handle exploration-exploitation trade-offs in this setting.",
-    "difficulty": "medium",
+    "question": "Explain the concept of Feature Extraction and how can it be used to improve the performance of AI models?",
+    "difficulty": "easy",
     "tags": [
-      "Reinforcement Learning",
-      "Conversational AI"
+      "feature-extraction",
+      "data-preprocessing"
     ]
   },
   {
     "id": "ai_016",
-    "question": "Assume you are working on a multi-modal dataset that combines text, images, and audio features. Describe a suitable approach for fusing these diverse modalities using attention mechanisms, and discuss the benefits and potential challenges of your proposed method.",
-    "difficulty": "medium",
+    "question": "Can you describe the difference between online and offline learning in AI and explain when each is used?",
+    "difficulty": "easy",
     "tags": [
-      "Multi-Modal Learning",
-      "Attention Mechanisms"
+      "online-learning",
+      "offline-learning",
+      "learning-strategies"
     ]
   },
   {
     "id": "ai_017",
-    "question": "You are given a dataset of user interactions with a recommendation system, where the goal is to predict the next item a user will engage with. Design a neural network architecture specifically tailored for this task, and discuss how you would incorporate user and item embeddings to capture complex relationships in the data.",
-    "difficulty": "medium",
+    "question": "What is the role of activation functions in Artificial Neural Networks and how do they affect the output?",
+    "difficulty": "easy",
     "tags": [
-      "Recommendation Systems",
-      "Neural Network Design"
+      "nn-fundamentals",
+      "activation-functions"
     ]
   },
   {
     "id": "ai_018",
-    "question": "Explain the concept of transfer learning in the context of deep learning, including both positive and negative transfer scenarios. Provide a real-world example of a domain where transfer learning might be particularly useful, and discuss potential strategies for adapting pre-trained models to new tasks.",
-    "difficulty": "medium",
+    "question": "How does Natural Language Processing (NLP) handle out-of-vocabulary words or words with different meanings?",
+    "difficulty": "easy",
     "tags": [
-      "Transfer Learning",
-      "Deep Learning"
+      "nlp",
+      "word-representation"
     ]
   },
   {
     "id": "ai_019",
-    "question": "Describe a pipeline for anomaly detection in a high-dimensional dataset, leveraging both unsupervised and supervised techniques. Discuss how you would balance detection accuracy and false positive rates in this setting, and provide a strategy for incremental learning to adapt to evolving data distributions.",
-    "difficulty": "medium",
+    "question": "What is the difference between type-1 and type-2 fuzzy logic in Fuzzy Sets and how are they applied?",
+    "difficulty": "easy",
     "tags": [
-      "Anomaly Detection",
-      "Unsupervised Learning"
+      "fuzzy-sets",
+      "fuzzy-logic"
     ]
   },
   {
     "id": "ai_020",
-    "question": "Discuss the limitations of using a single model to handle multiple tasks with vastly different input formats and explain how you would approach multimodal fusion.",
-    "difficulty": "hard",
+    "question": "Can you describe the concept of dimensionality reduction and its applications in AI?",
+    "difficulty": "easy",
     "tags": [
-      "multimodal learning",
-      "transfer learning"
+      "dimensionality-reduction",
+      "ai-applications"
     ]
   },
   {
     "id": "ai_021",
-    "question": "Design a framework for evaluating the fairness of AI models in a real-world setting. How would you handle noisy or missing data and what metrics would you use to assess fairness?",
-    "difficulty": "hard",
+    "question": "What is the purpose of using a validation set in Machine Learning during model evaluation?",
+    "difficulty": "easy",
     "tags": [
-      "fairness in AI",
-      "evaluation metrics"
+      "ml-fundamentals",
+      "model-evaluation"
     ]
   },
   {
     "id": "ai_022",
-    "question": "Explain the concept of adversarial robustness in AI and discuss a scenario where it's essential for model deployment. How would you approach adversarial training and regularization?",
-    "difficulty": "hard",
+    "question": "How does AI handle multimodal inputs, such as images and text, in a single model?",
+    "difficulty": "easy",
     "tags": [
-      "adversarial robustness",
-      "adversarial training"
+      "multimodal-inputs",
+      "ai-applications"
     ]
   },
   {
     "id": "ai_023",
-    "question": "Describe an approach for building a self-supervised learning pipeline that leverages auxiliary tasks to improve the performance of a primary task. How would you select auxiliary tasks and handle the trade-off between primary and auxiliary task performance?",
-    "difficulty": "hard",
+    "question": "What is the concept of 'Overfitting' in AI and how can it be mitigated?",
+    "difficulty": "easy",
     "tags": [
-      "self-supervised learning",
-      "multi-task learning"
+      "ai",
+      "neural networks"
     ]
   },
   {
     "id": "ai_024",
-    "question": "You are tasked with building a model for a new domain that has a very small amount of labeled data. How would you leverage few-shot learning techniques and meta-learning to adapt to this scenario?",
-    "difficulty": "hard",
+    "question": "What are the key characteristics of a Recurrent Neural Network (RNN) that make it suitable for sequential data?",
+    "difficulty": "easy",
     "tags": [
-      "few-shot learning",
-      "meta-learning"
+      "ai",
+      "neural networks"
     ]
   },
   {
     "id": "ai_025",
-    "question": "Design a pipeline for anomaly detection in a high-dimensional dataset. How would you approach feature selection and dimensionality reduction, and what metrics would you use to evaluate anomaly detection performance?",
-    "difficulty": "hard",
+    "question": "Can you describe the concept of 'Data Preprocessing' in AI and list some common techniques used for data cleaning?",
+    "difficulty": "easy",
+    "tags": [
+      "ai",
+      "data science"
+    ]
+  },
+  {
+    "id": "ai_026",
+    "question": "What is the difference between a Classification model and a Regression model in AI, and when would you use each?",
+    "difficulty": "easy",
+    "tags": [
+      "ai",
+      "machine learning"
+    ]
+  },
+  {
+    "id": "ai_027",
+    "question": "Explain the concept of 'Exploratory Data Analysis' in AI and its importance in the development of AI models.",
+    "difficulty": "easy",
+    "tags": [
+      "ai",
+      "data science"
+    ]
+  },
+  {
+    "id": "ai_028",
+    "question": "Can you describe the role of a Bias-Variance trade-off in AI model development and how it affects the model's performance?",
+    "difficulty": "easy",
+    "tags": [
+      "ai",
+      "machine learning"
+    ]
+  },
+  {
+    "id": "ai_029",
+    "question": "What is the concept of 'Feature Selection' in AI and how does it differ from Feature Engineering?",
+    "difficulty": "easy",
+    "tags": [
+      "ai",
+      "machine learning"
+    ]
+  },
+  {
+    "id": "ai_030",
+    "question": "Can you explain how reinforcement learning is different from traditional machine learning, and provide an example scenario where it might be applied?",
+    "difficulty": "easy",
+    "tags": [
+      "reinforcement learning",
+      "machine learning"
+    ]
+  },
+  {
+    "id": "ai_031",
+    "question": "What is the purpose of using a Generative Adversarial Network (GAN) in AI, and how does it generate new data samples?",
+    "difficulty": "easy",
+    "tags": [
+      "gan",
+      "generative models"
+    ]
+  },
+  {
+    "id": "ai_032",
+    "question": "How does Transfer Learning work in AI, and what are some common scenarios where it is applied?",
+    "difficulty": "easy",
+    "tags": [
+      "transfer learning",
+      "deep learning"
+    ]
+  },
+  {
+    "id": "ai_033",
+    "question": "What is the main difference between a Decision Tree and a Random Forest, and when would you choose one over the other in AI?",
+    "difficulty": "easy",
+    "tags": [
+      "decision trees",
+      "random forests",
+      "ensemble methods"
+    ]
+  },
+  {
+    "id": "ai_034",
+    "question": "Can you explain the concept of Attention Mechanism in AI, and how it is used in tasks such as machine translation?",
+    "difficulty": "easy",
+    "tags": [
+      "attention mechanism",
+      "deep learning"
+    ]
+  },
+  {
+    "id": "ai_035",
+    "question": "What is the purpose of using an Autoencoder in AI, and how does it learn to compress and reconstruct data?",
+    "difficulty": "easy",
+    "tags": [
+      "autoencoders",
+      "deep learning"
+    ]
+  },
+  {
+    "id": "ai_036",
+    "question": "How does the concept of Curiosity-Driven Exploration work in AI, and what are some potential applications of this approach?",
+    "difficulty": "easy",
+    "tags": [
+      "curiosity-driven exploration",
+      "reinforcement learning"
+    ]
+  },
+  {
+    "id": "ai_037",
+    "question": "What is the primary function of a Neural Network in AI, and how does it differ from traditional machine learning models?",
+    "difficulty": "easy",
+    "tags": [
+      "neural_networks",
+      "ml"
+    ]
+  },
+  {
+    "id": "ai_038",
+    "question": "Explain the concept of Overfitting in AI model development and how regularisation techniques can help mitigate it.",
+    "difficulty": "easy",
+    "tags": [
+      "overfitting",
+      "ml"
+    ]
+  },
+  {
+    "id": "ai_039",
+    "question": "Describe the key components of a Convolutional Neural Network (CNN) and their roles in image classification tasks.",
+    "difficulty": "easy",
+    "tags": [
+      "cnn",
+      "image_classification"
+    ]
+  },
+  {
+    "id": "ai_040",
+    "question": "How does a Recurrent Neural Network (RNN) handle sequential data, and what is the purpose of its memory component?",
+    "difficulty": "easy",
+    "tags": [
+      "rnn",
+      "seq2seq"
+    ]
+  },
+  {
+    "id": "ai_041",
+    "question": "What are some potential trade-offs between using a pre-trained model versus fine-tuning a pre-trained model for a specific task, and when would you choose one over the other?",
+    "difficulty": "medium",
+    "tags": [
+      "ai",
+      "model selection",
+      "pre-trained models"
+    ]
+  },
+  {
+    "id": "ai_042",
+    "question": "You have two AI models, one with high accuracy but slow inference time, and another with fast inference time but lower accuracy. How would you integrate these models to achieve a balance between accuracy and efficiency?",
+    "difficulty": "medium",
+    "tags": [
+      "ai",
+      "model deployment",
+      "trade-offs"
+    ]
+  },
+  {
+    "id": "ai_043",
+    "question": "Imagine you're building an AI-powered chatbot that needs to respond to user queries in multiple languages. How would you approach handling language translation and ensuring that the chatbot's responses are culturally sensitive?",
+    "difficulty": "medium",
+    "tags": [
+      "ai",
+      "multilingual support",
+      "chatbots"
+    ]
+  },
+  {
+    "id": "ai_044",
+    "question": "Suppose you're given a dataset with a large number of missing values. How would you decide which missing value imputation strategy to use (e.g. mean imputation, median imputation, k-nearest neighbors) and why?",
+    "difficulty": "medium",
+    "tags": [
+      "ai",
+      "data preprocessing",
+      "missing values"
+    ]
+  },
+  {
+    "id": "ai_045",
+    "question": "A company wants to build an AI-powered recommendation system for their e-commerce website. How would you design the system to handle cold start problem (i.e. new users or new items with little historical data)?",
+    "difficulty": "medium",
+    "tags": [
+      "ai",
+      "recommender systems",
+      "cold start problem"
+    ]
+  },
+  {
+    "id": "ai_046",
+    "question": "You're building a computer vision model for object detection. How would you decide which type of anchor box strategy to use (e.g. fixed anchor boxes, learned anchor boxes) and what are the trade-offs between these strategies?",
+    "difficulty": "medium",
+    "tags": [
+      "ai",
+      "object detection",
+      "anchor boxes"
+    ]
+  },
+  {
+    "id": "ai_047",
+    "question": "Suppose you're given a dataset with a large number of features, but many of them are highly correlated with each other. How would you decide which features to include in the AI model and why?",
+    "difficulty": "medium",
+    "tags": [
+      "ai",
+      "feature selection",
+      "correlation"
+    ]
+  },
+  {
+    "id": "ai_048",
+    "question": "A company wants to build an AI-powered sentiment analysis system for their customer service platform. How would you design the system to handle nuances in human language (e.g. sarcasm, idioms, figurative language)?",
+    "difficulty": "medium",
+    "tags": [
+      "ai",
+      "sentiment analysis",
+      "natural language processing"
+    ]
+  },
+  {
+    "id": "ai_049",
+    "question": "How would you approach dealing with concept drift in a real-world AI system that uses a pre-trained model for sentiment analysis, and what strategies would you use to retrain the model periodically?",
+    "difficulty": "medium",
+    "tags": [
+      "ai",
+      "sentiment analysis",
+      "concept drift"
+    ]
+  },
+  {
+    "id": "ai_050",
+    "question": "Suppose you're building an AI-powered decision support system that needs to incorporate domain knowledge from multiple experts. How would you design the system to handle conflicting opinions and ensure that the final output is reasonable and accurate?",
+    "difficulty": "medium",
+    "tags": [
+      "ai",
+      "expert opinion",
+      "conflict resolution"
+    ]
+  },
+  {
+    "id": "ai_051",
+    "question": "A company wants to build an AI-powered system for predicting customer churn based on historical data. However, the data contains both quantitative and categorical variables. How would you design the data preprocessing pipeline to handle these different types of variables?",
+    "difficulty": "medium",
+    "tags": [
+      "ai",
+      "predictive modeling",
+      "data preprocessing"
+    ]
+  },
+  {
+    "id": "ai_052",
+    "question": "Imagine you're building an AI-powered system that needs to handle multilingual text input. However, you have limited resources for training language models. How would you approach this problem and what trade-offs would you consider when choosing a language model?",
+    "difficulty": "medium",
+    "tags": [
+      "ai",
+      "multilingual text processing",
+      "language models"
+    ]
+  },
+  {
+    "id": "ai_053",
+    "question": "You're building an AI-powered system that uses Reinforcement Learning to optimize a complex control problem. However, the system requires large amounts of data to train effectively. How would you design a data collection strategy to gather the necessary data?",
+    "difficulty": "medium",
+    "tags": [
+      "ai",
+      "reinforcement learning",
+      "data collection"
+    ]
+  },
+  {
+    "id": "ai_054",
+    "question": "Suppose you're given a dataset that contains a mix of structured and unstructured data. How would you approach integrating these different data sources into a single AI system, and what challenges might you encounter along the way?",
+    "difficulty": "medium",
+    "tags": [
+      "ai",
+      "data integration",
+      "structured vs unstructured data"
+    ]
+  },
+  {
+    "id": "ai_055",
+    "question": "A company wants to build an AI-powered system for object detection in a specific industry (e.g. agriculture, healthcare). However, the system needs to be highly accurate and can only afford to be trained on a limited amount of labeled data. How would you approach this problem and what strategies would you use to improve performance?",
+    "difficulty": "medium",
+    "tags": [
+      "ai",
+      "object detection",
+      "limited labeled data"
+    ]
+  },
+  {
+    "id": "ai_056",
+    "question": "Imagine you're building an AI-powered system that needs to handle large amounts of data that arrive in real-time. However, the system requires significant computational resources to process the data in real-time. How would you design a system to handle real-time data processing and what trade-offs would you consider when choosing a hardware architecture?",
+    "difficulty": "medium",
+    "tags": [
+      "ai",
+      "real-time data processing",
+      "hardware architecture"
+    ]
+  },
+  {
+    "id": "ai_057",
+    "question": "You're building an AI-powered chatbot for a customer service platform. However, the chatbot needs to be able to respond to user queries in different languages. How would you approach this problem and what trade-offs would you consider when choosing a language model?",
+    "difficulty": "medium",
+    "tags": [
+      "nlp",
+      "multilingual"
+    ]
+  },
+  {
+    "id": "ai_058",
+    "question": "A company wants to build an AI-powered system for predicting employee turnover based on historical data. However, the data contains missing values and outliers. How would you design a data preprocessing pipeline to handle these issues and what techniques would you use to deal with missing data?",
+    "difficulty": "medium",
+    "tags": [
+      "ml",
+      "data_preprocessing"
+    ]
+  },
+  {
+    "id": "ai_059",
+    "question": "You're building an AI-powered system that uses Transfer Learning to adapt a pre-trained model to a specific domain. However, the pre-trained model was trained on a different task and dataset. How would you fine-tune the model and what techniques would you use to adapt it to the new task?",
+    "difficulty": "medium",
+    "tags": [
+      "transfer_learning",
+      "model_adaptation"
+    ]
+  },
+  {
+    "id": "ai_060",
+    "question": "Imagine you're building an AI-powered system that needs to handle data from various sources, including social media, sensors, and databases. However, the data is highly heterogeneous and lacks a unified schema. How would you approach integrating these different data sources into a single AI system and what challenges might you encounter along the way?",
+    "difficulty": "medium",
+    "tags": [
+      "data_integration",
+      "heterogeneous_data"
+    ]
+  },
+  {
+    "id": "ai_061",
+    "question": "You're building an AI-powered system that uses Explainable AI to provide insights into the decision-making process of the model. However, the system requires a high degree of interpretability. How would you design the model to be explainable and what techniques would you use to provide insights?",
+    "difficulty": "medium",
+    "tags": [
+      "explainability",
+      "ai_transparency"
+    ]
+  },
+  {
+    "id": "ai_062",
+    "question": "A company wants to build an AI-powered system for predicting maintenance schedules for industrial equipment based on sensor data. However, the system requires real-time predictions and can only afford to be trained on a limited amount of data. How would you approach this problem and what strategies would you use to improve performance?",
+    "difficulty": "medium",
+    "tags": [
+      "real_time_prediction",
+      "industrial_ai"
+    ]
+  },
+  {
+    "id": "ai_063",
+    "question": "Imagine you're building an AI-powered system that needs to handle highly imbalanced datasets, where one class has a significantly larger number of instances than the others. How would you approach this problem and what techniques would you use to improve performance, taking into account the class imbalance?",
+    "difficulty": "medium",
+    "tags": [
+      "class_imbalance",
+      "ml"
+    ]
+  },
+  {
+    "id": "ai_064",
+    "question": "You're building an AI-powered system that uses AutoML to automate the model selection and hyperparameter tuning process. However, the system requires a high degree of customization. How would you design the AutoML pipeline to be flexible and adaptable to different problem domains and what techniques would you use to improve performance?",
+    "difficulty": "medium",
+    "tags": [
+      "automl",
+      "model_selection"
+    ]
+  },
+  {
+    "id": "ai_065",
+    "question": "A company wants to build an AI-powered system for predicting energy consumption based on historical data. However, the system requires handling time-series data with non-linear trends and seasonality. How would you approach this problem and what techniques would you use to improve performance, taking into account the time-series nature of the data?",
+    "difficulty": "medium",
+    "tags": [
+      "time_series",
+      "predictive_modeling"
+    ]
+  },
+  {
+    "id": "ai_066",
+    "question": "You're building an AI-powered system that uses Generative Adversarial Networks (GANs) to generate synthetic data. However, the system requires high-quality data that is similar to the real data. How would you design the GAN architecture and what techniques would you use to improve the quality of the generated data?",
+    "difficulty": "medium",
+    "tags": [
+      "gan",
+      "generative_models"
+    ]
+  },
+  {
+    "id": "ai_067",
+    "question": "You're building an AI-powered system for image classification using Convolutional Neural Networks (CNNs). However, the system requires handling images with varying resolutions and aspect ratios. How would you approach this problem and what techniques would you use to improve performance?",
+    "difficulty": "medium",
+    "tags": [
+      "deep learning",
+      "computer vision"
+    ]
+  },
+  {
+    "id": "ai_068",
+    "question": "A company wants to build an AI-powered system for chatbot conversation summarization. However, the system requires handling natural language text with varying context and grammar. How would you approach this problem and what techniques would you use to improve performance?",
+    "difficulty": "medium",
+    "tags": [
+      "natural language processing",
+      "text analysis"
+    ]
+  },
+  {
+    "id": "ai_069",
+    "question": "Imagine you're building an AI-powered system that uses Reinforcement Learning to control a robotic arm. However, the system requires a delicate balance between exploration and exploitation. How would you approach this problem and what techniques would you use to improve performance?",
+    "difficulty": "medium",
+    "tags": [
+      "reinforcement learning",
+      "robotics"
+    ]
+  },
+  {
+    "id": "ai_070",
+    "question": "You're building an AI-powered system for sentiment analysis of product reviews. However, the system requires handling text data with varying sentiment and opinion. How would you approach this problem and what techniques would you use to improve performance?",
+    "difficulty": "medium",
+    "tags": [
+      "natural language processing",
+      "text analysis"
+    ]
+  },
+  {
+    "id": "ai_071",
+    "question": "You're building an AI-powered system for speech recognition in a noisy environment. However, the system requires handling variations in audio quality and background noise. How would you approach this problem and what techniques would you use to improve performance?",
+    "difficulty": "medium",
+    "tags": [
+      "speech recognition",
+      "audio processing"
+    ]
+  },
+  {
+    "id": "ai_072",
+    "question": "A company wants to build an AI-powered system for predicting network traffic congestion based on real-time data. However, the system requires handling large amounts of data that arrive in real-time. How would you design a system to handle real-time data processing and what trade-offs would you consider when choosing a hardware architecture?",
+    "difficulty": "medium",
+    "tags": [
+      "real-time processing",
+      "network analysis"
+    ]
+  },
+  {
+    "id": "ai_073",
+    "question": "You're building an AI-powered system for product recommendation, but the system requires handling missing user data and user behavior. How would you approach this problem and what techniques would you use to improve performance, taking into account the missing data?",
+    "difficulty": "medium",
+    "tags": [
+      "product recommendation",
+      "missing data"
+    ]
+  },
+  {
+    "id": "ai_074",
+    "question": "A company wants to build an AI-powered system for detecting anomalies in manufacturing equipment, but the system requires handling high-dimensional data with a large number of features. How would you approach this problem and what techniques would you use to improve performance, taking into account the high-dimensional data?",
+    "difficulty": "medium",
     "tags": [
       "anomaly detection",
-      "dimensionality reduction"
+      "high-dimensional data"
+    ]
+  },
+  {
+    "id": "ai_075",
+    "question": "You're building an AI-powered system for language translation, but the system requires handling out-of-vocabulary words and phrases. How would you approach this problem and what techniques would you use to improve performance, taking into account the limitations of the vocabulary?",
+    "difficulty": "medium",
+    "tags": [
+      "language translation",
+      "out-of-vocabulary"
+    ]
+  },
+  {
+    "id": "ai_076",
+    "question": "A company wants to build an AI-powered system for predicting customer churn, but the system requires handling time-sensitive data with dynamic relationships between customers and their interactions. How would you approach this problem and what techniques would you use to improve performance, taking into account the time-sensitive nature of the data?",
+    "difficulty": "medium",
+    "tags": [
+      "customer churn",
+      "time-sensitive data"
+    ]
+  },
+  {
+    "id": "ai_077",
+    "question": "You're building an AI-powered system for image captioning, but the system requires generating descriptive and accurate captions for images with complex scenes and objects. How would you approach this problem and what techniques would you use to improve performance, taking into account the complexity of the captions?",
+    "difficulty": "medium",
+    "tags": [
+      "image captioning",
+      "natural language generation"
+    ]
+  },
+  {
+    "id": "ai_078",
+    "question": "A company wants to build an AI-powered system for predicting stock market trends, but the system requires handling non-linear relationships between stock prices and various economic indicators. How would you approach this problem and what techniques would you use to improve performance, taking into account the non-linear relationships?",
+    "difficulty": "medium",
+    "tags": [
+      "predictive modeling",
+      "non-linear relationships"
+    ]
+  },
+  {
+    "id": "ai_079",
+    "question": "You're building an AI-powered system for sentiment analysis of social media posts, but the system requires handling sarcasm, irony, and figurative language. How would you approach this problem and what techniques would you use to improve performance, taking into account the complexities of human language?",
+    "difficulty": "medium",
+    "tags": [
+      "sentiment analysis",
+      "natural language processing"
+    ]
+  },
+  {
+    "id": "ai_080",
+    "question": "A company wants to build an AI-powered system for generating personalized content for customers, but the system requires handling diverse user preferences and behavioral data. How would you approach this problem and what techniques would you use to improve performance, taking into account the diversity of user data?",
+    "difficulty": "medium",
+    "tags": [
+      "content generation",
+      "personalization"
+    ]
+  },
+  {
+    "id": "ai_081",
+    "question": "Describe a situation where you would need to use a different loss function in an AI model, and how you would adapt the model and its training process accordingly.",
+    "difficulty": "hard",
+    "tags": [
+      "ai",
+      "machine-learning",
+      "loss-function"
+    ]
+  },
+  {
+    "id": "ai_082",
+    "question": "You are working on a chatbot that responds to user queries. However, in some cases, the chatbot is responding with irrelevant or unrelated answers. Explain why this might be happening and suggest a few ways to address the issue.",
+    "difficulty": "hard",
+    "tags": [
+      "ai",
+      "chatbots",
+      "natural-language-processing"
+    ]
+  },
+  {
+    "id": "ai_083",
+    "question": "Suppose you have been given two image classification models, one trained on a large dataset of images and the other trained on a small dataset of images. The large model is able to achieve high accuracy on a test set, but the small model is consistently producing incorrect classifications. Explain why this might be the case, and how you would approach improving the performance of the small model.",
+    "difficulty": "hard",
+    "tags": [
+      "ai",
+      "computer-vision",
+      "model-comparison"
+    ]
+  },
+  {
+    "id": "ai_084",
+    "question": "A company is considering deploying an AI-powered recommendation system on their e-commerce platform. Discuss the potential risks and challenges associated with this deployment, and propose some strategies to mitigate these risks.",
+    "difficulty": "hard",
+    "tags": [
+      "ai",
+      "recommender-systems",
+      "deployment"
+    ]
+  },
+  {
+    "id": "ai_085",
+    "question": "Imagine you are building a language model that needs to handle out-of-vocabulary (OOV) words. Describe a few ways you could approach this problem, including any trade-offs and potential limitations of each approach.",
+    "difficulty": "hard",
+    "tags": [
+      "ai",
+      "natural-language-processing",
+      "out-of-vocabulary"
+    ]
+  },
+  {
+    "id": "ai_086",
+    "question": "You are working on a project that involves training an AI model to recognize and classify audio data. However, the quality of the training data is variable, and some of the audio samples are noisy or corrupted. Explain how you would approach cleaning and preprocessing the data to improve the accuracy of the model.",
+    "difficulty": "hard",
+    "tags": [
+      "ai",
+      "audio-processing",
+      "data-preprocessing"
+    ]
+  },
+  {
+    "id": "ai_087",
+    "question": "A client has asked you to build an AI-powered sentiment analysis tool that can analyze social media posts and determine whether the sentiment is positive, negative, or neutral. However, the client is concerned about the potential for biased or inaccurate results. Describe how you would approach building the tool, including any steps you would take to ensure accuracy and mitigate bias.",
+    "difficulty": "hard",
+    "tags": [
+      "ai",
+      "sentiment-analysis",
+      "bias-mitigation"
+    ]
+  },
+  {
+    "id": "ai_088",
+    "question": "Suppose you have been given a dataset of product reviews from an e-commerce platform, and you want to build a model that can predict the likelihood of a customer purchasing a product based on their review. However, the data contains missing values and imbalanced class distributions. Explain how you would approach handling these issues to develop a reliable model.",
+    "difficulty": "hard",
+    "tags": [
+      "ai",
+      "predictive-modeling",
+      "data-handling"
+    ]
+  },
+  {
+    "id": "ai_089",
+    "question": "You are developing a reinforcement learning algorithm for a robotic arm that needs to learn how to pick up objects of varying sizes. However, the robotic arm's camera has limited resolution, and it can only perceive the objects in low-quality images. Explain how you would modify the reward function to account for the object's size and the camera's limitations, and propose a strategy for improving the robotic arm's performance.",
+    "difficulty": "hard",
+    "tags": [
+      "reinforcement learning",
+      "robotics"
+    ]
+  },
+  {
+    "id": "ai_090",
+    "question": "Suppose you are building a neural network-based model for time-series forecasting, but you discover that the target variable has multiple seasonality components. Describe how you would approach handling multiple seasonality in the model, including any necessary preprocessing steps, and explain how you would validate the model's performance on unseen data.",
+    "difficulty": "hard",
+    "tags": [
+      "time series forecasting",
+      "seasonality"
+    ]
+  },
+  {
+    "id": "ai_091",
+    "question": "A company is considering deploying an AI-powered predictive maintenance solution on their manufacturing floor. However, the system requires the ability to handle concept drift, where the relationship between the predictors and the target variable changes over time. Explain how you would approach dealing with concept drift in this scenario, including any necessary model updates and validation protocols.",
+    "difficulty": "hard",
+    "tags": [
+      "concept drift",
+      "predictive maintenance"
+    ]
+  },
+  {
+    "id": "ai_092",
+    "question": "You are developing a model for multi-label classification, where each sample can belong to multiple classes. However, the dataset is imbalanced, with some classes having significantly more instances than others. Describe how you would approach handling class imbalance in this scenario, including any necessary preprocessing steps and model modifications, and explain how you would evaluate the model's performance.",
+    "difficulty": "hard",
+    "tags": [
+      "class imbalance",
+      "multi-label classification"
+    ]
+  },
+  {
+    "id": "ai_093",
+    "question": "Suppose you are building a natural language processing model that needs to classify text into different categories, such as spam vs. non-spam emails. However, the model is prone to overfitting due to the large number of parameters. Explain how you would approach regularization in this scenario, including any necessary hyperparameter tuning and model modifications, and describe how you would evaluate the model's performance on unseen data.",
+    "difficulty": "hard",
+    "tags": [
+      "regularization",
+      "overfitting"
+    ]
+  },
+  {
+    "id": "ai_094",
+    "question": "A client has asked you to build an AI-powered image captioning system that can generate captions for images in various domains, such as fashion and food. However, the system requires the ability to handle out-of-vocabulary words, which are common in these domains. Describe a few ways you could approach this problem, including any necessary data preprocessing steps and model modifications, and explain how you would evaluate the system's performance.",
+    "difficulty": "hard",
+    "tags": [
+      "image captioning",
+      "out-of-vocabulary words"
+    ]
+  },
+  {
+    "id": "ai_095",
+    "question": "Suppose you are working on a computer vision project that involves detecting objects in images, but you discover that the dataset contains significant variations in lighting conditions. Explain how you would approach handling variations in lighting conditions, including any necessary data preprocessing steps and model modifications, and describe how you would evaluate the model's performance on unseen data.",
+    "difficulty": "hard",
+    "tags": [
+      "computer vision",
+      "lighting variations"
+    ]
+  },
+  {
+    "id": "ai_096",
+    "question": "A company is considering deploying an AI-powered chatbot on their customer support platform, but they are concerned about the potential for the chatbot to respond in a biased or stereotypical manner. Describe how you would approach ensuring fairness and non-bias in the chatbot's responses, including any necessary data preprocessing steps, model modifications, and evaluation protocols.",
+    "difficulty": "hard",
+    "tags": [
+      "fairness",
+      "chatbots"
+    ]
+  },
+  {
+    "id": "ai_097",
+    "question": "A company is developing an AI-powered system to recommend products to customers based on their browsing history and purchase behavior. However, they want to ensure that the system does not perpetuate existing social biases in product representation. Describe a few ways you could approach fairness in product recommendation, including any necessary data preprocessing steps, model modifications, and evaluation protocols.",
+    "difficulty": "hard",
+    "tags": [
+      "fairness",
+      "recommendation system"
+    ]
+  },
+  {
+    "id": "ai_098",
+    "question": "Suppose you are building a neural network-based model to predict the likelihood of a customer churning based on their service usage data. However, the model is prone to overfitting due to the high dimensionality of the input data. Explain how you would approach dimensionality reduction in this scenario, including any necessary feature engineering steps and model modifications, and describe how you would evaluate the model's performance on unseen data.",
+    "difficulty": "hard",
+    "tags": [
+      "dimensionality reduction",
+      "churn prediction"
+    ]
+  },
+  {
+    "id": "ai_099",
+    "question": "A client has asked you to build an AI-powered system to detect fake news articles based on their content and metadata. However, the system requires the ability to handle different languages and dialects, which can be challenging to model. Describe a few ways you could approach multilingual text classification, including any necessary data preprocessing steps, model modifications, and evaluation protocols.",
+    "difficulty": "hard",
+    "tags": [
+      "multilingual text classification",
+      "fake news detection"
+    ]
+  },
+  {
+    "id": "ai_100",
+    "question": "Suppose you are working on a computer vision project that involves detecting anomalies in medical images. However, the dataset contains significant variations in image quality and resolution. Explain how you would approach handling variations in image quality, including any necessary data preprocessing steps and model modifications, and describe how you would evaluate the model's performance on unseen data.",
+    "difficulty": "hard",
+    "tags": [
+      "image quality",
+      "anomaly detection"
+    ]
+  },
+  {
+    "id": "ai_101",
+    "question": "A company is developing an AI-powered system to predict employee turnover based on their performance data and work environment. However, the model requires the ability to handle missing values and outliers in the data. Describe a few ways you could approach missing value imputation and outlier detection, including any necessary data preprocessing steps and model modifications, and explain how you would evaluate the model's performance.",
+    "difficulty": "hard",
+    "tags": [
+      "missing value imputation",
+      "outlier detection"
+    ]
+  },
+  {
+    "id": "ai_102",
+    "question": "You are building a neural network-based model to classify text as either promotional or informative based on its content. However, the model is prone to overfitting due to the limited size of the training dataset. Explain how you would approach regularization in this scenario, including any necessary hyperparameter tuning and model modifications, and describe how you would evaluate the model's performance on unseen data.",
+    "difficulty": "hard",
+    "tags": [
+      "regularization",
+      "text classification"
+    ]
+  },
+  {
+    "id": "ai_103",
+    "question": "A client has asked you to build an AI-powered system to predict energy consumption based on weather and building usage data. However, the model requires the ability to handle high-dimensional time-series data. Describe a few ways you could approach time-series forecasting, including any necessary data preprocessing steps and model modifications, and explain how you would evaluate the model's performance on unseen data.",
+    "difficulty": "hard",
+    "tags": [
+      "time-series forecasting",
+      "energy consumption"
+    ]
+  },
+  {
+    "id": "ai_104",
+    "question": "Suppose you are working on a natural language processing project that involves sentiment analysis of customer reviews. However, the model requires the ability to handle sarcasm and idioms in the text. Describe a few ways you could approach handling sarcasm and idioms, including any necessary data preprocessing steps, model modifications, and evaluation protocols.",
+    "difficulty": "hard",
+    "tags": [
+      "sarcasm detection",
+      "sentiment analysis"
+    ]
+  },
+  {
+    "id": "ai_105",
+    "question": "You're building a neural network-based model to classify medical procedures as either high-risk or low-risk. However, the model requires the ability to handle variable-length procedure descriptions, and the dataset contains a significant number of outliers in the input data. Describe a few ways you could approach this problem, including any necessary data preprocessing steps, feature engineering, and model modifications, and explain how you would evaluate the model's performance on unseen data.",
+    "difficulty": "hard",
+    "tags": [
+      "natural_language_processing",
+      "neural_networks"
     ]
   }
 ]

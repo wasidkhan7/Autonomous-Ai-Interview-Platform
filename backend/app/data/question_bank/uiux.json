@@ -1,228 +1,952 @@
 [
   {
     "id": "uiux_001",
-    "question": "What is the difference between UI design and UX design?",
+    "question": "What are the main differences between a wireframe and a mockup?",
     "difficulty": "easy",
     "tags": [
-      "ui-ux",
-      "fundamentals"
+      "wireframes",
+      "mockups"
     ]
   },
   {
     "id": "uiux_002",
-    "question": "Explain the concept of visual hierarchy and how it guides a user's attention on a screen.",
+    "question": "How do you approach user research when designing a user interface?",
     "difficulty": "easy",
     "tags": [
-      "ui-ux",
-      "visual-design"
+      "user research",
+      "ux design"
     ]
   },
   {
     "id": "uiux_003",
-    "question": "Walk through your process for conducting user research before designing a new feature.",
-    "difficulty": "medium",
+    "question": "What is the main purpose of a style tile in UI design?",
+    "difficulty": "easy",
     "tags": [
-      "ui-ux",
-      "user-research"
+      "style guide",
+      "ui design"
     ]
   },
   {
     "id": "uiux_004",
-    "question": "How would you design an accessible interface for users with visual impairments? What specific techniques would you apply?",
-    "difficulty": "medium",
+    "question": "Can you explain the concept of responsive design in UI and UX?",
+    "difficulty": "easy",
     "tags": [
-      "ui-ux",
-      "accessibility"
+      "responsive design",
+      "flexible design"
     ]
   },
   {
     "id": "uiux_005",
-    "question": "Design the end-to-end UX flow for a complex multi-step onboarding process, minimizing drop-off at each step.",
-    "difficulty": "hard",
+    "question": "What is the difference between a prototype and a mockup in UI and UX design?",
+    "difficulty": "easy",
     "tags": [
-      "ui-ux",
-      "system-design",
-      "onboarding"
+      "prototypes",
+      "mockups"
     ]
   },
   {
     "id": "uiux_006",
-    "question": "Describe a scenario where a single-screen layout would be more effective than a multi-screen layout. What design considerations would you prioritize in this scenario?",
+    "question": "How do user personas relate to user research and usability testing?",
     "difficulty": "easy",
     "tags": [
-      "layout",
-      "decision-making"
+      "user personas",
+      "user research"
     ]
   },
   {
     "id": "uiux_007",
-    "question": "Design a feedback system for a web application that allows users to submit and edit text, with a focus on providing clear and timely feedback on successful and unsuccessful actions.",
+    "question": "What is the difference between a high-fidelity and a low-fidelity design in UI and UX?",
     "difficulty": "easy",
     "tags": [
-      "feedback",
-      "interaction design"
+      "high-fidelity design",
+      "low-fidelity design"
     ]
   },
   {
     "id": "uiux_008",
-    "question": "Compare the use of micro-interactions and animations in UI design. How would you choose between these two techniques for a specific design problem?",
+    "question": "Can you describe the process of creating a design system in UI and UX?",
     "difficulty": "easy",
     "tags": [
-      "animation",
-      "micro-interactions"
+      "design systems",
+      "ui design"
     ]
   },
   {
     "id": "uiux_009",
-    "question": "Imagine you're tasked with creating a UI kit for a team of developers. What design assets would you include in the kit, and why?",
+    "question": "What is the primary function of a layout grid in UI design?",
     "difficulty": "easy",
     "tags": [
-      "UI kit",
-      "design system"
+      "UI",
+      "Grid System"
     ]
   },
   {
     "id": "uiux_010",
-    "question": "How would you approach designing a UI for an application that has limited screen real estate, such as a smartwatch or a dashboard?",
+    "question": "How does the concept of affordance contribute to usability in user interface design?",
     "difficulty": "easy",
     "tags": [
-      "mobile",
-      "device-specific UI"
+      "Affordance",
+      "Usability"
     ]
   },
   {
     "id": "uiux_011",
-    "question": "Describe the process for conducting A/B testing on a UI design. What metrics would you measure, and how would you interpret the results?",
+    "question": "What is the difference between absolute and relative positioning in CSS layout?",
     "difficulty": "easy",
     "tags": [
-      "A/B testing",
-      "usability testing"
+      "CSS",
+      "Layout"
     ]
   },
   {
     "id": "uiux_012",
-    "question": "Design a system of color-coded icons for a web application that requires users to distinguish between multiple categories. What design principles would guide your decision-making process?",
+    "question": "Can you describe the purpose and usage of typography in UI design?",
     "difficulty": "easy",
     "tags": [
-      "iconography",
-      "color theory"
+      "Typography",
+      "Visual Hierarchy"
     ]
   },
   {
     "id": "uiux_013",
-    "question": "Describe the role of micro-interactions in enhancing user engagement and how you would design a micro-interaction to indicate a successful form submission.",
-    "difficulty": "medium",
+    "question": "How does the principle of consistency apply to the design of user interfaces?",
+    "difficulty": "easy",
     "tags": [
-      "interaction design",
-      "usability"
+      "Consistency",
+      "Design Principles"
     ]
   },
   {
     "id": "uiux_014",
-    "question": "Explain how you would approach designing a product for a global audience, accounting for differences in language, culture, and accessibility needs, using the example of a digital banking app.",
-    "difficulty": "medium",
+    "question": "What is the concept of visual hierarchy in UI design, and how is it achieved?",
+    "difficulty": "easy",
     "tags": [
-      "global design",
-      "cultural sensitivity"
+      "Visual Hierarchy",
+      "Design Principles"
     ]
   },
   {
     "id": "uiux_015",
-    "question": "How would you balance the number of features in a product to maintain user engagement while avoiding feature fatigue, and provide an example of a product where this balance was well executed?",
-    "difficulty": "medium",
+    "question": "What is the difference between a style guide and a design system in UI design?",
+    "difficulty": "easy",
     "tags": [
-      "product management",
-      "feature prioritization"
+      "Style Guide",
+      "Design System"
     ]
   },
   {
     "id": "uiux_016",
-    "question": "Design a simple and intuitive navigation system for a website with a complex information architecture, such as an online university course catalog, and explain your design decisions.",
-    "difficulty": "medium",
+    "question": "Can you explain how color theory applies to the selection of colors in UI design?",
+    "difficulty": "easy",
     "tags": [
-      "information architecture",
-      "navigation design"
+      "Color Theory",
+      "Color Selection"
     ]
   },
   {
     "id": "uiux_017",
-    "question": "Explain the concept of affordance in UX design and provide an example of a well-designed product that effectively communicates its affordances to the user.",
-    "difficulty": "medium",
+    "question": "What is the primary purpose of a wireframe in UI design?",
+    "difficulty": "easy",
     "tags": [
-      "affordance",
-      "usability principles"
+      "ui",
+      "wireframes"
     ]
   },
   {
     "id": "uiux_018",
-    "question": "How would you design a product that requires users to make a tough decision or trade-off, such as a budgeting app that requires users to choose between saving for short-term and long-term goals, and explain how you would mitigate potential decision fatigue?",
-    "difficulty": "medium",
+    "question": "How does the concept of accessibility apply to the design of user interfaces?",
+    "difficulty": "easy",
     "tags": [
-      "decision-making",
-      "trade-off design"
+      "ui",
+      "accessibility"
     ]
   },
   {
     "id": "uiux_019",
-    "question": "Describe a scenario where you would use A/B testing to evaluate the effectiveness of a design change and outline a plan for conducting a statistically significant A/B test with a small sample size.",
-    "difficulty": "medium",
+    "question": "What is the main function of a design style in a design system?",
+    "difficulty": "easy",
     "tags": [
-      "A/B testing",
-      "design experimentation"
+      "ux",
+      "style"
     ]
   },
   {
     "id": "uiux_020",
-    "question": "Design a conversational UI for an existing e-commerce application, incorporating both explicit and implicit contextual information. How would you utilize the conversational interface to personalize product recommendations and improve user engagement?",
-    "difficulty": "hard",
+    "question": "Compare and contrast the roles of a user experience (UX) designer and a user interface (UI) designer.",
+    "difficulty": "easy",
     "tags": [
-      "conversational design",
-      "personalization"
+      "ux",
+      "ui"
     ]
   },
   {
     "id": "uiux_021",
-    "question": "You are tasked with redesigning a legacy web application that has a complex, nested information architecture. Propose a strategy for reorganizing and simplifying the IA, including techniques for categorizing and tagging content, and how you would involve stakeholders and users in the redesign process.",
-    "difficulty": "hard",
+    "question": "What is the significance of using typography to convey tone and personality in UI design?",
+    "difficulty": "easy",
     "tags": [
-      "information architecture",
-      "taxonomy design"
+      "ui",
+      "typography"
     ]
   },
   {
     "id": "uiux_022",
-    "question": "Create a UX design for an interactive data visualization dashboard, where users can explore and analyze complex data sets in real-time. Discuss the key principles and patterns you would employ to facilitate effective data exploration and decision-making.",
-    "difficulty": "hard",
+    "question": "How does visual grouping contribute to the usability and clarity of a user interface?",
+    "difficulty": "easy",
     "tags": [
-      "data visualization",
-      "interaction design"
+      "ui",
+      "layout"
     ]
   },
   {
     "id": "uiux_023",
-    "question": "A company wants to integrate a voice assistant into their existing mobile app. Describe the process you would follow to evaluate the feasibility of voice integration, identify potential use cases, and design a seamless voice-based user experience.",
-    "difficulty": "hard",
+    "question": "What are the key characteristics of a well-designed form in UI design?",
+    "difficulty": "easy",
     "tags": [
-      "voice UI",
-      "mobile app design"
+      "ui",
+      "forms"
     ]
   },
   {
     "id": "uiux_024",
-    "question": "Develop a strategy for creating an inclusive design language system that encompasses diverse cultures, languages, and abilities. How would you conduct research and create adaptable design components to accommodate these diverse requirements?",
-    "difficulty": "hard",
+    "question": "Explain how the concept of feedback contributes to the overall user experience in UI design.",
+    "difficulty": "easy",
     "tags": [
-      "inclusion design",
-      "design language system"
+      "ui",
+      "feedback"
     ]
   },
   {
     "id": "uiux_025",
-    "question": "Propose a solution for designing a UI that can adapt to varying network conditions and device performance. Discuss the key design decisions and trade-offs involved in creating a responsive UI that balances user experience with performance constraints.",
+    "question": "What is the primary difference between a layout grid and a design system framework?",
+    "difficulty": "easy",
+    "tags": [
+      "uiux",
+      "layout"
+    ]
+  },
+  {
+    "id": "uiux_026",
+    "question": "Explain how the concept of micro-interactions applies to the design of user interfaces.",
+    "difficulty": "easy",
+    "tags": [
+      "uiux",
+      "ux"
+    ]
+  },
+  {
+    "id": "uiux_027",
+    "question": "What is the purpose of a user flow diagram in the design process?",
+    "difficulty": "easy",
+    "tags": [
+      "uiux",
+      "ux",
+      "designprocess"
+    ]
+  },
+  {
+    "id": "uiux_028",
+    "question": "Compare and contrast the use of skeuomorphism and minimalism in user interface design.",
+    "difficulty": "easy",
+    "tags": [
+      "uiux",
+      "designprinciples"
+    ]
+  },
+  {
+    "id": "uiux_029",
+    "question": "How does the concept of cognitive load affect the design of user interfaces?",
+    "difficulty": "easy",
+    "tags": [
+      "uiux",
+      "ux",
+      "humancomputerinteraction"
+    ]
+  },
+  {
+    "id": "uiux_030",
+    "question": "What is the main difference between a high-fidelity and a low-fidelity prototype?",
+    "difficulty": "easy",
+    "tags": [
+      "uiux",
+      "prototyping"
+    ]
+  },
+  {
+    "id": "uiux_031",
+    "question": "Explain how the concept of affordances applies to the design of user interfaces.",
+    "difficulty": "easy",
+    "tags": [
+      "uiux",
+      "ux",
+      "designprinciples"
+    ]
+  },
+  {
+    "id": "uiux_032",
+    "question": "What is the purpose of a user persona in the design process and how is it created?",
+    "difficulty": "easy",
+    "tags": [
+      "uiux",
+      "ux",
+      "designprocess"
+    ]
+  },
+  {
+    "id": "uiux_033",
+    "question": "What is the main purpose of a style guide in UI design, and how does it benefit the design team?",
+    "difficulty": "easy",
+    "tags": [
+      "UI Design",
+      "Style Guide"
+    ]
+  },
+  {
+    "id": "uiux_034",
+    "question": "Explain the difference between a wireframe and a high-fidelity prototype, and when would you use each in the design process?",
+    "difficulty": "easy",
+    "tags": [
+      "Prototyping",
+      "Design Process"
+    ]
+  },
+  {
+    "id": "uiux_035",
+    "question": "Compare and contrast the use of flat design and 3D effects in modern UI design, and provide examples of when each might be used.",
+    "difficulty": "easy",
+    "tags": [
+      "Visual Design",
+      "Interaction Design"
+    ]
+  },
+  {
+    "id": "uiux_036",
+    "question": "How does the concept of accessibility influence the design of UI elements, such as buttons and form fields?",
+    "difficulty": "easy",
+    "tags": [
+      "Accessibility",
+      "UI Elements"
+    ]
+  },
+  {
+    "id": "uiux_037",
+    "question": "Explain the importance of clear and concise labels in UI design, and provide examples of effective label design.",
+    "difficulty": "easy",
+    "tags": [
+      "Label Design",
+      "Information Architecture"
+    ]
+  },
+  {
+    "id": "uiux_038",
+    "question": "Compare and contrast the use of typography and graphics in UI design, and provide examples of when each might be used.",
+    "difficulty": "easy",
+    "tags": [
+      "Typography",
+      "Graphics"
+    ]
+  },
+  {
+    "id": "uiux_039",
+    "question": "What is the role of user testing in the design process, and how can it inform design decisions and improve user experience?",
+    "difficulty": "easy",
+    "tags": [
+      "User Testing",
+      "Design Process"
+    ]
+  },
+  {
+    "id": "uiux_040",
+    "question": "What is the main purpose of a design systems approach in UI design and how does it benefit a design team?",
+    "difficulty": "easy",
+    "tags": [
+      "design systems",
+      "team collaboration"
+    ]
+  },
+  {
+    "id": "uiux_041",
+    "question": "You've been given a task to redesign the navigation menu of an e-commerce website. It currently has a horizontal menu bar with multiple levels of dropdowns. How would you approach this task and what are the benefits and drawbacks of using a hamburger menu or a sidebar instead?",
+    "difficulty": "medium",
+    "tags": [
+      "uix",
+      "navigation"
+    ]
+  },
+  {
+    "id": "uiux_042",
+    "question": "Suppose you're working on a UI component library for a web application. You need to create a date picker component that can handle multiple date formats. How would you design the date picker component to be reusable and adaptable to different formats?",
+    "difficulty": "medium",
+    "tags": [
+      "uix",
+      "component library"
+    ]
+  },
+  {
+    "id": "uiux_043",
+    "question": "You're tasked with designing a responsive layout for a blog article page. The layout should have a hero image on top, followed by the article content and then some related posts. However, the article content is dynamic and can have multiple sections with different layouts. How would you approach this challenge and what are the trade-offs of using a grid system versus a custom layout?",
+    "difficulty": "medium",
+    "tags": [
+      "uix",
+      "responsive design"
+    ]
+  },
+  {
+    "id": "uiux_044",
+    "question": "Imagine you're working on a UI kit for a mobile application. You need to create a tab bar that supports multiple tab types (e.g., navigation tabs, content tabs, etc.). How would you design the tab bar component to be customizable and extensible?",
+    "difficulty": "medium",
+    "tags": [
+      "uix",
+      "mobile design"
+    ]
+  },
+  {
+    "id": "uiux_045",
+    "question": "You're tasked with creating a data visualization dashboard for a web application. The dashboard needs to display various metrics (e.g., sales, revenue, etc.) in a clear and concise manner. However, the metrics are updated in real-time and the dashboard needs to handle a large volume of data. How would you approach this challenge and what are the trade-offs of using different chart types?",
+    "difficulty": "medium",
+    "tags": [
+      "uix",
+      "data visualization"
+    ]
+  },
+  {
+    "id": "uiux_046",
+    "question": "Suppose you're working on a UI component library for a web application. You need to create a checkbox component that supports different types of checkboxes (e.g., single, multi, etc.). How would you design the checkbox component to be reusable and adaptable to different use cases?",
+    "difficulty": "medium",
+    "tags": [
+      "uix",
+      "form design"
+    ]
+  },
+  {
+    "id": "uiux_047",
+    "question": "You're tasked with designing a login page for a web application. The login page should have a simple and intuitive layout, but also needs to provide an option for users to recover their password. How would you approach this challenge and what are the trade-offs of using different layout patterns?",
+    "difficulty": "medium",
+    "tags": [
+      "uix",
+      "authentication"
+    ]
+  },
+  {
+    "id": "uiux_048",
+    "question": "Imagine you're working on a UI kit for a desktop application. You need to create a tooltip component that can handle complex text and provides a clear visual indication of the tooltip. How would you design the tooltip component to be customizable and accessible?",
+    "difficulty": "medium",
+    "tags": [
+      "uix",
+      "accessibility"
+    ]
+  },
+  {
+    "id": "uiux_049",
+    "question": "You're tasked with creating a chat interface for a web application. The chat interface should allow users to send messages, display a list of previous messages, and support different types of messages (e.g., text, images, videos). How would you approach this challenge and what are the trade-offs of using a scrolling container versus a grid system for the message list?",
+    "difficulty": "medium",
+    "tags": [
+      "user interface",
+      "chat interface"
+    ]
+  },
+  {
+    "id": "uiux_050",
+    "question": "Suppose you're working on a UI kit for a web application. You need to create a modal window component that can be used to display different types of content (e.g., login forms, alert messages, etc.). How would you design the modal window component to be reusable and customizable?",
+    "difficulty": "medium",
+    "tags": [
+      "user interface",
+      "modal window"
+    ]
+  },
+  {
+    "id": "uiux_051",
+    "question": "You're tasked with designing a form for a web application that requires users to input sensitive information (e.g., credit card numbers, personal data, etc.). How would you approach this challenge and what are the trade-offs of using a traditional form versus a masked input field?",
+    "difficulty": "medium",
+    "tags": [
+      "user interface",
+      "form design"
+    ]
+  },
+  {
+    "id": "uiux_052",
+    "question": "Imagine you're working on a UI component library for a web application. You need to create a carousel component that can display multiple images or content items. How would you design the carousel component to be responsive and support different navigation types (e.g., buttons, dots, etc.)?",
+    "difficulty": "medium",
+    "tags": [
+      "user interface",
+      "carousel component"
+    ]
+  },
+  {
+    "id": "uiux_053",
+    "question": "You're tasked with creating a data entry form for a web application that requires users to fill in multiple fields with different data types (e.g., text, dates, numbers, etc.). How would you approach this challenge and what are the trade-offs of using different field types (e.g., text input, select menus, etc.)?",
+    "difficulty": "medium",
+    "tags": [
+      "user interface",
+      "form design"
+    ]
+  },
+  {
+    "id": "uiux_054",
+    "question": "Suppose you're working on a UI kit for a web application. You need to create a button component that supports different types of buttons (e.g., primary, secondary, disabled, etc.). How would you design the button component to be customizable and accessible?",
+    "difficulty": "medium",
+    "tags": [
+      "user interface",
+      "button component"
+    ]
+  },
+  {
+    "id": "uiux_055",
+    "question": "You're tasked with designing a table component for a web application that displays large amounts of data. How would you approach this challenge and what are the trade-offs of using different table layouts (e.g., fixed layout, scrollable layout, etc.)?",
+    "difficulty": "medium",
+    "tags": [
+      "user interface",
+      "table component"
+    ]
+  },
+  {
+    "id": "uiux_056",
+    "question": "Imagine you're working on a UI component library for a web application. You need to create a notification component that can display different types of notifications (e.g., success, error, warning, etc.). How would you design the notification component to be customizable and extensible?",
+    "difficulty": "medium",
+    "tags": [
+      "user interface",
+      "notification component"
+    ]
+  },
+  {
+    "id": "uiux_057",
+    "question": "You're tasked with designing a settings panel for a web application that has multiple sections with varying levels of importance. How would you approach organizing and visualizing the content of the panel to ensure the user can easily find and configure relevant settings?",
+    "difficulty": "medium",
+    "tags": [
+      "ux",
+      "layout"
+    ]
+  },
+  {
+    "id": "uiux_058",
+    "question": "Suppose you're working on a UI kit for a web application and need to create a autocomplete component that provides suggestions to the user as they type. How would you balance the trade-off between providing relevant suggestions and minimizing the number of network requests?",
+    "difficulty": "medium",
+    "tags": [
+      "autocomplete",
+      "networking"
+    ]
+  },
+  {
+    "id": "uiux_059",
+    "question": "Imagine you're tasked with creating a timeline component for a web application that displays a series of events over time. How would you approach designing the component to ensure it is clear, concise, and can handle varying levels of detail in the events?",
+    "difficulty": "medium",
+    "tags": [
+      "timeline",
+      "ux"
+    ]
+  },
+  {
+    "id": "uiux_060",
+    "question": "You're tasked with designing an onboarding process for a web application that aims to guide new users through the key features and functionality of the application. How would you approach structuring the onboarding process to ensure users feel engaged and productive?",
+    "difficulty": "medium",
+    "tags": [
+      "onboarding",
+      "ux"
+    ]
+  },
+  {
+    "id": "uiux_061",
+    "question": "Suppose you're working on a UI component library for a web application and need to create a dropdown component that can handle complex, nested menus. How would you approach designing the component to ensure it is scalable and usable in a variety of contexts?",
+    "difficulty": "medium",
+    "tags": [
+      "dropdown",
+      "ux"
+    ]
+  },
+  {
+    "id": "uiux_062",
+    "question": "Imagine you're tasked with creating a progress indicator for a web application that provides visual feedback to the user as they complete tasks or progress towards a goal. How would you approach designing the indicator to ensure it is clear, intuitive, and customizable?",
+    "difficulty": "medium",
+    "tags": [
+      "progress",
+      "ux"
+    ]
+  },
+  {
+    "id": "uiux_063",
+    "question": "You're tasked with designing a notification system for a web application that can display both short-term and long-term notifications. How would you approach structuring the system to ensure it is clear, concise, and can adapt to varying user priorities?",
+    "difficulty": "medium",
+    "tags": [
+      "notifications",
+      "ux"
+    ]
+  },
+  {
+    "id": "uiux_064",
+    "question": "Suppose you're working on a UI kit for a web application and need to create a accordion component that can be used to display and hide large amounts of content. How would you approach designing the component to ensure it is scalable, usable, and provides an intuitive interface for users?",
+    "difficulty": "medium",
+    "tags": [
+      "accordion",
+      "ux"
+    ]
+  },
+  {
+    "id": "uiux_065",
+    "question": "Suppose you're tasked with designing a login form for a web application that supports both username/password and social media logins. How would you approach creating a seamless user experience that handles both authentication options while maintaining visual consistency and reducing errors?",
+    "difficulty": "medium",
+    "tags": [
+      "form-design",
+      "authentication"
+    ]
+  },
+  {
+    "id": "uiux_066",
+    "question": "Imagine you're working on a UI kit for a web application that aims to create a visually appealing and user-friendly interface. You need to decide between dark mode and a light mode theme. What factors would you consider when making this decision, and how would you implement a system to allow users to easily switch between themes?",
+    "difficulty": "medium",
+    "tags": [
+      "theme-design",
+      "accessibility"
+    ]
+  },
+  {
+    "id": "uiux_067",
+    "question": "You're tasked with creating a search bar for a web application that displays a list of search suggestions to the user as they type. How would you balance the trade-off between providing relevant suggestions and minimizing the number of network requests in a way that is both efficient and provides a good user experience?",
+    "difficulty": "medium",
+    "tags": [
+      "search-functionality",
+      "network-requests"
+    ]
+  },
+  {
+    "id": "uiux_068",
+    "question": "Suppose you're working on a UI component library for a web application and need to create a card component that can display information in a compact, visually appealing manner. How would you approach designing the card component to ensure it is scalable, customizable, and can handle varying levels of detail in the displayed information?",
+    "difficulty": "medium",
+    "tags": [
+      "card-component",
+      "layout-design"
+    ]
+  },
+  {
+    "id": "uiux_069",
+    "question": "Imagine you're tasked with designing a modal dialog for a web application that requires users to make a critical decision or take a specific action. How would you approach designing the modal to ensure it is clear, concise, and minimizes the user's cognitive load while still providing all necessary information?",
+    "difficulty": "medium",
+    "tags": [
+      "modal-dialog",
+      "information-architecture"
+    ]
+  },
+  {
+    "id": "uiux_070",
+    "question": "You're tasked with creating a rating system for a web application that allows users to rate products or services on a scale of 1-5 or more. How would you approach designing the rating system to ensure it is accessible, user-friendly, and provides a clear and consistent experience across different devices and screen sizes?",
+    "difficulty": "medium",
+    "tags": [
+      "rating-system",
+      "accessibility"
+    ]
+  },
+  {
+    "id": "uiux_071",
+    "question": "Suppose you're working on a UI kit for a web application that needs to create a customizable tooltip component that can be used to display information about a specific element or action. How would you approach designing the tooltip to ensure it is scalable, customizable, and can handle varying screen sizes and devices?",
+    "difficulty": "medium",
+    "tags": [
+      "tooltip",
+      "information-architecture"
+    ]
+  },
+  {
+    "id": "uiux_072",
+    "question": "Imagine you're tasked with designing a responsive grid system for a web application that needs to display a variety of content, including images, text, and videos. How would you approach designing the grid system to ensure it is flexible, scalable, and can handle varying screen sizes and devices while maintaining a consistent user experience?",
+    "difficulty": "medium",
+    "tags": [
+      "grid-system",
+      "layout-design"
+    ]
+  },
+  {
+    "id": "uiux_073",
+    "question": "You're working on a UI kit for a web application and need to design a component that allows users to upload multiple files at once. How would you approach designing the component to ensure it is efficient, user-friendly, and handles large file uploads?",
+    "difficulty": "medium",
+    "tags": [
+      "ui-component",
+      "file-upload"
+    ]
+  },
+  {
+    "id": "uiux_074",
+    "question": "Imagine you're tasked with creating a web application that requires users to input and display large amounts of data in a table. How would you approach designing the table to ensure it is scalable, customizable, and provides a clear visual hierarchy for the user?",
+    "difficulty": "medium",
+    "tags": [
+      "table-design",
+      "data-visualization"
+    ]
+  },
+  {
+    "id": "uiux_075",
+    "question": "Suppose you're working on a UI component library for a web application and need to create a component that displays a countdown timer to the user. How would you approach designing the timer to ensure it is clear, intuitive, and provides visual feedback as the countdown progresses?",
+    "difficulty": "medium",
+    "tags": [
+      "timer-component",
+      "ui-component"
+    ]
+  },
+  {
+    "id": "uiux_076",
+    "question": "You're tasked with designing a web application that requires users to select multiple options from a list. How would you approach designing the selection component to ensure it is efficient, user-friendly, and handles large lists of options?",
+    "difficulty": "medium",
+    "tags": [
+      "selection-component",
+      "checkbox-list"
+    ]
+  },
+  {
+    "id": "uiux_077",
+    "question": "Imagine you're working on a UI kit for a web application that needs to create a component that allows users to enter and edit rich text content. How would you approach designing the component to ensure it is user-friendly, customizable, and handles complex formatting requirements?",
+    "difficulty": "medium",
+    "tags": [
+      "rich-text-editor",
+      "ui-component"
+    ]
+  },
+  {
+    "id": "uiux_078",
+    "question": "Suppose you're tasked with creating a web application that requires users to view and interact with a map. How would you approach designing the map component to ensure it is clear, intuitive, and provides an efficient way for users to navigate and interact with the map?",
+    "difficulty": "medium",
+    "tags": [
+      "map-component",
+      "geolocation"
+    ]
+  },
+  {
+    "id": "uiux_079",
+    "question": "You're working on a UI component library for a web application and need to create a component that displays a chart or graph to the user. How would you approach designing the chart to ensure it is clear, intuitive, and provides an efficient way for users to understand complex data?",
+    "difficulty": "medium",
+    "tags": [
+      "chart-component",
+      "data-visualization"
+    ]
+  },
+  {
+    "id": "uiux_080",
+    "question": "Imagine you're tasked with designing a web application that requires users to enter and validate complex form data, such as dates or phone numbers. How would you approach designing the form component to ensure it is user-friendly, customizable, and handles complex validation requirements?",
+    "difficulty": "medium",
+    "tags": [
+      "form-component",
+      "input-validation"
+    ]
+  },
+  {
+    "id": "uiux_081",
+    "question": "Explain how you would design a UI component that handles dynamic loading and error states, ensuring that the user is kept informed of the component's status.",
     "difficulty": "hard",
     "tags": [
-      "responsive design",
-      "performance optimization"
+      "ui-design",
+      "error-handling"
+    ]
+  },
+  {
+    "id": "uiux_082",
+    "question": "A user has just logged in, and their account information is fetched from the server but displayed incorrectly in the UI due to a mismatch in data types. Describe the steps you would take to debug this issue and present the correct data to the user.",
+    "difficulty": "hard",
+    "tags": [
+      "debugging",
+      "data-types"
+    ]
+  },
+  {
+    "id": "uiux_083",
+    "question": "Design a navigation system that adapts to a user's preferences and browsing habits, such as hiding less frequently visited items. How would you implement this system using React Router and how would you store the user's preferences?",
+    "difficulty": "hard",
+    "tags": [
+      "react-router",
+      "user-preferences"
+    ]
+  },
+  {
+    "id": "uiux_084",
+    "question": "Explain the concept of 'responsive design' and how it applies to a specific layout component that needs to adapt to different screen sizes. Provide examples of how you would implement media queries to achieve this responsiveness.",
+    "difficulty": "hard",
+    "tags": [
+      "responsive-design",
+      "media-queries"
+    ]
+  },
+  {
+    "id": "uiux_085",
+    "question": "A UI component that displays a list of items has been optimized for large datasets, but it is still experiencing performance issues when the user scrolls quickly. What potential causes of this issue could there be, and how would you troubleshoot and optimize the component's performance?",
+    "difficulty": "hard",
+    "tags": [
+      "performance-optimization",
+      "virtual-scrolling"
+    ]
+  },
+  {
+    "id": "uiux_086",
+    "question": "Design a modal dialog that can be triggered from multiple locations within a UI application, but still behaves cohesively and consistently across all instances. What are the key considerations for implementing this design?",
+    "difficulty": "hard",
+    "tags": [
+      "modal-dialog",
+      "cohesive-design"
+    ]
+  },
+  {
+    "id": "uiux_087",
+    "question": "A UI application is built using a UI framework that supports server-side rendering (SSR), but the application also includes a complex, data-driven visualization component that is causing performance issues on slow network connections. Describe the strategies you would use to optimize this component for SSR while maintaining its interactivity.",
+    "difficulty": "hard",
+    "tags": [
+      "server-side-rendering",
+      "performance-optimization"
+    ]
+  },
+  {
+    "id": "uiux_088",
+    "question": "Explain the concept of 'accessibility' in the context of UI design and describe how you would ensure that a UI component is accessible to users with visual impairments, such as those who rely on screen readers.",
+    "difficulty": "hard",
+    "tags": [
+      "accessibility",
+      "inclusive-design"
+    ]
+  },
+  {
+    "id": "uiux_089",
+    "question": "You are implementing a UI component that supports internationalization and localization, but you've noticed that the default font styles are not being applied correctly when switching between languages. Describe the approach you would take to debug this issue and ensure that font styles are correctly applied across different languages.",
+    "difficulty": "hard",
+    "tags": [
+      "localization",
+      "internationalization"
+    ]
+  },
+  {
+    "id": "uiux_090",
+    "question": "A UI component that relies heavily on animations to convey complex data is experiencing high CPU usage, causing the application to slow down. What potential causes of this issue could there be, and how would you troubleshoot and optimize the component's animations?",
+    "difficulty": "hard",
+    "tags": [
+      "performance",
+      "animation"
+    ]
+  },
+  {
+    "id": "uiux_091",
+    "question": "You are designing a UI application that uses a data-driven approach to generate content dynamically. However, the application's UI is not responding promptly to user interactions, resulting in a poor user experience. Describe the strategies you would use to improve the application's responsiveness while maintaining dynamic content generation.",
+    "difficulty": "hard",
+    "tags": [
+      "responsiveness",
+      "content generation"
+    ]
+  },
+  {
+    "id": "uiux_092",
+    "question": "A UI component that displays a list of items has been optimized for accessibility, but the component's layout is not being correctly rendered in a screen reader. Describe the steps you would take to debug this issue, identify the root cause, and ensure that the component is correctly rendered in the screen reader.",
+    "difficulty": "hard",
+    "tags": [
+      "accessibility",
+      "screen readers"
+    ]
+  },
+  {
+    "id": "uiux_093",
+    "question": "You are implementing a UI application that uses server-side rendering (SSR) to improve performance, but you've noticed that the application's UI is not being correctly rendered in certain browsers due to inconsistent CSS support. Describe the strategies you would take to ensure that the application's UI is correctly rendered across different browsers using SSR.",
+    "difficulty": "hard",
+    "tags": [
+      "SSR",
+      "browser compatibility"
+    ]
+  },
+  {
+    "id": "uiux_094",
+    "question": "A UI component that relies on complex calculations to determine its layout is experiencing performance issues due to frequent recalculations. Describe the approach you would take to optimize the component's layout calculations, reducing the number of unnecessary recalculations and improving the application's overall performance.",
+    "difficulty": "hard",
+    "tags": [
+      "performance",
+      "layout"
+    ]
+  },
+  {
+    "id": "uiux_095",
+    "question": "You are designing a UI application that allows users to create custom layouts by dragging and dropping UI components. However, the application's layout is not being correctly saved and restored when the user closes and reopens the application. Describe the strategies you would use to persist the user's custom layout and ensure that it is correctly restored.",
+    "difficulty": "hard",
+    "tags": [
+      "customization",
+      "layout persistence"
+    ]
+  },
+  {
+    "id": "uiux_096",
+    "question": "A UI component that displays a large amount of data is experiencing issues with data scrolling, resulting in a poor user experience. Describe the approach you would take to optimize the component's data scrolling, ensuring that the user can efficiently navigate through the data and achieve a seamless scrolling experience.",
+    "difficulty": "hard",
+    "tags": [
+      "data scrolling",
+      "performance"
+    ]
+  },
+  {
+    "id": "uiux_097",
+    "question": "A UI application uses a third-party library to handle image uploads, but the library is not compatible with the application's current UI framework. Describe the approach you would take to integrate the image upload library with the UI framework, and how would you ensure a seamless user experience during the transition.",
+    "difficulty": "hard",
+    "tags": [
+      "integration",
+      "compatibility"
+    ]
+  },
+  {
+    "id": "uiux_098",
+    "question": "A UI component relies heavily on WebAssembly to perform complex calculations, but it is experiencing issues with caching and invalidation of the WebAssembly modules. Describe the strategies you would use to optimize the caching and invalidation process, ensuring that the component's performance and responsiveness are maintained.",
+    "difficulty": "hard",
+    "tags": [
+      "perfomance",
+      "webassembly"
+    ]
+  },
+  {
+    "id": "uiux_099",
+    "question": "You are designing a UI application that uses a container-based layout system to manage complex layouts, but the application's UI is experiencing issues with layout recalculations due to frequent container updates. Describe the approach you would take to optimize the layout recalculations and reduce the number of unnecessary updates.",
+    "difficulty": "hard",
+    "tags": [
+      "layout",
+      "performance"
+    ]
+  },
+  {
+    "id": "uiux_100",
+    "question": "A UI component that displays a video stream is experiencing issues with video playback due to inconsistent network connectivity. Describe the strategies you would use to optimize the video playback and ensure a seamless user experience, even in the presence of network latency and packet loss.",
+    "difficulty": "hard",
+    "tags": [
+      "video",
+      "performance"
+    ]
+  },
+  {
+    "id": "uiux_101",
+    "question": "You are implementing a UI application that uses a state machine to manage complex state transitions, but the application's UI is experiencing issues with state inconsistencies due to concurrent updates. Describe the approach you would take to optimize the state machine and ensure that the application's state remains consistent and accurate.",
+    "difficulty": "hard",
+    "tags": [
+      "state machine",
+      "concurrency"
+    ]
+  },
+  {
+    "id": "uiux_102",
+    "question": "A UI component relies heavily on machine learning models to perform predictions and recommendations, but it is experiencing issues with model updates and validation. Describe the strategies you would use to optimize the model updates and validation process, ensuring that the component's performance and accuracy are maintained.",
+    "difficulty": "hard",
+    "tags": [
+      "ml",
+      "performance"
+    ]
+  },
+  {
+    "id": "uiux_103",
+    "question": "You are designing a UI application that uses a data-driven approach to generate content dynamically, but the application's UI is experiencing issues with content inconsistencies due to delayed data loading. Describe the approach you would take to optimize the content generation and ensure that the application's UI remains consistent and accurate.",
+    "difficulty": "hard",
+    "tags": [
+      "content",
+      "performance"
+    ]
+  },
+  {
+    "id": "uiux_104",
+    "question": "A UI component that displays a large map with multiple layers is experiencing issues with performance due to excessive rendering and updating of the map layers. Describe the strategies you would use to optimize the map rendering and updating process, ensuring that the component's performance and responsiveness are maintained.",
+    "difficulty": "hard",
+    "tags": [
+      "map",
+      "performance"
+    ]
+  },
+  {
+    "id": "uiux_105",
+    "question": "A UI application uses a service worker to improve offline support, but the user experiences issues with inconsistent data synchronization between online and offline modes. Describe the strategies you would take to ensure seamless data synchronization across both online and offline modes.",
+    "difficulty": "hard",
+    "tags": [
+      "offline",
+      "service worker",
+      "data synchronization"
     ]
   }
 ]

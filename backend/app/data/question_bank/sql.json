@@ -1,230 +1,957 @@
 [
   {
     "id": "sql_001",
-    "question": "Explain the difference between INNER JOIN, LEFT JOIN, and RIGHT JOIN.",
+    "question": "What is the primary difference between INNER JOIN and LEFT JOIN in SQL?",
     "difficulty": "easy",
     "tags": [
       "sql",
-      "joins",
-      "fundamentals"
+      "joins"
     ]
   },
   {
     "id": "sql_002",
-    "question": "What is database normalization, and what problems does it solve?",
+    "question": "Explain the concept of a UNIQUE constraint in a SQL table, and provide an example use case.",
     "difficulty": "easy",
     "tags": [
       "sql",
-      "normalization"
+      "constraints"
     ]
   },
   {
     "id": "sql_003",
-    "question": "Explain how indexes work in SQL and how they impact read vs write performance.",
-    "difficulty": "medium",
+    "question": "What is the purpose of the AUTO_INCREMENT keyword in SQL, and how is it used?",
+    "difficulty": "easy",
     "tags": [
       "sql",
-      "indexing",
-      "performance"
+      "primary keys"
     ]
   },
   {
     "id": "sql_004",
-    "question": "Write a query approach to find the second-highest salary in an employees table without using LIMIT/OFFSET.",
-    "difficulty": "medium",
+    "question": "Describe the difference between an SQL view and a derived table, highlighting their respective use cases.",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "views"
+    ]
+  },
+  {
+    "id": "sql_005",
+    "question": "Explain the concept of NULL in SQL, including the four-valued logic for comparisons involving NULL values.",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "nulls"
+    ]
+  },
+  {
+    "id": "sql_006",
+    "question": "Define the difference between an index and a unique constraint on a SQL column, and provide an example use case.",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "indexes"
+    ]
+  },
+  {
+    "id": "sql_007",
+    "question": "What is the purpose of the LIMIT clause in SQL, and how is it used to restrict query results?",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "clauses"
+    ]
+  },
+  {
+    "id": "sql_008",
+    "question": "Explain the difference between a SQL subquery and a correlated subquery, including their respective use cases.",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "subqueries"
+    ]
+  },
+  {
+    "id": "sql_009",
+    "question": "What is the purpose of a subquery in SQL, and how is it used in conjunction with the IN operator?",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "subqueries",
+      "in operator"
+    ]
+  },
+  {
+    "id": "sql_010",
+    "question": "Describe the difference between an aggregate function and a non-aggregate function in SQL.",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "aggregate functions",
+      "non-aggregate functions"
+    ]
+  },
+  {
+    "id": "sql_011",
+    "question": "What is the purpose of the WHERE clause in a SQL query, and how does it differ from the HAVING clause?",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "queries",
+      "where clause"
+    ]
+  },
+  {
+    "id": "sql_012",
+    "question": "Explain the concept of a stored procedure in SQL, including its benefits and use cases.",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "stored procedures"
+    ]
+  },
+  {
+    "id": "sql_013",
+    "question": "Define the difference between a UNION operator and an INTERSECT operator in SQL.",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "set operators",
+      "union",
+      "intersect"
+    ]
+  },
+  {
+    "id": "sql_014",
+    "question": "Describe the purpose and use cases of the GROUP BY clause in SQL.",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "group by",
+      "aggregation"
+    ]
+  },
+  {
+    "id": "sql_015",
+    "question": "What is the purpose of a cursor in SQL, and how is it used to process query results?",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "cursors",
+      "results"
+    ]
+  },
+  {
+    "id": "sql_016",
+    "question": "Explain the concept of a FOREIGN KEY constraint in SQL, including its benefits and use cases.",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "constraints",
+      "foreign keys"
+    ]
+  },
+  {
+    "id": "sql_017",
+    "question": "What is the purpose of the CASE statement in SQL, and how can it be used to simplify complex conditional logic in queries?",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "conditional logic"
+    ]
+  },
+  {
+    "id": "sql_018",
+    "question": "Explain the concept of data types in SQL, including the differences between integer, character, and date data types, and provide an example of how data type selection can impact query results.",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "data types"
+    ]
+  },
+  {
+    "id": "sql_019",
+    "question": "Describe the difference between a SELF JOIN and a CROSS JOIN in SQL, and provide an example of each use case.",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "joins"
+    ]
+  },
+  {
+    "id": "sql_020",
+    "question": "What is the purpose of the ORDER BY clause in SQL, and how can it be used to sort query results in ascending or descending order?",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "sorting"
+    ]
+  },
+  {
+    "id": "sql_021",
+    "question": "Explain the concept of views in SQL, including their use cases and benefits, and provide an example of how a view can be created and used in a query.",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "views"
+    ]
+  },
+  {
+    "id": "sql_022",
+    "question": "Define the difference between a LIKE operator and a GREATER THAN operator in SQL, and provide an example that demonstrates their use in a query.",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "operators"
+    ]
+  },
+  {
+    "id": "sql_023",
+    "question": "Describe the purpose and use cases of the ROLLUP and CUBE clauses in SQL, and provide an example of how they can be used to generate summarized data.",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "aggregation"
+    ]
+  },
+  {
+    "id": "sql_024",
+    "question": "Explain the concept of Common Table Expressions (CTEs) in SQL, including their use cases and benefits, and provide an example of how a CTE can be used to simplify a complex query.",
+    "difficulty": "easy",
     "tags": [
       "sql",
       "queries"
     ]
   },
   {
-    "id": "sql_005",
-    "question": "Design a database schema for a ride-sharing app handling millions of trips per day. How would you handle sharding?",
-    "difficulty": "hard",
+    "id": "sql_025",
+    "question": "What is the difference between a CHAR and a VARCHAR data type in SQL, and when would you use each?",
+    "difficulty": "easy",
     "tags": [
-      "sql",
-      "system-design",
-      "scalability"
+      "data_types",
+      "sql_basic"
     ]
   },
   {
-    "id": "sql_006",
-    "question": "A database contains a table with columns for orders, products, and customers. Write a query to retrieve all customers who have made at least one order with a product that costs more than $100. However, the query should also exclude customers who have made an order with a product that costs less than $50 and is called 'Discount Item'.",
+    "id": "sql_026",
+    "question": "Describe the purpose and use cases of the HAVING clause in SQL, and how it differs from the WHERE clause.",
+    "difficulty": "easy",
+    "tags": [
+      "sql_basic",
+      "aggregate_functions"
+    ]
+  },
+  {
+    "id": "sql_027",
+    "question": "What is the purpose of the IS NULL and IS NOT NULL operators in SQL, and how can they be used to filter query results?",
+    "difficulty": "easy",
+    "tags": [
+      "sql_basic",
+      "conditional_statements"
+    ]
+  },
+  {
+    "id": "sql_028",
+    "question": "Explain the concept of index in SQL, including its benefits and use cases, and provide an example of how an index can improve query performance.",
+    "difficulty": "easy",
+    "tags": [
+      "sql_performance",
+      "indexes"
+    ]
+  },
+  {
+    "id": "sql_029",
+    "question": "Describe the purpose and use cases of the IN operator in SQL, and how it differs from the = operator.",
+    "difficulty": "easy",
+    "tags": [
+      "sql_basic",
+      "conditional_statements"
+    ]
+  },
+  {
+    "id": "sql_030",
+    "question": "What is the difference between a INNER JOIN and an OUTER JOIN in SQL, and provide an example of each use case.",
+    "difficulty": "easy",
+    "tags": [
+      "sql_queries",
+      "joins"
+    ]
+  },
+  {
+    "id": "sql_031",
+    "question": "Explain the concept of data consistency in SQL, including its importance and ways to maintain it, and provide an example of a scenario where data consistency is crucial.",
+    "difficulty": "easy",
+    "tags": [
+      "sql_concepts",
+      "data_consistency"
+    ]
+  },
+  {
+    "id": "sql_032",
+    "question": "Describe the purpose and use cases of the SUBSTRING function in SQL, and provide an example of how it can be used to extract a portion of a string.",
+    "difficulty": "easy",
+    "tags": [
+      "sql_functions",
+      "string_functions"
+    ]
+  },
+  {
+    "id": "sql_033",
+    "question": "Explain the concept of data normalization in SQL, including its benefits and importance, and provide an example of how normalization can improve data integrity.",
+    "difficulty": "easy",
+    "tags": [
+      "sql_concepts",
+      "data_normalization"
+    ]
+  },
+  {
+    "id": "sql_034",
+    "question": "What is the difference between a NOT IN and NOT EXISTS operator in SQL, and when would you use each?",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "operators"
+    ]
+  },
+  {
+    "id": "sql_035",
+    "question": "Explain the concept of auto-incrementing primary keys in SQL, including their benefits and use cases, and provide an example of how they can be used to simplify data insertion",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "keys"
+    ]
+  },
+  {
+    "id": "sql_036",
+    "question": "Describe the purpose and use cases of the GROUPING SETS clause in SQL, and provide an example of how it can be used to generate summarized data at multiple levels",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "clauses"
+    ]
+  },
+  {
+    "id": "sql_037",
+    "question": "What is the difference between a SQL view and a stored procedure, and when would you use each?",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "views",
+      "procedures"
+    ]
+  },
+  {
+    "id": "sql_038",
+    "question": "Explain the concept of data integrity in SQL, including its importance and ways to maintain it, and provide an example of a scenario where data integrity is crucial",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "integrity"
+    ]
+  },
+  {
+    "id": "sql_039",
+    "question": "Describe the purpose and use cases of the DATEDIFF function in SQL, and provide an example of how it can be used to calculate date-based differences",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "functions"
+    ]
+  },
+  {
+    "id": "sql_040",
+    "question": "What is the difference between a FOREIGN KEY constraint and a CHECK constraint in SQL, and when would you use each?",
+    "difficulty": "easy",
+    "tags": [
+      "sql",
+      "constraints"
+    ]
+  },
+  {
+    "id": "sql_041",
+    "question": "A large e-commerce database has a table with 10 million users and their purchase history. You need to query this data to retrieve the top 10 users who have made the most purchases in a specific category. What would be the most efficient query to achieve this, and what indexing strategy would you recommend?",
     "difficulty": "medium",
     "tags": [
+      "sql",
+      "performance",
+      "optimization"
+    ]
+  },
+  {
+    "id": "sql_042",
+    "question": "You are working on a project that requires storing and querying geographical data. What data type and indexing strategy would you use in SQL to efficiently store and query latitude and longitude coordinates, and how would you handle location-based queries?",
+    "difficulty": "medium",
+    "tags": [
+      "sql",
+      "geospatial",
+      "indexing"
+    ]
+  },
+  {
+    "id": "sql_043",
+    "question": "Imagine you have a table with a large number of unique values in a specific column. What approach would you use in SQL to efficiently handle frequent value lookups and aggregations on this column, and how would you maintain performance as data grows?",
+    "difficulty": "medium",
+    "tags": [
+      "sql",
+      "performance",
+      "caching"
+    ]
+  },
+  {
+    "id": "sql_044",
+    "question": "A database has two tables, orders and customers, where each order is associated with a customer. What SQL query would you write to retrieve all orders for customers who have made at least two purchases in a specific product category, and how would you optimize this query for performance?",
+    "difficulty": "medium",
+    "tags": [
+      "sql",
       "joins",
       "subqueries"
     ]
   },
   {
-    "id": "sql_007",
-    "question": "Design a SQL query to retrieve a list of top 5 countries with the highest average income from a table containing data on income, country, and year. However, the query should only consider the data from the year 2020 and exclude any countries with a population of less than 10 million.",
+    "id": "sql_045",
+    "question": "A data warehouse has a fact table with a large number of rows and multiple foreign keys referencing dimension tables. What SQL query would you write to efficiently retrieve the sum of sales for a specific product category, and how would you handle potential performance issues?",
     "difficulty": "medium",
     "tags": [
-      "window functions",
-      "grouping"
-    ]
-  },
-  {
-    "id": "sql_008",
-    "question": "An e-commerce website stores customer information in a database. Write a query to update the 'last_login' date for all customers who have not logged in for the past 6 months. However, the query should only consider customers who have made at least one purchase.",
-    "difficulty": "medium",
-    "tags": [
-      "update query",
-      "date functions"
-    ]
-  },
-  {
-    "id": "sql_009",
-    "question": "A database contains a table with columns for employees, departments, and managers. Write a query to retrieve the names of all employees who are managers, along with their department and the number of employees reporting to them. However, the query should also exclude departments with no reporting employees.",
-    "difficulty": "medium",
-    "tags": [
-      "joins",
-      "grouping"
-    ]
-  },
-  {
-    "id": "sql_010",
-    "question": "A company has a database with information on employees, job positions, and salary ranges. Write a query to retrieve the names of employees who have a salary above the average salary for their job position. However, the query should only consider job positions with at least 5 employees.",
-    "difficulty": "medium",
-    "tags": [
-      "aggregate functions",
-      "grouping"
-    ]
-  },
-  {
-    "id": "sql_011",
-    "question": "A database contains a table with columns for orders, order status, and dates. Write a query to retrieve a list of orders that have been shipped but not yet delivered, along with the date when they were shipped and the date when they were delivered (if known). However, the query should also handle the case where the delivery date is still unknown.",
-    "difficulty": "medium",
-    "tags": [
-      "date functions",
-      "conditional logic"
-    ]
-  },
-  {
-    "id": "sql_012",
-    "question": "A company wants to optimize the performance of a query that retrieves all customers with a specific order status. Write an explanation of how to use SQL tuning tools to improve the query, including any indexes or rewriting queries that may be necessary.",
-    "difficulty": "medium",
-    "tags": [
-      "query optimization",
+      "sql",
+      "data warehousing",
       "performance"
     ]
   },
   {
-    "id": "sql_013",
-    "question": "You have a table 'transactions' with columns 'id', 'amount', 'time', and 'type'. Write a query to calculate the 90th percentile of transaction amounts over a rolling 30-day window. Assume that the time column is of type timestamp and the amount column is of type numeric.",
-    "difficulty": "hard",
+    "id": "sql_046",
+    "question": "Imagine you have a table with a large number of duplicate rows. What approach would you use in SQL to efficiently remove duplicates, handle conflicts, and maintain data consistency?",
+    "difficulty": "medium",
     "tags": [
-      "time-series",
-      "window-functions"
+      "sql",
+      "data cleaning",
+      "optimization"
     ]
   },
   {
-    "id": "sql_014",
-    "question": "Design a SQL schema to store a graph with millions of nodes and edges, where each node has a 'name' and a set of 'labels', and each edge has a 'source' and 'destination' node, along with a 'weight'. What indexing strategy would you use to optimize query performance for shortest path and node connectivity queries?",
-    "difficulty": "hard",
+    "id": "sql_047",
+    "question": "A database has a large amount of temporal data, with a timestamp column on each row. What SQL query would you write to efficiently retrieve all records from a specific date range, and how would you maintain performance for large date ranges?",
+    "difficulty": "medium",
     "tags": [
-      "graph-databases",
+      "sql",
+      "temporal data",
+      "performance"
+    ]
+  },
+  {
+    "id": "sql_048",
+    "question": "A database has two tables, employees and salaries, where each employee has multiple salaries. What SQL query would you write to efficiently retrieve the average salary for each employee, and how would you handle potential performance issues?",
+    "difficulty": "medium",
+    "tags": [
+      "sql",
+      "aggregation",
+      "performance"
+    ]
+  },
+  {
+    "id": "sql_049",
+    "question": "You are designing a database for a social media platform that stores user data, posts, and comments. What indexing strategy would you use to efficiently retrieve posts and comments for a specific user, and how would you balance indexing for both retrieval and insert operations?",
+    "difficulty": "medium",
+    "tags": [
+      "database-design",
       "indexing"
     ]
   },
   {
-    "id": "sql_015",
-    "question": "A table 'users' has columns 'id', 'email', 'join_date', and 'last_login'. Write a query to find the 3 users who have been inactive (i.e., have not logged in) the longest, considering only users who have a last login date before 6 months ago. Also, return the total number of active users.",
-    "difficulty": "hard",
+    "id": "sql_050",
+    "question": "A database has a table with a large number of rows and a column with varying lengths of text data. What approach would you use in SQL to efficiently handle range-based queries on this column, such as retrieving all rows where the text length is between 10 and 50 characters, and how would you maintain performance as data grows?",
+    "difficulty": "medium",
     "tags": [
-      "window-functions",
-      "conditional-statements"
+      "full-text-search",
+      "query-optimization"
     ]
   },
   {
-    "id": "sql_016",
-    "question": "You are given a table 'web_logs' with columns 'ip_address', 'request_path', 'http_method', and 'status_code'. Write a query to count the number of unique IP addresses that have made requests to the same resource more than 5 times within a 1-hour window.",
-    "difficulty": "hard",
+    "id": "sql_051",
+    "question": "Imagine you have a database with a many-to-many relationship between two tables, orders and products. What SQL query would you write to efficiently retrieve all products associated with a specific order, and how would you optimize this query for performance in a large dataset?",
+    "difficulty": "medium",
     "tags": [
-      "time-series",
-      "cassandra-queries"
+      "many-to-many-relationship",
+      "join-optimization"
     ]
   },
   {
-    "id": "sql_017",
-    "question": "Design a database schema to store a social network graph where each node represents a user and each edge represents a friendship. How would you implement a query to find the shortest path between two users who are connected indirectly through a common friend?",
-    "difficulty": "hard",
+    "id": "sql_052",
+    "question": "A database has a table with a column that stores IP addresses and a column that stores corresponding user IDs. What approach would you use in SQL to efficiently join these two columns to retrieve user data based on IP address, and how would you handle performance issues due to large datasets?",
+    "difficulty": "medium",
     "tags": [
-      "graph-databases",
-      "shortest-paths"
+      "join-performance",
+      "data-partitioning"
     ]
   },
   {
-    "id": "sql_018",
-    "question": "A table 'orders' has columns 'id', 'customer_id', 'order_date', and 'total'. Write a query to find the total revenue for each customer over the past year, grouped by customer type (e.g., individual, business), and also return the customer with the highest total revenue.",
-    "difficulty": "hard",
+    "id": "sql_053",
+    "question": "A data warehouse has a star schema with a fact table and multiple dimension tables. What SQL query would you write to efficiently retrieve sales data for a specific product category and time period, and how would you handle potential performance issues due to large date ranges?",
+    "difficulty": "medium",
     "tags": [
-      "grouping",
-      "conditional-statements"
+      "star-schema",
+      "data-warehousing"
     ]
   },
   {
-    "id": "sql_019",
-    "question": "Design a SQL query to retrieve the month with the highest average order value in a table that contains information on orders, products, and customers. However, the query should also exclude months with less than 100 orders.",
-    "difficulty": "easy",
+    "id": "sql_054",
+    "question": "Imagine you have a database with a table that stores large binary data, such as images or videos. What approach would you use in SQL to efficiently store and retrieve this data, and how would you balance storage requirements with retrieval performance?",
+    "difficulty": "medium",
     "tags": [
-      "aggregation",
-      "filtering"
+      "binary-data",
+      "storage-performance"
     ]
   },
   {
-    "id": "sql_020",
-    "question": "A company has a database with information on employees, job positions, and salary ranges. Write a query to retrieve the names of employees who have a job position with a salary range that has a minimum value above the average minimum salary range across all job positions.",
-    "difficulty": "easy",
+    "id": "sql_055",
+    "question": "A database has a table with a column that stores categorical data, such as user roles or product categories. What approach would you use in SQL to efficiently handle aggregations and filtering on this column, and how would you maintain performance as data grows?",
+    "difficulty": "medium",
     "tags": [
-      "window functions",
-      "aggregation"
+      "categorical-data",
+      "query-optimization"
     ]
   },
   {
-    "id": "sql_021",
-    "question": "Design a database schema for an online marketplace that handles millions of products, sellers, and customers. How would you handle denormalization and caching to improve read performance?",
-    "difficulty": "easy",
+    "id": "sql_056",
+    "question": "You are designing a database for a real-time analytics system that requires fast and efficient querying of large datasets. What indexing strategy would you use to balance indexing for both query performance and data insertion operations, and how would you handle potential performance issues due to large datasets?",
+    "difficulty": "medium",
     "tags": [
-      "database design",
-      "performance optimization"
+      "real-time-analytics",
+      "indexing"
     ]
   },
   {
-    "id": "sql_022",
-    "question": "A database contains a table with columns for users, activities, and timestamps. Write a query to retrieve the top 5 most active users for each day of the week, but the activity count should be based on the number of minutes spent on the platform, not the number of activities.",
-    "difficulty": "easy",
+    "id": "sql_057",
+    "question": "You are designing a table to store information about vehicles. The table has columns for vehicle ID, make, model, year, and mileage. What indexing strategy would you use to efficiently retrieve vehicles within a specific mileage range, and how would you balance indexing for both retrieval and update operations?",
+    "difficulty": "medium",
     "tags": [
-      "window functions",
-      "aggregation"
+      "indexing",
+      "range queries"
     ]
   },
   {
-    "id": "sql_023",
-    "question": "An e-commerce website stores customer information in a database. Write a query to retrieve the names of customers who have made purchases in all 12 months of the year 2020.",
-    "difficulty": "easy",
+    "id": "sql_058",
+    "question": "A database has two tables, orders and customers, where each customer can have multiple orders. What SQL query would you write to efficiently retrieve the total amount spent by each customer, and how would you handle potential performance issues due to large datasets?",
+    "difficulty": "medium",
+    "tags": [
+      "subqueries",
+      "aggregations"
+    ]
+  },
+  {
+    "id": "sql_059",
+    "question": "You have a table that stores product information, including product name, description, price, and a foreign key referencing a category table. What approach would you use in SQL to efficiently handle filtering and sorting on the product description column, and how would you maintain performance as data grows?",
+    "difficulty": "medium",
+    "tags": [
+      "text search",
+      "sorting"
+    ]
+  },
+  {
+    "id": "sql_060",
+    "question": "A database has a table with a date column and a column that stores event type (e.g., purchase, return). What SQL query would you write to efficiently retrieve all events of a specific type for a given date range, and how would you handle potential performance issues due to large datasets?",
+    "difficulty": "medium",
+    "tags": [
+      "date range queries",
+      "event processing"
+    ]
+  },
+  {
+    "id": "sql_061",
+    "question": "You are designing a table to store sensor readings from various locations. The table has columns for reading ID, location, time, and value. What indexing strategy would you use to efficiently retrieve readings for a specific location and time range, and how would you balance indexing for both retrieval and insertion operations?",
+    "difficulty": "medium",
+    "tags": [
+      "indexing",
+      "temporal queries"
+    ]
+  },
+  {
+    "id": "sql_062",
+    "question": "A database has a table with a column that stores user permissions (e.g., read, write, admin). What approach would you use in SQL to efficiently handle filtering and aggregations on this column, and how would you maintain performance as data grows?",
+    "difficulty": "medium",
+    "tags": [
+      "categorical data",
+      "aggregations"
+    ]
+  },
+  {
+    "id": "sql_063",
+    "question": "You have a table that stores employee information, including employee ID, name, department, and manager ID. What SQL query would you write to efficiently retrieve all employees in a given department, along with their managers, and how would you handle potential performance issues due to large datasets?",
+    "difficulty": "medium",
+    "tags": [
+      "joins",
+      "hierarchy queries"
+    ]
+  },
+  {
+    "id": "sql_064",
+    "question": "A database has a table with a column that stores geographical coordinates (latitude and longitude). What SQL query would you write to efficiently retrieve all rows within a specific geographic bounding box, and how would you handle potential performance issues due to large datasets?",
+    "difficulty": "medium",
+    "tags": [
+      "spatial queries",
+      "geolocation"
+    ]
+  },
+  {
+    "id": "sql_065",
+    "question": "You are designing a database for a web application that stores user data, including their username, email, and password. What approach would you use in SQL to efficiently handle password hashing and verification, and how would you balance ease of verification with resistance to common password cracking techniques?",
+    "difficulty": "medium",
+    "tags": [
+      "password management",
+      "database security"
+    ]
+  },
+  {
+    "id": "sql_066",
+    "question": "A database has a table with a column that stores URLs of external resources. What approach would you use in SQL to efficiently handle retrieval of the latest external resource for each category, and how would you handle potential performance issues due to large datasets?",
+    "difficulty": "medium",
+    "tags": [
+      "sql optimization",
+      "data retrieval"
+    ]
+  },
+  {
+    "id": "sql_067",
+    "question": "You are designing a table to store information about products with variations, such as different colors or sizes. What indexing strategy would you use to efficiently retrieve products and their variations, and how would you balance indexing for both retrieval and update operations?",
+    "difficulty": "medium",
+    "tags": [
+      "indexing",
+      "schema design"
+    ]
+  },
+  {
+    "id": "sql_068",
+    "question": "A database has a table with a column that stores binary data, such as images, and another column that stores metadata about the images, such as captions and tags. What approach would you use in SQL to efficiently retrieve images and their associated metadata, and how would you handle potential performance issues due to large datasets?",
+    "difficulty": "medium",
+    "tags": [
+      "sql optimization",
+      "binary data"
+    ]
+  },
+  {
+    "id": "sql_069",
+    "question": "You are designing a database for a system that requires data caching in order to improve performance. What approach would you use in SQL to implement a cache layer, and how would you handle potential issues with cache invalidation and consistency?",
+    "difficulty": "medium",
+    "tags": [
+      "data caching",
+      "database performance"
+    ]
+  },
+  {
+    "id": "sql_070",
+    "question": "A database has a table with a column that stores JSON data, and another table that stores metadata about the JSON data, such as timestamps and flags. What approach would you use in SQL to efficiently retrieve JSON data and its associated metadata, and how would you handle potential performance issues due to large datasets?",
+    "difficulty": "medium",
+    "tags": [
+      "sql optimization",
+      "json data"
+    ]
+  },
+  {
+    "id": "sql_071",
+    "question": "You are designing a table to store information about customers with hierarchical relationships, such as parent-child relationships between customers. What indexing strategy would you use to efficiently retrieve customer hierarchies, and how would you balance indexing for both retrieval and update operations?",
+    "difficulty": "medium",
+    "tags": [
+      "indexing",
+      "schema design"
+    ]
+  },
+  {
+    "id": "sql_072",
+    "question": "A database has a table with a column that stores Markdown text, and another column that stores metadata about the text, such as author information and timestamps. What approach would you use in SQL to efficiently retrieve Markdown text and its associated metadata, and how would you handle potential performance issues due to large datasets?",
+    "difficulty": "medium",
+    "tags": [
+      "sql optimization",
+      "text data"
+    ]
+  },
+  {
+    "id": "sql_073",
+    "question": "You are designing a database to store information about books with multiple authors. The table has columns for book ID, title, publication date, and author IDs. What indexing strategy would you use to efficiently retrieve all books by a specific author, and how would you balance indexing for both retrieval and insertion operations when new authors are added?",
+    "difficulty": "medium",
+    "tags": [
+      "indexing, many-to-many relationships"
+    ]
+  },
+  {
+    "id": "sql_074",
+    "question": "A database has a table with a column that stores strings using a non-English character set. What approach would you use in SQL to efficiently query and filter data in this table, and how would you handle potential performance issues due to character encoding and collation?",
+    "difficulty": "medium",
+    "tags": [
+      "character encoding, text search"
+    ]
+  },
+  {
+    "id": "sql_075",
+    "question": "You are designing a database for a system that requires data archiving, where older data is stored in a secondary table for reference purposes. What approach would you use in SQL to implement data archiving, and how would you handle potential issues with data consistency and retrieval performance?",
+    "difficulty": "medium",
+    "tags": [
+      "data archiving, database design"
+    ]
+  },
+  {
+    "id": "sql_076",
+    "question": "A database has a table with a column that stores numerical values with possible null values. What approach would you use in SQL to efficiently handle aggregation operations, such as averaging and summing, when null values need to be excluded, and how would you handle potential performance issues due to null value filtering?",
+    "difficulty": "medium",
+    "tags": [
+      "conditional aggregation, null handling"
+    ]
+  },
+  {
+    "id": "sql_077",
+    "question": "You are designing a table to store information about products with a complex hierarchical structure, such as product categories and subcategories. What indexing strategy would you use to efficiently retrieve products and their hierarchical relationships, and how would you balance indexing for both retrieval and update operations?",
+    "difficulty": "medium",
+    "tags": [
+      "hierarchical data, indexing"
+    ]
+  },
+  {
+    "id": "sql_078",
+    "question": "A database has a table with a column that stores IP addresses. What approach would you use in SQL to efficiently query and filter data based on IP address ranges, and how would you handle potential performance issues due to large datasets and complex IP address logic?",
+    "difficulty": "medium",
+    "tags": [
+      "ip address operations, network queries"
+    ]
+  },
+  {
+    "id": "sql_079",
+    "question": "You are designing a database for a system that requires data versioning, where each change to the data is recorded and tracked. What approach would you use in SQL to implement data versioning, and how would you handle potential issues with data consistency and retrieval performance?",
+    "difficulty": "medium",
+    "tags": [
+      "data versioning, auditing"
+    ]
+  },
+  {
+    "id": "sql_080",
+    "question": "You have a database table that stores information about employees, including their department and job title. The department column has a very large number of unique values. What approach would you use in SQL to efficiently filter employees by department, and how would you handle potential performance issues due to a large number of unique values?",
+    "difficulty": "medium",
     "tags": [
       "filtering",
-      "aggregation"
+      "indexing"
     ]
   },
   {
-    "id": "sql_024",
-    "question": "A company has a database with information on employees, job titles, and work history. Write a query to retrieve the most common job title for employees who have worked in the same department for more than 5 years.",
-    "difficulty": "easy",
+    "id": "sql_081",
+    "question": "Design a database schema for an e-commerce platform that handles multiple warehouses, each with its own inventory management system. Consider the relationships between orders, products, and warehouses, and ensure optimal querying performance.",
+    "difficulty": "hard",
     "tags": [
-      "grouping",
-      "filtering"
+      "database design",
+      "relational modeling"
     ]
   },
   {
-    "id": "sql_025",
-    "question": "Design a SQL query to retrieve the top 3 countries with the highest total sales from a table containing data on sales, products, and countries. However, the query should only consider sales data from the year 2021 and should exclude countries with a total sales amount below $10 million.",
-    "difficulty": "easy",
+    "id": "sql_082",
+    "question": "You have a database containing a large table of customer orders, with columns for order ID, customer ID, order date, and total cost. Suppose you add an index on the total cost column. How would this affect query performance for queries like: SELECT * FROM orders WHERE total_cost > 100",
+    "difficulty": "hard",
+    "tags": [
+      "indexing",
+      "query optimization"
+    ]
+  },
+  {
+    "id": "sql_083",
+    "question": "Suppose you are working with a database that stores employee information, including their department ID, job title, and hire date. Consider the following queries: SELECT * FROM employees WHERE department_id = 5; SELECT * FROM employees WHERE hire_date > '2020-01-01'; How would you create a single efficient query that can handle both conditions?",
+    "difficulty": "hard",
+    "tags": [
+      "sql joins",
+      "subqueries"
+    ]
+  },
+  {
+    "id": "sql_084",
+    "question": "You have a large table of log entries, with columns for timestamp, user ID, and event type. Suppose you need to find the 10 most frequent events for a given user, along with the frequency of each event. How would you write an efficient query to achieve this, assuming no indexes are present on the table?",
+    "difficulty": "hard",
+    "tags": [
+      "window functions",
+      "grouping"
+    ]
+  },
+  {
+    "id": "sql_085",
+    "question": "Design a SQL query to find all the employees who have at least one child employee in the company. The employees table has columns for employee ID, name, and manager ID. How would you write this query, assuming the employees table has a large number of rows?",
+    "difficulty": "hard",
+    "tags": [
+      "self-joins",
+      "query optimization"
+    ]
+  },
+  {
+    "id": "sql_086",
+    "question": "Suppose you need to optimize a query like: SELECT * FROM orders WHERE customer_id IN (SELECT id FROM customers WHERE country = 'USA'); However, the customers table has a large number of rows and the query takes a long time to execute. How would you rewrite this query to improve its performance?",
+    "difficulty": "hard",
+    "tags": [
+      "subqueries",
+      "indexing"
+    ]
+  },
+  {
+    "id": "sql_087",
+    "question": "Consider a database schema with two tables: orders and order_items. The orders table has columns for order ID, customer ID, and total cost. The order_items table has columns for order ID, product ID, and quantity. Suppose you need to find the total cost of all orders that include at least one product with a price greater than $100. How would you write an efficient query to achieve this?",
+    "difficulty": "hard",
+    "tags": [
+      "sql joins",
+      "subqueries"
+    ]
+  },
+  {
+    "id": "sql_088",
+    "question": "You have a database containing a table of products with columns for product ID, name, and price. Suppose you need to find the 5 most expensive products in the database, and return the result in descending order by price. However, the table has a large number of rows and the query takes a long time to execute. How would you rewrite this query to improve its performance?",
+    "difficulty": "hard",
+    "tags": [
+      "window functions",
+      "ordering"
+    ]
+  },
+  {
+    "id": "sql_089",
+    "question": "Design a database schema for a social media platform that handles user relationships, posts, and comments. Consider the relationships between users, posts, and comments, and ensure optimal querying performance for features like: 'Who are my friends?', 'What are the most commented posts?', etc.",
+    "difficulty": "hard",
+    "tags": [
+      "database design",
+      "relational modeling"
+    ]
+  },
+  {
+    "id": "sql_090",
+    "question": "Suppose you have two tables: employees and departments. The employees table has columns for employee ID, name, and department ID. The departments table has columns for department ID, name, and manager ID. How would you write an efficient query to find all employees who work under a manager with a salary greater than the average salary in their department?",
+    "difficulty": "hard",
+    "tags": [
+      "sql",
+      "subquery"
+    ]
+  },
+  {
+    "id": "sql_091",
+    "question": "Suppose you have a table called orders with columns for order ID, customer ID, order date, and total cost. You also have a table called customers with columns for customer ID, name, and average order value. How would you write an efficient query to find the top 5 customers by their average order value, and return the result in descending order by average order value?",
+    "difficulty": "hard",
+    "tags": [
+      "sql",
+      "window functions"
+    ]
+  },
+  {
+    "id": "sql_092",
+    "question": "You have two tables: employees and projects. The employees table has columns for employee ID, name, and project ID. The projects table has columns for project ID, name, and start date. Suppose you need to find all employees who have worked on a project that started in 2022, and return the result in descending order by the number of projects each employee has worked on. However, the tables have a large number of rows and the query takes a long time to execute. How would you rewrite this query to improve its performance?",
+    "difficulty": "hard",
+    "tags": [
+      "sql",
+      "group by"
+    ]
+  },
+  {
+    "id": "sql_093",
+    "question": "Consider a database schema with a table called orders with columns for order ID, customer ID, order date, and total cost. You also have a table called customers with columns for customer ID, name, and credit limit. Suppose you need to find all customers who have exceeded their credit limit based on their order history, and return the result in descending order by the amount of credit limit exceeded. However, the tables have a large number of rows and the query takes a long time to execute. How would you rewrite this query to improve its performance?",
+    "difficulty": "hard",
+    "tags": [
+      "sql",
+      "subquery"
+    ]
+  },
+  {
+    "id": "sql_094",
+    "question": "Suppose you have a table called students with columns for student ID, name, and grade. You also have a table called grades with columns for grade, name, and year. Suppose you need to find the average grade for each year, and return the result in descending order by the average grade. However, the tables have a large number of rows and the query takes a long time to execute. How would you rewrite this query to improve its performance?",
+    "difficulty": "hard",
+    "tags": [
+      "sql",
+      "group by"
+    ]
+  },
+  {
+    "id": "sql_095",
+    "question": "You have two tables: employees and roles. The employees table has columns for employee ID, name, and role ID. The roles table has columns for role ID, name, and salary. Suppose you need to find all employees who earn more than the average salary for their role, and return the result in descending order by salary. However, the tables have a large number of rows and the query takes a long time to execute. How would you rewrite this query to improve its performance?",
+    "difficulty": "hard",
+    "tags": [
+      "sql",
+      "subquery"
+    ]
+  },
+  {
+    "id": "sql_096",
+    "question": "A company has a table of employees with columns for employee ID, name, department ID, and hire date. Another table contains a list of training courses with columns for course ID, name, and duration. Suppose you need to find all employees who have not completed all the courses in their department within the last 6 months. How would you write an efficient query to achieve this?",
+    "difficulty": "hard",
+    "tags": [
+      "join",
+      "date arithmetic"
+    ]
+  },
+  {
+    "id": "sql_097",
+    "question": "You have a database containing a table of customers with columns for customer ID, name, and address. Another table contains a list of orders with columns for order ID, customer ID, order date, and total cost. Suppose you need to find the total cost of all orders for each street in a given city. However, the tables have a large number of rows and the query takes a long time to execute. How would you rewrite this query to improve its performance?",
+    "difficulty": "hard",
+    "tags": [
+      "groupby",
+      "join"
+    ]
+  },
+  {
+    "id": "sql_098",
+    "question": "A university has a table of courses with columns for course ID, name, and credits. Another table contains a list of enrollments with columns for enrollment ID, course ID, student ID, and grade. Suppose you need to find the average grade for each student, but only consider courses with more than 3 credits. How would you write an efficient query to achieve this?",
+    "difficulty": "hard",
+    "tags": [
+      "subquery",
+      "conditional aggregate"
+    ]
+  },
+  {
+    "id": "sql_099",
+    "question": "You have a database containing a table of products with columns for product ID, name, price, and category. Another table contains a list of orders with columns for order ID, product ID, and quantity. Suppose you need to find the total revenue for each product category, but only include products with a price greater than the average price in that category. How would you write an efficient query to achieve this?",
+    "difficulty": "hard",
+    "tags": [
+      "groupby",
+      "conditional aggregate"
+    ]
+  },
+  {
+    "id": "sql_100",
+    "question": "A company has a table of employees with columns for employee ID, name, department ID, and salary. Another table contains a list of managers with columns for manager ID, name, and department ID. Suppose you need to find the average salary for each department, but only include departments with a manager who has been with the company for more than 5 years. How would you write an efficient query to achieve this?",
+    "difficulty": "hard",
+    "tags": [
+      "join",
+      "date arithmetic"
+    ]
+  },
+  {
+    "id": "sql_101",
+    "question": "You have a database containing a table of products with columns for product ID, name, price, and category. Another table contains a list of orders with columns for order ID, product ID, and quantity. Suppose you need to find the top 3 best-selling products in each category, but only include categories with more than 5 products. How would you write an efficient query to achieve this?",
+    "difficulty": "hard",
+    "tags": [
+      "groupby",
+      "rank function"
+    ]
+  },
+  {
+    "id": "sql_102",
+    "question": "You have a table of orders with columns for order ID, customer ID, order date, and total cost. Another table contains a list of customers with columns for customer ID, name, and billing address. Suppose you need to find the total cost of all orders for each state in a given country, but only consider orders made through online payment methods. How would you write an efficient query to achieve this?",
+    "difficulty": "hard",
+    "tags": [
+      "subquery",
+      "joins"
+    ]
+  },
+  {
+    "id": "sql_103",
+    "question": "A company has a table of employees with columns for employee ID, name, department ID, and salary. Another table contains a list of departments with columns for department ID, name, and budget. Suppose you need to find the departments that have a total salary greater than 75% of their budget, but only consider departments with more than 5 employees. How would you write an efficient query to achieve this?",
+    "difficulty": "hard",
     "tags": [
       "aggregation",
-      "filtering"
+      "window functions"
+    ]
+  },
+  {
+    "id": "sql_104",
+    "question": "You have a table of products with columns for product ID, name, price, and category. Another table contains a list of orders with columns for order ID, product ID, quantity, and order date. Suppose you need to find the products that have been out of stock for more than 6 months, but only consider products in the 'Electronics' category. How would you write an efficient query to achieve this?",
+    "difficulty": "hard",
+    "tags": [
+      "date calculations",
+      "conditional statements"
+    ]
+  },
+  {
+    "id": "sql_105",
+    "question": "You have a table of employees with columns for employee ID, name, department ID, and hire date. Another table contains a list of managers with columns for manager ID, name, and department ID. Suppose you need to find the employees who have been working for more than 5 years in a department with a manager who has been with the company for more than 10 years. How would you write an efficient query to achieve this?",
+    "difficulty": "hard",
+    "tags": [
+      "date calculations",
+      "joins"
     ]
   }
 ]
