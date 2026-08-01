@@ -21,11 +21,22 @@ class Settings(BaseSettings):
     # Voice
     ELEVENLABS_API_KEY: str = ""
     WHISPER_MODEL_SIZE: str = "small"  # base | small | medium
+    # False on Render: the local model needs ~500 MB, which a 512 MB instance
+    # cannot hold. When False, partial captions are skipped and final
+    # transcription has no local fallback - Groq or nothing.
+    ALLOW_LOCAL_WHISPER: bool = True
+    
 
 
     OPENAI_API_KEY: str = ""
     # OpenAI
     
+    # Shared secret for mentor-only routes (dashboard + analytics).
+    MENTOR_KEY: str = ""
+
+    # Comma-separated. Kept as a plain string because pydantic-settings would
+    # try to JSON-parse a list[str] field.
+    FRONTEND_ORIGINS: str = "http://localhost:5173"
 
     class Config:
         env_file = ".env"

@@ -84,6 +84,7 @@ def register_candidate(
         candidate.experience_level = experience_level
         candidate.resume_path = str(save_path)
         candidate.resume_skills = parsed["skills"]
+        candidate.resume_text = parsed["text"]
     else:
         candidate = Candidate(
             full_name=full_name,
@@ -92,6 +93,7 @@ def register_candidate(
             experience_level=experience_level,
             resume_path=str(save_path),
             resume_skills=parsed["skills"],
+            resume_text=parsed["text"],
         )
         db.add(candidate)
 
