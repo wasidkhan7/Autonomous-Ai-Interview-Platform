@@ -18,7 +18,6 @@ def _get_groq_client():
     return _groq_client
 
 
-
 def get_whisper_model():
     """
     Lazily loaded once per process — loading model weights from disk is
@@ -51,13 +50,11 @@ def _transcribe_bytes(audio_bytes: bytes, beam_size: int = 2) -> str:
 
 def transcribe_partial(audio_buffer: bytes) -> str:
     """
-    Called repeatedly (every 2-3 seconds) on the growing audio buffer for
-    an in-progress turn. Powers the 'live captions' the candidate sees
-    while still speaking. beam_size=1 (greedy decoding) trades some
-    accuracy for speed - acceptable here since this is never scored,
-    just a rough live preview.
+    Live captions only. Stays on the local model deliberately: at ~1 request
+    every 5 seconds per candidate, routing these to Groq would blow its
+    20 requests/minute limit with just two concurrent interviews.
     """
-    if not audio_buffer:
+    if not audio_buffer or not settings.ALLOW_LOCAL_WHISPER:
         return ""
     return _transcribe_bytes(audio_buffer, beam_size=3)
 
@@ -65,10 +62,8 @@ def transcribe_partial(audio_buffer: bytes) -> str:
 def transcribe_final(audio_buffer: bytes) -> str:
     """
     Sends the complete answer to Groq's hosted Whisper. This is what makes
-    concurrent interviews viable - a local model serialises every request behind
-    the last one, so ten candidates finishing answers at once means the tenth
-    waits for the other nine. Falls back to the local model if Groq fails, so a
-    rate limit or outage degrades quality rather than breaking the interview.
+    concurrent interviews viable - a local model serialises every request, so
+    ten candidates finishing at once means the tenth waits for the other nine.
     """
     if not audio_buffer:
         return ""
@@ -85,6 +80,11 @@ def transcribe_final(audio_buffer: bytes) -> str:
         if text.strip():
             return text.strip()
     except Exception as e:
-        print(f"[stt] Groq transcription failed, falling back to local: {e}")
+        print(f"[stt] Groq transcription failed: {e}")
 
-    return _transcribe_bytes(audio_buffer, beam_size=3)
+    # Only fall back where there's memory for it. On a small instance, loading
+    # the local model would OOM-kill the process - worse than returning empty.
+    if settings.ALLOW_LOCAL_WHISPER:
+        return _transcribe_bytes(audio_buffer, beam_size=3)
+
+    return ""

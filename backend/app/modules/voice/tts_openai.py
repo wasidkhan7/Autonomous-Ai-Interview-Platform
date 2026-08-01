@@ -1,4 +1,6 @@
-from pathlib import Path
+import io
+
+from app.db.models import QuestionAudio
 from openai import OpenAI
 from app.config import get_settings
 
@@ -9,24 +11,55 @@ client = OpenAI(api_key=settings.OPENAI_API_KEY)
 # neutral, clear default. Others: echo, fable, onyx, nova, shimmer, etc.
 DEFAULT_VOICE = "alloy"
 
-AUDIO_OUTPUT_DIR = Path("uploads/audio/tts")
-AUDIO_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
-
-def synthesize_speech(text: str, interview_id: int, turn_number: int) -> str:
+def synthesize_speech(text: str) -> bytes:
     """
-    Converts agent text into speech using OpenAI's gpt-4o-mini-tts model,
-    saves it to disk, and returns the file path. Same interface/return
-    shape as the old ElevenLabs version, so no other file needs to change
-    beyond the import line.
+    Generates speech and returns the raw mp3 bytes. Deliberately does NOT touch
+    the database - that keeps it safe to run on a worker thread via
+    asyncio.to_thread, since SQLAlchemy sessions aren't thread-safe.
     """
-    file_path = AUDIO_OUTPUT_DIR / f"interview_{interview_id}_turn_{turn_number}.mp3"
+    buffer = io.BytesIO()
 
     with client.audio.speech.with_streaming_response.create(
         model="gpt-4o-mini-tts",
         voice=DEFAULT_VOICE,
         input=text,
     ) as response:
-        response.stream_to_file(file_path)
+        for chunk in response.iter_bytes():
+            buffer.write(chunk)
 
-    return str(file_path)
+    return buffer.getvalue()
+
+
+def store_question_audio(db, interview_id: int, turn_number: int, audio_bytes: bytes) -> None:
+    """Saves (or replaces) the audio for one question turn."""
+    existing = (
+        db.query(QuestionAudio)
+        .filter(
+            QuestionAudio.interview_id == interview_id,
+            QuestionAudio.turn_number == turn_number,
+        )
+        .first()
+    )
+
+    if existing:
+        existing.audio_bytes = audio_bytes
+    else:
+        db.add(QuestionAudio(
+            interview_id=interview_id,
+            turn_number=turn_number,
+            audio_bytes=audio_bytes,
+        ))
+
+    db.commit()
+
+
+def get_question_audio(db, interview_id: int, turn_number: int) -> bytes | None:
+    row = (
+        db.query(QuestionAudio)
+        .filter(
+            QuestionAudio.interview_id == interview_id,
+            QuestionAudio.turn_number == turn_number,
+        )
+        .first()
+    )
+    return row.audio_bytes if row else None

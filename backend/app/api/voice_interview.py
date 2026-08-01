@@ -3,19 +3,24 @@ import asyncio
 from datetime import datetime, timezone
 from pathlib import Path
 
-from fastapi import APIRouter, WebSocket, WebSocketDisconnect
-from fastapi.responses import FileResponse
+from fastapi import APIRouter, WebSocket, WebSocketDisconnect, Depends, Response, HTTPException
 from starlette.websockets import WebSocketState
 
 from app.db.session import SessionLocal
 from app.db.models import Interview, InterviewResponse
 from app.modules.voice.audio_buffer import audio_buffer_manager
 from app.modules.voice.stt_whisper import transcribe_final, transcribe_partial
-from app.modules.voice.tts_openai import synthesize_speech
+from app.modules.voice.tts_openai import synthesize_speech, store_question_audio, get_question_audio
 from app.modules.agent.memory import get_session_state, save_session_state
 from app.modules.agent.interview_graph import process_answer_turn
 from app.modules.evaluation import run_full_evaluation_threadsafe
 from app.modules.question_bank.usage_tracker import increment_usage
+from app.db.session import get_db
+from sqlalchemy.orm import Session
+from app.config import get_settings
+
+settings = get_settings()
+
 
 router = APIRouter(prefix="/voice", tags=["voice"])
 
@@ -93,7 +98,10 @@ async def voice_answer_stream(websocket: WebSocket, interview_id: int):
                         interview_id, message["bytes"]
                     )
 
-                    if chunk_count % 5 == 0:
+                    if (
+                        settings.ALLOW_LOCAL_WHISPER
+                        and chunk_count % 5 == 0
+                    ):
                         try:
                             partial = await asyncio.to_thread(transcribe_partial, buffer_so_far)
                             if partial.strip():
@@ -184,12 +192,10 @@ async def voice_answer_stream(websocket: WebSocket, interview_id: int):
                 next_question_text = new_state["next_output"]
                 increment_usage(db, new_state["current_question_id"])
 
-                audio_path = await asyncio.to_thread(
-                    synthesize_speech,
-                    next_question_text,
-                    interview_id,
-                    new_state["question_count"],
-                )
+                # Generate off-thread (network call), then store on this thread -
+                # the DB session must not cross threads.
+                audio_bytes = await asyncio.to_thread(synthesize_speech, next_question_text)
+                store_question_audio(db, interview_id, new_state["question_count"], audio_bytes) 
 
                 await safe_send(websocket, {
                     "type": "next_question",
@@ -197,7 +203,7 @@ async def voice_answer_stream(websocket: WebSocket, interview_id: int):
                     "difficulty": new_state["difficulty"],
                     "question_count": new_state["question_count"],
                     "total_questions": new_state["max_questions"],
-                    "audio_url": f"/voice/audio/{Path(audio_path).name}",
+                    "audio_url": f"/voice/audio/{interview_id}/{new_state['question_count']}",
                     "status": new_state["status"],
                 })
 
@@ -235,9 +241,14 @@ async def voice_answer_stream(websocket: WebSocket, interview_id: int):
                 pass
 
 
-@router.get("/audio/{filename}")
-def get_audio_file(filename: str):
-    file_path = Path("uploads/audio/tts") / filename
-    if not file_path.exists():
-        return {"error": "Audio file not found."}
-    return FileResponse(file_path, media_type="audio/mpeg")
+@router.get("/audio/{interview_id}/{turn_number}")
+def get_audio_file(interview_id: int, turn_number: int, db: Session = Depends(get_db)):
+    audio = get_question_audio(db, interview_id, turn_number)
+    if audio is None:
+        raise HTTPException(status_code=404, detail="Audio not found.")
+    # Cached aggressively - the audio for a given turn never changes.
+    return Response(
+        content=audio,
+        media_type="audio/mpeg",
+        headers={"Cache-Control": "public, max-age=86400"},
+    )
