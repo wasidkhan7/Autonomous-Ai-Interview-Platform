@@ -69,4 +69,5 @@ def parse_resume(file_path: str) -> dict:
     return {
         "raw_text_length": len(text),
         "skills": skills,
+        "text": text,
     }

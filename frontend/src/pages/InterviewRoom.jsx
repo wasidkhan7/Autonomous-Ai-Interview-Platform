@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
-import apiClient from "../api/client";
+import apiClient, { API_BASE_URL, WS_BASE_URL } from "../api/client";
 
 const LABEL = "font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-[#5A6478]";
 
@@ -90,7 +90,7 @@ function InterviewRoom() {
       // a recent user gesture, so fall back to the manual button.
       const lastAgent = [...restored].reverse().find((m) => m.role === "agent");
       if (lastAgent?.audioUrl && audioPlayerRef.current) {
-        audioPlayerRef.current.src = `http://localhost:8000${lastAgent.audioUrl}`;
+        audioPlayerRef.current.src = `${API_BASE_URL}${lastAgent.audioUrl}`;
         audioPlayerRef.current.play().catch(() => setNeedsManualPlay(true));
       } else {
         setNeedsManualPlay(true);
@@ -102,7 +102,7 @@ function InterviewRoom() {
 
   function playAudio(audioUrl) {
     if (!audioUrl || !audioPlayerRef.current) return;
-    audioPlayerRef.current.src = `http://localhost:8000${audioUrl}`;
+    audioPlayerRef.current.src = `${API_BASE_URL}${audioUrl}`;
     audioPlayerRef.current.play().catch(() => {});
   }
 
@@ -133,7 +133,7 @@ function InterviewRoom() {
 
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      const ws = new WebSocket(`ws://localhost:8000/voice/interviews/${interviewId}/answer-stream`);
+      const ws = new WebSocket(`${WS_BASE_URL}/voice/interviews/${interviewId}/answer-stream`);
       wsRef.current = ws;
 
       ws.onopen = () => {
@@ -606,4 +606,3 @@ function Section({ title, body }) {
 }
 
 export default InterviewRoom;
-

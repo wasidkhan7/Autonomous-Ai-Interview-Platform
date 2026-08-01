@@ -5,6 +5,12 @@ from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
+    # The email is only "claimed" once the candidate has answered something.
+    # Start an interview for the first candidate and record one answer, so the
+    # duplicate check below has a reason to fire.
+#from app.db.session import SessionLocal
+from app.db.models import Candidate, Interview, InterviewResponse
+
 from app.main import app
 from app.db.session import Base, get_db
 from app.modules.resume_parser import extract_skills, parse_resume
@@ -107,7 +113,7 @@ def test_register_candidate_duplicate_email_rejected(tmp_path):
 
     # First registration should succeed
     with open(resume_path, "rb") as f:
-        client.post(
+        response = client.post(
             "/candidates/register",
             data={
                 "full_name": "First User",
@@ -115,10 +121,52 @@ def test_register_candidate_duplicate_email_rejected(tmp_path):
                 "technology": "MERN",
                 "experience_level": "mid",
             },
-            files={"resume": ("resume.docx", f, "application/vnd.openxmlformats-officedocument.wordprocessingml.document")},
+            files={
+                "resume": (
+                    "resume.docx",
+                    f,
+                    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                )
+            },
         )
 
-    # Second registration with same email should be rejected
+    assert response.status_code == 200
+
+    # IMPORTANT: Use the TEST database, not the real one.
+    db = TestSessionLocal()
+
+    try:
+        cand = (
+            db.query(Candidate)
+            .filter(Candidate.email == "duplicate@example.com")
+            .first()
+        )
+
+        assert cand is not None
+
+        interview = Interview(
+            candidate_id=cand.id,
+            status="in_progress",
+            mode="voice",
+        )
+
+        db.add(interview)
+        db.commit()
+        db.refresh(interview)
+
+        response_record = InterviewResponse(
+            interview_id=interview.id,
+            question_text="Q1",
+            answer_text="a real answer",
+        )
+
+        db.add(response_record)
+        db.commit()
+
+    finally:
+        db.close()
+
+    # Now the duplicate registration should be rejected
     with open(resume_path, "rb") as f:
         response = client.post(
             "/candidates/register",
@@ -128,11 +176,36 @@ def test_register_candidate_duplicate_email_rejected(tmp_path):
                 "technology": "MERN",
                 "experience_level": "senior",
             },
-            files={"resume": ("resume.docx", f, "application/vnd.openxmlformats-officedocument.wordprocessingml.document")},
+            files={
+                "resume": (
+                    "resume.docx",
+                    f,
+                    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                )
+            },
         )
 
     assert response.status_code == 400
     assert "already exists" in response.json()["detail"]
+    
+def test_register_candidate_same_email_allowed_before_answering(tmp_path):
+    """A crashed or abandoned registration must not lock someone out of their
+    own email - re-registering is fine until they've actually answered."""
+    resume_path = _make_fake_docx(tmp_path)
+
+    for _ in range(2):
+        with open(resume_path, "rb") as f:
+            response = client.post(
+                "/candidates/register",
+                data={
+                    "full_name": "Retry User",
+                    "email": "retry@example.com",
+                    "technology": "Python",
+                    "experience_level": "junior",
+                },
+                files={"resume": ("resume.docx", f, "application/vnd.openxmlformats-officedocument.wordprocessingml.document")},
+            )
+        assert response.status_code == 200    
 
 
 def test_register_candidate_rejects_unsupported_file_type(tmp_path):
