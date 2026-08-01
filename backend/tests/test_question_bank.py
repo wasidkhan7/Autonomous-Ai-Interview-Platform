@@ -118,24 +118,23 @@ def test_embed_text_returns_correct_dimension():
     assert isinstance(vector, list)
     assert len(vector) == 384  # all-MiniLM-L6-v2 output size
 
-
 @pytest.mark.integration
 def test_query_questions_returns_relevant_results():
     """
-    Confirms retrieval actually works end-to-end against live Pinecone:
-    a RAG-specific query should surface a RAG-tagged question in the
-    'ai' namespace, not an unrelated one.
+    Round-trip check: embed the exact text of a question that IS in the index
+    and confirm it comes back top. Asserting on tag strings instead would break
+    every time the question bank is regenerated, since tags are LLM-chosen.
     """
     from app.modules.question_bank.embeddings import embed_text
     from app.modules.question_bank.pinecone_db import query_questions
+    from app.modules.question_bank.loader import load_questions
 
-    query_vector = embed_text("How does retrieval-augmented generation reduce hallucination?")
-    results = query_questions(query_vector, namespace="ai", top_k=3)
+    known = load_questions("ai")[0]
+    results = query_questions(embed_text(known["question"]), namespace="ai", top_k=3)
 
     assert len(results) > 0
-    top_result_tags = results[0]["metadata"].get("tags", [])
-    assert any("rag" in tag.lower() or "llm" in tag.lower() for tag in top_result_tags)
-
+    assert results[0]["id"] == known["id"]
+    assert results[0]["score"] > 0.9  # near-exact match on identical text
 
 @pytest.mark.integration
 def test_query_questions_respects_namespace_isolation():
