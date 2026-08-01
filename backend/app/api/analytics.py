@@ -8,7 +8,13 @@ from sqlalchemy.orm import Session
 from app.db.session import get_db
 from app.db.models import Candidate, Interview, InterviewResponse, InterviewReport
 
-router = APIRouter(prefix="/analytics", tags=["analytics"])
+from app.api.auth import require_mentor_key
+
+router = APIRouter(
+    prefix="/analytics",
+    tags=["analytics"],
+    dependencies=[Depends(require_mentor_key)],
+)
 
 
 def _avg_of(values: list) -> float:

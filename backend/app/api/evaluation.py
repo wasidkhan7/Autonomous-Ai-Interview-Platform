@@ -4,8 +4,15 @@ from sqlalchemy.orm import Session
 from app.db.session import get_db
 from app.db.models import InterviewReport, InterviewResponse
 
-router = APIRouter(prefix="/evaluation", tags=["evaluation"])
+from app.api.auth import require_mentor_key
 
+# Applied at router level, so every route inside is protected - including any
+# you add later. Safer than remembering to decorate each one.
+router = APIRouter(
+    prefix="/evaluation",
+    tags=["evaluation"],
+    dependencies=[Depends(require_mentor_key)],
+)
 
 class MentorOverrideRequest(BaseModel):
     override: str  # "approve" | "reject" | "needs_review"

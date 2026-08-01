@@ -7,6 +7,7 @@ from app.config import get_settings
 from app.db.models import InterviewResponse
 from app.modules.evaluation.rubric import RUBRIC_DESCRIPTION
 
+
 settings = get_settings()
 llm = ChatGroq(api_key=settings.GROQ_API_KEY, model=settings.LLM_MODEL, temperature=0.2)
 
@@ -90,3 +91,37 @@ def aggregate_scores(responses: list[InterviewResponse]) -> dict:
         "avg_problem_solving": round(mean(r.problem_solving_score or 0 for r in responses), 2),
         "avg_communication": round(mean(r.communication_score or 0 for r in responses), 2),
     }
+
+
+def compute_confidence(responses: list) -> float:
+    """
+    How much can a mentor trust this assessment? Deliberately computed rather
+    than asked of the LLM - self-reported confidence is poorly calibrated, and
+    a number a mentor acts on should be reproducible and explainable.
+
+    Three observable factors:
+      coverage  - did they actually attempt the questions?
+      substance - were the answers long enough to judge?
+      scoring   - did the evaluator return a score for every answer?
+    """
+    if not responses:
+        return 0.0
+
+    # An answer under 5 words can't be meaningfully assessed.
+    answered = [r for r in responses if r.answer_text and len(r.answer_text.split()) >= 5]
+    coverage = len(answered) / len(responses)
+
+    if answered:
+        avg_words = sum(len(r.answer_text.split()) for r in answered) / len(answered)
+        # ~40 words is a full spoken answer; beyond that adds no more certainty.
+        substance = min(1.0, avg_words / 40)
+    else:
+        substance = 0.0
+
+    # A NULL score means the evaluator silently skipped that answer - the single
+    # biggest reason to distrust a report.
+    scored = [r for r in responses if r.technical_score is not None]
+    scoring = len(scored) / len(responses)
+
+    confidence = (0.4 * coverage) + (0.3 * substance) + (0.3 * scoring)
+    return round(max(0.0, min(1.0, confidence)), 2)

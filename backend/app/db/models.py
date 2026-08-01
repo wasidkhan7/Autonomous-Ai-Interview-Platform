@@ -1,4 +1,7 @@
-from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey, Text, JSON
+from sqlalchemy import (
+    Column, Integer, String, Float, DateTime, ForeignKey, Text, JSON,
+    LargeBinary, UniqueConstraint,
+)
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from app.db.session import Base
@@ -14,6 +17,9 @@ class Candidate(Base):
     experience_level = Column(String, nullable=False)  # "junior" | "mid" | "senior"
     resume_path = Column(String, nullable=True)
     resume_skills = Column(JSON, nullable=True)         # parsed skills list
+    # The extracted resume text. Kept because the uploaded file itself won't
+    # survive a container restart on Render.
+    resume_text = Column(Text, nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
     interviews = relationship("Interview", back_populates="candidate")
@@ -77,3 +83,23 @@ class QuestionUsage(Base):
     question_id = Column(String, unique=True, nullable=False, index=True)
     times_used = Column(Integer, default=1)
     last_used_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())    
+
+class QuestionAudio(Base):
+    """
+    TTS audio stored as bytes rather than on disk.
+
+    Render's filesystem is ephemeral - it's wiped on every deploy, restart, and
+    (on free tier) every wake from sleep. Files written there have a lifespan of
+    minutes, which breaks question replay and post-refresh audio. At ~50 KB per
+    question this is small enough that a BLOB column is the pragmatic answer.
+    """
+    __tablename__ = "question_audio"
+    __table_args__ = (
+        UniqueConstraint("interview_id", "turn_number", name="uq_question_audio_turn"),
+    )
+
+    id = Column(Integer, primary_key=True, index=True)
+    interview_id = Column(Integer, ForeignKey("interviews.id"), nullable=False, index=True)
+    turn_number = Column(Integer, nullable=False)
+    audio_bytes = Column(LargeBinary, nullable=False)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())    

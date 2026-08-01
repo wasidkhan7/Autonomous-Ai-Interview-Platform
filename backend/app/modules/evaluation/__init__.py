@@ -4,6 +4,7 @@ from app.modules.evaluation.scorer import (
     score_interview_responses,
     apply_scores_to_responses,
     aggregate_scores,
+    compute_confidence,
 )
 from app.modules.evaluation.report_gen import generate_report
 
@@ -41,7 +42,8 @@ def run_full_evaluation(db: Session, interview_id: int) -> InterviewReport:
         weaknesses=report_data["weaknesses"],
         learning_plan=report_data["learning_plan"],
         hiring_recommendation=report_data["hiring_recommendation"],
-        ai_confidence_score=report_data["ai_confidence_score"],
+        # Computed from the transcript, not self-reported by the LLM.
+        ai_confidence_score=compute_confidence(responses),
     )
     db.add(report)
     db.commit()
@@ -70,4 +72,4 @@ def run_full_evaluation_threadsafe(interview_id: int) -> dict:
         }
     finally:
         db.close()
-        
+

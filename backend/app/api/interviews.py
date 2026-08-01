@@ -12,7 +12,7 @@ from app.modules.agent.memory import get_session_state, save_session_state
 from app.modules.question_bank.usage_tracker import increment_usage
 from app.modules.evaluation import run_full_evaluation
 # from app.modules.voice.tts_elevenlabs import synthesize_speech
-from app.modules.voice.tts_openai import synthesize_speech
+from app.modules.voice.tts_openai import synthesize_speech, store_question_audio, get_question_audio
 
 router = APIRouter(prefix="/interviews", tags=["interviews"])
 
@@ -71,11 +71,9 @@ def _build_resume_payload(interview_id: int, db: Session) -> dict:
         if r.answer_text:
             conversation.append({"role": "candidate", "content": r.answer_text})
 
-    # The current, not-yet-answered question - its audio was already generated
-    # and saved to disk under this predictable filename pattern.
-    audio_filename = f"interview_{interview_id}_turn_{state['question_count']}.mp3"
-    audio_path = Path("uploads/audio/tts") / audio_filename
-    audio_url = f"/voice/audio/{audio_filename}" if audio_path.exists() else None
+    turn = state["question_count"]
+    has_audio = get_question_audio(db, interview_id, turn) is not None
+    audio_url = f"/voice/audio/{interview_id}/{turn}" if has_audio else None
 
     conversation.append({
         "role": "agent",
@@ -139,11 +137,8 @@ def start(payload: StartInterviewRequest, db: Session = Depends(get_db)):
     save_session_state(db, interview.id, state)
     increment_usage(db, state["current_question_id"])
 
-    audio_path = synthesize_speech(
-        text=state["current_question_text"],
-        interview_id=interview.id,
-        turn_number=1,
-    )
+    audio_bytes = synthesize_speech(state["current_question_text"])
+    store_question_audio(db, interview.id, 1, audio_bytes)
 
     return {
         "interview_id": interview.id,
@@ -152,7 +147,7 @@ def start(payload: StartInterviewRequest, db: Session = Depends(get_db)):
         "status": state["status"],
         "question_count": state["question_count"],
         "total_questions": state["max_questions"],
-        "audio_url": f"/voice/audio/{Path(audio_path).name}",
+        "audio_url": f"/voice/audio/{interview.id}/1",
         "resumed": False,
     }
 
