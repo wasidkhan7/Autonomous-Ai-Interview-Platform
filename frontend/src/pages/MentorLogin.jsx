@@ -2,6 +2,7 @@
 // and sent with every request to the backend.
 //  The backend checks the key against the value in the .env file and returns 401 if it doesn't match.
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import apiClient from "../api/client";
 
 const LABEL = "font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-[#5A6478]";
@@ -10,6 +11,7 @@ function MentorLogin() {
   const [key, setKey] = useState("");
   const [isChecking, setIsChecking] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -22,8 +24,10 @@ function MentorLogin() {
 
     try {
       await apiClient.get("/analytics/overview");
-      // Full page load so the nav bar re-reads localStorage and shows the links.
-      window.location.href = "/dashboard";
+      // Client-side navigation. A full page load (window.location.href) makes a
+      // real HTTP request for /dashboard, which the static host 404s because no
+      // such file exists — routing is React Router's job, not the server's.
+      navigate("/dashboard");
     } catch (err) {
       localStorage.removeItem("mentorKey");
       setErrorMessage(
